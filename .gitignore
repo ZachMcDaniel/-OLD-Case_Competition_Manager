@@ -10,6 +10,23 @@
 
 .DesignTimeResolveAssemblyReferencesInput.cache
 .CaseCompetition.csprojAssemblyReference.cache
+.CaseCompetitionApp.dll
+.CaseCompetitionApp.pdb
+*.dll
+*.exe
+*.pdb
+/build/
+*.user
+_ReSharper.*/
+*.sdf
+*.opensdf
+*.tlog
+TestResult.xml
+*.VisualState.xml
+Version.cs
+Version.h
+Version.cpp
+
 /.vs
 /obj
 
