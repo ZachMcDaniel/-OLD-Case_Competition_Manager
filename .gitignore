@@ -1,0 +1,19 @@
+
+# Logs and databases #
+######################
+*db.lock
+*.log
+*.sql
+*.sqlite
+*.suo
+*.cache
+
+.DesignTimeResolveAssemblyReferencesInput.cache
+.CaseCompetition.csprojAssemblyReference.cache
+/.vs
+/obj
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
