@@ -178,6 +178,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="Deliverables.aspx" />
+    <Content Include="example.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="FileReview.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -396,6 +397,13 @@
     </Compile>
     <Compile Include="Deliverables.aspx.designer.cs">
       <DependentUpon>Deliverables.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="example.aspx.cs">
+      <DependentUpon>example.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="example.aspx.designer.cs">
+      <DependentUpon>example.aspx</DependentUpon>
     </Compile>
     <Compile Include="FileReview.aspx.cs">
       <DependentUpon>FileReview.aspx</DependentUpon>
