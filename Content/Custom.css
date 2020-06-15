@@ -1,6 +1,17 @@
 ﻿body {
 }
 
+.btn .btn-default {
+    background-color: white;
+    color: #4E2582;
+}
+
+.btn .btn-default:hover {
+    background-color: #CCB576;
+ }
+
+
+
 .center{
     text-align:center;
 }
