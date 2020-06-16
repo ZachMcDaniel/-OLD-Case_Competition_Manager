@@ -178,7 +178,6 @@
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="Deliverables.aspx" />
-    <Content Include="example.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="FileReview.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -192,8 +191,10 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Account\Web.config" />
+    <Content Include="Maintenance\Web.config" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Hub.aspx" />
+    <Content Include="Maintenance\Default.aspx" />
     <Content Include="News.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -227,7 +228,6 @@
     <Content Include="Submissions.aspx" />
     <Content Include="TeamInfo.aspx" />
     <Content Include="TeamMGMT.aspx" />
-    <Content Include="Test.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -399,13 +399,6 @@
     <Compile Include="Deliverables.aspx.designer.cs">
       <DependentUpon>Deliverables.aspx</DependentUpon>
     </Compile>
-    <Compile Include="example.aspx.cs">
-      <DependentUpon>example.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="example.aspx.designer.cs">
-      <DependentUpon>example.aspx</DependentUpon>
-    </Compile>
     <Compile Include="FileReview.aspx.cs">
       <DependentUpon>FileReview.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -422,6 +415,13 @@
     </Compile>
     <Compile Include="Hub.aspx.designer.cs">
       <DependentUpon>Hub.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="News.aspx.cs">
@@ -467,13 +467,6 @@
     </Compile>
     <Compile Include="TeamMGMT.aspx.designer.cs">
       <DependentUpon>TeamMGMT.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Test.aspx.cs">
-      <DependentUpon>Test.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Test.aspx.designer.cs">
-      <DependentUpon>Test.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
