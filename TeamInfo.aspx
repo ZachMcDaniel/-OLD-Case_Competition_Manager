@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="Team Information" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="TeamInfo.aspx.cs" Inherits="CaseCompetitionApp.TeamInfo" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-   <h2><%: Title %></h2>
+    <h2><%: Title %></h2>
     <h3>Team Information, What you need to know.</h3>
     <div class="col-md-12">
     <div class="col-md-3">
