@@ -44,11 +44,6 @@
                 <HeaderStyle CssClass="center" />
                 <ItemStyle CssClass="center" />
                 </asp:BoundField>
-                <asp:BoundField DataField="Email" HeaderText="Email Address" SortExpression="Email" >
-                    <ControlStyle CssClass="center" />
-                <HeaderStyle CssClass="center" />
-                <ItemStyle CssClass="center" />
-                </asp:BoundField>
 
             </Columns>
             <FooterStyle BackColor="#CCCC99" />
