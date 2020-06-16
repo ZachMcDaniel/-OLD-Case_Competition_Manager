@@ -11,7 +11,44 @@ namespace CaseCompetitionApp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
+
+        protected void BTNDeliv_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Deliverables.aspx");
+        }
+
+        protected void BTNAnnounce_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AdminAnnounce.aspx");
+        }
+
+        protected void BTNDownCaseFile_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("CaseFiles.aspx");
+        }
+        protected void BTNFileReview_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("FileReview.aspx");
+        }
+
+        protected void BTNTeamMGMT_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("TeamMGMT.aspx");
+        }
+        protected void BTNDeliverables_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Deliverables.aspx");
+        }
+        protected void BTNAnnouncements_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Announcements.aspx");
+        }
+        protected void BTNSubmissions_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Submissions.aspx");
+        }
+
     }
 }
