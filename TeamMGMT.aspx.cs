@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -11,7 +13,49 @@ namespace CaseCompetitionApp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                clearfields();
+            }
+        }
 
+        protected void btnSubmit_Click(object sender, EventArgs e)
+        {
+            if (Page.IsValid)
+            {
+                string mainconn = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+                SqlConnection con = new SqlConnection(mainconn);
+                con.Open();
+                SqlCommand sqlcomm = new SqlCommand();
+                string insertSql = "INSERT INTO [MEMBERS](TeamID, FirstName, LastName, PhoneNumber, Email, ShirtSize, Vegan) OUTPUT INSERTED.Id VALUES (@TeamID,@FirstName,@LastName,@PhoneNumber, @Email, @ShirtSize, @Vegan);";
+                SqlCommand cmd = new SqlCommand(insertSql, con);
+
+                cmd.Parameters.AddWithValue("@TeamID", "1");
+                cmd.Parameters.AddWithValue("@FirstName", txtFirstName.Text);
+                cmd.Parameters.AddWithValue("@LastName", txtLName.Text);
+                cmd.Parameters.AddWithValue("@PhoneNumber", txtPhone.Text);
+                cmd.Parameters.AddWithValue("@Email", txtEmail.Text);
+                cmd.Parameters.AddWithValue("@ShirtSize", txtShirt.Text);
+                cmd.Parameters.AddWithValue("@Vegan", "0");
+
+                lblSubmit.Visible = true;
+                lblSubmit.Text = "Submitted";
+            }
+        }
+
+        protected void btnClear_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void clearfields()
+        {
+            txtFirstName.Text = "";
+            txtLName.Text = "";
+            txtEmail.Text = "";
+            txtPhone.Text = "";
+            txtShirt.Text = "";
+            lblSubmit.Visible = false;
         }
     }
 }
