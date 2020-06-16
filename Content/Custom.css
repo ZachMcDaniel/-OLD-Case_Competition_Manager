@@ -15,3 +15,29 @@
 .center{
     text-align:center;
 }
+
+.jumbotron {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    color: #FFFFFF;
+    background-image: url('../Images/Tippie Arches.jpg');
+    background-position: center;
+    height: 20em;
+    border-color: black;
+    border-width: 2px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.black {
+    background-color: black;
+    width: 400px;
+    font-weight: bold;
+}
+.gold {
+    background-color: rgba(255, 238, 1, 0.5);
+    color: white;
+    width: 95%;
+    font-weight: bold;
+}
+
