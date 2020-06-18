@@ -10,7 +10,7 @@
 
     <br />
     <div>
-        <p>The CyHawk Case Competition is an annual event hosted by the University of Iowa and Iowa State University.</p>
+        <h2 class="center">The CyHawk Case Competition is an annual event hosted by the University of Iowa and Iowa State University.</h2>
     </div>
     <br />
 

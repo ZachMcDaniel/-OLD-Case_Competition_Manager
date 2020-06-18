@@ -1,10 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Hub.aspx.cs" Inherits="CaseCompetitionApp.Hub" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <H2>
+    <H1 class="center gold">
         Competition Hub
-    </H2>
+    </H1>
     <h3>
-        All links located here!
+        Access to all team and case information for competitors
     </h3>
     <br />
    

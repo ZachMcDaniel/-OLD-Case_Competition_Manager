@@ -1,7 +1,11 @@
 ﻿<%@ Page Title="Team Information" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="TeamInfo.aspx.cs" Inherits="CaseCompetitionApp.TeamInfo" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <h2><%: Title %></h2>
-    <h3>Team Information, What you need to know.</h3>
+    <h1 class="center gold"><%: Title %></h1>
+    <br />
+    <h3>
+        Access the team table to view member information
+    </h3>
+
     <div class="col-md-12">
     <div class="col-md-5">
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" Width="95%" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" DataKeyNames="TeamID">
