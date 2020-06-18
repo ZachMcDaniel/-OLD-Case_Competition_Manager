@@ -33,7 +33,9 @@
             <p>
                 (ENTER TEXT HERE)
             </p>
-            <p>                <a class="btn btn-default" target="_blank" href="../JudgeInfo">See Info &raquo;</a>            </p>
+            <p>                <a class="btn btn-default"  href="../JudgeInfo">See Info &raquo;</a>            
+
+            </p>
         </div>
     </div>
 
