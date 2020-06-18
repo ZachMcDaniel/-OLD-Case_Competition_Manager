@@ -192,6 +192,9 @@
     <Content Include="Account\Web.config" />
     <Content Include="JudgeInfo.aspx" />
     <Content Include="Maintenance\Web.config" />
+    <None Include="Properties\PublishProfiles\casecompetition - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\casecompetition - ReadOnly - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\casecompetition - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Hub.aspx" />
     <Content Include="Maintenance\Default.aspx" />
