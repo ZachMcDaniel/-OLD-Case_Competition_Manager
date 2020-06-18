@@ -3,20 +3,25 @@
     <h2><%: Title %></h2>
     <h3>Team Information, What you need to know.</h3>
     <div class="col-md-12">
-    <div class="col-md-3">
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="TeamID" DataSourceID="SqlDataSource1" Width="95%" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical">
+    <div class="col-md-5">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" Width="95%" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" DataKeyNames="TeamID">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
-                <asp:BoundField DataField="TeamName" HeaderText="Team Name" SortExpression="TeamName" >
-                <ControlStyle CssClass="center" />
-                <HeaderStyle CssClass="center" />
-                <ItemStyle CssClass="center" />
-                </asp:BoundField>
-                <asp:CommandField SelectText="View Members" ShowSelectButton="True" HeaderText="View Members" >
+                <asp:BoundField DataField="TeamName" HeaderText="TeamName" SortExpression="TeamName" >
                     <ControlStyle CssClass="center" />
                 <HeaderStyle CssClass="center" />
                 <ItemStyle CssClass="center" />
-                </asp:CommandField>
+                </asp:BoundField>
+                <asp:BoundField DataField="Timeslots" HeaderText="Timeslots" SortExpression="Timeslots" >
+                 <ControlStyle CssClass="center" />
+                <HeaderStyle CssClass="center" />
+                <ItemStyle CssClass="center" />
+                    </asp:BoundField>
+                <asp:CommandField HeaderText="View Members" SelectText="View Members" ShowSelectButton="True" >
+                     <ControlStyle CssClass="center" />
+                <HeaderStyle CssClass="center" />
+                <ItemStyle CssClass="center" />
+                    </asp:CommandField>
             </Columns>
             <FooterStyle BackColor="#CCCC99" />
             <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
@@ -30,7 +35,7 @@
         </asp:GridView>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT * FROM [TEAM]"></asp:SqlDataSource>
     </div>
-    <div class="col-md-9">
+    <div class="col-md-7">
         <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataKeyNames="MemberID" DataSourceID="SqlDataSource2" Width="95%" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical">
             <AlternatingRowStyle BackColor="White" />
             <Columns>

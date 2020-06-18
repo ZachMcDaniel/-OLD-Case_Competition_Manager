@@ -150,7 +150,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
     <Content Include="Account\AddPhoneNumber.aspx" />
     <Content Include="Account\Confirm.aspx" />
     <Content Include="Account\Forgot.aspx" />
@@ -170,7 +169,6 @@
     <Content Include="AdminDeliverable.aspx" />
     <Content Include="Announcements.aspx" />
     <Content Include="CaseFiles.aspx" />
-    <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -192,6 +190,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Account\Web.config" />
+    <Content Include="JudgeInfo.aspx" />
     <Content Include="Maintenance\Web.config" />
     <None Include="Properties\PublishProfiles\casecompetition - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\casecompetition - ReadOnly - FTP.pubxml" />
@@ -366,13 +365,6 @@
       <DependentUpon>Announcements.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="About.aspx.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="About.aspx.designer.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-    </Compile>
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
@@ -382,13 +374,6 @@
     </Compile>
     <Compile Include="CaseFiles.aspx.designer.cs">
       <DependentUpon>CaseFiles.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Contact.aspx.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -420,6 +405,13 @@
     </Compile>
     <Compile Include="Hub.aspx.designer.cs">
       <DependentUpon>Hub.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JudgeInfo.aspx.cs">
+      <DependentUpon>JudgeInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JudgeInfo.aspx.designer.cs">
+      <DependentUpon>JudgeInfo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Maintenance\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
