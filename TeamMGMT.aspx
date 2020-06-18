@@ -4,13 +4,41 @@
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="MemberID" DataSourceID="SqlDataSource1" Width="95%" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical">
         <AlternatingRowStyle BackColor="White" />
         <Columns>
-            <asp:BoundField DataField="FirstName" HeaderText="FirstName" SortExpression="FirstName" />
-            <asp:BoundField DataField="LastName" HeaderText="LastName" SortExpression="LastName" />
-            <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
-            <asp:BoundField DataField="PhoneNumber" HeaderText="PhoneNumber" SortExpression="PhoneNumber" />
-            <asp:BoundField DataField="ShirtSize" HeaderText="ShirtSize" SortExpression="ShirtSize" />
-            <asp:BoundField DataField="FoodAllergy" HeaderText="FoodAllergy" SortExpression="FoodAllergy" />
-            <asp:BoundField DataField="Vegan" HeaderText="Vegan" SortExpression="Vegan" />
+            <asp:BoundField DataField="FirstName" HeaderText="First Name" SortExpression="FirstName" >
+                <ControlStyle CssClass="center" />
+                <HeaderStyle CssClass="center" />
+                <ItemStyle CssClass="center" />
+                </asp:BoundField>
+            <asp:BoundField DataField="LastName" HeaderText="Last Name" SortExpression="LastName" >
+                <ControlStyle CssClass="center" />
+                <HeaderStyle CssClass="center" />
+                <ItemStyle CssClass="center" />
+                </asp:BoundField>
+            <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" >
+                <ControlStyle CssClass="center" />
+                <HeaderStyle CssClass="center" />
+                <ItemStyle CssClass="center" />
+                </asp:BoundField>
+            <asp:BoundField DataField="PhoneNumber" HeaderText="Phone Number" SortExpression="PhoneNumber" >
+                <ControlStyle CssClass="center" />
+                <HeaderStyle CssClass="center" />
+                <ItemStyle CssClass="center" />
+                </asp:BoundField>
+            <asp:BoundField DataField="ShirtSize" HeaderText="Shirt Size" SortExpression="ShirtSize" >
+                <ControlStyle CssClass="center" />
+                <HeaderStyle CssClass="center" />
+                <ItemStyle CssClass="center" />
+                </asp:BoundField>
+            <asp:BoundField DataField="FoodAllergy" HeaderText="Food Allergy" SortExpression="FoodAllergy" >
+                <ControlStyle CssClass="center" />
+                <HeaderStyle CssClass="center" />
+                <ItemStyle CssClass="center" />
+                </asp:BoundField>
+            <asp:BoundField DataField="Vegan" HeaderText="Vegan" SortExpression="Vegan" >
+                <ControlStyle CssClass="center" />
+                <HeaderStyle CssClass="center" />
+                <ItemStyle CssClass="center" />
+                </asp:BoundField>
         </Columns>
         <FooterStyle BackColor="#CCCC99" />
         <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
