@@ -4,7 +4,7 @@
         News & Information
     </h1>
     <h2>
-        This news feed will contain all information related to the CyHawk Case Competition\n
+        This news feed will contain all information related to the CyHawk Case Competition
         including contact information, resources, ETC ...
     </h2>
 

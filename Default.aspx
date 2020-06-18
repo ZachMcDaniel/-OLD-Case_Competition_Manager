@@ -29,11 +29,11 @@
             </p>
         </div>
         <div class="col-md-4">
-            <h2>SECTION 3</h2>
+            <h2>Meet the Judges</h2>
             <p>
                 (ENTER TEXT HERE)
             </p>
-          
+            <p>                <a class="btn btn-default" target="_blank" href="../JudgeInfo">See Info &raquo;</a>            </p>
         </div>
     </div>
 
