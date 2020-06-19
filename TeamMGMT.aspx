@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="TeamMGMT.aspx.cs" Inherits="CaseCompetitionApp.TeamMGMT" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h2>Team Managment</h2>
+    <div class="col-md-12 center">
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="MemberID" DataSourceID="SqlDataSource1" Width="95%" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical">
         <AlternatingRowStyle BackColor="White" />
         <Columns>
@@ -51,8 +52,14 @@
         <SortedDescendingHeaderStyle BackColor="#575357" />
     </asp:GridView>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT * FROM [Members]"></asp:SqlDataSource>
+        </div>
 
-<fieldset id="NewMember" runat="server" method="post" class="form-horizontal" defaultfocus="txtEmail1" defaultbutton="btnSubmit">
+    <div class="col-md-12">
+        <br />
+            <asp:Button ID="BtnNewMember" CssClass="btn btn-default" runat="server" Text="Add Members" OnClick="BtnAddMember_Click" />
+        </div>
+    <div class="col-md-12"> 
+<fieldset id="NewMember"  runat="server" method="post" class="form-horizontal expandedbox" defaultfocus="txtEmail1" defaultbutton="btnSubmit">
     <div class="col-md-12">
     <br />
     </div>
@@ -138,6 +145,5 @@
     </div>
 
 </fieldset>
-
-
+    </div>
 </asp:Content>
