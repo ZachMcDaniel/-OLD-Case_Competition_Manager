@@ -167,7 +167,6 @@
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="AdminAnnounce.aspx" />
     <Content Include="AdminDeliverable.aspx" />
-    <Content Include="Announcements.aspx" />
     <Content Include="CaseFiles.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -358,13 +357,6 @@
     </Compile>
     <Compile Include="AdminDeliverable.aspx.designer.cs">
       <DependentUpon>AdminDeliverable.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Announcements.aspx.cs">
-      <DependentUpon>Announcements.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Announcements.aspx.designer.cs">
-      <DependentUpon>Announcements.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />

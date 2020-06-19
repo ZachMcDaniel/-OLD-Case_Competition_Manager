@@ -2,8 +2,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h1 class="center gold"><%: Title %></h1>
     <br />
-    <h3>
-        Access the team table to view member information
+    <h3 class="center">
+        Access the Team Table to View Member Information
     </h3>
 
     <div class="col-md-12">

@@ -43,6 +43,16 @@
     font-weight: bold;
 }
 
+.grey {
+    background-color: lightgrey;
+    color: black;
+    width: 95%;
+    font-weight: bold;
+}
+.wide {
+    width: 95%;
+    font-weight: bold;
+
 .expandbox{
     background-color: black;
     color: white;
