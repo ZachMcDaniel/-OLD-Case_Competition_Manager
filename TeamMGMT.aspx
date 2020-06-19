@@ -53,11 +53,12 @@
     </asp:GridView>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT * FROM [Members]"></asp:SqlDataSource>
         </div>
-    <br />
+
     <div class="col-md-12">
-        <div class="expandbox">
-            <asp:Button ID="BtnNewMember" CssClass="btnclear" runat="server" Text="Add Members &#8853;" OnClick="BtnAddMember_Click" />
+        <br />
+            <asp:Button ID="BtnNewMember" CssClass="btn btn-default" runat="server" Text="Add Members" OnClick="BtnAddMember_Click" />
         </div>
+    <div class="col-md-12"> 
 <fieldset id="NewMember"  runat="server" method="post" class="form-horizontal expandedbox" defaultfocus="txtEmail1" defaultbutton="btnSubmit">
     <div class="col-md-12">
     <br />

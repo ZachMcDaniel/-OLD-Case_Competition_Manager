@@ -7,7 +7,7 @@
     </h3>
 
     <div class="col-md-12">
-    <div class="col-md-5">
+    <div class="col-md-7">
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" Width="95%" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" DataKeyNames="TeamID">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
@@ -18,6 +18,11 @@
                 </asp:BoundField>
                 <asp:BoundField DataField="Timeslots" HeaderText="Time Slot" SortExpression="Timeslots" >
                  <ControlStyle CssClass="center" />
+                <HeaderStyle CssClass="center" />
+                <ItemStyle CssClass="center" />
+                    </asp:BoundField>
+                <asp:BoundField DataField="RoomNumber" HeaderText="Room Number" SortExpression="RoomNumber" >
+                    <ControlStyle CssClass="center" />
                 <HeaderStyle CssClass="center" />
                 <ItemStyle CssClass="center" />
                     </asp:BoundField>
@@ -39,7 +44,7 @@
         </asp:GridView>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT * FROM [TEAM]"></asp:SqlDataSource>
     </div>
-    <div class="col-md-7">
+    <div class="col-md-5">
         <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataKeyNames="MemberID" DataSourceID="SqlDataSource2" Width="95%" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
@@ -72,5 +77,7 @@
         </asp:SqlDataSource>
     </div>
 </div>
+    <div class="col-md-12">
     <br />
+        </div>
 </asp:Content>
