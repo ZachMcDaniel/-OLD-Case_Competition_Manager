@@ -190,6 +190,8 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Account\Web.config" />
+    <Content Include="Images\CyHawk.jpg" />
+    <Content Include="Images\Herky-vs-Cy.jpg" />
     <Content Include="JudgeInfo.aspx" />
     <Content Include="Maintenance\Web.config" />
     <None Include="Properties\PublishProfiles\casecompetition - FTP.pubxml" />
