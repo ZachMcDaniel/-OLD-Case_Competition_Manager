@@ -16,6 +16,7 @@ namespace CaseCompetitionApp
             if (!IsPostBack)
             {
                 clearfields();
+                NewMember.Visible = false;
             }
         }
 
@@ -45,7 +46,7 @@ namespace CaseCompetitionApp
 
         protected void btnClear_Click(object sender, EventArgs e)
         {
-
+            clearfields();
         }
 
         protected void clearfields()
@@ -56,6 +57,11 @@ namespace CaseCompetitionApp
             txtPhone.Text = "";
             txtShirt.Text = "";
             lblSubmit.Visible = false;
+        }
+
+        protected void BtnAddMember_Click(object sender, EventArgs e)
+        {
+            NewMember.Visible = true;
         }
     }
 }
