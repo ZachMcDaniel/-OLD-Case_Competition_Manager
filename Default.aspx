@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="CaseCompetitionApp._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <h1 class="center black" >CyHawk Case Competition</h1>
+    <h1 class="center gold" >CyHawk Case Competition</h1>
     <div class="jumbotron">
         
         <asp:Image ID="Image1" runat="server" />
