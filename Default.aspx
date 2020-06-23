@@ -14,13 +14,7 @@
     <br />
 
     <div class="row">
-        <div class="col-md-4">
-            <h2 class="center">CyHawk History</h2>
-            <p class="center">
-                (ENTER TEXT HERE)
-            </p>
-           
-        </div>
+       
         <div class="col-md-4">
             <h2 class="center">Meet the Judges</h2>
             <p class="center">
@@ -38,6 +32,13 @@
             <p>                <a class="btn btn-default gold"  href="../TeamInfo">View Teams &raquo;</a>            
 
             </p>
+        </div>
+        <div class="col-md-4">
+            <h2 class="center">Competition Archive</h2>
+            <p class="center">
+                Access Previous Competitions and Results
+            </p>
+           
         </div>
     </div>
 
