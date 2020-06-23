@@ -4,7 +4,7 @@
        Update News Feed
     </h1>
     <h3>
-        Make any changes needed to the News page
+        Add or Remove Announcements on the News Page
     </h3>
 
     <br />

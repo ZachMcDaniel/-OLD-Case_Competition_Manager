@@ -4,7 +4,7 @@
         Competition Hub
     </H1>
     <h3 class="center">
-        Access to all team and case information for competitors
+        Access to all Team and Case Information for Competitors
     </h3>
    
    <div class="col-md-12">
