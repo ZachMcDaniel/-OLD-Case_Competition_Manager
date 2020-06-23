@@ -13,7 +13,7 @@
     </div>
     <br />
 
-    <div class="row grey">
+    <div class="row">
        
         <div class="col-md-4">
             <h2 class="center">Meet the Judges</h2>
@@ -21,7 +21,7 @@
                 List of This Year's Judges and Their Companies
             </p>
             <p>                
-                 <a class="btn btn-default black"  href="../JudgeInfo">View Judges &raquo;</a>
+                 <a class="btn btn-default grey"  href="../JudgeInfo">View Judges &raquo;</a>
             </p>
         </div>
         <div class="col-md-4">
@@ -30,7 +30,7 @@
                 List of This Year's Teams
             </p>
             <p>                
-                <a class="btn btn-default black"  href="../TeamInfo">View Teams &raquo;</a>            
+                <a class="btn btn-default grey"  href="../TeamInfo">View Teams &raquo;</a>            
             </p>
         </div>
         <div class="col-md-4">

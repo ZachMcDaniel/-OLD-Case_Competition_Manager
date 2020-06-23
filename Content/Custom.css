@@ -40,7 +40,13 @@
 .gold {
     background-color: rgba(255,223,0, 0.75);
     color: black;
-    width: 95%;
+    width: 100%;
+    font-weight: bold;
+}
+.gold2 {
+    background-color: rgba(255,223,0, 0.25);
+    color: black;
+    width: 100%;
     font-weight: bold;
 }
 
@@ -48,7 +54,14 @@
     background-color: rgba(220,220,220, 0.75);
     color: black;
     width: 95%;
-    font-weight: bold;
+    font-weight: bolder;
+}
+
+    .grey:hover {
+        background-color: rgba(255,223,0,0.75);
+    }
+.border {
+    border-color: rgba(255,223,0,0.75);
 }
 .wide {
     width: 95%;
@@ -73,8 +86,4 @@
 
 .expandbox :hover{
     color:yellow;
-}
-
-.gridfont{
-    font-size: 24em;
 }
