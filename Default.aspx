@@ -1,9 +1,8 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="CaseCompetitionApp._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-
+    <h1 class="center gold" >CyHawk Case Competition</h1>
     <div class="jumbotron">
-        <h1 class="center gold" >CyHawk Case Competition</h1>
         
         <asp:Image ID="Image1" runat="server" />
     </div>
@@ -15,27 +14,31 @@
     <br />
 
     <div class="row">
+       
         <div class="col-md-4">
-            <h2>SECTION 1</h2>
-            <p>
-                (ENTER TEXT HERE)
+            <h2 class="center">Meet the Judges</h2>
+            <p class="center">
+                List of This Year's Judges and Their Companies
             </p>
-           
-        </div>
-        <div class="col-md-4">
-            <h2>SECTION 2</h2>
             <p>
-                (ENTER TEXT HERE)
+                 <p>                <a class="btn btn-default gold"  href="../JudgeInfo">View Judges &raquo;</a>
             </p>
         </div>
         <div class="col-md-4">
-            <h2>Meet the Judges</h2>
-            <p>
-                (ENTER TEXT HERE)
+            <h2 class="center">Meet the Competitors</h2>
+            <p class="center">
+                List of This Year's Teams
             </p>
-            <p>                <a class="btn btn-default"  href="../JudgeInfo">See Info &raquo;</a>            
+            <p>                <a class="btn btn-default gold"  href="../TeamInfo">View Teams &raquo;</a>            
 
             </p>
+        </div>
+        <div class="col-md-4">
+            <h2 class="center">Competition Archive</h2>
+            <p class="center">
+                Access Previous Competitions and Results
+            </p>
+           
         </div>
     </div>
 

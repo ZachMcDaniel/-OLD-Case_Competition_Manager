@@ -22,18 +22,19 @@
     padding-bottom: 30px;
     margin-bottom: 30px;
     color: #FFFFFF;
-    background-image: url('../Images/Tippie Arches.jpg');
+    background-image: url('../Images/BLOG-IA-vs-ISU_930x402.jpg');
     background-position: center;
     height: 20em;
     border-color: black;
     border-width: 2px;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
+    background-color: transparent;
 }
 .black {
     background-color: black;
     color: white;
-    width: 400px;
+    width: 100%;
     font-weight: bold;
 }
 .gold {
@@ -42,6 +43,16 @@
     width: 95%;
     font-weight: bold;
 }
+
+.grey {
+    background-color: grey;
+    color: black;
+    width: 95%;
+    font-weight: bold;
+}
+.wide {
+    width: 95%;
+    font-weight: bold;
 
 .expandbox{
     background-color: black;
