@@ -42,6 +42,15 @@ namespace CaseCompetitionApp
         protected global::System.Web.UI.WebControls.Button BtnNewMember;
 
         /// <summary>
+        /// lblSubmit control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSubmit;
+
+        /// <summary>
         /// NewMember control.
         /// </summary>
         /// <remarks>
@@ -195,22 +204,13 @@ namespace CaseCompetitionApp
         protected global::System.Web.UI.WebControls.Label lblVegan;
 
         /// <summary>
-        /// rbtnYes control.
+        /// rbtnVegan control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rbtnYes;
-
-        /// <summary>
-        /// rbtnNo control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rbtnNo;
+        protected global::System.Web.UI.WebControls.RadioButtonList rbtnVegan;
 
         /// <summary>
         /// lblFood control.
@@ -247,14 +247,5 @@ namespace CaseCompetitionApp
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnClear;
-
-        /// <summary>
-        /// lblSubmit control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSubmit;
     }
 }

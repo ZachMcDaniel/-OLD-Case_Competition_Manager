@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h2>Team Managment</h2>
     <div class="col-md-12 center">
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="MemberID" DataSourceID="SqlDataSource1" Width="95%" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical">
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="MemberID" DataSourceID="SqlDataSource1" Width="95%" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" AllowSorting="True">
         <AlternatingRowStyle BackColor="White" />
         <Columns>
             <asp:BoundField DataField="FirstName" HeaderText="First Name" SortExpression="FirstName" >
@@ -40,6 +40,8 @@
                 <HeaderStyle CssClass="center" />
                 <ItemStyle CssClass="center" />
                 </asp:BoundField>
+            <asp:CommandField ShowEditButton="True" />
+            <asp:CommandField ButtonType="Button" ShowDeleteButton="True" />
         </Columns>
         <FooterStyle BackColor="#CCCC99" />
         <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
@@ -56,7 +58,13 @@
 
     <div class="col-md-12">
         <br />
-            <asp:Button ID="BtnNewMember" CssClass="btn btn-default" runat="server" Text="Add Members" OnClick="BtnAddMember_Click" />
+        <div class="col-md-6">
+                <asp:Button ID="BtnNewMember" CssClass="btn btn-default" runat="server" Text="Add Members" OnClick="BtnAddMember_Click" />
+        </div>
+        <div class ="col-md-6">
+                 <asp:label class="col-sm-4" ID="lblSubmit" runat="server"></asp:label>
+        </div>
+
         </div>
     <div class="col-md-12"> 
 <fieldset id="NewMember"  runat="server" method="post" class="form-horizontal expandedbox" defaultfocus="txtEmail1" defaultbutton="btnSubmit">
@@ -118,8 +126,10 @@
   <div class="form-group col-md-12">
         <asp:Label class="control-label col-sm-3" ID="lblVegan" runat="server" Text="Vegan:"></asp:Label>
         <div class="col-sm-5">
-            <asp:RadioButton ID="rbtnYes" runat="server" Text="Yes"/>
-            <asp:RadioButton ID="rbtnNo" runat="server" Text="No"/>
+            <asp:RadioButtonList ID="rbtnVegan" runat="server" Width="107px">
+                <asp:ListItem Value="1">Yes</asp:ListItem>
+                <asp:ListItem Value="0">No</asp:ListItem>
+            </asp:RadioButtonList>
         </div>
         <div class="col-sm-4">
               </div>
@@ -141,7 +151,6 @@
         <asp:Button ID="btnSubmit" runat="server" Text="Submit" CssClass="btn btn-default"  OnClick="btnSubmit_Click" Width="125px" />
         <asp:Button ID="btnClear" runat="server" Text="Clear" CssClass="btn btn-default"  OnClick="btnClear_Click" Width="125px" />
         </div>
-        <asp:label class="col-sm-4" ID="lblSubmit" runat="server"></asp:label>
     </div>
 
 </fieldset>

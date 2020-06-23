@@ -28,18 +28,21 @@ namespace CaseCompetitionApp
                 SqlConnection con = new SqlConnection(mainconn);
                 con.Open();
                 SqlCommand sqlcomm = new SqlCommand();
-                string insertSql = "INSERT INTO [MEMBERS](TeamID, FirstName, LastName, PhoneNumber, Email, ShirtSize, Vegan) OUTPUT INSERTED.Id VALUES (@TeamID,@FirstName,@LastName,@PhoneNumber, @Email, @ShirtSize, @Vegan);";
+                string insertSql = "INSERT INTO [MEMBERS](TeamID, FirstName, LastName, PhoneNumber, Email, ShirtSize, Vegan) OUTPUT INSERTED.MemberID VALUES (@TeamID,@FirstName,@LastName,@PhoneNumber, @Email, @ShirtSize, @Vegan);";
                 SqlCommand cmd = new SqlCommand(insertSql, con);
 
-                cmd.Parameters.AddWithValue("@TeamID", "1");
+                cmd.Parameters.AddWithValue("@TeamID", "4");
                 cmd.Parameters.AddWithValue("@FirstName", txtFirstName.Text);
                 cmd.Parameters.AddWithValue("@LastName", txtLName.Text);
                 cmd.Parameters.AddWithValue("@PhoneNumber", txtPhone.Text);
                 cmd.Parameters.AddWithValue("@Email", txtEmail.Text);
                 cmd.Parameters.AddWithValue("@ShirtSize", txtShirt.Text);
-                cmd.Parameters.AddWithValue("@Vegan", "0");
+                cmd.Parameters.AddWithValue("@Vegan", rbtnVegan.SelectedValue);
+
+                var MemberID = (int)cmd.ExecuteScalar();
 
                 lblSubmit.Visible = true;
+                clearfields();
                 lblSubmit.Text = "Submitted";
             }
         }
