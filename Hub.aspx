@@ -8,6 +8,7 @@
     </h3>
     <br />
    
+    <div class="center">
     <asp:LoginView runat="server">     
          <RoleGroups>       
              <asp:RoleGroup Roles="admin">           
@@ -42,4 +43,5 @@
 
              </asp:RoleGroup>   
          </RoleGroups></asp:LoginView>
+    </div>
 </asp:Content>

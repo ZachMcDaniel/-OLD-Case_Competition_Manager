@@ -38,14 +38,14 @@
     font-weight: bold;
 }
 .gold {
-    background-color: rgba(255, 238, 1, 0.5);
+    background-color: rgba(255,223,0, 0.75);
     color: black;
     width: 95%;
     font-weight: bold;
 }
 
 .grey {
-    background-color: grey;
+    background-color: rgba(220,220,220, 0.75);
     color: black;
     width: 95%;
     font-weight: bold;
