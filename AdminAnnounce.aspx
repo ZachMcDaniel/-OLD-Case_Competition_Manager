@@ -14,19 +14,18 @@
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
                     <asp:BoundField DataField="Feed" SortExpression="Feed" >
-                    <ControlStyle Font-Size="Large" />
                 <ItemStyle Font-Overline="False" Font-Size="Large" />
                 </asp:BoundField>
                     <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
                 </Columns>
 
-<EditRowStyle BorderWidth="4px" BackColor="#7C6F57"></EditRowStyle>
+<EditRowStyle BorderWidth="4px" BackColor="#7C6F57" Width="95%"></EditRowStyle>
 
                 <FooterStyle BackColor="#1C5E55" ForeColor="White" Font-Bold="True" />
                 <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
                 <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
                 <RowStyle BackColor="#E3EAEB" />
-                <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
+                <SelectedRowStyle BackColor="yellow" Font-Bold="True" ForeColor="#333333" Width="100%" />
                 <SortedAscendingCellStyle BackColor="#F8FAFA" />
                 <SortedAscendingHeaderStyle BackColor="#246B61" />
                 <SortedDescendingCellStyle BackColor="#D4DFE1" />

@@ -35,13 +35,12 @@
                 <HeaderStyle CssClass="center" />
                 <ItemStyle CssClass="center" />
                 </asp:BoundField>
-            <asp:BoundField DataField="Vegan" HeaderText="Vegan" SortExpression="Vegan" >
+            <asp:BoundField DataField="Vegan" HeaderText="Vegan" SortExpression="Vegan" ApplyFormatInEditMode="True" >
                 <ControlStyle CssClass="center" />
                 <HeaderStyle CssClass="center" />
                 <ItemStyle CssClass="center" />
                 </asp:BoundField>
-            <asp:CommandField ShowEditButton="True" />
-            <asp:CommandField ButtonType="Button" ShowDeleteButton="True" />
+            <asp:CommandField ShowEditButton="True" ShowDeleteButton="True" />
         </Columns>
         <FooterStyle BackColor="#CCCC99" />
         <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
@@ -53,7 +52,24 @@
         <SortedDescendingCellStyle BackColor="#EAEAD3" />
         <SortedDescendingHeaderStyle BackColor="#575357" />
     </asp:GridView>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT * FROM [Members]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="select MemberId, TeamId, FirstName, LastName, Email, FoodAllergy, ShirtSize, PhoneNumber, CASE WHEN Vegan = 1 THEN 'Yes' ELSE 'No' END AS Vegan From [Members] where TeamID = (select TeamID FROM TEAM where TeamName = (select Username FROM AspNetUsers where Id = @ID))"  UpdateCommand="UPDATE [Members] SET [FirstName] = @FirstName, [LastName] = @LastName, [Email] = @Email, [PhoneNumber] = @PhoneNumber, [ShirtSize] = @ShirtSize, [FoodAllergy] = @FoodAllergy, [Vegan] = @Vegan WHERE [MemberID] = @original_MemberID" OldValuesParameterFormatString="original_{0}" DeleteCommand="DELETE FROM [Members] where [MemberID] = @original_MemberID">
+<SelectParameters>
+    <asp:Parameter Name="ID" Type="String"/>
+</SelectParameters>        
+        <DeleteParameters>
+              <asp:Parameter Name="original_MemberID" Type="String" />
+          </DeleteParameters>
+         <UpdateParameters>
+              <asp:Parameter Name="MemberID" Type="String" />
+              <asp:Parameter Name="FirstName" Type="String" />
+                   <asp:Parameter Name="LastName" Type="String" />
+              <asp:Parameter Name="Email" Type="String" />
+              <asp:Parameter Name="PhoneNumber" Type="String" />
+              <asp:Parameter Name="ShirtSize" Type="String" />
+              <asp:Parameter Name="FoodAllergy" Type="String" />
+              <asp:Parameter Name="Vegan" Type="string" />
+          </UpdateParameters>
+                </asp:SqlDataSource>
         </div>
 
     <div class="col-md-12">
@@ -152,7 +168,7 @@
         <asp:Button ID="btnClear" runat="server" Text="Clear" CssClass="btn btn-default"  OnClick="btnClear_Click" Width="125px" />
         </div>
     </div>
-
 </fieldset>
     </div>
+
 </asp:Content>

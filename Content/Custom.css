@@ -40,7 +40,7 @@
 .gold {
     background-color: rgba(255, 238, 1, 0.5);
     color: black;
-    width: 95%;
+    width: 100%;
     font-weight: bold;
 }
 
@@ -53,6 +53,7 @@
 .wide {
     width: 95%;
     font-weight: bold;
+}
 
 .expandbox{
     background-color: black;
@@ -75,6 +76,3 @@
     color:yellow;
 }
 
-.gridfont{
-    font-size: 24em;
-}
