@@ -70,15 +70,12 @@
                 </asp:SqlDataSource>
         </div>
 
-    <div class="col-md-12">
         <br />
-        <div class="col-md-6">
+        <div class="col-md-3">
                 <asp:Button ID="BtnNewMember" CssClass="btn btn-default grey" runat="server" Text="Add Members" OnClick="BtnAddMember_Click" />
         </div>
-        <div class ="col-md-6">
+        <div class ="col-md-9">
                  <asp:label class="col-sm-4" ID="lblSubmit" runat="server"></asp:label>
-        </div>
-
         </div>
     <div class="col-md-12"> 
 <fieldset id="NewMember"  runat="server" method="post" class="form-horizontal expandedbox" defaultfocus="txtEmail1" defaultbutton="btnSubmit">
@@ -167,6 +164,10 @@
         </div>
     </div>
 </fieldset>
+    </div>
+    <div class="col-md-12">
+        <br />
+        <hr />
     </div>
 
 </asp:Content>
