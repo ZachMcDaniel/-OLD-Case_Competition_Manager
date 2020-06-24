@@ -17,20 +17,6 @@
                 </asp:BoundField>
                     <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
                 </Columns>
-
-<<<<<<< HEAD
-<EditRowStyle BorderWidth="4px" BackColor="#7C6F57" Width="95%"></EditRowStyle>
-
-                <FooterStyle BackColor="#1C5E55" ForeColor="White" Font-Bold="True" />
-                <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
-                <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
-                <RowStyle BackColor="#E3EAEB" />
-                <SelectedRowStyle BackColor="yellow" Font-Bold="True" ForeColor="#333333" Width="100%" />
-                <SortedAscendingCellStyle BackColor="#F8FAFA" />
-                <SortedAscendingHeaderStyle BackColor="#246B61" />
-                <SortedDescendingCellStyle BackColor="#D4DFE1" />
-                <SortedDescendingHeaderStyle BackColor="#15524A" />
-=======
 <EditRowStyle BorderWidth="4px"></EditRowStyle>
 
                 <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
@@ -41,9 +27,8 @@
                 <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
                 <SortedDescendingCellStyle BackColor="#E5E5E5" />
                 <SortedDescendingHeaderStyle BackColor="#242121" />
->>>>>>> b46fce34cca932edd5805afa17140dc92c50ffc2
             </asp:GridView>
-            <asp:SqlDataSource ID="SQLNews" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT * FROM [News]" UpdateCommand="UPDATE [News] SET [Feed] = @Feed WHERE [NewsId] = @original_NewsId" OldValuesParameterFormatString="original_{0}" DeleteCommand="DELETE FROM [News] where [NewsId] = @original_NewsId">
+            <asp:SqlDataSource ID="SQLNews" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT * FROM [News] ORDER BY NewsTime desc" UpdateCommand="UPDATE [News] SET [Feed] = @Feed WHERE [NewsId] = @original_NewsId" OldValuesParameterFormatString="original_{0}" DeleteCommand="DELETE FROM [News] where [NewsId] = @original_NewsId">
          <DeleteParameters>
               <asp:Parameter Name="original_NewsId" Type="String" />
           </DeleteParameters>

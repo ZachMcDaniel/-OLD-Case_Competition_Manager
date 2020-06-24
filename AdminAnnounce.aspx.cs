@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
@@ -23,14 +24,17 @@ namespace CaseCompetitionApp
         {
             if (Page.IsValid)
             {
+                string Timestamp = DateTime.Now.ToString();
+
                 string mainconn = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
                 SqlConnection con = new SqlConnection(mainconn);
                 con.Open();
                 SqlCommand sqlcomm = new SqlCommand();
-                string insertSql = "INSERT INTO [News](Feed) OUTPUT INSERTED.NewsId VALUES (@Feed);";
+                string insertSql = "INSERT INTO [News](Feed, NewsTime) OUTPUT INSERTED.NewsId VALUES (@Feed, @TimeStamp);";
                 SqlCommand cmd = new SqlCommand(insertSql, con);
 
                 cmd.Parameters.AddWithValue("@Feed", txtNews.Text);
+                cmd.Parameters.AddWithValue("@TimeStamp", Timestamp);
 
                 var NewsId = (int)cmd.ExecuteScalar();
 
