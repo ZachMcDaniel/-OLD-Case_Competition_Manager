@@ -2,7 +2,7 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h1 class="center gold" >CyHawk Case Competition</h1>
-    <div class="jumbotron">
+    <div class="jumbotron center">
         
         <asp:Image ID="Image1" runat="server" />
     </div>
@@ -20,8 +20,8 @@
             <p class="center">
                 List of This Year's Judges and Their Companies
             </p>
-            <p>
-                 <p>                <a class="btn btn-default gold"  href="../JudgeInfo">View Judges &raquo;</a>
+            <p>                
+                 <a class="btn btn-default grey"  href="../JudgeInfo">View Judges &raquo;</a>
             </p>
         </div>
         <div class="col-md-4">
@@ -29,8 +29,8 @@
             <p class="center">
                 List of This Year's Teams
             </p>
-            <p>                <a class="btn btn-default gold"  href="../TeamInfo">View Teams &raquo;</a>            
-
+            <p>                
+                <a class="btn btn-default grey"  href="../TeamInfo">View Teams &raquo;</a>            
             </p>
         </div>
         <div class="col-md-4">
