@@ -1,8 +1,9 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="TeamMGMT.aspx.cs" Inherits="CaseCompetitionApp.TeamMGMT" %>
+﻿<%@ Page Title="Team Management" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="TeamMGMT.aspx.cs" Inherits="CaseCompetitionApp.TeamMGMT" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <h2>Team Managment</h2>
-    <div class="col-md-12 center">
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="MemberID" DataSourceID="SqlDataSource1" Width="95%" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" AllowSorting="True">
+    <h2 class="center gold">Team Managment</h2>
+
+    <div class="row center">
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="MemberID" DataSourceID="SqlDataSource1" Width="100%" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" AllowSorting="True">
         <Columns>
             <asp:BoundField DataField="FirstName" HeaderText="First Name" SortExpression="FirstName" >
                 <ControlStyle CssClass="center" />
@@ -44,7 +45,7 @@
         <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
         <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
         <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
-        <SelectedRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
+        <SelectedRowStyle BackColor="#FFDF00" Font-Bold="True" ForeColor="Black" />
         <SortedAscendingCellStyle BackColor="#F7F7F7" />
         <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
         <SortedDescendingCellStyle BackColor="#E5E5E5" />
@@ -70,13 +71,23 @@
                 </asp:SqlDataSource>
         </div>
 
-        <br />
+    <div class="row col-md-12">
+      <br />
+    </div>
+
+    <div class="row">
         <div class="col-md-3">
                 <asp:Button ID="BtnNewMember" CssClass="btn btn-default grey" runat="server" Text="Add Members" OnClick="BtnAddMember_Click" />
         </div>
-        <div class ="col-md-9">
-                 <asp:label class="col-sm-4" ID="lblSubmit" runat="server"></asp:label>
+        <div class="col-md-9">
+
         </div>
+        </div>
+
+     <div class="col-md-12">
+      <br />
+    </div>
+
     <div class="col-md-12"> 
 <fieldset id="NewMember"  runat="server" method="post" class="form-horizontal expandedbox" defaultfocus="txtEmail1" defaultbutton="btnSubmit">
     <div class="col-md-12">

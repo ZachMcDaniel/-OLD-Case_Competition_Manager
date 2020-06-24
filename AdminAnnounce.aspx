@@ -1,8 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AdminAnnounce.aspx.cs" Inherits="CaseCompetitionApp.AdminAnnounce" %>
+﻿<%@ Page Title="Admin Announcements" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AdminAnnounce.aspx.cs" Inherits="CaseCompetitionApp.AdminAnnounce" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-     <h1 class=" center gold">
+     <h2 class=" center gold">
        Update News Feed
-    </h1>
+    </h2>
     <h3>
         Add or Remove Announcements on the News Page
     </h3>
@@ -42,7 +42,7 @@
             <br />
     </div>
     </div>
-    <div class="col-md-12">
+    <div class="row">
             <div class="col-md-8">
             <asp:TextBox ID="txtNews" runat="server" class="txtbox"></asp:TextBox>
                 </div>

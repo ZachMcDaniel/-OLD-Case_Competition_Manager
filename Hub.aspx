@@ -1,10 +1,10 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Hub.aspx.cs" Inherits="CaseCompetitionApp.Hub" %>
+﻿<%@ Page Title="The Hub" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Hub.aspx.cs" Inherits="CaseCompetitionApp.Hub" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <H1 class="center gold">
+    <H2 class="center gold">
         Competition Hub
-    </H1>
+    </H2>
     <h3 class="center">
-        Access to all Team and Case Information for Competitors
+        Access to all Team and Case Information
     </h3>
    
    <div class="col-md-12">
@@ -19,10 +19,10 @@
                      <asp:Button ID="BTNAnnounce" runat="server" Text="Announcements"  OnClick="BTNAnnounce_Click" Class="btn btn-default wide grey"/>
                          </div>
                      <div class="col-md-4">
-                     <asp:Button ID="BTNDeliv" runat="server" Text="Deliverable Upload"  OnClick="BTNDeliv_Click" Class="btn btn-default wide grey"/>
+                     <asp:Button ID="BTNDeliv" runat="server" Text="Upload Case Files"  OnClick="BTNDeliv_Click" Class="btn btn-default wide grey"/>
                          </div>
                      <div class="col-md-4">
-                     <asp:Button ID="BTNDownCaseFile" runat="server" Text="Download Case Files"  OnClick="BTNDownCaseFile_Click" Class="btn btn-default wide grey"/>
+                     <asp:Button ID="BTNDownCaseFile" runat="server" Text="Download Submissions"  OnClick="BTNDownCaseFile_Click" Class="btn btn-default wide grey"/>
                          </div>
                  </ContentTemplate>        
              </asp:RoleGroup>   
@@ -50,10 +50,10 @@
                       <asp:Button ID="BTNTeamMGMT" runat="server" Text="Team Managment"  OnClick="BTNTeamMGMT_Click" Class="btn btn-default wide grey"/>
                         </div>
                       <div class="col-md-4">
-                      <asp:Button ID="BTNDeliverables" runat="server" Text="Deliverables"  OnClick="BTNDeliverables_Click" Class="btn btn-default wide grey "/>
+                      <asp:Button ID="BTNDeliverables" runat="server" Text="Download Case Files"  OnClick="BTNDeliverables_Click" Class="btn btn-default wide grey "/>
                           </div>
                       <div class="col-md-4">
-                      <asp:Button ID="BTNSubmissions" runat="server" Text="Submissions"  OnClick="BTNSubmissions_Click" Class="btn btn-default wide grey"/>
+                      <asp:Button ID="BTNSubmissions" runat="server" Text="Upload Submissions"  OnClick="BTNSubmissions_Click" Class="btn btn-default wide grey"/>
                           </div>
                  </ContentTemplate>        
 

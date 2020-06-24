@@ -1,15 +1,14 @@
 ﻿<%@ Page Title="Team Information" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="TeamInfo.aspx.cs" Inherits="CaseCompetitionApp.TeamInfo" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <h1 class="center gold"><%: Title %></h1>
-    <br />
+    <h2 class="center gold"><%: Title %></h2>
     <h3>
         View Team Information for the CyHawk Case Competition 2020
     </h3>
-    <div class="col-md-12">
+    <div class="row col-md-12">
         <br />
     </div>
 
-    <div class="col-md-12">
+    <div class="row" >
     <div class="col-md-7">
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" Width="95%" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" DataKeyNames="TeamID">
             <Columns>
@@ -37,7 +36,7 @@
             <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
             <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
             <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
-            <SelectedRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
+            <SelectedRowStyle BackColor="#FFDF00" Font-Bold="True" ForeColor="Black" />
             <SortedAscendingCellStyle BackColor="#F7F7F7" />
             <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
             <SortedDescendingCellStyle BackColor="#E5E5E5" />
@@ -76,7 +75,8 @@
         </asp:SqlDataSource>
     </div>
 </div>
-    <div class="col-md-12">
+    <div class="row col-md-12">
     <br />
+        <hr />
         </div>
 </asp:Content>
