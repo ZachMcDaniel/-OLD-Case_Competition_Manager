@@ -168,6 +168,7 @@
     <Content Include="AdminAnnounce.aspx" />
     <Content Include="AdminDeliverable.aspx" />
     <Content Include="CaseFiles.aspx" />
+    <Content Include="ContactInfo.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -202,6 +203,7 @@
     <Content Include="Maintenance\Default.aspx" />
     <Content Include="Images\Tippie Arches.jpg" />
     <Content Include="News.aspx" />
+    <Content Include="Results.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -370,6 +372,13 @@
     <Compile Include="CaseFiles.aspx.designer.cs">
       <DependentUpon>CaseFiles.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ContactInfo.aspx.cs">
+      <DependentUpon>ContactInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContactInfo.aspx.designer.cs">
+      <DependentUpon>ContactInfo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -424,6 +433,13 @@
       <DependentUpon>News.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Results.aspx.cs">
+      <DependentUpon>Results.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Results.aspx.designer.cs">
+      <DependentUpon>Results.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
