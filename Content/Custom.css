@@ -37,12 +37,31 @@
     width: 100%;
     font-weight: bold;
 }
+
+.black2 {
+    color: black;
+    width: 100%;
+    font-weight: bold;
+}
+
+
+
+
 .gold {
     background-color: rgba(255,223,0, 0.75);
     color: black;
     width: 100%;
     font-weight: bold;
 }
+
+
+.gold2 {
+    background-color: rgba(255,223,0, 0.75);
+    color: black;
+    width: 20%;
+    font-weight: bold;
+}
+
 
 .grey {
     background-color: rgba(220,220,220, 0.75);
