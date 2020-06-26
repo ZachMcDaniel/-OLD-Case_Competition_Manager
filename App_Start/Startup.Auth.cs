@@ -11,7 +11,8 @@ using CaseCompetitionApp.Models;
 
 namespace CaseCompetitionApp
 {
-    public partial class Startup {
+    public partial class Startup
+    {
 
         // For more information on configuring authentication, please visit https://go.microsoft.com/fwlink/?LinkId=301883
         public void ConfigureAuth(IAppBuilder app)
@@ -24,6 +25,8 @@ namespace CaseCompetitionApp
             // Enable the application to use a cookie to store information for the signed in user
             // and to use a cookie to temporarily store information about a user logging in with a third party login provider
             // Configure the sign in cookie
+            app.CreatePerOwinContext<ApplicationRoleManager>(ApplicationRoleManager.Create);
+
             app.UseCookieAuthentication(new CookieAuthenticationOptions
             {
                 AuthenticationType = DefaultAuthenticationTypes.ApplicationCookie,

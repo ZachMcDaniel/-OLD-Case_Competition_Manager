@@ -201,8 +201,8 @@
     <None Include="Properties\PublishProfiles\casecompetition - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Hub.aspx" />
-    <Content Include="Maintenance\Default.aspx" />
     <Content Include="Images\Tippie Arches.jpg" />
+    <Content Include="Maintenance\Default.aspx" />
     <Content Include="News.aspx" />
     <Content Include="Results.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -420,7 +420,6 @@
     </Compile>
     <Compile Include="Maintenance\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Maintenance\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>

@@ -10,6 +10,14 @@
         <h4>Create a new account</h4>
         <hr />
         <asp:ValidationSummary runat="server" CssClass="text-danger" />
+         <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="username" CssClass="col-md-2 control-label">Team Name</asp:Label>
+            <div class="col-md-10">
+                <asp:TextBox runat="server" ID="username" CssClass="form-control" />
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="username"
+                    CssClass="text-danger" ErrorMessage="A team name is required." />
+            </div>
+        </div>
         <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="Email" CssClass="col-md-2 control-label">Email</asp:Label>
             <div class="col-md-10">

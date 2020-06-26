@@ -52,6 +52,17 @@
                         <li><a runat="server" href="~/Hub">Hub</a></li>
                         <li><a runat="server" href="~/News">News</a></li>
                         <li><a runat="server" href="~/TeamInfo">Team Info</a></li>
+                         <li>
+                             <asp:LoginView runat="server">
+                            <RoleGroups>
+                                <asp:RoleGroup Roles="admin">
+                                    <ContentTemplate>
+                                             <a runat="server" href="~/Maintenance">Admin</a>
+                                        </ContentTemplate>
+                                    </asp:RoleGroup>
+                                </RoleGroups>
+                                 </asp:LoginView>
+                                 </li>
                     </ul>
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>

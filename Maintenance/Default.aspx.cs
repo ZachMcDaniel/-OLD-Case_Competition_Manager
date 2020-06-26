@@ -14,8 +14,8 @@ namespace CaseCompetitionApp.Maintenance
 {
     public partial class Default : System.Web.UI.Page
     {
-        ApplicationUserManager userMgr;
         ApplicationRoleManager roleMgr;
+        ApplicationUserManager userMgr;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -24,9 +24,13 @@ namespace CaseCompetitionApp.Maintenance
         }
 
         // Select methods
+        public IQueryable<IdentityRole> grdRoles_GetData()
+        {
+            return roleMgr.Roles;
+        }
         public IQueryable<ApplicationUser> grdUsers_GetData()
         {
-            return userMgr.Users;
+           return userMgr.Users;
         }
 
         public object dvRoles_GetItem([Control] string grdRoles)
