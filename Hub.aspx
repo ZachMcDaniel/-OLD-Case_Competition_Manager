@@ -62,5 +62,6 @@
     </div>
     <div class="col-md-12">
        <br />
+        <hr />
    </div>
 </asp:Content>

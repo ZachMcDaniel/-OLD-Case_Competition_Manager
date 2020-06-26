@@ -52,6 +52,7 @@
                         <li><a runat="server" href="~/Hub">Hub</a></li>
                         <li><a runat="server" href="~/News">News</a></li>
                         <li><a runat="server" href="~/TeamInfo">Team Info</a></li>
+<<<<<<< HEAD
                          <li>
                              <asp:LoginView runat="server">
                             <RoleGroups>
@@ -63,6 +64,9 @@
                                 </RoleGroups>
                                  </asp:LoginView>
                                  </li>
+=======
+                         <li><a runat="server" href="~/Results">Results</a></li>
+>>>>>>> 9294ceca7407f13fe7344f6034fd42f5f68a0a68
                     </ul>
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
@@ -88,7 +92,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-               <p class="center">  <a runat="server" class="center black2" href="~/ContactInfo">Contact Info</a> </p>
+               <p class="center">  <a runat="server" class="center black2" href="~/ContactInfo">Contact Us</a> </p>
                 <p class="center">&copy; <%: DateTime.Now.Year %> - University of Iowa Tippie Technology and Innovation</p>
             </footer>
         </div>
