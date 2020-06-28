@@ -89,8 +89,8 @@
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
-            <footer>
-               <p class="center">  <a runat="server" class="center black2" href="~/ContactInfo">Contact Us</a> </p>
+            <footer class="black">
+               <p class="center">  <a runat="server" class="center white" href="~/ContactInfo">Contact Us</a> </p>
                 <p class="center">&copy; <%: DateTime.Now.Year %> - University of Iowa Tippie Technology and Innovation</p>
             </footer>
         </div>
