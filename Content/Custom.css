@@ -59,7 +59,6 @@
 .dropdown:hover .dropbtn {
     color: white;
     background-color: #222222;
-    ;
 }
 
 .center{
@@ -180,5 +179,11 @@
     display: flex;
     justify-content: center;
     padding: 15px 0
+}
+
+.div_text_center {
+    text-align: center;
+    margin-left: 22.5%;
+    margin-right: 30%;
 }
 

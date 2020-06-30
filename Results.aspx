@@ -10,7 +10,7 @@
             <p class="center">                
                 <img src="Images/first.jpeg" /> <%--Change the image for teams here--%>
             </p>
-            <div class="center">
+            <div class="div_text_center">
                 <asp:GridView ID="GridView1" HorizontalAlign="Center" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource3" ForeColor="Black" GridLines="Horizontal" Width="200px">
                     
                     <Columns>
@@ -53,7 +53,7 @@
             <p class="center">                
                 <img src="Images/second.jpeg" />  <%--Change the image for teams here--%>  
             </p>
-            <p class="center">
+            <div class="div_text_center">
                 <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" Width="200px">
                     <Columns>
                         <asp:BoundField DataField="FirstName" HeaderText="First Name" SortExpression="FirstName">
@@ -84,7 +84,7 @@
                         <asp:Parameter DefaultValue="29" Name="TeamID" Type="Int32"></asp:Parameter> <%--change default value to change team names--%>
                     </SelectParameters>
                 </asp:SqlDataSource>
-            </p>
+            </div>
         </div>
 
         <div class="center col-md-4">
@@ -95,7 +95,7 @@
             <p class="center">                
                 <img src="Images/third.jpeg" />  <%--Change the image for teams here--%>
             </p>
-            <p class="center">
+            <div class="div_text_center">
                 <asp:GridView ID="GridView3" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource2" ForeColor="Black" GridLines="Horizontal" Width="200px">
                     <Columns>
                         <asp:BoundField DataField="FirstName" HeaderText="First Name" SortExpression="FirstName">
@@ -125,7 +125,7 @@
                         <asp:Parameter DefaultValue="22" Name="TeamID" Type="Int32" /> <%--change default value to change team names--%>
                     </SelectParameters>
                 </asp:SqlDataSource>
-            </p>
+            </div>
            
         </div>
     </div>
