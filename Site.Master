@@ -98,8 +98,8 @@
       <div class="row">
         <p class="center col-md-12">  <a runat="server" class="center white" href="~/ContactInfo">Contact Us</a> </p>
         <p class="center whitefoot col-md-12">&copy; <%: DateTime.Now.Year %> - University of Iowa Tippie Technology and Innovation</p>
-   </div>
           </footer>
+            </div>
     </form>
 </body>
 </html>
