@@ -1,5 +1,6 @@
 ﻿body {
     width:100%;
+    margin: 0;
 }
 
 .btn .btn-default {
@@ -11,9 +12,61 @@
     background-color: #CCB576;
  }
 
+.dropbtn {
+    padding: 16px;
+    background-color: #222222;
+    border: none;
+    color: #959D9D;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    background-color: #222222;
+    color: #959D9D;
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    background-color: #222222;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        padding: 12px 16px;
+        color: #959D9D;
+        text-decoration: none;
+        display: block;
+    }
+
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {
+            color: white;
+        }
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    color: white;
+    background-color: #222222;
+    ;
+}
+
 .center{
     text-align:center;
     align-content: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 .gridcenter {
     text-align: center;
@@ -55,6 +108,11 @@
     .white:hover {
         color: rgba(255,223,0,0.75);
     }
+
+.whitefoot {
+    color: white;
+    font-weight: bolder;
+}
 
 .gold {
     background-color: rgba(255, 223, 0, 0.75);
@@ -117,6 +175,10 @@
     position: relative;
     background-color: black;
     width: 100%;
-    margin-bottom: 0px;
+    margin-bottom: 0;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0
 }
 
