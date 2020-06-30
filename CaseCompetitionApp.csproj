@@ -193,7 +193,10 @@
     <Content Include="Images\BLOG-IA-vs-ISU_930x402.jpg" />
     <Content Include="Images\CyHawk.jpg" />
     <Content Include="Images\CyHawk1.ico" />
+    <Content Include="Images\first.jpeg" />
     <Content Include="Images\Herky-vs-Cy.jpg" />
+    <Content Include="Images\second.jpeg" />
+    <Content Include="Images\third.jpeg" />
     <Content Include="JudgeInfo.aspx" />
     <Content Include="Maintenance\Web.config" />
     <None Include="Properties\PublishProfiles\casecompetition - FTP.pubxml" />
@@ -420,6 +423,7 @@
     </Compile>
     <Compile Include="Maintenance\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Maintenance\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>

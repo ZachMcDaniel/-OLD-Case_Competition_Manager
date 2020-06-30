@@ -1,4 +1,5 @@
 ﻿body {
+    width:100%;
 }
 
 .btn .btn-default {
@@ -13,6 +14,11 @@
 .center{
     text-align:center;
     align-content: center;
+}
+.gridcenter {
+    text-align: center;
+    align-content: center;
+    padding-left: 25px;
 }
 
 .jumbotron {
@@ -29,6 +35,7 @@
     background-repeat: no-repeat;
     background-color: transparent;
 }
+
 .black {
     background-color: black;
     color: white;
@@ -41,6 +48,13 @@
     width: 100%;
     font-weight: bold;
 }
+.white {
+    color: white;
+    font-weight: bolder;
+}
+    .white:hover {
+        color: rgba(255,223,0,0.75);
+    }
 
 .gold {
     background-color: rgba(255, 223, 0, 0.75);
@@ -97,5 +111,12 @@
 
 .expandbox :hover{
     color:yellow;
+}
+
+.footer {
+    position: relative;
+    background-color: black;
+    width: 100%;
+    margin-bottom: 0px;
 }
 

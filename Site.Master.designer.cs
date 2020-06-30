@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CaseCompetitionApp {
-    
-    
-    public partial class SiteMaster {
-        
+namespace CaseCompetitionApp
+{
+
+
+    public partial class SiteMaster
+    {
+
         /// <summary>
         /// MainContent control.
         /// </summary>

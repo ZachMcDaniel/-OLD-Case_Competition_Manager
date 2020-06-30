@@ -15,7 +15,7 @@
     <link href="~/Images/CyHawk1.ico" rel="shortcut icon" type="image/x-icon" />
 
 </head>
-<body>
+<body class="body">
     <form runat="server">
         <asp:ScriptManager runat="server">
             <Scripts>
@@ -88,10 +88,10 @@
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
-            <footer>
-               <p class="center">  <a runat="server" class="center black2" href="~/ContactInfo">Contact Us</a> </p>
-                <p class="center">&copy; <%: DateTime.Now.Year %> - University of Iowa Tippie Technology and Innovation</p>
-            </footer>
+    <footer class="footer">
+        <p class="center">  <a runat="server" class="center white" href="~/ContactInfo">Contact Us</a> </p>
+        <p class="center white">&copy; <%: DateTime.Now.Year %> - University of Iowa Tippie Technology and Innovation</p>
+    </footer>
         </div>
     </form>
 </body>
