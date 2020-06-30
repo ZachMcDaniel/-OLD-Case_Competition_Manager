@@ -118,7 +118,7 @@
     color: black;
     width: 100%;
     font-weight: bold;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 .grey {
@@ -186,4 +186,5 @@
     margin-left: 22.5%;
     margin-right: 30%;
 }
+
 

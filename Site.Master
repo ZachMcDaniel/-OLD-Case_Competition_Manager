@@ -96,7 +96,9 @@
             <hr />
   <footer class="footer">
       <div class="row">
-        <p class="center col-md-12">  <a runat="server" class="center white" href="~/ContactInfo">Contact Us</a> </p>
+        <p class="center col-md-12" <%--style="text-align:right"--%>>  <a runat="server" class="center white" href="~/ContactInfo">Contact Us</a> </p>
+        <p class="center col-md-12" <%--style="text-align:left"--%>>  <a runat="server" class="center white" href="~/CompetitionSupport">Competition Support</a> </p>
+          <hr style="border: 1px solid rgb(255,223,0,0.75)"/>
         <p class="center whitefoot col-md-12">&copy; <%: DateTime.Now.Year %> - University of Iowa Tippie Technology and Innovation</p>
    </div>
           </footer>
