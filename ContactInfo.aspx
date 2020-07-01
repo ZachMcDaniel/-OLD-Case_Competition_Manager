@@ -6,6 +6,6 @@
 
      <h3>
         We will get back to you as soon as possible!
-        If you do not get a response within 10 minutes contact: casecompetitionmanager@gmail.com
+        If you do not get a response within 2 business days contact: casecompetitionmanager@gmail.com
     </h3>
 </asp:Content>

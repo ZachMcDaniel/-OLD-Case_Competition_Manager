@@ -4,9 +4,9 @@
        
         <div class="center col-md-4">
             <h2 class="center">1st Place</h2>
-            <p class="center">
+            <h4 class="center">
                 Sons of Analysts
-            </p>
+            </h4>
             <p class="center">                
                 <img src="Images/first.jpeg" /> <%--Change the image for teams here--%>
             </p>
@@ -47,9 +47,9 @@
 
         <div class="center col-md-4">
             <h2 class="center">2nd Place</h2>
-            <p class="center">
+            <h4 class="center">
                 AKA Consulting
-            </p>
+            </h4>
             <p class="center">                
                 <img src="Images/second.jpeg" />  <%--Change the image for teams here--%>  
             </p>
@@ -89,9 +89,9 @@
 
         <div class="center col-md-4">
             <h2 class="center">3rd Place</h2>
-            <p class="center">
+            <h4 class="center">
                 The Zip Codes
-            </p>
+            </h4>
             <p class="center">                
                 <img src="Images/third.jpeg" />  <%--Change the image for teams here--%>
             </p>
