@@ -2,7 +2,111 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h2 class="center gold">Team Managment</h2>
 
-    <div class="row center">
+    <asp:gridview id="gvTeam"         
+    autogeneratecolumns="False"   
+    emptydatatext="No data available." CssClass="GridViewStyle"         
+    runat="server" DataKeyNames="ProductID"
+    OnRowEditing="gvTeam_RowEditing" <%--OnRowCancelingEdit="gvTeam_RowCancelingEdit"--%>        
+    onrowupdating="gvTeam_RowUpdating" onrowdatabound="gvTeam_RowDataBound">
+    <RowStyle CssClass="RowStyle" />             
+    <FooterStyle CssClass="RowStyle" />                       
+    <SelectedRowStyle CssClass="SelectedRowStyle" />   
+    <HeaderStyle CssClass="HeaderStyle" />             
+    <AlternatingRowStyle CssClass="AltRowStyle" />
+    <Columns>                           
+         <asp:TemplateField headertext="First Name">
+            <HeaderStyle HorizontalAlign="Left" Width="200px" />
+            <ItemStyle HorizontalAlign="Left" Width="200px"/>
+            <ItemTemplate> <%#Eval("FirstName")%></ItemTemplate>
+            <EditItemTemplate>
+              <asp:TextBox id="txtFirst" Width="170px" text='<%# Eval("FirstName")%>' runat="server"/>                                            
+            </EditItemTemplate>                   
+        </asp:TemplateField>    
+        <asp:TemplateField headertext="Last Name">
+            <HeaderStyle HorizontalAlign="Left" Width="200px" />
+            <ItemStyle HorizontalAlign="Left" Width="200px"/>
+            <ItemTemplate> <%#Eval("LastName")%></ItemTemplate>
+            <EditItemTemplate>
+              <asp:TextBox id="txtLast" Width="170px" text='<%# Eval("LastName")%>' runat="server"/>                                            
+            </EditItemTemplate>                   
+        </asp:TemplateField>
+        <asp:TemplateField headertext="Email">
+            <HeaderStyle HorizontalAlign="Left" Width="200px" />
+            <ItemStyle HorizontalAlign="Left" Width="200px"/>
+            <ItemTemplate> <%#Eval("Email")%></ItemTemplate>
+            <EditItemTemplate>
+              <asp:TextBox id="txtTeamEmail" Width="170px" text='<%# Eval("Email")%>' runat="server"/>                                            
+            </EditItemTemplate>                   
+        </asp:TemplateField>
+        <asp:TemplateField headertext="Food Allergy">
+            <HeaderStyle HorizontalAlign="Left" Width="200px" />
+            <ItemStyle HorizontalAlign="Left" Width="200px"/>
+            <ItemTemplate> <%#Eval("FoodAllergy")%></ItemTemplate>
+            <EditItemTemplate>
+              <asp:TextBox id="txtFood" Width="170px" text='<%# Eval("FoodAllergy")%>' runat="server"/>                                            
+            </EditItemTemplate>                   
+        </asp:TemplateField>
+        <asp:TemplateField headertext="Shirt Size">
+            <HeaderStyle HorizontalAlign="Left" Width="150px" />
+            <ItemStyle HorizontalAlign="Left" />
+            <ItemTemplate> <%#Eval("ShirtSize")%></ItemTemplate>
+            <EditItemTemplate>
+             <asp:DropDownList ID="ddlShirt" runat="server" > </asp:DropDownList>                                      
+            </EditItemTemplate>                   
+        </asp:TemplateField>
+        <asp:TemplateField headertext="Phone Number">
+            <HeaderStyle HorizontalAlign="Left" Width="200px" />
+            <ItemStyle HorizontalAlign="Left" Width="200px"/>
+            <ItemTemplate> <%#Eval("PhoneNumber")%></ItemTemplate>
+            <EditItemTemplate>
+              <asp:TextBox id="txtPhoneNumb" Width="170px" text='<%# Eval("PhoneNumber")%>' runat="server"/>                                            
+            </EditItemTemplate>                   
+        </asp:TemplateField>
+
+        <asp:TemplateField headertext="Vegan">
+            <HeaderStyle HorizontalAlign="Left" Width="150px" />
+            <ItemStyle HorizontalAlign="Left" />
+            <ItemTemplate> <%#Eval("Vegan")%></ItemTemplate>
+            <EditItemTemplate>                  
+                <asp:PlaceHolder ID="plVegan" runat="server"></asp:PlaceHolder>
+                <asp:HiddenField ID="hflVegan" Value='<%#Eval("Vegan")%>' runat="server" />
+            </EditItemTemplate>                   
+        </asp:TemplateField>    
+
+                                    
+        <asp:TemplateField>
+        <ItemTemplate>
+           <asp:LinkButton ID="btnedit" runat="server" CommandName="Edit" Text="Edit"/>                 
+        </ItemTemplate>
+        <EditItemTemplate>
+           <asp:LinkButton ID="btnupdate" runat="server" CommandName="Update" Text="Update" />
+           <asp:LinkButton ID="btncancel" runat="server" CommandName="Cancel" Text="Cancel"/>               
+        </EditItemTemplate>             
+        </asp:TemplateField>                                         
+    </Columns>
+</asp:gridview>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%--    <div class="row center">
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="MemberID" DataSourceID="SqlDataSource1" Width="100%" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" AllowSorting="True">
         <Columns>
             <asp:BoundField DataField="FirstName" HeaderText="First Name" SortExpression="FirstName" >
@@ -69,7 +173,11 @@
               <asp:Parameter Name="Vegan" Type="string" />
           </UpdateParameters>
                 </asp:SqlDataSource>
-        </div>
+        </div>--%>
+
+
+
+
 
     <div class="row col-md-12">
       <br />
