@@ -75,8 +75,5 @@
         </asp:SqlDataSource>
     </div>
 </div>
-    <div class="row col-md-12">
-    <br />
-        <hr />
-        </div>
+  
 </asp:Content>

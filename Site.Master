@@ -89,7 +89,7 @@
                 </div>
             </div>
         </div>
-        <div class="container body-content" style="min-height:100vh"> <%--the style is what sets footer to bottom of the page--%>
+        <div class="container body-content" style="min-height:60vh"> <%--the style is what sets footer to bottom of the page--%>
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             </div>
