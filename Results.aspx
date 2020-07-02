@@ -4,14 +4,19 @@
        
         <div class="center col-md-4">
             <h2 class="center">1st Place</h2>
-            <p class="center">
+            <h4 class="center">
                 Sons of Analysts
-            </p>
+            </h4>
             <p class="center">                
                 <img src="Images/first.jpeg" /> <%--Change the image for teams here--%>
             </p>
+<<<<<<< HEAD
             <p class="center">
                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource3" ForeColor="Black" GridLines="Horizontal" Width="200px">
+=======
+            <div class="div_text_center">
+                <asp:GridView ID="GridView1" HorizontalAlign="Center" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource3" ForeColor="Black" GridLines="Horizontal" Width="200px">
+>>>>>>> c22a22f6b18d2ae0a841dc6a3ad9b69dca231472
                     
                     <Columns>
                         <asp:BoundField DataField="FirstName" HeaderText="First Name" SortExpression="FirstName" >
@@ -48,13 +53,13 @@
 
         <div class="center col-md-4">
             <h2 class="center">2nd Place</h2>
-            <p class="center">
+            <h4 class="center">
                 AKA Consulting
-            </p>
+            </h4>
             <p class="center">                
                 <img src="Images/second.jpeg" />  <%--Change the image for teams here--%>  
             </p>
-            <p class="center">
+            <div class="div_text_center">
                 <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" Width="200px">
                     <Columns>
                         <asp:BoundField DataField="FirstName" HeaderText="First Name" SortExpression="FirstName">
@@ -85,18 +90,18 @@
                         <asp:Parameter DefaultValue="29" Name="TeamID" Type="Int32"></asp:Parameter> <%--change default value to change team names--%>
                     </SelectParameters>
                 </asp:SqlDataSource>
-            </p>
+            </div>
         </div>
 
         <div class="center col-md-4">
             <h2 class="center">3rd Place</h2>
-            <p class="center">
+            <h4 class="center">
                 The Zip Codes
-            </p>
+            </h4>
             <p class="center">                
                 <img src="Images/third.jpeg" />  <%--Change the image for teams here--%>
             </p>
-            <p class="center">
+            <div class="div_text_center">
                 <asp:GridView ID="GridView3" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource2" ForeColor="Black" GridLines="Horizontal" Width="200px">
                     <Columns>
                         <asp:BoundField DataField="FirstName" HeaderText="First Name" SortExpression="FirstName">
@@ -126,7 +131,7 @@
                         <asp:Parameter DefaultValue="22" Name="TeamID" Type="Int32" /> <%--change default value to change team names--%>
                     </SelectParameters>
                 </asp:SqlDataSource>
-            </p>
+            </div>
            
         </div>
     </div>
