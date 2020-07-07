@@ -21,6 +21,12 @@ namespace CaseCompetitionApp.Maintenance
         {
             userMgr = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
             roleMgr = Context.GetOwinContext().Get<ApplicationRoleManager>();
+
+            gvAdmin.Visible = false;
+            gvJudge.Visible = false;
+            gvCompete.Visible = false;
+            gvWithout.Visible = false;
+            gvAll.Visible = false;
         }
 
         // Select methods
@@ -110,5 +116,104 @@ namespace CaseCompetitionApp.Maintenance
             if (grd.HeaderRow != null)
                 grd.HeaderRow.TableSection = TableRowSection.TableHeader;
         }
+
+        protected void btnClickAdmin(object sender, EventArgs e)
+        {
+            gvAdmin.Visible = true;
+            gvJudge.Visible = false;
+            gvCompete.Visible = false;
+            gvWithout.Visible = false;
+            gvAll.Visible = false;
+            btnAdmin.Style.Add("background-color", "rgba(255, 223, 0, 0.75)");
+            btnAdmin.Style.Add("font-weight", "bold");
+            btnJudge.Style.Remove("background-color");
+            btnJudge.Style.Remove("font-weight");
+            btnCompete.Style.Remove("background-color");
+            btnCompete.Style.Remove("font-weight");
+            btnElse.Style.Remove("background-color");
+            btnElse.Style.Remove("font-weight");
+            btnAll.Style.Remove("background-color");
+            btnAll.Style.Remove("font-weight");
+        }
+
+        protected void btnClick_Judges(object sender, EventArgs e)
+        {
+            gvAdmin.Visible = false;
+            gvJudge.Visible = true;
+            gvCompete.Visible = false;
+            gvWithout.Visible = false;
+            gvAll.Visible = false;
+
+            btnJudge.Style.Add("background-color", "rgba(255, 223, 0, 0.75)");
+            btnJudge.Style.Add("font-weight", "bold");
+            btnAdmin.Style.Remove("background-color");
+            btnAdmin.Style.Remove("font-weight");
+            btnCompete.Style.Remove("background-color");
+            btnCompete.Style.Remove("font-weight");
+            btnElse.Style.Remove("background-color");
+            btnElse.Style.Remove("font-weight");
+            btnAll.Style.Remove("background-color");
+            btnAll.Style.Remove("font-weight");
+        }
+
+        protected void btnClick_competitor(object sender, EventArgs e)
+        {
+            gvAdmin.Visible = false;
+            gvJudge.Visible = false;
+            gvCompete.Visible = true;
+            gvWithout.Visible = false;
+            gvAll.Visible = false;
+            btnCompete.Style.Add("background-color", "rgba(255, 223, 0, 0.75)");
+            btnCompete.Style.Add("font-weight", "bold");
+            btnJudge.Style.Remove("background-color");
+            btnJudge.Style.Remove("font-weight");
+            btnAdmin.Style.Remove("background-color");
+            btnAdmin.Style.Remove("font-weight");
+            btnElse.Style.Remove("background-color");
+            btnElse.Style.Remove("font-weight");
+            btnAll.Style.Remove("background-color");
+            btnAll.Style.Remove("font-weight");
+        }
+
+        protected void btnclick_UserWO(object sender, EventArgs e)
+        {
+            gvAdmin.Visible = false;
+            gvJudge.Visible = false;
+            gvCompete.Visible = false;
+            gvWithout.Visible = true;
+            gvAll.Visible = false;
+            btnElse.Style.Add("background-color", "rgba(255, 223, 0, 0.75)");
+            btnElse.Style.Add("font-weight", "bold");
+            btnJudge.Style.Remove("background-color");
+            btnJudge.Style.Remove("font-weight");
+            btnCompete.Style.Remove("background-color");
+            btnCompete.Style.Remove("font-weight");
+            btnAdmin.Style.Remove("background-color");
+            btnAdmin.Style.Remove("font-weight");
+            btnAll.Style.Remove("background-color");
+            btnAll.Style.Remove("font-weight");
+        }
+
+        protected void btnClick_ShowAll(object sender, EventArgs e)
+        {
+            gvAdmin.Visible = false;
+            gvJudge.Visible = false;
+            gvCompete.Visible = false;
+            gvWithout.Visible = false;
+            gvAll.Visible = true;
+
+            btnAll.Style.Add("background-color", "rgba(255, 223, 0, 0.75)");
+            btnAll.Style.Add("font-weight", "bold");
+            btnJudge.Style.Remove("background-color");
+            btnJudge.Style.Remove("font-weight");
+            btnCompete.Style.Remove("background-color");
+            btnCompete.Style.Remove("font-weight");
+            btnElse.Style.Remove("background-color");
+            btnElse.Style.Remove("font-weight");
+            btnAdmin.Style.Remove("background-color");
+            btnAdmin.Style.Remove("font-weight");
+        }
+
+       
     }
 }

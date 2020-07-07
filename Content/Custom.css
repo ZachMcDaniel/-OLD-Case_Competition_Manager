@@ -188,3 +188,13 @@
     margin-right: 30%;
 }
 
+.btnSelect {
+    background-color: rgba(255, 223, 0, 0.75);
+    color: black;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.padding{
+    padding-left: 10px;
+}
