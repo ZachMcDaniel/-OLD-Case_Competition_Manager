@@ -241,6 +241,7 @@
     <Content Include="Submissions.aspx" />
     <Content Include="TeamInfo.aspx" />
     <Content Include="TeamMGMT.aspx" />
+    <Content Include="Testtimer.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -487,6 +488,13 @@
     </Compile>
     <Compile Include="TeamMGMT.aspx.designer.cs">
       <DependentUpon>TeamMGMT.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Testtimer.aspx.cs">
+      <DependentUpon>Testtimer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Testtimer.aspx.designer.cs">
+      <DependentUpon>Testtimer.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

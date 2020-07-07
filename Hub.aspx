@@ -46,6 +46,8 @@
              <asp:RoleGroup Roles="competitor">           
                  
                  <ContentTemplate> 
+                     <div class="center">
+                     </div>
                       <div class="col-md-4">
                       <asp:Button ID="BTNTeamMGMT" runat="server" Text="Team Managment"  OnClick="BTNTeamMGMT_Click" Class="btn btn-default wide grey"/>
                         </div>
