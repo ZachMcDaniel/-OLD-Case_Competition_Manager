@@ -200,6 +200,7 @@
     <Content Include="Images\third.jpeg" />
     <Content Include="JudgeInfo.aspx" />
     <Content Include="Maintenance\Web.config" />
+    <Content Include="ErrorPage.aspx" />
     <None Include="Properties\PublishProfiles\casecompetition - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\casecompetition - ReadOnly - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\casecompetition - Web Deploy.pubxml" />
@@ -502,6 +503,13 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.designer.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
