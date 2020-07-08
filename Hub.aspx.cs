@@ -28,6 +28,12 @@ namespace CaseCompetitionApp
         {
             Response.Redirect("CaseFiles.aspx");
         }
+
+        protected void BTNModifyTeamInfo(object sender, EventArgs e)
+        {
+            Response.Redirect("ModifyTeamInfo.aspx");
+        }
+
         protected void BTNFileReview_Click(object sender, EventArgs e)
         {
             Response.Redirect("FileReview.aspx");
