@@ -4,26 +4,30 @@
         Competition Hub
     </H2>
     <h3 class="center">
-        Access to all Team and Case Information
+        Access to all team and case information
     </h3>
-   
-   <div class="col-md-12">
-       <br />
+     <div class="col-md-12">
+        <hr style="border: .25px solid rgb(0,0,0)" />
    </div>
+  
     <div class="center">
     <asp:LoginView runat="server">     
          <RoleGroups>       
              <asp:RoleGroup Roles="admin">           
                  <ContentTemplate>
-                     <div class="col-md-4">
-                     <asp:Button ID="BTNAnnounce" runat="server" Text="Announcements"  OnClick="BTNAnnounce_Click" Class="btn btn-default wide grey"/>
+                      <div class="col-md-3">
+                     <asp:Button ID="BTNModifyTeamInfo" runat="server" Text="Modify Team Info"  OnClick="BTNModifyTeamInfo" Class="btn btn-default wide grey"/>
                          </div>
-                     <div class="col-md-4">
+                     <div class="col-md-3">
+                     <asp:Button ID="BTNAnnounce" runat="server" Text="Modify Announcements"  OnClick="BTNAnnounce_Click" Class="btn btn-default wide grey"/>
+                         </div>
+                     <div class="col-md-3">
                      <asp:Button ID="BTNDeliv" runat="server" Text="Upload Case Files"  OnClick="BTNDeliv_Click" Class="btn btn-default wide grey"/>
                          </div>
-                     <div class="col-md-4">
+                     <div class="col-md-3">
                      <asp:Button ID="BTNDownCaseFile" runat="server" Text="Download Submissions"  OnClick="BTNDownCaseFile_Click" Class="btn btn-default wide grey"/>
                          </div>
+                    
                  </ContentTemplate>        
              </asp:RoleGroup>   
          </RoleGroups></asp:LoginView>
@@ -62,8 +66,5 @@
              </asp:RoleGroup>   
          </RoleGroups></asp:LoginView>
     </div>
-    <div class="col-md-12">
-       <br />
-        <hr />
-   </div>
+   
 </asp:Content>

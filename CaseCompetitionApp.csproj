@@ -208,6 +208,7 @@
     <Content Include="Hub.aspx" />
     <Content Include="Images\Tippie Arches.jpg" />
     <Content Include="Maintenance\Default.aspx" />
+    <Content Include="ModifyTeamInfo.aspx" />
     <Content Include="News.aspx" />
     <Content Include="Results.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -439,6 +440,13 @@
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="ModifyTeamInfo.aspx.cs">
+      <DependentUpon>ModifyTeamInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModifyTeamInfo.aspx.designer.cs">
+      <DependentUpon>ModifyTeamInfo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="News.aspx.cs">
       <DependentUpon>News.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
