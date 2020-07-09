@@ -134,6 +134,9 @@
     background-color: rgba(255,223,0,0.75);
 }
 
+.button {
+    border-radius: 20px;
+}
 
 .txtbox {
     width: 600px;

@@ -16,7 +16,7 @@
              <asp:RoleGroup Roles="admin">           
                  <ContentTemplate>
                       <div class="col-md-3">
-                     <asp:Button ID="BTNModifyTeamInfo" runat="server" Text="Modify Team Info"  OnClick="BTNModifyTeamInfo" Class="btn btn-default wide grey"/>
+                     <asp:Button ID="BTNCompetitionInfo" runat="server" Text="Modify Competition Info"  OnClick="BTNModifyCompetitionInfo" Class="btn btn-default wide grey"/>
                          </div>
                      <div class="col-md-3">
                      <asp:Button ID="BTNAnnounce" runat="server" Text="Modify Announcements"  OnClick="BTNAnnounce_Click" Class="btn btn-default wide grey"/>

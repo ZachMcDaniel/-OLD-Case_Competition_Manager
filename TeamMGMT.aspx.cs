@@ -44,7 +44,7 @@ namespace CaseCompetitionApp
 
         //    //SQL statement to fetch entries from products
         //    string sql = @"select FirstName, LastName, Email, FoodAllergy, ShirtSize, PhoneNumber, CASE WHEN Vegan = 1 THEN 'Yes' ELSE 'No' END AS Vegan From [Members] where TeamID = (select TeamID FROM TEAM where TeamName = (select Username FROM AspNetUsers where Id = @ID))";
-            
+
         //    DataSet dsTeam = new DataSet();
         //    //Open SQL Connection
         //    using (SqlConnection conn = new SqlConnection(connString))
@@ -328,69 +328,69 @@ namespace CaseCompetitionApp
         //}
 
 
-        //protected void Page_Load(object sender, EventArgs e)
-        //{
-        //    var userID = User.Identity.GetUserId();
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            var userID = User.Identity.GetUserId();
 
-        //    string user = Convert.ToString(userID);
+            string user = Convert.ToString(userID);
 
-        //    if (!IsPostBack)
-        //    {
-        //        clearfields();
-        //        SqlDataSource1.SelectParameters["ID"].DefaultValue = user;
-        //        NewMember.Visible = false;
-        //    }
-        //}
+            if (!IsPostBack)
+            {
+                clearfields();
+                SqlDataSource1.SelectParameters["ID"].DefaultValue = user;
+                NewMember.Visible = false;
+            }
+        }
 
-        //protected void btnSubmit_Click(object sender, EventArgs e)
-        //{
-        //    if (Page.IsValid)
-        //    {
-        //        var userID = User.Identity.GetUserId();
+        protected void btnSubmit_Click(object sender, EventArgs e)
+        {
+            if (Page.IsValid)
+            {
+                var userID = User.Identity.GetUserId();
 
-        //        string user = Convert.ToString(userID);
+                string user = Convert.ToString(userID);
 
-        //        string mainconn = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
-        //        SqlConnection con = new SqlConnection(mainconn);
-        //        con.Open();
-        //        SqlCommand sqlcomm = new SqlCommand();
-        //        string insertSql = "INSERT INTO [MEMBERS](TeamID, FirstName, LastName, PhoneNumber, Email, ShirtSize, Vegan) OUTPUT INSERTED.MemberID VALUES ((select TeamID FROM TEAM where TeamName = (select Username FROM AspNetUsers where Id = @TeamId)), @FirstName,@LastName,@PhoneNumber, @Email, @ShirtSize, @Vegan);";
-        //        SqlCommand cmd = new SqlCommand(insertSql, con);
+                string mainconn = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+                SqlConnection con = new SqlConnection(mainconn);
+                con.Open();
+                SqlCommand sqlcomm = new SqlCommand();
+                string insertSql = "INSERT INTO [MEMBERS](TeamID, FirstName, LastName, PhoneNumber, Email, ShirtSize, Vegan) OUTPUT INSERTED.MemberID VALUES ((select TeamID FROM TEAM where TeamName = (select Username FROM AspNetUsers where Id = @TeamId)), @FirstName,@LastName,@PhoneNumber, @Email, @ShirtSize, @Vegan);";
+                SqlCommand cmd = new SqlCommand(insertSql, con);
 
-        //        cmd.Parameters.AddWithValue("@TeamID", user);
-        //        cmd.Parameters.AddWithValue("@FirstName", txtFirstName.Text);
-        //        cmd.Parameters.AddWithValue("@LastName", txtLName.Text);
-        //        cmd.Parameters.AddWithValue("@PhoneNumber", txtPhone.Text);
-        //        cmd.Parameters.AddWithValue("@Email", txtEmail.Text);
-        //        cmd.Parameters.AddWithValue("@ShirtSize", txtShirt.Text);
-        //        cmd.Parameters.AddWithValue("@Vegan", rbtnVegan.SelectedValue);
+                cmd.Parameters.AddWithValue("@TeamID", user);
+                cmd.Parameters.AddWithValue("@FirstName", txtFirstName.Text);
+                cmd.Parameters.AddWithValue("@LastName", txtLName.Text);
+                cmd.Parameters.AddWithValue("@PhoneNumber", txtPhone.Text);
+                cmd.Parameters.AddWithValue("@Email", txtEmail.Text);
+                cmd.Parameters.AddWithValue("@ShirtSize", txtShirt.Text);
+                cmd.Parameters.AddWithValue("@Vegan", rbtnVegan.SelectedValue);
 
-        //        var MemberID = (int)cmd.ExecuteScalar();
+                var MemberID = (int)cmd.ExecuteScalar();
 
-        //        Response.Redirect("TeamMGMT.aspx");
-        //    }
-        //}
+                Response.Redirect("TeamMGMT.aspx");
+            }
+        }
 
-        //protected void btnClear_Click(object sender, EventArgs e)
-        //{
-        //    clearfields();
-        //}
+        protected void btnClear_Click(object sender, EventArgs e)
+        {
+            clearfields();
+        }
 
-        //protected void clearfields()
-        //{
-        //    txtFirstName.Text = "";
-        //    txtLName.Text = "";
-        //    txtEmail.Text = "";
-        //    txtPhone.Text = "";
-        //    txtShirt.Text = "";
-        //    txtfood.Text = "";
-        //    rbtnVegan.ClearSelection();
-        //}
+        protected void clearfields()
+        {
+            txtFirstName.Text = "";
+            txtLName.Text = "";
+            txtEmail.Text = "";
+            txtPhone.Text = "";
+            txtShirt.Text = "";
+            txtfood.Text = "";
+            rbtnVegan.ClearSelection();
+        }
 
-        //protected void BtnAddMember_Click(object sender, EventArgs e)
-        //{
-        //    NewMember.Visible = true;
-        //}
+        protected void BtnAddMember_Click(object sender, EventArgs e)
+        {
+            NewMember.Visible = true;
+        }
 
 
     }
