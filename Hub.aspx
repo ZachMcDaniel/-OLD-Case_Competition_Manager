@@ -15,16 +15,13 @@
          <RoleGroups>       
              <asp:RoleGroup Roles="admin">           
                  <ContentTemplate>
-                      <div class="col-md-3">
+                      <div class="col-md-4">
                      <asp:Button ID="BTNCompetitionInfo" runat="server" Text="Modify Competition Info"  OnClick="BTNModifyCompetitionInfo" Class="btn btn-default wide grey"/>
                          </div>
-                     <div class="col-md-3">
+                     <div class="col-md-4">
                      <asp:Button ID="BTNAnnounce" runat="server" Text="Modify Announcements"  OnClick="BTNAnnounce_Click" Class="btn btn-default wide grey"/>
                          </div>
-                     <div class="col-md-3">
-                     <asp:Button ID="BTNDeliv" runat="server" Text="Upload Case Files"  OnClick="BTNDeliv_Click" Class="btn btn-default wide grey"/>
-                         </div>
-                     <div class="col-md-3">
+                     <div class="col-md-4">
                      <asp:Button ID="BTNDownCaseFile" runat="server" Text="Download Submissions"  OnClick="BTNDownCaseFile_Click" Class="btn btn-default wide grey"/>
                          </div>
                     
