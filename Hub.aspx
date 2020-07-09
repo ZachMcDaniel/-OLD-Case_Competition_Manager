@@ -1,4 +1,4 @@
-﻿<%@ Page Title="The Hub" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Hub.aspx.cs" Inherits="CaseCompetitionApp.Hub" %>
+﻿<%@ Page Title="Hub" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Hub.aspx.cs" Inherits="CaseCompetitionApp.Hub" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <H2 class="center gold">
         Competition Hub
