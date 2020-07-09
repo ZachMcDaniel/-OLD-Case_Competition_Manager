@@ -67,6 +67,11 @@
     margin-left: auto;
     margin-right: auto;
 }
+.left {
+    text-align: left;
+    padding-left: 30px;
+}
+
 .gridcenter {
     text-align: center;
     align-content: center;
