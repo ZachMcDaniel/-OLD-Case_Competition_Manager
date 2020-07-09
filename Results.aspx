@@ -132,6 +132,7 @@
     </div>
 
     <div class="center">
+        <br />
         <h3>
             Thank you to all competitors for the hard work at this year's competition!
         </h3>
