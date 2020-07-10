@@ -10,16 +10,16 @@
 
     <%--Buttons--%>
     <div class="row">
-        <div class="col-md-4 center button">
-            <asp:Button ID="BTNTeamInfo" runat="server" Text="Modify Team Info" OnClick="BTNClickTeamInfo" width="100%"/>
+        <div class="col-md-4 center">
+            <asp:Button ID="BTNTeamInfo" runat="server" Text="Modify Team Info" OnClick="BTNClickTeamInfo" width="100%" CssClass="button"/>
         </div>
 
-        <div class="col-md-4 center button">
-            <asp:Button ID="BTNMemberInfo" runat="server" Text="Modify Member Info" OnClick="BTNClickMemberInfo" width="100%" />
+        <div class="col-md-4 center">
+            <asp:Button ID="BTNMemberInfo" runat="server" Text="Modify Member Info" OnClick="BTNClickMemberInfo" width="100%" CssClass="button" />
         </div>
 
-        <div class="col-md-4 center button">
-            <asp:Button ID="BTNJudgeInfo" runat="server" Text="Modify Judge Info" OnClick="BTNClickJudgeInfo" width="100%"/>
+        <div class="col-md-4 center">
+            <asp:Button ID="BTNJudgeInfo" runat="server" Text="Modify Judge Info" OnClick="BTNClickJudgeInfo" width="100%" CssClass="button"/>
         </div>
     </div>
 

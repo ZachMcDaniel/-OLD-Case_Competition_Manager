@@ -202,6 +202,7 @@
     <Content Include="JudgeInfo.aspx" />
     <Content Include="Maintenance\Web.config" />
     <Content Include="ErrorPage.aspx" />
+    <Content Include="Archive.aspx" />
     <None Include="Properties\PublishProfiles\casecompetition - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\casecompetition - ReadOnly - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\casecompetition - Web Deploy.pubxml" />
@@ -526,6 +527,13 @@
     </Compile>
     <Compile Include="ErrorPage.aspx.designer.cs">
       <DependentUpon>ErrorPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Archive.aspx.cs">
+      <DependentUpon>Archive.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Archive.aspx.designer.cs">
+      <DependentUpon>Archive.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

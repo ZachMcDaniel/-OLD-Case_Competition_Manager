@@ -38,8 +38,11 @@
             <p class="center">
                 Access Previous Competitions and Results
             </p>
+             <p>                
+                <a class="btn btn-default grey"  href="../Archive">View Archive &raquo;</a>            
+            </p>
            
-        </div>
+        </div> 
     </div>
 
 </asp:Content>
