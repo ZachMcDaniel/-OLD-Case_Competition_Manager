@@ -2,11 +2,11 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h2 class="center gold">Team Managment</h2>
 
-    <asp:gridview id="gvTeam"         
+  <%--  <asp:gridview id="gvTeam"         
     autogeneratecolumns="False"   
     emptydatatext="No data available." CssClass="GridViewStyle"         
     runat="server" DataKeyNames="ProductID"
-    OnRowEditing="gvTeam_RowEditing" <%--OnRowCancelingEdit="gvTeam_RowCancelingEdit"--%>        
+    OnRowEditing="gvTeam_RowEditing" <%--OnRowCancelingEdit="gvTeam_RowCancelingEdit"      
     onrowupdating="gvTeam_RowUpdating" onrowdatabound="gvTeam_RowDataBound">
     <RowStyle CssClass="RowStyle" />             
     <FooterStyle CssClass="RowStyle" />                       
@@ -86,6 +86,7 @@
     </Columns>
 </asp:gridview>
 
+--%>
 
 
 
@@ -105,8 +106,7 @@
 
 
 
-
-<%--    <div class="row center">
+<div class="row center">
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="MemberID" DataSourceID="SqlDataSource1" Width="100%" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" AllowSorting="True">
         <Columns>
             <asp:BoundField DataField="FirstName" HeaderText="First Name" SortExpression="FirstName" >
@@ -173,7 +173,7 @@
               <asp:Parameter Name="Vegan" Type="string" />
           </UpdateParameters>
                 </asp:SqlDataSource>
-        </div>--%>
+        </div>
 
 
 
