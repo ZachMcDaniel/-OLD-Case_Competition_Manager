@@ -201,6 +201,7 @@
     <Content Include="Images\third.jpeg" />
     <Content Include="JudgeInfo.aspx" />
     <Content Include="Maintenance\Web.config" />
+    <Content Include="ErrorPage.aspx" />
     <None Include="Properties\PublishProfiles\casecompetition - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\casecompetition - ReadOnly - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\casecompetition - Web Deploy.pubxml" />
@@ -208,6 +209,7 @@
     <Content Include="Hub.aspx" />
     <Content Include="Images\Tippie Arches.jpg" />
     <Content Include="Maintenance\Default.aspx" />
+    <Content Include="ModifyCompetitionInfo.aspx" />
     <Content Include="News.aspx" />
     <Content Include="Results.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -446,6 +448,13 @@
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="ModifyCompetitionInfo.aspx.cs">
+      <DependentUpon>ModifyCompetitionInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModifyCompetitionInfo.aspx.designer.cs">
+      <DependentUpon>ModifyCompetitionInfo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="News.aspx.cs">
       <DependentUpon>News.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -510,6 +519,13 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.designer.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
