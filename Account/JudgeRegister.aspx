@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Judge Register" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="JudgeRegister.aspx.cs" Inherits="CaseCompetitionApp.Account.JudgeRegister" %>
+﻿<%@ Page Title="Register Judge" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="JudgeRegister.aspx.cs" Inherits="CaseCompetitionApp.Account.JudgeRegister" %>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
     <h2><%: Title %></h2>

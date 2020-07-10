@@ -6,7 +6,6 @@
     <h3 class="center">
         Access to all team and case information
     </h3>
-    <br />
 
     <%--Competitor view btn info--%>
      <asp:LoginView runat="server">     
