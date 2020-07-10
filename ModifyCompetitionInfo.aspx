@@ -170,12 +170,12 @@
                     <HeaderStyle CssClass="center" />
                     <ItemStyle CssClass="padding" />
                     </asp:BoundField>
-                    <asp:BoundField DataField="Company" HeaderText="Company" SortExpression="Company">
+                    <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email">
                     <ControlStyle CssClass="padding" />
                     <HeaderStyle CssClass="center" />
                     <ItemStyle CssClass="padding" />
                     </asp:BoundField>
-                    <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email">
+                    <asp:BoundField DataField="Company" HeaderText="Company" SortExpression="Company">
                     <ControlStyle CssClass="padding" />
                     <HeaderStyle CssClass="center" />
                     <ItemStyle CssClass="padding" />
