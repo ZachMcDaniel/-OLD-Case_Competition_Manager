@@ -30,14 +30,13 @@
                              </p>
                          </div> 
                      </div>
+                     <div class="col-md-12">
+        <hr style="border: .25px solid rgb(0,0,0)" />
+   </div>
                 </ContentTemplate>        
          </asp:RoleGroup>   
          </RoleGroups>
      </asp:LoginView>
-
-     <div class="col-md-12">
-        <hr style="border: .25px solid rgb(0,0,0)" />
-   </div>
   
     <div class="center">
     <%--Admin View--%>
