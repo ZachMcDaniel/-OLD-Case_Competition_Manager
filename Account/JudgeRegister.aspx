@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Register" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="CaseCompetitionApp.Account.Register" %>
+﻿<%@ Page Title="Judge Register" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="JudgeRegister.aspx.cs" Inherits="CaseCompetitionApp.Account.JudgeRegister" %>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
     <h2><%: Title %></h2>
@@ -11,7 +11,7 @@
         <hr />
         <asp:ValidationSummary runat="server" CssClass="text-danger" />
          <div class="form-group">
-            <asp:Label runat="server" AssociatedControlID="username" CssClass="col-md-2 control-label">Team Name</asp:Label>
+            <asp:Label runat="server" AssociatedControlID="username" CssClass="col-md-2 control-label">User Name</asp:Label>
             <div class="col-md-4">
                 <asp:TextBox runat="server" ID="username" CssClass="form-control" />
                 <asp:RequiredFieldValidator runat="server" ControlToValidate="username"
@@ -21,9 +21,26 @@
              </div>
         </div>
 
+          <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="FName" CssClass="col-md-2 control-label">First Name</asp:Label>
+            <div class="col-md-4">
+                <asp:TextBox runat="server" ID="FName" CssClass="form-control" />
+            </div>
+             <div class="col-md-6">
+             </div>
+        </div>
+
+          <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="LName" CssClass="col-md-2 control-label">Last Name</asp:Label>
+            <div class="col-md-4">
+                <asp:TextBox runat="server" ID="LName" CssClass="form-control" />
+            </div>
+             <div class="col-md-6">
+             </div>
+        </div>
 
         <div class="form-group">
-            <asp:Label runat="server" AssociatedControlID="Email" CssClass="col-md-2 control-label">Contact Email</asp:Label>
+            <asp:Label runat="server" AssociatedControlID="Email" CssClass="col-md-2 control-label">Email</asp:Label>
             <div class="col-md-10">
                 <asp:TextBox runat="server" ID="Email" CssClass="form-control" TextMode="Email" />
                 <asp:RequiredFieldValidator runat="server" ControlToValidate="Email"
@@ -32,15 +49,23 @@
         </div>
 
         <div class="form-group">
-            <asp:Label runat="server" AssociatedControlID="school" CssClass="col-md-2 control-label">School</asp:Label>
+            <asp:Label runat="server" AssociatedControlID="company" CssClass="col-md-2 control-label">Company Name</asp:Label>
             <div class="col-md-4">
-                <asp:TextBox runat="server" ID="school" CssClass="form-control" />
-                <asp:RequiredFieldValidator runat="server" ControlToValidate="school"
-                    CssClass="text-danger" ErrorMessage="School is required." />
+                <asp:TextBox runat="server" ID="Company" CssClass="form-control" />
             </div>
              <div class="col-md-6">
              </div>
         </div>
+
+          <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="coURL" CssClass="col-md-2 control-label">Company Site URL</asp:Label>
+            <div class="col-md-4">
+                <asp:TextBox runat="server" ID="coURL" CssClass="form-control" />
+            </div>
+             <div class="col-md-6">
+             </div>
+        </div>
+
 
         <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="Password" CssClass="col-md-2 control-label">Password</asp:Label>
@@ -66,5 +91,4 @@
             </div>
         </div>
     </div>
-    <asp:Label ID="LabelHelp" runat="server" Text=""></asp:Label>
 </asp:Content>

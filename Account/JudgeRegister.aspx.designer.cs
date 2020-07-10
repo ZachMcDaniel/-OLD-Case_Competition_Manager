@@ -11,7 +11,7 @@ namespace CaseCompetitionApp.Account
 {
 
 
-    public partial class Register
+    public partial class JudgeRegister
     {
 
         /// <summary>
@@ -33,6 +33,24 @@ namespace CaseCompetitionApp.Account
         protected global::System.Web.UI.WebControls.TextBox username;
 
         /// <summary>
+        /// FName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox FName;
+
+        /// <summary>
+        /// LName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox LName;
+
+        /// <summary>
         /// Email control.
         /// </summary>
         /// <remarks>
@@ -42,13 +60,22 @@ namespace CaseCompetitionApp.Account
         protected global::System.Web.UI.WebControls.TextBox Email;
 
         /// <summary>
-        /// school control.
+        /// Company control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox school;
+        protected global::System.Web.UI.WebControls.TextBox Company;
+
+        /// <summary>
+        /// coURL control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox coURL;
 
         /// <summary>
         /// Password control.
@@ -67,14 +94,5 @@ namespace CaseCompetitionApp.Account
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox ConfirmPassword;
-
-        /// <summary>
-        /// LabelHelp control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelHelp;
     }
 }

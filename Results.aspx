@@ -10,15 +10,11 @@
             <p class="center">                
                 <img src="Images/first.jpeg" /> <%--Change the image for teams here--%>
             </p>
-<<<<<<< HEAD
-            <p class="center">
+             <p class="center">
                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource3" ForeColor="Black" GridLines="Horizontal" Width="200px">
-=======
-            <div class="div_text_center">
-                <asp:GridView ID="GridView1" HorizontalAlign="Center" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource3" ForeColor="Black" GridLines="Horizontal" Width="200px">
->>>>>>> c22a22f6b18d2ae0a841dc6a3ad9b69dca231472
-                    
-                    <Columns>
+            <%--<div class="div_text_center">
+                <asp:GridView ID="GridView1" HorizontalAlign="Center" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource3" ForeColor="Black" GridLines="Horizontal" Width="200px">                 
+          --%>          <Columns>
                         <asp:BoundField DataField="FirstName" HeaderText="First Name" SortExpression="FirstName" >
                             <ControlStyle CssClass="center" />
                             <HeaderStyle CssClass="center" />

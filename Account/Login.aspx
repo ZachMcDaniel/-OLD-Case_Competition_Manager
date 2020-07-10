@@ -45,9 +45,15 @@
                         </div>
                     </div>
                 </div>
-                <p>
-                    <asp:HyperLink runat="server" ID="RegisterHyperLink" ViewStateMode="Disabled">Register as a new user</asp:HyperLink>
-                </p>
+
+                <hr />
+
+                <div class="col-md-4">
+                    <asp:HyperLink runat="server" CssClass="btn btn-default grey" ID="RegisterHyperLink" ViewStateMode="Disabled">Register as a Team</asp:HyperLink>
+                </div>
+                <div class="col-md-4">
+                    <asp:HyperLink runat="server" CssClass="btn btn-default grey" ID="JudgeRegisterLink" ViewStateMode="Disabled">Register as a Judge</asp:HyperLink>
+                </div>
                 <p>
                     <%-- Enable this once you have account confirmation enabled for password reset functionality
                     <asp:HyperLink runat="server" ID="ForgotPasswordHyperLink" ViewStateMode="Disabled">Forgot your password?</asp:HyperLink>
