@@ -6,7 +6,6 @@
     <h3 class="center">
         Access to all team and case information
     </h3>
-    <br />
 
     <%--Competitor view btn info--%>
      <asp:LoginView runat="server">     
@@ -30,13 +29,14 @@
                              </p>
                          </div> 
                      </div>
-                     <div class="col-md-12">
-        <hr style="border: .25px solid rgb(0,0,0)" />
-   </div>
                 </ContentTemplate>        
          </asp:RoleGroup>   
          </RoleGroups>
      </asp:LoginView>
+
+     <div class="col-md-12">
+        <hr style="border: .25px solid rgb(0,0,0)" />
+   </div>
   
     <div class="center">
     <%--Admin View--%>
