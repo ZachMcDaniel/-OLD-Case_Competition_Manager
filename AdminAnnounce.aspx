@@ -3,19 +3,23 @@
      <h2 class=" center gold">
        Update News Feed
     </h2>
-    <h3>
+    <h3 class="center">
         Add or Remove Announcements on the News Page
     </h3>
 
     <br />
     <div class="row">
         <div class="col-md-12">
-            <asp:GridView ID="GridView1" runat="server" DataKeyNames="NewsId" AutoGenerateColumns="False" ShowHeader="False" DataSourceID="SQLNews" Width="100%" BorderWidth="1px" CellPadding="4" ForeColor="Black" Gridlines="Horizontal" EditRowStyle-BorderWidth="4px" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" >
+            <asp:GridView ID="GridView1" runat="server" DataKeyNames="NewsId" AutoGenerateColumns="False" ShowHeader="False" DataSourceID="SQLNews" Width="100%" BorderWidth="1px" CellPadding="4" ForeColor="Black" Gridlines="Horizontal" EditRowStyle-BorderWidth="4px" Css-Class="newsborder" >
                 <Columns>
                     <asp:BoundField DataField="Feed" SortExpression="Feed" >
-                <ItemStyle Font-Overline="False" Font-Size="Large" />
+                    <ControlStyle CssClass="newspadding" />
+                <ItemStyle Font-Overline="False" Font-Size="Large" CssClass="newspadding" />
                 </asp:BoundField>
-                    <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
+                    <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" >
+                    <ControlStyle CssClass="newspadding" />
+                    <ItemStyle CssClass="newspadding" />
+                    </asp:CommandField>
                 </Columns>
 <EditRowStyle BorderWidth="4px"></EditRowStyle>
 
@@ -46,6 +50,7 @@
             <div class="col-md-8">
             <asp:TextBox ID="txtNews" runat="server" class="txtbox"></asp:TextBox>
                 </div>
+
             <div class="col-md-2">
                 <asp:Button ID="btnNews" CssClass="btn btn-default grey" width="100%" runat="server" Text="Insert News" OnClick="btnNewsClick" />
              </div>

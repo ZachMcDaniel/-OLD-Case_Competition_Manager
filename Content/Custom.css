@@ -144,8 +144,7 @@
 }
 
 .txtbox {
-    width: 600px;
-    height: 100px;
+    min-width: 100%;
     padding: 10px;
     box-sizing: border-box;
 }
@@ -206,8 +205,25 @@
 .padding{
     padding-left: 10px;
 }
+.newspadding {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left:15px;
+    padding-right: 5px;
+    
+}
+.newsborder {
+    border: solid;
+    border-color: #000000;
+    border-width: 1.5px;
+    border-radius:15px;
+}
 
 .red{
     color:red;
     font-weight: bold;
+}
+
+.wide {
+    width: 100%
 }
