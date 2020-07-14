@@ -12,17 +12,17 @@
         <div class="col-md-12">
             <asp:GridView ID="GridView1" runat="server" DataKeyNames="NewsId" AutoGenerateColumns="False" ShowHeader="False" DataSourceID="SQLNews" Width="100%" BorderWidth="1px" CellPadding="4" ForeColor="Black" Gridlines="Horizontal" EditRowStyle-BorderWidth="4px" Css-Class="newsborder" >
                 <Columns>
-                    <asp:BoundField DataField="NewsTime" HeaderText="Time" SortExpression="NewsTime">
-                    <ControlStyle CssClass="newspadding" />
-                    <ItemStyle CssClass="newspadding" />
-                    </asp:BoundField>
-                    <asp:BoundField DataField="Feed" SortExpression="Feed" >
-                    <ControlStyle CssClass="newspadding" />
-                <ItemStyle Font-Overline="False" Font-Size="Large" CssClass="newspadding" />
+                    <asp:BoundField DataField="Time" SortExpression="Time" HeaderText="Time" ReadOnly="True" >
+                    <ControlStyle CssClass="newspadding" Font-Size="Medium" width="800px"/>
+                    <ItemStyle CssClass="newspadding" Font-Size="Medium" Width="100px" />
                 </asp:BoundField>
-                    <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" >
-                    <ControlStyle CssClass="newspadding" />
-                    <ItemStyle CssClass="newspadding" />
+                    <asp:BoundField DataField="Feed" HeaderText="Feed" SortExpression="Feed">
+                    <ControlStyle CssClass="newspadding" Font-Size="Medium"/>
+                    <ItemStyle CssClass="newspadding" Font-Size="Medium" />
+                    </asp:BoundField>
+                    <asp:CommandField ShowDeleteButton="True" ShowEditButton="True">
+                    <ControlStyle CssClass="newspadding" Font-Size="Medium" />
+                    <ItemStyle CssClass="newspadding" Font-Size="Medium" />
                     </asp:CommandField>
                 </Columns>
 <EditRowStyle BorderWidth="4px"></EditRowStyle>
@@ -36,13 +36,13 @@
                 <SortedDescendingCellStyle BackColor="#E5E5E5" />
                 <SortedDescendingHeaderStyle BackColor="#242121" />
             </asp:GridView>
-            <asp:SqlDataSource ID="SQLNews" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT * FROM [News] ORDER BY NewsTime desc" UpdateCommand="UPDATE [News] SET [Feed] = @Feed WHERE [NewsId] = @original_NewsId" OldValuesParameterFormatString="original_{0}" DeleteCommand="DELETE FROM [News] where [NewsId] = @original_NewsId">
+            <asp:SqlDataSource ID="SQLNews" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT NewsId, FORMAT([NewsTime], 'MM/dd/yy hh:mm tt') AS Time, Feed FROM [News] ORDER BY NewsTime desc" UpdateCommand="UPDATE [News] SET [Feed] = @Feed WHERE [NewsId] = @original_NewsId" OldValuesParameterFormatString="original_{0}" DeleteCommand="DELETE FROM [News] where [NewsId] = @original_NewsId">
          <DeleteParameters>
               <asp:Parameter Name="original_NewsId" Type="String" />
           </DeleteParameters>
          <UpdateParameters>
-              <asp:Parameter Name="NewsId" Type="String" />
               <asp:Parameter Name="Feed" Type="String" />
+              <asp:Parameter Name="original_NewsId" />
           </UpdateParameters>
                 </asp:SqlDataSource>
         </div>
@@ -62,6 +62,14 @@
                 <asp:Button ID="btncancel" CssClass="btn btn-default grey" width="100%" runat="server" Text="Clear" OnClick="btnClear_Click" />
              </div>
     </div>
+
+    <div class="col-md-12">
+        <hr />
+    </div>
+
+    <asp:Button ID="btnDrop" cssclass="btn btn-default" runat="server" Text="Delete All News"  OnClientClick="return confirm('Are you sure you want to delete the news feed?')" OnClick="btnDrop_Click" />
+
+    
     <div class="col-md-12">
         <br />
     </div>

@@ -147,6 +147,7 @@
     min-width: 100%;
     padding: 10px;
     box-sizing: border-box;
+    overflow-wrap: break-word;
 }
 .border {
     border-color: rgba(255,223,0,0.75);
@@ -210,6 +211,7 @@
     padding-bottom: 25px;
     padding-left:15px;
     padding-right: 5px;
+    text-align: left;
     
 }
 .newsborder {
