@@ -13,6 +13,10 @@
         <div class="col-md-12">
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" ShowHeader="False" DataSourceID="SQLNews" Width="100%" EditRowStyle-BorderWidth="4px" CssClass="newsborder">
                 <Columns>
+                    <asp:BoundField DataField="NewsTime" HeaderText="Time" SortExpression="NewsTime">
+                    <ControlStyle CssClass="newspadding" />
+                    <ItemStyle CssClass="newspadding" />
+                    </asp:BoundField>
                     <asp:BoundField DataField="Feed" SortExpression="Feed" >
                     <ControlStyle Font-Size="Large" CssClass="newspadding" />
                 <ItemStyle Font-Overline="False" Font-Size="Large" CssClass="newspadding" />
