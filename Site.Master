@@ -45,12 +45,12 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" runat="server" href="~/">Home</a>
+                    <a class="navbar-brand" runat="server" id="white2" href="~/">Home</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/Hub">Hub</a></li>
-                        <li><a runat="server" href="~/News">News</a></li>
+                        <li><a runat="server" id="white" href="~/Hub">Hub</a></li>
+                        <li><a runat="server" id="white1" href="~/News">News</a></li>
                          <li class="dropdown">
                           <button class="dropbtn">Competition Info</button>
                           <div class="dropdown-content">
@@ -63,7 +63,7 @@
                             <RoleGroups>
                                 <asp:RoleGroup Roles="admin">
                                     <ContentTemplate>
-                                             <a runat="server" href="~/Maintenance">Admin</a>
+                                             <a runat="server" style="color:white;" href="~/Maintenance">Admin</a>
                                         </ContentTemplate>
                                     </asp:RoleGroup>
                                 </RoleGroups>
@@ -72,17 +72,17 @@
                     </ul>
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a runat="server" href="~/Account/JudgeRegister">Register Judge</a></li>
-                                <li><a runat="server" href="~/Account/Register">Register Team</a></li>
-                                <li><a runat="server" href="~/Account/Login">Log in</a></li>
+                            <ul class="nav navbar-nav navbar-right navwhite">
+                                <li><a runat="server" style="color:white" href="~/Account/JudgeRegister">Register Judge</a></li>
+                                <li><a runat="server" style="color:white" href="~/Account/Register">Register Team</a></li>
+                                <li><a runat="server" style="color:white" href="~/Account/Login">Log in</a></li>
                             </ul>
                         </AnonymousTemplate>
                         <LoggedInTemplate>
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a runat="server" href="~/Account/Manage" title="Manage your account">Hello, <%: Context.User.Identity.GetUserName()  %> !</a></li>
+                                <li><a runat="server" style="color:white" href="~/Account/Manage" title="Manage your account">Hello, <%: Context.User.Identity.GetUserName()  %> !</a></li>
                                 <li>
-                                    <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
+                                    <asp:LoginStatus runat="server" style="color:white" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
                                 </li>
                             </ul>
                         </LoggedInTemplate>
