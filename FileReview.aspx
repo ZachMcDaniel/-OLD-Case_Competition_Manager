@@ -12,6 +12,6 @@
     </div>
 
     <div class ="col-md-12 center">
-        <a class="btn btn-default grey"  href="https://www.dropbox.com/sh/8h7pjqsrrzyo3u8/AADfweW9pktF6cT8kFmJqJP_a?dl=0">Dropbox &raquo;</a>
+        <a class="btn btn-default grey" target="_blank"  href="https://www.dropbox.com/sh/8h7pjqsrrzyo3u8/AADfweW9pktF6cT8kFmJqJP_a?dl=0">Dropbox &raquo;</a>
     </div>
 </asp:Content>

@@ -57,7 +57,7 @@
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
-    color: white;
+    color: rgb(255,223,0);
     background-color: #222222;
 }
 
@@ -288,4 +288,10 @@
 }
 
 
+.nav navbar-nav navbar-right li a{
+    color:blue;
+}
 
+.nav navbar-nav navbar-right li a:hover {
+    color: yellow;
+}
