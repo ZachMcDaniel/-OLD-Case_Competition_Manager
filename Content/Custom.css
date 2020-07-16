@@ -147,10 +147,11 @@
 }
 
 .txtbox {
-    min-width: 100%;
+    min-width: 90%;
     padding: 10px;
     box-sizing: border-box;
     overflow-wrap: break-word;
+    white-space: pre-wrap;
 }
 .border {
     border-color: rgba(255,223,0,0.75);
@@ -255,30 +256,6 @@
 }
 
     #white2:hover {
-        color: rgb(255,223,0) !important;
-    }
-
-#white3 {
-    color: white !important;
-}
-
-    #white3:hover {
-        color: rgb(255,223,0) !important;
-    }
-
-#white4 {
-    color: white !important;
-}
-
-    #white4:hover {
-        color: rgb(255,223,0) !important;
-    }
-
-#white5 {
-    color: white !important;
-}
-
-    #white5:hover {
         color: rgb(255,223,0) !important;
     }
 
