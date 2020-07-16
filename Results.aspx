@@ -123,7 +123,7 @@
                 </asp:GridView>
                 <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [FirstName], [LastName] FROM [Members] WHERE ([TeamID] = @TeamID)">
                     <SelectParameters>
-                        <asp:Parameter DefaultValue="22" Name="TeamID" Type="Int32" /> <%--change default value to change team names--%>
+                        <asp:Parameter DefaultValue="48" Name="TeamID" Type="Int32" /> <%--change default value to change team names--%>
                     </SelectParameters>
                 </asp:SqlDataSource>
             </div>

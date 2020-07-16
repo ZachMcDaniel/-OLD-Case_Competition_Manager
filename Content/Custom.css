@@ -16,8 +16,11 @@
     padding: 16px;
     background-color: #222222;
     border: none;
-    color: #959D9D;
+    color: white;
 }
+/*.dropbtn :hover {
+    color: #FFDF00;
+}*/
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
@@ -40,14 +43,14 @@
     /* Links inside the dropdown */
     .dropdown-content a {
         padding: 12px 16px;
-        color: #959D9D;
+        color: white;
         text-decoration: none;
         display: block;
     }
 
         /* Change color of dropdown links on hover */
         .dropdown-content a:hover {
-            color: white;
+            color: rgb(255,223,0);
         }
 
 /* Show the dropdown menu on hover */
@@ -144,10 +147,11 @@
 }
 
 .txtbox {
-    width: 600px;
-    height: 100px;
+    min-width: 90%;
     padding: 10px;
     box-sizing: border-box;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
 }
 .border {
     border-color: rgba(255,223,0,0.75);
@@ -180,7 +184,7 @@
 
 .footer {
     position: relative;
-    background-color: black;
+    background-color: #222222;
     width: 100%;
     margin-bottom: 0;
     flex-wrap: wrap;
@@ -206,8 +210,63 @@
 .padding{
     padding-left: 10px;
 }
+.newspadding {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left:15px;
+    padding-right: 5px;
+    text-align: left;
+    
+}
+.newsborder {
+    border: solid;
+    border-color: #000000;
+    border-width: 1.5px;
+    border-radius:15px;
+}
 
 .red{
     color:red;
     font-weight: bold;
 }
+
+.wide {
+    width: 100%
+}
+
+
+#white {
+    color: white;
+}
+
+    #white:hover {
+        color: rgb(255,223,0);
+    }
+
+#white1 {
+    color: white;
+}
+
+    #white1:hover {
+        color: rgb(255,223,0);
+    }
+
+#white2 {
+    color: white !important;
+}
+
+    #white2:hover {
+        color: rgb(255,223,0) !important;
+    }
+
+.nav > li.customclass1 > a:hover, .nav > li.customclass1 > a:focus {
+    background-color: inherit;
+    color: #FFDF00;
+}
+
+.nav > li.customclass1 > a {
+    color: white ;
+}
+
+
+

@@ -42,6 +42,24 @@ namespace CaseCompetitionApp
         protected global::System.Web.UI.WebControls.TextBox txtNews;
 
         /// <summary>
+        /// REVEntry control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator REVEntry;
+
+        /// <summary>
+        /// rfVEntry control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfVEntry;
+
+        /// <summary>
         /// btnNews control.
         /// </summary>
         /// <remarks>
@@ -58,5 +76,14 @@ namespace CaseCompetitionApp
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btncancel;
+
+        /// <summary>
+        /// btnDrop control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnDrop;
     }
 }

@@ -11,15 +11,15 @@
     <%--Buttons--%>
     <div class="row">
         <div class="col-md-4 center">
-            <asp:Button ID="BTNTeamInfo" runat="server" Text="Modify Team Info" OnClick="BTNClickTeamInfo" width="100%" CssClass="button"/>
+            <asp:Button ID="BTNTeamInfo" runat="server" Text="Modify Team Info" OnClick="BTNClickTeamInfo" width="100%" CssClass="btn btn-default wide grey"/>
         </div>
 
         <div class="col-md-4 center">
-            <asp:Button ID="BTNMemberInfo" runat="server" Text="Modify Member Info" OnClick="BTNClickMemberInfo" width="100%" CssClass="button" />
+            <asp:Button ID="BTNMemberInfo" runat="server" Text="Modify Member Info" OnClick="BTNClickMemberInfo" width="100%" CssClass="btn btn-default wide grey" />
         </div>
 
         <div class="col-md-4 center">
-            <asp:Button ID="BTNJudgeInfo" runat="server" Text="Modify Judge Info" OnClick="BTNClickJudgeInfo" width="100%" CssClass="button"/>
+            <asp:Button ID="BTNJudgeInfo" runat="server" Text="Modify Judge Info" OnClick="BTNClickJudgeInfo" width="100%" CssClass="btn btn-default wide grey"/>
         </div>
     </div>
 
@@ -54,7 +54,9 @@
                         <ItemStyle CssClass="padding" />
                         </asp:BoundField>
                         <asp:CommandField HeaderText="Edit" ShowDeleteButton="True" ShowEditButton="True" >
+                        <ControlStyle CssClass="padding" />
                         <HeaderStyle CssClass="center" />
+                        <ItemStyle CssClass="padding" />
                         </asp:CommandField>
                     </Columns>
                         <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
@@ -120,7 +122,9 @@
                     <ItemStyle CssClass="padding" />
                     </asp:BoundField>
                     <asp:CommandField HeaderText="Edit" ShowDeleteButton="True" ShowEditButton="True" ShowHeader="True">
+                    <ControlStyle CssClass="padding" />
                     <HeaderStyle CssClass="center" />
+                    <ItemStyle CssClass="padding" />
                     </asp:CommandField>
                 </Columns>
                         <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
@@ -166,12 +170,12 @@
                     <HeaderStyle CssClass="center" />
                     <ItemStyle CssClass="padding" />
                     </asp:BoundField>
-                    <asp:BoundField DataField="Company" HeaderText="Company" SortExpression="Company">
+                    <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email">
                     <ControlStyle CssClass="padding" />
                     <HeaderStyle CssClass="center" />
                     <ItemStyle CssClass="padding" />
                     </asp:BoundField>
-                    <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email">
+                    <asp:BoundField DataField="Company" HeaderText="Company" SortExpression="Company">
                     <ControlStyle CssClass="padding" />
                     <HeaderStyle CssClass="center" />
                     <ItemStyle CssClass="padding" />
@@ -181,7 +185,10 @@
                     <HeaderStyle CssClass="center" />
                     <ItemStyle CssClass="padding" />
                     </asp:BoundField>
-                    <asp:CommandField HeaderText="Edit" ShowDeleteButton="True" ShowEditButton="True" ShowHeader="True" />
+                    <asp:CommandField HeaderText="Edit" ShowDeleteButton="True" ShowEditButton="True" ShowHeader="True" >
+                    <ControlStyle CssClass="padding" />
+                    <ItemStyle CssClass="padding" />
+                    </asp:CommandField>
                 </Columns>
                         <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
                         <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />

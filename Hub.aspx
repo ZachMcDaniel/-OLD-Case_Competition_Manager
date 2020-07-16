@@ -86,8 +86,8 @@
       <asp:LoginView runat="server">    
          <RoleGroups>       
          <asp:RoleGroup Roles="competitor">           
-                 
-                 <ContentTemplate> 
+                 <ContentTemplate>           
+
                     <div class="col-md-12 center">
                       <asp:Button ID="BTNTeamMGMT" runat="server" Text="Team Managment"  OnClick="BTNTeamMGMT_Click" Class="btn btn-default wide grey"/>
                         </div>                                      

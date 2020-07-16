@@ -52,6 +52,19 @@ namespace CaseCompetitionApp
             {
             txtNews.Text = "";
             }
-        
+
+        protected void btnDrop_Click(object sender, EventArgs e)
+        {
+            string mainconn = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+            SqlConnection con = new SqlConnection(mainconn);
+            con.Open();
+            SqlCommand sqlcomm = new SqlCommand();
+            string deleteSql = "DELETE FROM News;";
+            SqlCommand cmd = new SqlCommand(deleteSql, con);
+
+            cmd.ExecuteScalar();
+
+            Response.Redirect("AdminAnnounce.aspx");
+        }
     }
 }

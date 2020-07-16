@@ -3,19 +3,27 @@
      <h2 class=" center gold">
        Update News Feed
     </h2>
-    <h3>
+    <h3 class="center">
         Add or Remove Announcements on the News Page
     </h3>
 
     <br />
     <div class="row">
         <div class="col-md-12">
-            <asp:GridView ID="GridView1" runat="server" DataKeyNames="NewsId" AutoGenerateColumns="False" ShowHeader="False" DataSourceID="SQLNews" Width="100%" BorderWidth="1px" CellPadding="4" ForeColor="Black" Gridlines="Horizontal" EditRowStyle-BorderWidth="4px" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" >
+            <asp:GridView ID="GridView1" runat="server" DataKeyNames="NewsId" AutoGenerateColumns="False" ShowHeader="False" DataSourceID="SQLNews" Width="100%" BorderWidth="1px" CellPadding="4" ForeColor="Black" Gridlines="Horizontal" EditRowStyle-BorderWidth="4px" Css-Class="newsborder" >
                 <Columns>
-                    <asp:BoundField DataField="Feed" SortExpression="Feed" >
-                <ItemStyle Font-Overline="False" Font-Size="Large" />
+                    <asp:BoundField DataField="Time" SortExpression="Time" HeaderText="Time" ReadOnly="True" >
+                    <ControlStyle CssClass="newspadding" Font-Size="Medium" width="800px"/>
+                    <ItemStyle CssClass="newspadding" Font-Size="Medium" Width="100px" />
                 </asp:BoundField>
-                    <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
+                    <asp:BoundField DataField="Feed" HeaderText="Feed" SortExpression="Feed">
+                    <ControlStyle CssClass="newspadding" Font-Size="Medium"/>
+                    <ItemStyle CssClass="newspadding" Font-Size="Medium" />
+                    </asp:BoundField>
+                    <asp:CommandField ShowDeleteButton="True" ShowEditButton="True">
+                    <ControlStyle CssClass="newspadding" Font-Size="Medium" />
+                    <ItemStyle CssClass="newspadding" Font-Size="Medium" />
+                    </asp:CommandField>
                 </Columns>
 <EditRowStyle BorderWidth="4px"></EditRowStyle>
 
@@ -28,13 +36,13 @@
                 <SortedDescendingCellStyle BackColor="#E5E5E5" />
                 <SortedDescendingHeaderStyle BackColor="#242121" />
             </asp:GridView>
-            <asp:SqlDataSource ID="SQLNews" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT * FROM [News] ORDER BY NewsTime desc" UpdateCommand="UPDATE [News] SET [Feed] = @Feed WHERE [NewsId] = @original_NewsId" OldValuesParameterFormatString="original_{0}" DeleteCommand="DELETE FROM [News] where [NewsId] = @original_NewsId">
+            <asp:SqlDataSource ID="SQLNews" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT NewsId, FORMAT([NewsTime], 'MM/dd/yy hh:mm tt') AS Time, Feed FROM [News] ORDER BY NewsTime desc" UpdateCommand="UPDATE [News] SET [Feed] = @Feed WHERE [NewsId] = @original_NewsId" OldValuesParameterFormatString="original_{0}" DeleteCommand="DELETE FROM [News] where [NewsId] = @original_NewsId">
          <DeleteParameters>
               <asp:Parameter Name="original_NewsId" Type="String" />
           </DeleteParameters>
          <UpdateParameters>
-              <asp:Parameter Name="NewsId" Type="String" />
               <asp:Parameter Name="Feed" Type="String" />
+              <asp:Parameter Name="original_NewsId" />
           </UpdateParameters>
                 </asp:SqlDataSource>
         </div>
@@ -44,8 +52,12 @@
     </div>
     <div class="row">
             <div class="col-md-8">
-            <asp:TextBox ID="txtNews" runat="server" class="txtbox"></asp:TextBox>
+            <asp:TextBox ID="txtNews" runat="server" class="txtbox" TextMode="MultiLine" Wrap="True"></asp:TextBox> <%--YEET--%>
+                <br />
+                <asp:RegularExpressionValidator ID="REVEntry" runat="server" ErrorMessage="RegularExpressionValidator" ControlToValidate="txtNews" ValidationExpression="^[\s\S]{0,1000}$" CssClass="text-danger" style="font:bold">1000 word limit on news posts</asp:RegularExpressionValidator>
+                <asp:RequiredFieldValidator ID="rfVEntry" runat="server"  CssClass="text-danger" ControlToValidate="txtNews" ErrorMessage="RequiredFieldValidator">News Entry Required</asp:RequiredFieldValidator>
                 </div>
+
             <div class="col-md-2">
                 <asp:Button ID="btnNews" CssClass="btn btn-default grey" width="100%" runat="server" Text="Insert News" OnClick="btnNewsClick" />
              </div>
@@ -53,6 +65,14 @@
                 <asp:Button ID="btncancel" CssClass="btn btn-default grey" width="100%" runat="server" Text="Clear" OnClick="btnClear_Click" />
              </div>
     </div>
+
+    <div class="col-md-12">
+        <hr />
+    </div>
+
+    <asp:Button ID="btnDrop" cssclass="btn btn-default" runat="server" Text="Delete All News"  OnClientClick="return confirm('Are you sure you want to delete the news feed?')" OnClick="btnDrop_Click" />
+
+    
     <div class="col-md-12">
         <br />
     </div>
