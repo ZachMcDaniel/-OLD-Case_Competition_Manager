@@ -203,6 +203,8 @@
     <Content Include="Maintenance\Web.config" />
     <Content Include="ErrorPage.aspx" />
     <Content Include="Archive.aspx" />
+    <Content Include="JudgeModify.aspx" />
+    <Content Include="WebForm4.aspx" />
     <None Include="Properties\PublishProfiles\casecompetition - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\casecompetition - ReadOnly - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\casecompetition - Web Deploy.pubxml" />
@@ -534,6 +536,20 @@
     </Compile>
     <Compile Include="Archive.aspx.designer.cs">
       <DependentUpon>Archive.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JudgeModify.aspx.cs">
+      <DependentUpon>JudgeModify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JudgeModify.aspx.designer.cs">
+      <DependentUpon>JudgeModify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm4.aspx.cs">
+      <DependentUpon>WebForm4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm4.aspx.designer.cs">
+      <DependentUpon>WebForm4.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

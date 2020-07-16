@@ -10,8 +10,9 @@
 </head>
 <body>
 
-
-
+  <!-- Button to start your timer -->
+<button class=".btn .btn-default" onclick='StartTimer(); this.disabled = "disabled";'>Start Timer
+</button>
 <!-- An area to display your elapsed time -->
 <span id='timer'></span>
 <!-- Scripts to store your progress -->

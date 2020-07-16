@@ -55,6 +55,9 @@ namespace CaseCompetitionApp
         {
             Response.Redirect("Submissions.aspx");
         }
-
+        protected void BTNJudgeModify_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("JudgeModify.aspx");
+        }
     }
 }

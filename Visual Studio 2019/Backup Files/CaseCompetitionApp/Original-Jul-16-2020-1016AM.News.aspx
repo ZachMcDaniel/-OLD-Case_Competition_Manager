@@ -20,7 +20,7 @@
                 </asp:BoundField>
                 </Columns>
 
-<EditRowStyle BorderWidth="4px" ></EditRowStyle>
+<EditRowStyle BorderWidth="4px" Text="Wrap Text" rows="10"></EditRowStyle>
 
                 <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
                 <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
