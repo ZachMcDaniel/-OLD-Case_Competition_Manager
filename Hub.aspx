@@ -65,9 +65,17 @@
          <asp:RoleGroup Roles="judge">           
                  
                  <ContentTemplate>   
-                     <div class="col-md-12">
+                     <div class="row">
+                     <div class="col-md-6">
                      <asp:Button ID="BTNFileReview" runat="server" Text="File Review"  OnClick="BTNFileReview_Click" Class="btn btn-default wide grey"/>
-                         </div>
+                         
+                     </div>
+                     <div class="col-md-6">
+                     <asp:Button ID="BTNJudgeModify" runat="server" Text="Modify Information"  OnClick="BTNJudgeModify_Click" Class="btn btn-default wide grey"/>
+                         
+                     </div>
+                    </div>
+
                  </ContentTemplate>        
 
          </asp:RoleGroup>   

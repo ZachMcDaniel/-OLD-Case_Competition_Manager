@@ -52,8 +52,9 @@
     </div>
     <div class="row">
             <div class="col-md-8">
-            <asp:TextBox ID="txtNews" runat="server" class="txtbox"></asp:TextBox>
+            <asp:TextBox ID="txtNews" runat="server" class="txtbox" TextMode="MultiLine" Wrap="True"></asp:TextBox> <%--YEET--%>
                 <br />
+                <asp:RegularExpressionValidator ID="REVEntry" runat="server" ErrorMessage="RegularExpressionValidator" ControlToValidate="txtNews" ValidationExpression="^[\s\S]{0,1000}$" CssClass="text-danger" style="font:bold">1000 word limit on news posts</asp:RegularExpressionValidator>
                 <asp:RequiredFieldValidator ID="rfVEntry" runat="server"  CssClass="text-danger" ControlToValidate="txtNews" ErrorMessage="RequiredFieldValidator">News Entry Required</asp:RequiredFieldValidator>
                 </div>
 

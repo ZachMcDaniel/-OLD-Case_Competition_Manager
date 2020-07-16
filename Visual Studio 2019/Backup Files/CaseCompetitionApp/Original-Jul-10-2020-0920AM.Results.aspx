@@ -1,18 +1,23 @@
 ﻿<%@ Page Title="Results" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Results.aspx.cs" Inherits="CaseCompetitionApp.Results" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="row">
-
+       
         <div class="center col-md-4">
             <h2 class="center">1st Place</h2>
             <h4 class="center">
                 Sons of Analysts
             </h4>
-            <p class="center">
+            <p class="center">                
                 <img src="Images/first.jpeg" /> <%--Change the image for teams here--%>
             </p>
-
+<<<<<<< HEAD
+            <p class="center">
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource3" ForeColor="Black" GridLines="Horizontal" Width="200px">
+=======
             <div class="div_text_center">
                 <asp:GridView ID="GridView1" HorizontalAlign="Center" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource3" ForeColor="Black" GridLines="Horizontal" Width="200px">
+>>>>>>> c22a22f6b18d2ae0a841dc6a3ad9b69dca231472
+                    
                     <Columns>
                         <asp:BoundField DataField="FirstName" HeaderText="First Name" SortExpression="FirstName" >
                             <ControlStyle CssClass="center" />
@@ -42,8 +47,8 @@
                         <asp:Parameter DefaultValue="28" Name="TeamID" Type="Int32" /> <%--change default value to change team names--%>
                     </SelectParameters>
                 </asp:SqlDataSource>
-
-            </div>
+               
+            </p>
         </div>
 
         <div class="center col-md-4">
@@ -51,8 +56,8 @@
             <h4 class="center">
                 AKA Consulting
             </h4>
-            <p class="center">
-                <img src="Images/second.jpeg" />  <%--Change the image for teams here--%>
+            <p class="center">                
+                <img src="Images/second.jpeg" />  <%--Change the image for teams here--%>  
             </p>
             <div class="div_text_center">
                 <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" Width="200px">
@@ -93,7 +98,7 @@
             <h4 class="center">
                 The Zip Codes
             </h4>
-            <p class="center">
+            <p class="center">                
                 <img src="Images/third.jpeg" />  <%--Change the image for teams here--%>
             </p>
             <div class="div_text_center">
@@ -103,7 +108,7 @@
                             <ControlStyle CssClass="center" />
                             <HeaderStyle CssClass="center" />
                             <ItemStyle CssClass="center" />
-                        </asp:BoundField>
+                        </asp:BoundField> 
 
                         <asp:BoundField DataField="LastName" HeaderText="Last Name" SortExpression="LastName">
                             <ControlStyle CssClass="center" />
@@ -123,16 +128,15 @@
                 </asp:GridView>
                 <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [FirstName], [LastName] FROM [Members] WHERE ([TeamID] = @TeamID)">
                     <SelectParameters>
-                        <asp:Parameter DefaultValue="48" Name="TeamID" Type="Int32" /> <%--change default value to change team names--%>
+                        <asp:Parameter DefaultValue="22" Name="TeamID" Type="Int32" /> <%--change default value to change team names--%>
                     </SelectParameters>
                 </asp:SqlDataSource>
             </div>
-
+           
         </div>
     </div>
 
     <div class="center">
-        <br />
         <h3>
             Thank you to all competitors for the hard work at this year's competition!
         </h3>

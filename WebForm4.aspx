@@ -1,33 +1,25 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Testtimer.aspx.cs" Inherits="CaseCompetitionApp.Testtimer" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm4.aspx.cs" Inherits="CaseCompetitionApp.WebForm4" %>
 
 <!DOCTYPE html>
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-
 </head>
 <body>
+    <input id="userInput" type="number" value = "0"/> 
+    <p id="timerr"> 00 </p>
+    <button onclick="startTime()">Start time</button>
+    <button onclick="stop()">Stop time</button>
 
-
-
-<!-- An area to display your elapsed time -->
-<span id='timer'></span>
-<!-- Scripts to store your progress -->
 <script type='text/javascript'>
-    var timeRemaining = 10800;
 
-    function StartTimer() {
-        // Start an interval that repeats each second and increments the timer
-        setInterval(UpdateTimer, 1000);
-    }
-
+   
     function UpdateTimer() {
         // Increment the timer
         timeRemaining--;
         // Display your time
-        document.getElementById('timer').innerHTML = timeRemaining.toString().toHHMMSS();
+        document.getElementById('timerr').innerHTML = timeRemaining.toString().toHHMMSS();
         // Check if the timer has completed
         if (timeRemaining <= 0) {
             " Time is up! Please prepare to present!"
@@ -46,6 +38,8 @@
         var time = hours + ':' + minutes + ':' + seconds;
         return time;
     }  
-</script>
-  </body>
-    </html>
+    
+    </script>
+   
+</body>
+</html>

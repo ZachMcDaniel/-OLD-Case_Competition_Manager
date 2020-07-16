@@ -58,12 +58,12 @@
                             <a runat="server" href="~/Results">Results</a>
                           </div>
                         </li>
-                         <li>
+                         <li class="customclass1">
                              <asp:LoginView runat="server">
                             <RoleGroups>
                                 <asp:RoleGroup Roles="admin">
                                     <ContentTemplate>
-                                             <a runat="server" style="color:white;" href="~/Maintenance">Admin</a>
+                                             <a runat="server" href="~/Maintenance">Admin</a>
                                         </ContentTemplate>
                                     </asp:RoleGroup>
                                 </RoleGroups>
@@ -72,17 +72,17 @@
                     </ul>
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
-                            <ul class="nav navbar-nav navbar-right navwhite">
-                                <li><a runat="server" style="color:white" href="~/Account/JudgeRegister">Register Judge</a></li>
-                                <li><a runat="server" style="color:white" href="~/Account/Register">Register Team</a></li>
-                                <li><a runat="server" style="color:white" href="~/Account/Login">Log in</a></li>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="customclass1"><a runat="server" href="~/Account/JudgeRegister">Register Judge</a></li>
+                                <li class="customclass1"><a runat="server" href="~/Account/Register">Register Team</a></li>
+                                <li class="customclass1"><a runat="server"  href="~/Account/Login">Log in</a></li>
                             </ul>
                         </AnonymousTemplate>
                         <LoggedInTemplate>
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a runat="server" style="color:white" href="~/Account/Manage" title="Manage your account">Hello, <%: Context.User.Identity.GetUserName()  %> !</a></li>
-                                <li>
-                                    <asp:LoginStatus runat="server" style="color:white" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
+                                <li class="customclass1"><a runat="server" href="~/Account/Manage" title="Manage your account">Hello, <%: Context.User.Identity.GetUserName()  %> !</a></li>
+                                <li class="customclass1">
+                                    <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
                                 </li>
                             </ul>
                         </LoggedInTemplate>
