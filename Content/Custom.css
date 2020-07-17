@@ -153,6 +153,16 @@
     overflow-wrap: break-word;
     white-space: pre-wrap;
 }
+
+/*Yanni try to find some wraps*/
+.editbox {
+    min-width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+}
+
 .border {
     border-color: rgba(255,223,0,0.75);
 }

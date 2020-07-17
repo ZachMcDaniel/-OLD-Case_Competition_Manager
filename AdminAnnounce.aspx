@@ -17,7 +17,7 @@
                     <ItemStyle CssClass="newspadding" Font-Size="Medium" Width="100px" />
                 </asp:BoundField>
                     <asp:BoundField DataField="Feed" HeaderText="Feed" SortExpression="Feed">
-                    <ControlStyle CssClass="newspadding" Font-Size="Medium"/>
+                    <ControlStyle CssClass="newspadding editbox" Font-Size="Medium"/>
                     <ItemStyle CssClass="newspadding" Font-Size="Medium" />
                     </asp:BoundField>
                     <asp:CommandField ShowDeleteButton="True" ShowEditButton="True">

@@ -7,27 +7,39 @@
         Access all previous competitions and results
     </h3>
 
-    <div class="row">
-        <div class="col-md-4 center">
-            <asp:Label ID="lblArchive" runat="server" Text="Input Name of Competition" CssClass="center"></asp:Label>
-            <br />
-            <asp:TextBox ID="txtCompetition" runat="server" CssClass="center"></asp:TextBox>
+    <div class="form-horizontal">
+    <div class="form-group">
+            <asp:Label ID="lblArchive" runat="server"  CssClass="col-md-4 control-label" Text="Input Name of Competition"></asp:Label>
+        <div class="col-md-4">
+            <asp:TextBox ID="txtCompetition" runat="server" class="txtbox" TextMode="MultiLine" Wrap="True"></asp:TextBox>
+        </div>
+        <div class="col-md-4">
             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtCompetition" ErrorMessage="RequiredFieldValidator">Competition Name REquired</asp:RequiredFieldValidator>
         </div>
-        <div class="col-md-4 center">
-            <asp:Label ID="lblDate" runat="server" Text="Select Date of Competition" CssClass="center"></asp:Label>
-        <asp:Calendar ID="Calendar1" runat="server" BackColor="White" BorderColor="White" BorderWidth="1px" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="161px" NextPrevFormat="FullMonth" Width="95%" CssClass="center">
-            <DayHeaderStyle Font-Bold="True" Font-Size="8pt" />
-            <NextPrevStyle Font-Bold="True" Font-Size="8pt" ForeColor="#333333" VerticalAlign="Bottom" />
-            <OtherMonthDayStyle ForeColor="#999999" />
-            <SelectedDayStyle BackColor="#333399" ForeColor="White" />
-            <TitleStyle BackColor="White" BorderColor="Black" BorderWidth="4px" Font-Bold="True" Font-Size="12pt" ForeColor="#333399" />
-            <TodayDayStyle BackColor="#CCCCCC" />
+        </div>
+
+    <div class="form-group">
+            <asp:Label ID="lblDate" runat="server" CssClass="col-md-4 control-label" Text="Select Date of Competition"></asp:Label>
+        <div class="col-md-4">
+        <asp:Calendar ID="Calendar1" runat="server" BackColor="White" BorderColor="#999999" Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" Height="180px" Width="200px" CellPadding="4" DayNameFormat="Shortest">
+            <DayHeaderStyle Font-Bold="True" Font-Size="7pt" BackColor="#CCCCCC" />
+            <NextPrevStyle VerticalAlign="Bottom" />
+            <OtherMonthDayStyle ForeColor="#808080" />
+            <SelectedDayStyle BackColor="#FFDF00" ForeColor="White" Font-Bold="True" />
+            <SelectorStyle BackColor="#CCCCCC" />
+            <TitleStyle BackColor="#999999" BorderColor="Black" Font-Bold="True" />
+            <TodayDayStyle BackColor="#CCCCCC" ForeColor="Black" />
+            <WeekendDayStyle BackColor="#FFFFCC" />
             </asp:Calendar>
         </div>
-        <div class="col-md-4 center">
-            <asp:Button ID="BtnArchive" CssClass="btn btn-default wide" runat="server" OnClientClick="return confirm('Are you sure you want to archive the current competition?')" Text="Archive Competition" />
         </div>
+
+    <div class="form-group">
+     <div class="col-md-offset-3 col-md-9">
+            <asp:Button ID="BtnArchive" CssClass="btn btn-default" runat="server" OnClientClick="return confirm('Are you sure you want to archive the current competition?')" Text="Archive Competition" />
+        </div>
+    </div>
+
     </div>
 
     <div class="row">
@@ -49,7 +61,7 @@
     </div>
     </div>
 
-   <%-- <div class="row">
+    <div class="row">
         <div class="col-md-12">
             <asp:GridView ID="gvCompete" runat="server" AutoGenerateColumns="False" DataSourceID="SqlCompetition" Width="95%" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" DataKeyNames="CompetitionID">
                 <Columns>
@@ -138,6 +150,6 @@
                 </SelectParameters>
             </asp:SqlDataSource>
         </div>
-    </div>--%>
+    </div>
 
 </asp:Content>

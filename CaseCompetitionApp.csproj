@@ -170,6 +170,7 @@
     <Content Include="AdminDeliverable.aspx" />
     <Content Include="CaseFiles.aspx" />
     <Content Include="CompetitionSupport.aspx" />
+    <Content Include="CompetitorInfo.aspx" />
     <Content Include="ContactInfo.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -397,6 +398,13 @@
     </Compile>
     <Compile Include="CompetitionSupport.aspx.designer.cs">
       <DependentUpon>CompetitionSupport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CompetitorInfo.aspx.cs">
+      <DependentUpon>CompetitorInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CompetitorInfo.aspx.designer.cs">
+      <DependentUpon>CompetitorInfo.aspx</DependentUpon>
     </Compile>
     <Compile Include="ContactInfo.aspx.cs">
       <DependentUpon>ContactInfo.aspx</DependentUpon>
