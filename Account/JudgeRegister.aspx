@@ -58,14 +58,21 @@
         </div>
 
           <div class="form-group">
-            <asp:Label runat="server" AssociatedControlID="coURL" CssClass="col-md-2 control-label">Company Site URL</asp:Label>
+            <asp:Label runat="server" AssociatedControlID="coURL" CssClass="col-md-2 control-label">Company Site</asp:Label>
             <div class="col-md-4">
                 <asp:TextBox runat="server" ID="coURL" CssClass="form-control" />
+                <asp:RegularExpressionValidator 
+            ID="RegularExpressionValidator1"
+            runat="server" 
+            ValidationExpression="^(?!http(s)?://).+"
+            ControlToValidate="coURL"
+            ErrorMessage="Please remove http(S):// from url"
+            ></asp:RegularExpressionValidator>
             </div>
              <div class="col-md-6">
              </div>
         </div>
-
+         <%--"http(s)?://([\w-]+\.)+[\w-]+(/[\w- ./?%&=]*)?"--%>
 
         <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="Password" CssClass="col-md-2 control-label">Password</asp:Label>

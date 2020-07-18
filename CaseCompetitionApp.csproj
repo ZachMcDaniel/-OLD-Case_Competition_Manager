@@ -168,6 +168,7 @@
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="AdminAnnounce.aspx" />
     <Content Include="AdminDeliverable.aspx" />
+    <Content Include="Archive.aspx" />
     <Content Include="CaseFiles.aspx" />
     <Content Include="CompetitionSupport.aspx" />
     <Content Include="CompetitorInfo.aspx" />
@@ -203,7 +204,6 @@
     <Content Include="JudgeInfo.aspx" />
     <Content Include="Maintenance\Web.config" />
     <Content Include="ErrorPage.aspx" />
-    <Content Include="Archive.aspx" />
     <Content Include="JudgeModify.aspx" />
     <Content Include="WebForm4.aspx" />
     <None Include="Properties\PublishProfiles\casecompetition - FTP.pubxml" />
@@ -385,6 +385,13 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Archive.aspx.cs">
+      <DependentUpon>Archive.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Archive.aspx.designer.cs">
+      <DependentUpon>Archive.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CaseFiles.aspx.cs">
       <DependentUpon>CaseFiles.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -537,13 +544,6 @@
     </Compile>
     <Compile Include="ErrorPage.aspx.designer.cs">
       <DependentUpon>ErrorPage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Archive.aspx.cs">
-      <DependentUpon>Archive.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Archive.aspx.designer.cs">
-      <DependentUpon>Archive.aspx</DependentUpon>
     </Compile>
     <Compile Include="JudgeModify.aspx.cs">
       <DependentUpon>JudgeModify.aspx</DependentUpon>

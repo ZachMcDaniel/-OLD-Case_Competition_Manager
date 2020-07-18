@@ -53,5 +53,5 @@
             <SortedDescendingHeaderStyle BackColor="#242121" />
 
     </asp:GridView>
-    <asp:SqlDataSource ID="SqlTeams" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [TeamID], [School], [TeamName], [Email], [Timeslots], [RoomNumber] FROM [TEAM]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlTeams" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [TeamID], [School], [TeamName], [Email], FORMAT([Timeslots], 'hh:mm tt') AS Timeslots, [RoomNumber] FROM [TEAM]"></asp:SqlDataSource>
 </asp:Content>

@@ -35,28 +35,28 @@
                     <Columns>
                         <asp:BoundField DataField="TeamName" HeaderText="Team Name" SortExpression="TeamName" ReadOnly="True" >
                         <ControlStyle CssClass="padding" />
-                        <HeaderStyle CssClass="center" />
+                        <HeaderStyle CssClass="padding" />
                         <ItemStyle CssClass="padding" />
                         </asp:BoundField>
                         <asp:BoundField DataField="School" HeaderText="School" SortExpression="School" ReadOnly="True" >
                         <ControlStyle CssClass="padding" />
-                        <HeaderStyle CssClass="center" />
+                        <HeaderStyle CssClass="padding" />
                         <ItemStyle CssClass="padding" />
                         </asp:BoundField>
                         <asp:BoundField DataField="Timeslots" HeaderText="Timeslot" SortExpression="Timeslots" >
                         <ControlStyle CssClass="padding" />
-                        <HeaderStyle CssClass="center" />
+                        <HeaderStyle CssClass="padding" />
                         <ItemStyle CssClass="padding" />
                         </asp:BoundField>
                         <asp:BoundField DataField="RoomNumber" HeaderText="Room Number" SortExpression="RoomNumber" >
                         <ControlStyle CssClass="padding" />
-                        <HeaderStyle CssClass="center" />
+                        <HeaderStyle CssClass="padding" />
                         <ItemStyle CssClass="padding" />
                         </asp:BoundField>
                         <asp:CommandField HeaderText="Edit" ShowDeleteButton="True" ShowEditButton="True" >
-                        <ControlStyle CssClass="padding" />
-                        <HeaderStyle CssClass="center" />
-                        <ItemStyle CssClass="padding" />
+                        <ControlStyle CssClass="smpadding" />
+                        <HeaderStyle CssClass="padding" />
+                        <ItemStyle CssClass="smpadding" />
                         </asp:CommandField>
                     </Columns>
                         <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
@@ -88,43 +88,43 @@
                 <Columns>
                     <asp:BoundField DataField="FirstName" HeaderText="First Name" SortExpression="FirstName">
                     <ControlStyle CssClass="padding" />
-                    <HeaderStyle CssClass="center" />
+                    <HeaderStyle CssClass="padding" />
                     <ItemStyle CssClass="padding" />
                     </asp:BoundField>
                     <asp:BoundField DataField="LastName" HeaderText="Last Name" SortExpression="LastName">
                     <ControlStyle CssClass="padding" />
-                    <HeaderStyle CssClass="center" />
+                    <HeaderStyle CssClass="padding" />
                     <ItemStyle CssClass="padding" />
                     </asp:BoundField>
                     <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email">
                     <ControlStyle CssClass="padding" />
-                    <HeaderStyle CssClass="center" />
+                    <HeaderStyle CssClass="padding" />
                     <ItemStyle CssClass="padding" />
                     </asp:BoundField>
                     <asp:BoundField DataField="FoodAllergy" HeaderText="Food Allergy" SortExpression="FoodAllergy">
                     <ControlStyle CssClass="padding" />
-                    <HeaderStyle CssClass="center" />
+                    <HeaderStyle CssClass="padding" />
                     <ItemStyle CssClass="padding" />
                     </asp:BoundField>
                     <asp:BoundField DataField="ShirtSize" HeaderText="Shirt Size" SortExpression="ShirtSize">
                     <ControlStyle CssClass="padding" />
-                    <HeaderStyle CssClass="center" />
+                    <HeaderStyle CssClass="padding" />
                     <ItemStyle CssClass="padding" />
                     </asp:BoundField>
                     <asp:BoundField DataField="PhoneNumber" HeaderText="Phone Number" SortExpression="PhoneNumber">
                     <ControlStyle CssClass="padding" />
-                    <HeaderStyle CssClass="center" />
+                    <HeaderStyle CssClass="padding" />
                     <ItemStyle CssClass="padding" />
                     </asp:BoundField>
                     <asp:BoundField DataField="Vegan" HeaderText="Vegan" SortExpression="Vegan">
                     <ControlStyle CssClass="padding" />
-                    <HeaderStyle CssClass="center" />
+                    <HeaderStyle CssClass="padding" />
                     <ItemStyle CssClass="padding" />
                     </asp:BoundField>
                     <asp:CommandField HeaderText="Edit" ShowDeleteButton="True" ShowEditButton="True" ShowHeader="True">
-                    <ControlStyle CssClass="padding" />
-                    <HeaderStyle CssClass="center" />
-                    <ItemStyle CssClass="padding" />
+                    <ControlStyle CssClass="smpadding" />
+                    <HeaderStyle CssClass="padding" />
+                    <ItemStyle CssClass="smpadding" />
                     </asp:CommandField>
                 </Columns>
                         <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
@@ -162,32 +162,33 @@
                 <Columns>
                     <asp:BoundField DataField="FirstName" HeaderText="First Name" SortExpression="FirstName">
                     <ControlStyle CssClass="padding" />
-                    <HeaderStyle CssClass="center" />
+                    <HeaderStyle CssClass="padding" />
                     <ItemStyle CssClass="padding" />
                     </asp:BoundField>
                     <asp:BoundField DataField="LastName" HeaderText="Last Name" SortExpression="LastName">
                     <ControlStyle CssClass="padding" />
-                    <HeaderStyle CssClass="center" />
+                    <HeaderStyle CssClass="padding" />
                     <ItemStyle CssClass="padding" />
                     </asp:BoundField>
                     <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email">
                     <ControlStyle CssClass="padding" />
-                    <HeaderStyle CssClass="center" />
+                    <HeaderStyle CssClass="padding" />
                     <ItemStyle CssClass="padding" />
                     </asp:BoundField>
                     <asp:BoundField DataField="Company" HeaderText="Company" SortExpression="Company">
                     <ControlStyle CssClass="padding" />
-                    <HeaderStyle CssClass="center" />
+                    <HeaderStyle CssClass="padding" />
                     <ItemStyle CssClass="padding" />
                     </asp:BoundField>
                     <asp:BoundField DataField="CompanySite" HeaderText="Company Site" SortExpression="CompanySite">
                     <ControlStyle CssClass="padding" />
-                    <HeaderStyle CssClass="center" />
+                    <HeaderStyle CssClass="padding" />
                     <ItemStyle CssClass="padding" />
                     </asp:BoundField>
                     <asp:CommandField HeaderText="Edit" ShowDeleteButton="True" ShowEditButton="True" ShowHeader="True" >
-                    <ControlStyle CssClass="padding" />
-                    <ItemStyle CssClass="padding" />
+                    <ControlStyle CssClass="smpadding" />
+                    <ItemStyle CssClass="smpadding" />
+                    <HeaderStyle CssClass="padding" />
                     </asp:CommandField>
                 </Columns>
                         <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
