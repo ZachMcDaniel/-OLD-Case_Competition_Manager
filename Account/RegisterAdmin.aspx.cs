@@ -20,6 +20,7 @@ namespace CaseCompetitionApp
         {
             userMgr = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
             roleMgr = Context.GetOwinContext().Get<ApplicationRoleManager>();
+            lblSubmit.Visible = false;
         }
 
             protected void CreateUser_Click(object sender, EventArgs e)
@@ -27,7 +28,7 @@ namespace CaseCompetitionApp
             var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
             var signInManager = Context.GetOwinContext().Get<ApplicationSignInManager>();
             var user = new ApplicationUser() { UserName = username.Text, Email = Email.Text };
-            IdentityResult result = manager.Create(user, Password.Text);
+            IdentityResult result = manager.Create(user, "Gohawks1847!");
 
             if (result.Succeeded)
             {
@@ -35,6 +36,9 @@ namespace CaseCompetitionApp
 
                 // User added successfully, you can safely use the Id now.
                 var id = user.Id;
+
+                lblSubmit.Text = "New Admin account created";
+                lblSubmit.Visible = true;
 
                 //userMgr.AddToRole(username.Text, "1");
 

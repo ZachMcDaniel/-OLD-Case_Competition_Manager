@@ -10,6 +10,7 @@
         <h4>Create a new account</h4>
         <hr />
         <asp:ValidationSummary runat="server" CssClass="text-danger" />
+        <asp:Panel ID="Register" runat="server" DefaultButton="btnRegister">
          <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="username" CssClass="col-md-2 control-label">User Name</asp:Label>
             <div class="col-md-4">
@@ -94,8 +95,9 @@
         </div>
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <asp:Button runat="server" OnClick="CreateUser_Click" Text="Register" CssClass="btn btn-default" />
+                <asp:Button runat="server" ID="btnRegister" OnClick="CreateUser_Click" Text="Register" CssClass="btn btn-default" />
             </div>
         </div>
+            </asp:Panel>
     </div>
 </asp:Content>

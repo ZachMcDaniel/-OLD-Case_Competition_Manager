@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Archive.aspx.cs" Inherits="CaseCompetitionApp.Archive" %>
+﻿<%@ Page Title="Archive" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Archive.aspx.cs" Inherits="CaseCompetitionApp.Archive" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
       <h2 class=" center gold">
@@ -9,43 +9,7 @@
     </h3>
 
     <hr />
-      <%--Admin View--%>
-  <asp:LoginView ID="adminArchives" runat="server">     
-         <RoleGroups>       
-         <asp:RoleGroup Roles="admin">           
-                 <ContentTemplate>
-    <div class="row">
-        <div>
-             <div class="col-md-2" style="text-align:right;vertical-align:central">
-             <asp:Label ID="lblArchive" style="text-align:right; font-weight:bold; vertical-align:central" runat="server"  CssClass="control-label" Text="Name of Competition: "></asp:Label>
-                 </div>
-            <div class="col-md-3">
-             <asp:TextBox ID="txtCompetition" runat="server" class="ArchBox"></asp:TextBox>
-            <br />
-              <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtCompetition" ErrorMessage="RequiredFieldValidator">Competition Name Required</asp:RequiredFieldValidator>
-        </div>
-        </div>
-       <div>
-           <div class="col-md-2" style="text-align:right;vertical-align:central">
-              <asp:Label ID="lblDate" style="text-align:right; font-weight:bold; vertical-align:central" runat="server" CssClass="control-label" Text="Date of Competition: "></asp:Label>
-               </div>
-           <div class="col-md-3">
-              <asp:TextBox ID="txtDate" textmode="Date" runat="server" class="ArchBox"></asp:TextBox>
-            <br />
 
-              <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtDate" ErrorMessage="RequiredFieldValidator">Competition Date Required</asp:RequiredFieldValidator>
-        </div>
-       </div>
-          <div class="col-md-2">
-            <asp:Button ID="BtnArchive" CssClass="btn btn-default" Style="padding-bottom:0px; padding-top:0px; margin-top:0px;text-align:center" runat="server" OnClientClick="return confirm('Are you sure you want to archive the current competition?')" Text="Archive Competition" Height="26px" OnClick="Btn_Archive" />
-              <asp:Label ID="lblEmpty" runat="server" CssClass="text-danger" Text=""></asp:Label>
-          </div>
-    </div>
-                      <hr />
-</ContentTemplate>        
-          </asp:RoleGroup>   
-         </RoleGroups>
-    </asp:LoginView>
     <div class="row">
         <div class="col-md-12">
             <asp:GridView ID="gvCompete" runat="server" AutoGenerateColumns="False" DataSourceID="SqlCompetition" Width="100%" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" DataKeyNames="CompetitionID">

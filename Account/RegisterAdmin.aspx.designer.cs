@@ -24,6 +24,15 @@ namespace CaseCompetitionApp
         protected global::System.Web.UI.WebControls.Literal ErrorMessage;
 
         /// <summary>
+        /// register control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel register;
+
+        /// <summary>
         /// username control.
         /// </summary>
         /// <remarks>
@@ -42,21 +51,21 @@ namespace CaseCompetitionApp
         protected global::System.Web.UI.WebControls.TextBox Email;
 
         /// <summary>
-        /// Password control.
+        /// btnRegister control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Password;
+        protected global::System.Web.UI.WebControls.Button btnRegister;
 
         /// <summary>
-        /// ConfirmPassword control.
+        /// lblSubmit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ConfirmPassword;
+        protected global::System.Web.UI.WebControls.Label lblSubmit;
     }
 }

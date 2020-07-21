@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="RegisterAdmin.aspx.cs" Inherits="CaseCompetitionApp.RegisterAdmin" %>
+﻿<%@ Page Title="Register Admin" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="RegisterAdmin.aspx.cs" Inherits="CaseCompetitionApp.RegisterAdmin" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
       <h2><%: Title %></h2>
     <p class="text-danger">
@@ -6,9 +6,10 @@
     </p>
 
     <div class="form-horizontal">
-        <h4>Create a new account</h4>
+        <h4>Create a new admin account</h4>
         <hr />
         <asp:ValidationSummary runat="server" CssClass="text-danger" />
+        <asp:Panel ID="register" runat="server" DefaultButton="btnRegister">
          <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="username" CssClass="col-md-2 control-label">User Name</asp:Label>
             <div class="col-md-4">
@@ -29,8 +30,9 @@
             </div>
         </div>
 
+<%--        Comment back in if you would like admin to set temp passwords for other admin--%>
 
-        <div class="form-group">
+        <%--<div class="form-group">
             <asp:Label runat="server" AssociatedControlID="Password" CssClass="col-md-2 control-label">Password</asp:Label>
             <div class="col-md-10">
                 <asp:TextBox runat="server" ID="Password" TextMode="Password" CssClass="form-control" />
@@ -47,11 +49,16 @@
                 <asp:CompareValidator runat="server" ControlToCompare="Password" ControlToValidate="ConfirmPassword"
                     CssClass="text-danger" Display="Dynamic" ErrorMessage="The password and confirmation password do not match." />
             </div>
-        </div>
+        </div>--%>
+
         <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <asp:Button runat="server" OnClick="CreateUser_Click" Text="Register" CssClass="btn btn-default" />
+            <div class="col-md-offset-2 col-md-1">
+                <asp:Button runat="server" ID="btnRegister" OnClick="CreateUser_Click" Text="Register" CssClass="btn btn-default" />
+            </div>
+            <div class="col-md-9">
+                <asp:Label ID="lblSubmit" runat="server" Text=""></asp:Label>
             </div>
         </div>
+            </asp:Panel>
     </div>
 </asp:Content>

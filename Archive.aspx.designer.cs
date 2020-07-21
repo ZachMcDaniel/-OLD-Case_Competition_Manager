@@ -15,15 +15,6 @@ namespace CaseCompetitionApp
     {
 
         /// <summary>
-        /// adminArchives control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LoginView adminArchives;
-
-        /// <summary>
         /// gvCompete control.
         /// </summary>
         /// <remarks>
