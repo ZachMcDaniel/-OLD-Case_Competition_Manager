@@ -53,6 +53,11 @@
                         <HeaderStyle CssClass="center" />
                         <ItemStyle CssClass="padding" />
                         </asp:BoundField>
+                        <asp:BoundField DataField="Ranking" HeaderText="Team Ranking" SortExpression="Ranking">
+                        <ControlStyle CssClass="padding" />
+                        <HeaderStyle CssClass="center" />
+                        <ItemStyle CssClass="padding" />
+                        </asp:BoundField>
                         <asp:CommandField HeaderText="Edit" ShowDeleteButton="True" ShowEditButton="True" >
                         <ControlStyle CssClass="padding" />
                         <HeaderStyle CssClass="center" />
@@ -68,11 +73,12 @@
                         <SortedDescendingCellStyle BackColor="#E5E5E5" />
                         <SortedDescendingHeaderStyle BackColor="#242121" />
                 </asp:GridView>
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [TeamID], [TeamName], [Timeslots], [School], [RoomNumber] FROM [TEAM]" UpdateCommand="UPDATE [TEAM] SET [Timeslots] = @Timeslots, [RoomNumber] = @RoomNumber WHERE [TeamID] = @original_TeamID" OldValuesParameterFormatString="original_{0}" DeleteCommand="DELETE FROM [TEAM] where [TeamID] = @original_TeamID">
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT * FROM [TEAM]" UpdateCommand="UPDATE [TEAM] SET [Timeslots] = @Timeslots, [RoomNumber] = @RoomNumber , [Ranking] = @Ranking WHERE [TeamID] = @original_TeamID" OldValuesParameterFormatString="original_{0}" DeleteCommand="DELETE FROM [TEAM] where [TeamID] = @original_TeamID">
                      <DeleteParameters>
                         <asp:Parameter Name="original_TeamID" Type="String" />
                      </DeleteParameters>
                      <UpdateParameters>
+                        <asp:Parameter Name="Ranking" Type="String" />
                         <asp:Parameter Name="Timeslots" Type="String" />
                         <asp:Parameter Name="RoomNumber" Type="String" />
                      </UpdateParameters>
