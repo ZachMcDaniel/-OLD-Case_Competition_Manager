@@ -60,7 +60,25 @@ namespace CaseCompetitionApp
 
                 Response.Redirect("Archive.aspx");
             }
+
+
         }
+
+        protected void btnunarchive(object sender, EventArgs e)
+        {
+            string mainconn = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+            SqlConnection con = new SqlConnection(mainconn);
+            con.Open();
+            SqlCommand sqlcomm = new SqlCommand();
+
+            string insertID = "UPDATE TEAM SET CompetitionID = NULL WHERE CompetitionID = @CompetitionID;";
+            SqlCommand comd = new SqlCommand(insertID, con);
+
+            comd.Parameters.AddWithValue("@CompetitionID", 1);
+
+            comd.ExecuteScalar();
+        }
+
 
     }
 }

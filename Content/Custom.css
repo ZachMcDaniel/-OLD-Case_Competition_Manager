@@ -319,3 +319,11 @@
 .nav navbar-nav navbar-right li a:hover {
     color: yellow;
 }
+
+.button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 0px;
+}
