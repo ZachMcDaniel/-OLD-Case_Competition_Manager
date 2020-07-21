@@ -63,5 +63,6 @@ namespace CaseCompetitionApp
             BTNMemberInfo.Style.Remove("font-weight");
 
         }
-    }
+       
+        }
 }

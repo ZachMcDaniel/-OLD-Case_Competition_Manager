@@ -167,6 +167,7 @@
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="AdminAnnounce.aspx" />
+
     <Content Include="AdminArchive.aspx" />
     <Content Include="AdminDeliverable.aspx" />
     <Content Include="Archive.aspx" />
@@ -181,7 +182,6 @@
     <Content Include="Content\Custom.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
-    <Content Include="Deliverables.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="FileReview.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -435,13 +435,6 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Deliverables.aspx.cs">
-      <DependentUpon>Deliverables.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Deliverables.aspx.designer.cs">
-      <DependentUpon>Deliverables.aspx</DependentUpon>
     </Compile>
     <Compile Include="FileReview.aspx.cs">
       <DependentUpon>FileReview.aspx</DependentUpon>
