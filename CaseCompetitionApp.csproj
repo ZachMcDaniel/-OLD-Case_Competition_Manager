@@ -167,9 +167,7 @@
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="AdminAnnounce.aspx" />
-
     <Content Include="AdminArchive.aspx" />
-    <Content Include="AdminDeliverable.aspx" />
     <Content Include="Archive.aspx" />
     <Content Include="CaseFiles.aspx" />
     <Content Include="CompetitionSupport.aspx" />
@@ -382,13 +380,6 @@
     </Compile>
     <Compile Include="AdminArchive.aspx.designer.cs">
       <DependentUpon>AdminArchive.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="AdminDeliverable.aspx.cs">
-      <DependentUpon>AdminDeliverable.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AdminDeliverable.aspx.designer.cs">
-      <DependentUpon>AdminDeliverable.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
