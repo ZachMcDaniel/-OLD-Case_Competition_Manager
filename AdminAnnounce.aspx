@@ -70,11 +70,16 @@
         <hr />
     </div>
 
+    <div class="rightdiv">
     <asp:Button ID="btnDrop" cssclass="btn btn-default" runat="server" Text="Delete All News"  OnClientClick="return confirm('Are you sure you want to delete the news feed?')" OnClick="btnDrop_Click" />
-
+    </div>
     
     <div class="col-md-12">
         <br />
+    </div>
+
+     <div class="bottomdiv">
+         <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="Hub.aspx" CssClass="hyperlink" >Return to Hub</asp:HyperLink>
     </div>
 
 </asp:Content>
