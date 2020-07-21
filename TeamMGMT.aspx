@@ -139,11 +139,17 @@
                 <HeaderStyle CssClass="center" />
                 <ItemStyle CssClass="center" />
                 </asp:BoundField>
-            <asp:BoundField DataField="Vegan" HeaderText="Vegan" SortExpression="Vegan" ApplyFormatInEditMode="True" >
+            <asp:TemplateField HeaderText="Vegan" SortExpression="Vegan">
+                <EditItemTemplate>
+    <asp:RadioButtonList ID="RadioButtonList1" runat="server" DataSourceID="SqlDataSource2" DataTextField="Vegan" DataValueField="Vegan"></asp:RadioButtonList>
+                </EditItemTemplate>
+                <ItemTemplate>
+                    <asp:Label ID="Label1" runat="server" Text='<%# Bind("Vegan") %>'></asp:Label>
+                </ItemTemplate>
                 <ControlStyle CssClass="center" />
                 <HeaderStyle CssClass="center" />
                 <ItemStyle CssClass="center" />
-                </asp:BoundField>
+            </asp:TemplateField>
             <asp:CommandField ShowEditButton="True" ShowDeleteButton="True" />
         </Columns>
         <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
@@ -173,6 +179,8 @@
               <asp:Parameter Name="Vegan" Type="string" />
           </UpdateParameters>
                 </asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT DISTINCT CASE WHEN Vegan = 1 THEN 'Yes' ELSE 'No' END As Vegan  FROM [Members]"></asp:SqlDataSource>
+
         </div>
 
 

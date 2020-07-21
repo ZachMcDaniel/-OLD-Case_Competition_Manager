@@ -9,12 +9,7 @@
     <br/>
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSourcejudge" Width="95%" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal">
         <Columns>
-            <asp:BoundField DataField="FirstName" HeaderText="First Name" SortExpression="FirstName" >
-                <ControlStyle CssClass="center" />
-                <HeaderStyle CssClass="center" />
-                <ItemStyle CssClass="center" />
-                </asp:BoundField>
-            <asp:BoundField DataField="LastName" HeaderText="Last Name" SortExpression="LastName" >
+            <asp:BoundField DataField="JudgeName" HeaderText="Judge Name" SortExpression="JudgeName" >
                 <ControlStyle CssClass="center" />
                 <HeaderStyle CssClass="center" />
                 <ItemStyle CssClass="center" />
@@ -41,7 +36,7 @@
     </asp:GridView>
 
 
-    <asp:SqlDataSource ID="SqlDataSourcejudge" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [FirstName], [LastName], [Company], [CompanySite] FROM [Judges]" ></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSourcejudge" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT concat([FirstName], ' ', [LastName]) AS JudgeName, [Company], [CompanySite] FROM [Judges] WHERE CompetitionID IS NULL" ></asp:SqlDataSource>
 
 
 </asp:Content>

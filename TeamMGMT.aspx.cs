@@ -15,7 +15,7 @@ namespace CaseCompetitionApp
 {
     public partial class TeamMGMT : System.Web.UI.Page
     {
-
+        
         //protected void Page_Load(object sender, EventArgs e)
         //{
         //    //if this is the first time loading the page, bind the grid

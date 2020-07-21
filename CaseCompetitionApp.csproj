@@ -167,8 +167,13 @@
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="AdminAnnounce.aspx" />
+
+    <Content Include="AdminArchive.aspx" />
+    <Content Include="AdminDeliverable.aspx" />
+    <Content Include="Archive.aspx" />
     <Content Include="CaseFiles.aspx" />
     <Content Include="CompetitionSupport.aspx" />
+    <Content Include="CompetitorInfo.aspx" />
     <Content Include="ContactInfo.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -200,7 +205,9 @@
     <Content Include="JudgeInfo.aspx" />
     <Content Include="Maintenance\Web.config" />
     <Content Include="ErrorPage.aspx" />
-    <Content Include="Archive.aspx" />
+    <Content Include="JudgeModify.aspx" />
+    <Content Include="Account\RegisterAdmin.aspx" />
+    <Content Include="WebForm4.aspx" />
     <None Include="Properties\PublishProfiles\casecompetition - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\casecompetition - ReadOnly - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\casecompetition - Web Deploy.pubxml" />
@@ -369,10 +376,31 @@
     <Compile Include="AdminAnnounce.aspx.designer.cs">
       <DependentUpon>AdminAnnounce.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AdminArchive.aspx.cs">
+      <DependentUpon>AdminArchive.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminArchive.aspx.designer.cs">
+      <DependentUpon>AdminArchive.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDeliverable.aspx.cs">
+      <DependentUpon>AdminDeliverable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminDeliverable.aspx.designer.cs">
+      <DependentUpon>AdminDeliverable.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Archive.aspx.cs">
+      <DependentUpon>Archive.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Archive.aspx.designer.cs">
+      <DependentUpon>Archive.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CaseFiles.aspx.cs">
       <DependentUpon>CaseFiles.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -386,6 +414,13 @@
     </Compile>
     <Compile Include="CompetitionSupport.aspx.designer.cs">
       <DependentUpon>CompetitionSupport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CompetitorInfo.aspx.cs">
+      <DependentUpon>CompetitorInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CompetitorInfo.aspx.designer.cs">
+      <DependentUpon>CompetitorInfo.aspx</DependentUpon>
     </Compile>
     <Compile Include="ContactInfo.aspx.cs">
       <DependentUpon>ContactInfo.aspx</DependentUpon>
@@ -448,6 +483,13 @@
       <DependentUpon>News.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Account\RegisterAdmin.aspx.cs">
+      <DependentUpon>RegisterAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\RegisterAdmin.aspx.designer.cs">
+      <DependentUpon>RegisterAdmin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Results.aspx.cs">
       <DependentUpon>Results.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -512,12 +554,19 @@
     <Compile Include="ErrorPage.aspx.designer.cs">
       <DependentUpon>ErrorPage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Archive.aspx.cs">
-      <DependentUpon>Archive.aspx</DependentUpon>
+    <Compile Include="JudgeModify.aspx.cs">
+      <DependentUpon>JudgeModify.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Archive.aspx.designer.cs">
-      <DependentUpon>Archive.aspx</DependentUpon>
+    <Compile Include="JudgeModify.aspx.designer.cs">
+      <DependentUpon>JudgeModify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm4.aspx.cs">
+      <DependentUpon>WebForm4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm4.aspx.designer.cs">
+      <DependentUpon>WebForm4.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

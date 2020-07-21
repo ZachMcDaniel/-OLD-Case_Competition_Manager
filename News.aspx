@@ -23,7 +23,7 @@
                 </asp:BoundField>
                 </Columns>
 
-<EditRowStyle BorderWidth="4px"></EditRowStyle>
+<EditRowStyle BorderWidth="4px" ></EditRowStyle>
 
             </asp:GridView>
             <asp:SqlDataSource ID="SQLNews" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT NewsId, FORMAT([NewsTime], 'MM/dd/yy hh:mm tt') AS Time, Feed FROM [News] ORDER BY NewsTime desc"></asp:SqlDataSource>

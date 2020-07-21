@@ -11,79 +11,61 @@ namespace CaseCompetitionApp
 {
 
 
-    public partial class Archive
+    public partial class RegisterAdmin
     {
 
         /// <summary>
-        /// gvCompete control.
+        /// ErrorMessage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvCompete;
+        protected global::System.Web.UI.WebControls.Literal ErrorMessage;
 
         /// <summary>
-        /// SqlCompetition control.
+        /// register control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlCompetition;
+        protected global::System.Web.UI.WebControls.Panel register;
 
         /// <summary>
-        /// gvJudge control.
+        /// username control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvJudge;
+        protected global::System.Web.UI.WebControls.TextBox username;
 
         /// <summary>
-        /// SqlJudge control.
+        /// Email control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlJudge;
+        protected global::System.Web.UI.WebControls.TextBox Email;
 
         /// <summary>
-        /// gvTeam control.
+        /// btnRegister control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvTeam;
+        protected global::System.Web.UI.WebControls.Button btnRegister;
 
         /// <summary>
-        /// SqlTeam control.
+        /// lblSubmit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlTeam;
-
-        /// <summary>
-        /// gvMembers control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvMembers;
-
-        /// <summary>
-        /// SQLMembers control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SQLMembers;
+        protected global::System.Web.UI.WebControls.Label lblSubmit;
     }
 }

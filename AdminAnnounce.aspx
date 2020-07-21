@@ -10,16 +10,23 @@
     <br />
     <div class="row">
         <div class="col-md-12">
-            <asp:GridView ID="GridView1" runat="server" DataKeyNames="NewsId" AutoGenerateColumns="False" ShowHeader="False" DataSourceID="SQLNews" Width="100%" BorderWidth="1px" CellPadding="4" ForeColor="Black" Gridlines="Horizontal" EditRowStyle-BorderWidth="4px" Css-Class="newsborder" >
+            <asp:GridView ID="GVNews" runat="server" DataKeyNames="NewsId" AutoGenerateColumns="False" ShowHeader="False" DataSourceID="SQLNews" Width="100%"  BorderWidth="1px" CellPadding="4" ForeColor="Black" Gridlines="Horizontal" EditRowStyle-BorderWidth="4px" Css-Class="newsborder" >
                 <Columns>
                     <asp:BoundField DataField="Time" SortExpression="Time" HeaderText="Time" ReadOnly="True" >
                     <ControlStyle CssClass="newspadding" Font-Size="Medium" width="800px"/>
                     <ItemStyle CssClass="newspadding" Font-Size="Medium" Width="100px" />
                 </asp:BoundField>
-                    <asp:BoundField DataField="Feed" HeaderText="Feed" SortExpression="Feed">
-                    <ControlStyle CssClass="newspadding" Font-Size="Medium"/>
-                    <ItemStyle CssClass="newspadding" Font-Size="Medium" />
-                    </asp:BoundField>
+                    <asp:TemplateField HeaderText="Feed" SortExpression="Feed">
+                        <EditItemTemplate>
+                            <asp:TextBox ID="txtFeed" runat="server" class="txtbox" TextMode="MultiLine" Wrap="true" Text='<%# Bind("Feed") %>'></asp:TextBox>
+                        </EditItemTemplate>
+                        <ItemTemplate>
+                            <asp:Label ID="lblFeed" runat="server" Text='<%# Bind("Feed") %>'></asp:Label>
+                        </ItemTemplate>
+                        <ControlStyle CssClass="newspadding editbox" font-size="Medium"/>
+                        <HeaderStyle CssClass="newspadding editbox" font-size="Medium"/>
+                        <ItemStyle CssClass="newspadding editbox" font-size="Medium"/>
+                    </asp:TemplateField>
                     <asp:CommandField ShowDeleteButton="True" ShowEditButton="True">
                     <ControlStyle CssClass="newspadding" Font-Size="Medium" />
                     <ItemStyle CssClass="newspadding" Font-Size="Medium" />
