@@ -4,7 +4,13 @@
          <RoleGroups>       
          <asp:RoleGroup Roles="judge"> 
             <ContentTemplate>
-                  <h2 class=" center gold">       Modify Judge Info    </h2>    <h3 class="center">        Add or remove information about yourself!    </h3>    <br />
+                  <h2 class=" center gold">
+       Modify Judge Info
+    </h2>
+    <h3 class="center">
+        Add or remove information about yourself!
+    </h3>
+    <br />
 
   <div class="row">
         <div class="col-md-12">

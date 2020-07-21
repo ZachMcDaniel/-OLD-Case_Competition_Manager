@@ -70,10 +70,9 @@
                      <asp:Button ID="BTNFileReview" runat="server" Text="File Review"  OnClick="BTNFileReview_Click" Class="btn btn-default wide grey"/>
                          
                      </div>
-                     <div class="col-md-6">
+                   <%--  <div class="col-md-6">
                      <asp:Button ID="BTNJudgeModify" runat="server" Text="Modify Information"  OnClick="BTNJudgeModify_Click" Class="btn btn-default wide grey"/>
-                         
-                     </div>
+                     </div>--%>
                     </div>
 
                  </ContentTemplate>        
