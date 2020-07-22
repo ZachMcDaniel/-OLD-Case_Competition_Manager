@@ -66,13 +66,13 @@
                 <%--second row--%>   
                 <div class="row">
                     <div class="col-md-4">
-                         <a class="btn btn-default wide grey"  href="../CompetitorInfo">Competitor Info &raquo;</a>    
+                         <a class="btn btn-default wide grey"  href="../CompetitorInfo">Team Info &raquo;</a>    
                     </div>
                     <div class="col-md-4">
                          <a class="btn btn-default wide grey"  href="../AdminArchive">Archive Competition &raquo;</a>    
                     </div>
                     <div class="col-md-4">
-                         <a class="btn btn-default wide grey"  href="../RegisterAdmin">Register Admin &raquo;</a>    
+                         <a class="btn btn-default wide grey"  href="../Account/RegisterAdmin">Register Admin &raquo;</a>    
                     </div>
                 </div>
 
