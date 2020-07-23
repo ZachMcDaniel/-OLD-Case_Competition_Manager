@@ -23,9 +23,9 @@
                         <ItemTemplate>
                             <asp:Label ID="lblFeed" runat="server" Text='<%# Bind("Feed") %>'></asp:Label>
                         </ItemTemplate>
-                        <ControlStyle CssClass="newspadding editbox" font-size="Medium"/>
-                        <HeaderStyle CssClass="newspadding editbox" font-size="Medium"/>
-                        <ItemStyle CssClass="newspadding editbox" font-size="Medium"/>
+                        <ControlStyle CssClass="newsss editbox" font-size="Medium"/>
+                        <HeaderStyle CssClass="newspadding" font-size="Medium"/>
+                        <ItemStyle CssClass="newspadding" font-size="Medium"/>
                     </asp:TemplateField>
                     <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" CausesValidation="false">
                     <ControlStyle CssClass="newspadding" Font-Size="Medium" />

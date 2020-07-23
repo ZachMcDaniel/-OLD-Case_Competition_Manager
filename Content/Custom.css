@@ -157,7 +157,6 @@
 /*Yanni try to find some wraps*/
 .editbox {
     min-width: 100%;
-    padding: 10px;
     box-sizing: border-box;
     overflow-wrap: break-word;
     white-space: pre-wrap;
@@ -318,6 +317,14 @@
 
 .nav navbar-nav navbar-right li a:hover {
     color: yellow;
+}
+
+.newsss {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 0px;
+    padding-right: 5px;
+    text-align: left;
 }
 
 .button {
