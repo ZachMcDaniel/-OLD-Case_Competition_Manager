@@ -21,7 +21,9 @@
                             <asp:TextBox ID="txtFeed" runat="server" class="txtbox" TextMode="MultiLine" Wrap="true" Text='<%# Bind("Feed") %>'></asp:TextBox>
                         </EditItemTemplate>
                         <ItemTemplate>
+
                             <asp:Label ID="lblFeed" runat="server" Text='<%# Bind("Feed") %>'></asp:Label>
+
                         </ItemTemplate>
                         <ControlStyle CssClass="newsss editbox" font-size="Medium"/>
                         <HeaderStyle CssClass="newspadding" font-size="Medium"/>
