@@ -21,11 +21,13 @@
                             <asp:TextBox ID="txtFeed" runat="server" class="txtbox" TextMode="MultiLine" Wrap="true" Text='<%# Bind("Feed") %>'></asp:TextBox>
                         </EditItemTemplate>
                         <ItemTemplate>
-                            <asp:Label ID="lblFeed" runat="server" style="padding(-3,0,0,0)" Text='<%# Bind("Feed") %>' .Replace("(", "<br/>(") %>'></asp:Label>
+
+                            <asp:Label ID="lblFeed" runat="server" Text='<%# Bind("Feed") %>'></asp:Label>
+
                         </ItemTemplate>
-                        <ControlStyle CssClass="newspadding editbox" font-size="Medium"/>
-                        <HeaderStyle CssClass="newspadding editbox" font-size="Medium"/>
-                        <ItemStyle CssClass="newspadding editbox" font-size="Medium"/>
+                        <ControlStyle CssClass="newsss editbox" font-size="Medium"/>
+                        <HeaderStyle CssClass="newspadding" font-size="Medium"/>
+                        <ItemStyle CssClass="newspadding" font-size="Medium"/>
                     </asp:TemplateField>
                     <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" CausesValidation="false">
                     <ControlStyle CssClass="newspadding" Font-Size="Medium" />

@@ -43,11 +43,17 @@
                         <HeaderStyle CssClass="padding" />
                         <ItemStyle CssClass="padding" />
                         </asp:BoundField>
-                        <asp:BoundField DataField="Timeslots" HeaderText="Timeslot" SortExpression="Timeslots" >
-                        <ControlStyle CssClass="padding" />
-                        <HeaderStyle CssClass="padding" />
-                        <ItemStyle CssClass="padding" />
-                        </asp:BoundField>
+                        <asp:TemplateField HeaderText="Timeslot" SortExpression="Timeslots">
+                            <EditItemTemplate>
+                                <asp:TextBox ID="TextBox1" runat="server" TextMode="Time" Text='<%# Bind("Timeslots") %>'></asp:TextBox>
+                            </EditItemTemplate>
+                            <ItemTemplate>
+                                <asp:Label ID="Label1" runat="server" Text='<%# Bind("Timeslots") %>'></asp:Label>
+                            </ItemTemplate>
+                            <ControlStyle CssClass="padding" />
+                            <HeaderStyle CssClass="padding" />
+                            <ItemStyle CssClass="padding" />
+                        </asp:TemplateField>
                         <asp:BoundField DataField="RoomNumber" HeaderText="Room Number" SortExpression="RoomNumber" >
                         <ControlStyle CssClass="padding" />
                         <HeaderStyle CssClass="padding" />
@@ -73,7 +79,7 @@
                         <SortedDescendingCellStyle BackColor="#E5E5E5" />
                         <SortedDescendingHeaderStyle BackColor="#242121" />
                 </asp:GridView>
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT * FROM [TEAM]" UpdateCommand="UPDATE [TEAM] SET [Timeslots] = @Timeslots, [RoomNumber] = @RoomNumber , [Ranking] = @Ranking WHERE [TeamID] = @original_TeamID" OldValuesParameterFormatString="original_{0}" DeleteCommand="DELETE FROM [TEAM] where [TeamID] = @original_TeamID">
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [TeamID], [TeamName],[School], FORMAT([Timeslots], 'hh:mm tt') AS Timeslots, [RoomNumber], [Ranking] FROM [TEAM] where CompetitionId IS NULL" UpdateCommand="UPDATE [TEAM] SET [Timeslots] = @Timeslots, [RoomNumber] = @RoomNumber , [Ranking] = @Ranking WHERE [TeamID] = @original_TeamID" OldValuesParameterFormatString="original_{0}" DeleteCommand="DELETE FROM [TEAM] where [TeamID] = @original_TeamID">
                      <DeleteParameters>
                         <asp:Parameter Name="original_TeamID" Type="String" />
                      </DeleteParameters>
@@ -142,7 +148,7 @@
                         <SortedDescendingCellStyle BackColor="#E5E5E5" />
                         <SortedDescendingHeaderStyle BackColor="#242121" />
             </asp:GridView>
-            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT * FROM [Members]" UpdateCommand="UPDATE [Members] SET [FirstName] = @FirstName, [LastName] =@LastName, [Email]=@Email, [FoodAllergy]=@FoodAllergy, [ShirtSize]=@ShirtSize, [PhoneNumber]=@PhoneNumber, [Vegan]=@Vegan  WHERE [MemberID] = @original_MemberID  " OldValuesParameterFormatString="original_{0}" DeleteCommand="DELETE FROM [Members] where [MemberID] = @original_MemberID">
+            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT * FROM [Members] join TEAM on Members.TeamID = TEAM.TeamID where CompetitionId IS NULL" UpdateCommand="UPDATE [Members] SET [FirstName] = @FirstName, [LastName] =@LastName, [Email]=@Email, [FoodAllergy]=@FoodAllergy, [ShirtSize]=@ShirtSize, [PhoneNumber]=@PhoneNumber, [Vegan]=@Vegan  WHERE [MemberID] = @original_MemberID  " OldValuesParameterFormatString="original_{0}" DeleteCommand="DELETE FROM [Members] where [MemberID] = @original_MemberID">
                      
                   <DeleteParameters>
                     <asp:Parameter Name="original_MemberID" Type="String" />
@@ -206,7 +212,7 @@
                         <SortedDescendingCellStyle BackColor="#E5E5E5" />
                         <SortedDescendingHeaderStyle BackColor="#242121" />
             </asp:GridView>
-            <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [JudgeID], [FirstName], [LastName], [Company], [Email], [CompanySite] FROM [Judges]" UpdateCommand="UPDATE [Judges] SET [FirstName] = @FirstName, [LastName]=@LastName, [Company]=@Company, [Email]=@Email, [CompanySite]=@CompanySite  WHERE [JudgeID] = @original_JudgeID  " OldValuesParameterFormatString="original_{0}" DeleteCommand="DELETE FROM [Judges] where [JudgeID] = @original_JudgeID">
+            <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [JudgeID], [FirstName], [LastName], [Company], [Email], [CompanySite] FROM [Judges] where competitionID IS NULL" UpdateCommand="UPDATE [Judges] SET [FirstName] = @FirstName, [LastName]=@LastName, [Company]=@Company, [Email]=@Email, [CompanySite]=@CompanySite  WHERE [JudgeID] = @original_JudgeID  " OldValuesParameterFormatString="original_{0}" DeleteCommand="DELETE FROM [Judges] where [JudgeID] = @original_JudgeID">
                  <DeleteParameters>
                     <asp:Parameter Name="original_JudgeID" Type="String" />
                  </DeleteParameters>
