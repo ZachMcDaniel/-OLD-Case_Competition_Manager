@@ -40,29 +40,23 @@
 
      <div class="row">
         <div class="col-md-12">
-            <asp:GridView ID="gvCompete" runat="server" AutoGenerateColumns="False" DataSourceID="SqlCompetition" Width="100%" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" DataKeyNames="CompetitionID">
+            <asp:GridView ID="gvCompete" runat="server" AutoGenerateColumns="False" DataSourceID="SqlCompetition" Width="100%" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" DataKeyNames="CompetitionId">
                 <Columns>
-                    <asp:BoundField DataField="CompetitionName" HeaderText="Competition Name" SortExpression="CompetitionName" >
+                    <asp:BoundField DataField="CompetitionId" HeaderText="CompetitionId" InsertVisible="False" ReadOnly="True" SortExpression="CompetitionId" />
+                    <asp:BoundField DataField="CompetitionName" HeaderText="Competition Name" SortExpression="CompetitionName" ReadOnly="True" >
                     <ControlStyle CssClass="padding" />
                     <HeaderStyle CssClass="padding" />
                     <ItemStyle CssClass="padding" />
                     </asp:BoundField>
-                    <asp:BoundField DataField="CompetitionDate" HeaderText="Competition Date" SortExpression="CompetitionDate" >
+                    <asp:BoundField DataField="CompetitionDate" HeaderText="Competition Date" SortExpression="CompetitionDate" ReadOnly="True" >
                         <ControlStyle CssClass="padding" />
                     <HeaderStyle CssClass="padding" />
                     <ItemStyle CssClass="padding" />
                     </asp:BoundField>
                     
-                    <asp:TemplateField>
-                         
-                <ItemTemplate>
-                    <asp:Button ID="btnUn" CssClass="button" OnClick="btnunarchive" runat="server" Text="Unarchive" />
-                </ItemTemplate>
-
-                <ControlStyle CssClass="padding" />
-                <HeaderStyle CssClass="padding" />
-                <ItemStyle CssClass="padding" />
-                    </asp:TemplateField>
+                    
+                    <asp:CommandField EditText="Unarchive" ShowEditButton="True" CausesValidation="false" UpdateText="Confirm" />
+                    
                     
                 </Columns>
                 <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
@@ -74,9 +68,14 @@
             <SortedDescendingCellStyle BackColor="#E5E5E5" />
             <SortedDescendingHeaderStyle BackColor="#242121" />
             </asp:GridView>
-            <asp:SqlDataSource ID="SqlCompetition" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT CompetitionId, CompetitionName, FORMAT([CompetitionDate], 'MM/dd/yy') AS CompetitionDate FROM [Competition]"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="SqlCompetition" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT CompetitionId, CompetitionName, FORMAT([CompetitionDate], 'MM/dd/yy') AS CompetitionDate FROM [Competition]" UpdateCommand="UpdateCompetition" UpdateCommandType="StoredProcedure"  OldValuesParameterFormatString="original_{0}">
+                <UpdateParameters>
+                  <asp:Parameter Name="CompetitionId" Type="Int32" />
+                </UpdateParameters>
+            </asp:SqlDataSource>
         </div>
     </div>
     <br />
-     
+    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+    <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
 </asp:Content>

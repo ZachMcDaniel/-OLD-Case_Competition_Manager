@@ -64,21 +64,39 @@ namespace CaseCompetitionApp
 
         }
 
-        protected void btnunarchive(object sender, EventArgs e)
-        {
-            string mainconn = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
-            SqlConnection con = new SqlConnection(mainconn);
-            con.Open();
-            SqlCommand sqlcomm = new SqlCommand();
 
-            string insertID = "UPDATE TEAM SET CompetitionID = NULL WHERE CompetitionID = @CompetitionID;";
-            SqlCommand comd = new SqlCommand(insertID, con);
+        //protected void linkUnarchive_Click(object sender, EventArgs e)
+        //{
+        //    LinkButton btn = (LinkButton)sender;
 
-            comd.Parameters.AddWithValue("@CompetitionID", 1);
+        //    //Get the row that contains this button
+        //    GridViewRow gvr = (GridViewRow)btn.NamingContainer;
+        //    HiddenField hdnDataId = (HiddenField)gvr.FindControl("CompetitionId");
+        //    int index = Convert.ToInt32(gvr.RowIndex);
 
-            comd.ExecuteScalar();
-        }
+        //    GridViewRow selectedRow = gvCompete.Rows[index];
+
+        //    Label1.Text = Convert.ToString(selectedRow.DataItem.T
+        //}
 
 
+
+        //protected void gvCompete_RowCommand(object sender, GridViewCommandEventArgs e)
+        //{
+        //    // If multiple ButtonField column fields are used, use the
+        //    // CommandName property to determine which button was clicked.
+        //    if (e.CommandName == "Select")
+        //    {
+        //        // Convert the row index stored in the CommandArgument
+        //        // property to an Integer.
+        //        int index = Convert.ToInt32(e.CommandArgument);
+
+        //        // Get the last name of the selected author from the appropriate
+        //        // cell in the GridView control.
+        //        GridViewRow selectedRow = gvCompete.Rows[index];
+
+        //        Label1.Text = Convert.ToString(selectedRow.Cells[1].Text);
+        //    }
+        //}
     }
 }
