@@ -58,7 +58,6 @@
 
                      <div class ="row">
                          <br />
-                           <hr />
                          <br />
                        
                      </div>

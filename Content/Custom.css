@@ -130,14 +130,15 @@
 }
 
 .grey {
-    background-color: lightgrey;
+    background-color: rgb(211, 211, 211);
     color: black;
     width: 95%;
     height: 40px;
     font-weight: bold;
     font-weight: bolder;
-    font-size: 14px;
-    border-radius: 20px;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 10px;
 }
 
 .grey:hover {
