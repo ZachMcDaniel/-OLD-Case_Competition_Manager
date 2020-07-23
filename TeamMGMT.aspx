@@ -141,7 +141,8 @@
                 </asp:BoundField>
             <asp:TemplateField HeaderText="Vegan" SortExpression="Vegan">
                 <EditItemTemplate>
-    <asp:RadioButtonList ID="RadioButtonList1" runat="server" DataSourceID="SqlDataSource2" DataTextField="Vegan" DataValueField="Vegan"></asp:RadioButtonList>
+                 <asp:RadioButtonList ID="RadioButtonList1" runat="server"  DataTextField="Vegan" DataValueField="Vegan">
+                 </asp:RadioButtonList>
                 </EditItemTemplate>
                 <ItemTemplate>
                     <asp:Label ID="Label1" runat="server" Text='<%# Bind("Vegan") %>'></asp:Label>
