@@ -42,7 +42,7 @@
             <SortedDescendingCellStyle BackColor="#E5E5E5" />
             <SortedDescendingHeaderStyle BackColor="#242121" />
         </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT TeamID, TeamName, FORMAT([Timeslots], 'hh:mm tt') AS Timeslots, RoomNumber FROM [TEAM] WHERE CompetitionID IS NULL ORDER BY Timeslots desc"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT TeamID, TeamName, FORMAT([Timeslots], 'hh:mm tt') AS Timeslots, RoomNumber FROM [TEAM] WHERE CompetitionID IS NULL ORDER BY Timeslots"></asp:SqlDataSource>
     </div>
     <div class="col-md-5">
         <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataKeyNames="MemberID" DataSourceID="SqlDataSource2" Width="95%" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal">
