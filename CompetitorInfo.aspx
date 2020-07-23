@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CompetitorInfo.aspx.cs" Inherits="CaseCompetitionApp.CompetitorInfo" %>
+﻿<%@ Page Title="Team Info" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CompetitorInfo.aspx.cs" Inherits="CaseCompetitionApp.CompetitorInfo" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
     <h2 class=" center gold">
@@ -53,5 +53,10 @@
             <SortedDescendingHeaderStyle BackColor="#242121" />
 
     </asp:GridView>
-    <asp:SqlDataSource ID="SqlTeams" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [TeamID], [School], [TeamName], [Email], FORMAT([Timeslots], 'hh:mm tt') AS Timeslots, [RoomNumber] FROM [TEAM]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlTeams" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [TeamID], [School], [TeamName], [Email], FORMAT([Timeslots], 'hh:mm tt') AS Timeslots, [RoomNumber] FROM [TEAM]">
+
+    </asp:SqlDataSource>
+      <div class="bottomdiv">
+         <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="Hub.aspx" CssClass="hyperlink" >Return to Hub</asp:HyperLink>
+    </div>
 </asp:Content>

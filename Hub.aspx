@@ -44,6 +44,7 @@
          <RoleGroups>       
          <asp:RoleGroup Roles="admin">           
                  <ContentTemplate>
+                    <div class="row">
                       <div class="col-md-4">
                         <asp:Button ID="BTNCompetitionInfo" runat="server" Text="Modify Competition Info"  OnClick="BTNModifyCompetitionInfo" Class="btn btn-default wide grey"/>
                       </div>
@@ -51,9 +52,30 @@
                         <asp:Button ID="BTNAnnounce" runat="server" Text="Modify Announcements"  OnClick="BTNAnnounce_Click" Class="btn btn-default wide grey"/>
                      </div>
                      <div class="col-md-4">
-                        <asp:Button ID="BTNDownCaseFile" runat="server" Text="Download Submissions"  OnClick="BTNDownCaseFile_Click" Class="btn btn-default wide grey"/>
+                        <asp:Button ID="BTNDownCaseFile" runat="server" Text="Submissions"  OnClick="BTNDownCaseFile_Click" Class="btn btn-default wide grey"/>
                      </div>
-                    
+                 </div> 
+
+                     <div class ="row">
+                         <br />
+                           <hr />
+                         <br />
+                       
+                     </div>
+                     
+                <%--second row--%>   
+                <div class="row">
+                    <div class="col-md-4">
+                         <a class="btn btn-default wide grey"  href="../CompetitorInfo">Team Info &raquo;</a>    
+                    </div>
+                    <div class="col-md-4">
+                         <a class="btn btn-default wide grey"  href="../AdminArchive">Archive Competition &raquo;</a>    
+                    </div>
+                    <div class="col-md-4">
+                         <a class="btn btn-default wide grey"  href="../Account/RegisterAdmin">Register Admin &raquo;</a>    
+                    </div>
+                </div>
+
                  </ContentTemplate>        
           </asp:RoleGroup>   
          </RoleGroups>
@@ -72,7 +94,6 @@
                      </div>
                      <div class="col-md-6">
                      <asp:Button ID="BTNJudgeModify" runat="server" Text="Modify Information"  OnClick="BTNJudgeModify_Click" Class="btn btn-default wide grey"/>
-                         
                      </div>
                     </div>
 

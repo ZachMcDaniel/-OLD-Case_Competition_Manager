@@ -76,6 +76,9 @@
         </div>
     </div>
     <br />
-    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-    <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+
+      <div class="bottomdiv">
+         <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="Hub.aspx" CssClass="hyperlink" >Return to Hub</asp:HyperLink>
+    </div>
+     
 </asp:Content>
