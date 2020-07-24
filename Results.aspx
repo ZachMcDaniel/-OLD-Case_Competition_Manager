@@ -25,7 +25,7 @@
                         <SortedDescendingCellStyle BackColor="#E5E5E5" />
                         <SortedDescendingHeaderStyle BackColor="#242121" />
                 </asp:GridView>
-                <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [TeamName] FROM [TEAM] WHERE ([Ranking] = @Ranking)">
+                <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [TeamName] FROM [TEAM] WHERE ([Ranking] = 1 AND CompetitionID IS NULL )">
                     <SelectParameters>
                         <asp:Parameter DefaultValue="1" Name="Ranking" Type="Int32" />
                     </SelectParameters>
@@ -87,7 +87,7 @@
                         <SortedDescendingCellStyle BackColor="#E5E5E5" />
                         <SortedDescendingHeaderStyle BackColor="#242121" />
                 </asp:GridView>
-                <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [TeamName] FROM [TEAM] WHERE ([Ranking] = @Ranking)">
+                <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [TeamName] FROM [TEAM] WHERE ([Ranking] = 2 AND CompetitionID IS NULL )">
                     <SelectParameters>
                         <asp:Parameter DefaultValue="2" Name="Ranking" Type="Int32" />
                     </SelectParameters>
@@ -147,7 +147,7 @@
                         <SortedDescendingCellStyle BackColor="#E5E5E5" />
                         <SortedDescendingHeaderStyle BackColor="#242121" />
                 </asp:GridView>
-                <asp:SqlDataSource ID="SqlDataSource6" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [TeamName] FROM [TEAM] WHERE ([Ranking] = @Ranking)">
+                <asp:SqlDataSource ID="SqlDataSource6" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [TeamName] FROM [TEAM] WHERE ([Ranking] = 3 AND CompetitionID IS NULL )">
                     <SelectParameters>
                         <asp:Parameter DefaultValue="3" Name="Ranking" Type="Int32" />
                     </SelectParameters>
@@ -190,8 +190,10 @@
 
     <div class="center">
         <br />
+            <div class="bottomdiv">
         <h3>
             Thank you to all competitors for the hard work at this year's competition!
         </h3>
+            </div>
     </div>
 </asp:Content>
