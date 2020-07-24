@@ -9,6 +9,12 @@
 
     <br />
 
+    <div id="empty" runat="server" class="center">
+        <hr />
+        <br />
+      <asp:Label ID="lblEmpty" Font-Size="X-Large" runat="server" Text="No Current News. Please check back later."></asp:Label>
+    </div>
+
     <div class="row">
         <div class="col-md-12">
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" ShowHeader="False" DataSourceID="SQLNews" Width="100%" EditRowStyle-BorderWidth="4px" CssClass="newsborder">

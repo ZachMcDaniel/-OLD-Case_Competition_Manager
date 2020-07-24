@@ -27,11 +27,17 @@
     <br />
     <hr style="border: .25px solid rgb(0,0,0)" />
 
+     <div id="empty" runat="server" class="center">
+      <asp:Label ID="lblEmpty" Font-Size="X-Large" runat="server" Text="There is no current competition data available. Unarchive a competition to edit it."></asp:Label>
+         <br />
+         <br />
+         <asp:Button ID="btnUnarchive" CssClass="btn btn-default" OnClick="UnarchiveLink_Click" runat="server" Text="Go to Admin Archives &raquo;" />
+    </div>
 
     <%--Team Table--%>
         <div class="row">
             <div class="col-md-12">
-                <asp:GridView ID="gvCompete" DataKeyNames="TeamID" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" Width="100%">
+                <asp:GridView ID="gvCompete" DataKeyNames="TeamID" runat="server"  AutoGenerateColumns="False" DataSourceID="SqlDataSource1" Width="100%">
                     <Columns>
                         <asp:BoundField DataField="TeamName" HeaderText="Team Name" SortExpression="TeamName" ReadOnly="True" >
                         <ControlStyle CssClass="padding" />
@@ -96,7 +102,7 @@
     <%--Member Table--%>
     <div class="row">
         <div class="col-md-12">
-            <asp:GridView ID="gvMember" runat="server" AutoGenerateColumns="False" DataKeyNames="MemberID" DataSourceID="SqlDataSource2" Width="100%">
+            <asp:GridView ID="gvMember" runat="server" AutoGenerateColumns="False"  DataKeyNames="MemberID" DataSourceID="SqlDataSource2" Width="100%">
                 <Columns>
                     <asp:BoundField DataField="FirstName" HeaderText="First Name" SortExpression="FirstName">
                     <ControlStyle CssClass="padding" />
@@ -170,7 +176,7 @@
     <%--Judge Table--%>
     <div class="row">
         <div class="col-md-12">
-            <asp:GridView ID="gvJudge" runat="server" AutoGenerateColumns="False" DataKeyNames="JudgeID" DataSourceID="SqlDataSource3" Width="100%">
+            <asp:GridView ID="gvJudge" runat="server"  AutoGenerateColumns="False" DataKeyNames="JudgeID" DataSourceID="SqlDataSource3" Width="100%">
                 <Columns>
                     <asp:BoundField DataField="FirstName" HeaderText="First Name" SortExpression="FirstName">
                     <ControlStyle CssClass="padding" />

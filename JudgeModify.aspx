@@ -10,7 +10,7 @@
 
   <div class="row">
         <div class="col-md-12">
-            <asp:GridView ID="gvJudge" runat="server" AutoGenerateColumns="False" DataKeyNames="JudgeID" DataSourceID="SqlDataSource3" Width="100%">
+            <asp:GridView ID="gvJudge" runat="server"  AutoGenerateColumns="False" DataKeyNames="JudgeID" DataSourceID="SqlDataSource3" Width="100%">
                 <Columns>
                     <asp:BoundField DataField="FirstName" HeaderText="First Name" SortExpression="FirstName">
                     <ControlStyle CssClass="padding" />

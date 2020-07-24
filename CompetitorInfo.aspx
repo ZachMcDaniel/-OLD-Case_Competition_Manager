@@ -6,6 +6,10 @@
      </h2>
     <hr />
 
+    <div id="empty" runat="server" class="center">
+      <asp:Label ID="lblEmpty" Font-Size="X-Large" runat="server" Text="No Current Competition is running. Please check archives for any data"></asp:Label>
+    </div>
+
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="TeamID" DataSourceID="SqlTeams" Width="95%" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black">
         <Columns>
             <asp:BoundField DataField="TeamName" HeaderText="TeamName" SortExpression="TeamName" >
@@ -53,7 +57,7 @@
             <SortedDescendingHeaderStyle BackColor="#242121" />
 
     </asp:GridView>
-    <asp:SqlDataSource ID="SqlTeams" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [TeamID], [School], [TeamName], [Email], FORMAT([Timeslots], 'hh:mm tt') AS Timeslots, [RoomNumber] FROM [TEAM]">
+    <asp:SqlDataSource ID="SqlTeams" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [TeamID], [School], [TeamName], [Email], FORMAT([Timeslots], 'hh:mm tt') AS Timeslots, [RoomNumber] FROM [TEAM] where competitionID IS NULL">
 
     </asp:SqlDataSource>
       <div class="bottomdiv">

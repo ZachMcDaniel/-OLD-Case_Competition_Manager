@@ -13,7 +13,9 @@ namespace CaseCompetitionApp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+        //    gvCompete.DataKeys.Value;
+        //    SqlCompetition.SelectParameters["ID"].DefaultValue = 
+        //
         }
 
         protected void Btn_Archive(object sender, EventArgs e)
