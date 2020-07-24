@@ -18,6 +18,7 @@ namespace CaseCompetitionApp
                 gvCompete.Visible = false;
                 gvMember.Visible = false;
                 gvJudge.Visible = false;
+                empty.Visible = false;
             }
         }
 

@@ -13,14 +13,15 @@ namespace CaseCompetitionApp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-        //    gvCompete.DataKeys.Value;
-        //    SqlCompetition.SelectParameters["ID"].DefaultValue = 
-        //
+            if (!IsPostBack)
+            {
+                editarchive.Visible = false;
+                archives.Visible = false;
+            }
         }
 
         protected void Btn_Archive(object sender, EventArgs e)
         {
-           
 
             string mainconn = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
             SqlConnection con = new SqlConnection(mainconn);
@@ -33,10 +34,13 @@ namespace CaseCompetitionApp
             SqlDataReader reader = command.ExecuteReader();
             if (!reader.Read())
             {
+                con.Close();
                 lblEmpty.Text = "No new competitions to archive";
             }
             else
             {
+                con.Close();
+                con.Open();
 
                 string insertSql = "INSERT INTO [Competition](CompetitionName, CompetitionDate) OUTPUT INSERTED.CompetitionID VALUES (@CompetitionName, @CompetitionDate);";
                 SqlCommand cmd = new SqlCommand(insertSql, con);
@@ -60,45 +64,55 @@ namespace CaseCompetitionApp
 
                 cmnd.ExecuteScalar();
 
-                Response.Redirect("Archive.aspx");
+                con.Close();
+
+                Response.Redirect("AdminArchive.aspx");
             }
 
 
         }
 
+        protected void btnShowArchives_Click(object sender, EventArgs e)
+        {
+            editarchive.Visible = false;
+            archives.Visible = true;
+            gvCompete.Visible = true;
+            btnShowArchives.Style.Add("background-color", "rgba(255, 223, 0, 0.75)");
+            btnShowArchives.Style.Add("font-weight", "bold");
+            btnEditArchives.Style.Remove("background-color");
+            btnEditArchives.Style.Remove("font-weight");
+        }
 
-        //protected void linkUnarchive_Click(object sender, EventArgs e)
-        //{
-        //    LinkButton btn = (LinkButton)sender;
+        protected void btnEditArchives_Click(object sender, EventArgs e)
+        {
+            editarchive.Visible = true;
+            gvCompete.Visible = false;
+            archives.Visible = false;
+            btnEditArchives.Style.Add("background-color", "rgba(255, 223, 0, 0.75)");
+            btnEditArchives.Style.Add("font-weight", "bold");
+            btnShowArchives.Style.Remove("background-color");
+            btnShowArchives.Style.Remove("font-weight");
 
-        //    //Get the row that contains this button
-        //    GridViewRow gvr = (GridViewRow)btn.NamingContainer;
-        //    HiddenField hdnDataId = (HiddenField)gvr.FindControl("CompetitionId");
-        //    int index = Convert.ToInt32(gvr.RowIndex);
+            string mainconn = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+            SqlConnection con = new SqlConnection(mainconn);
+            con.Open();
+            SqlCommand sqlcomm = new SqlCommand();
 
-        //    GridViewRow selectedRow = gvCompete.Rows[index];
+            string check = "SELECT CompetitionId From Competition;";
+            SqlCommand command = new SqlCommand(check, con);
 
-        //    Label1.Text = Convert.ToString(selectedRow.DataItem.T
-        //}
+            SqlDataReader reader = command.ExecuteReader();
+            if (!reader.Read())
+            {
+                empty.Visible = true;
+            }
 
+            else
+            {
+                empty.Visible = false;
+            }
+        }
 
-
-        //protected void gvCompete_RowCommand(object sender, GridViewCommandEventArgs e)
-        //{
-        //    // If multiple ButtonField column fields are used, use the
-        //    // CommandName property to determine which button was clicked.
-        //    if (e.CommandName == "Select")
-        //    {
-        //        // Convert the row index stored in the CommandArgument
-        //        // property to an Integer.
-        //        int index = Convert.ToInt32(e.CommandArgument);
-
-        //        // Get the last name of the selected author from the appropriate
-        //        // cell in the GridView control.
-        //        GridViewRow selectedRow = gvCompete.Rows[index];
-
-        //        Label1.Text = Convert.ToString(selectedRow.Cells[1].Text);
-        //    }
-        //}
+        }
     }
 }

@@ -9,6 +9,21 @@
     </h3>
 
     <hr />
+     <asp:LoginView runat="server">     
+         <RoleGroups>       
+          <asp:RoleGroup Roles="admin">  
+                <ContentTemplate>
+                    <div class="row center">
+                           <div class="col-md-12">
+                         <a class="btn btn-default wide grey"  href="../AdminArchive">Edit Archives &raquo;</a>    
+                             </div>
+                     </div>
+                     <hr />
+                </ContentTemplate>        
+         </asp:RoleGroup>   
+         </RoleGroups>
+     </asp:LoginView>
+
 
     <div class="row">
         <div class="col-md-12">
