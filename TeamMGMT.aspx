@@ -2,112 +2,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h2 class="center gold">Team Managment</h2>
 
-  <%--  <asp:gridview id="gvTeam"         
-    autogeneratecolumns="False"   
-    emptydatatext="No data available." CssClass="GridViewStyle"         
-    runat="server" DataKeyNames="ProductID"
-    OnRowEditing="gvTeam_RowEditing" <%--OnRowCancelingEdit="gvTeam_RowCancelingEdit"      
-    onrowupdating="gvTeam_RowUpdating" onrowdatabound="gvTeam_RowDataBound">
-    <RowStyle CssClass="RowStyle" />             
-    <FooterStyle CssClass="RowStyle" />                       
-    <SelectedRowStyle CssClass="SelectedRowStyle" />   
-    <HeaderStyle CssClass="HeaderStyle" />             
-    <AlternatingRowStyle CssClass="AltRowStyle" />
-    <Columns>                           
-         <asp:TemplateField headertext="First Name">
-            <HeaderStyle HorizontalAlign="Left" Width="200px" />
-            <ItemStyle HorizontalAlign="Left" Width="200px"/>
-            <ItemTemplate> <%#Eval("FirstName")%></ItemTemplate>
-            <EditItemTemplate>
-              <asp:TextBox id="txtFirst" Width="170px" text='<%# Eval("FirstName")%>' runat="server"/>                                            
-            </EditItemTemplate>                   
-        </asp:TemplateField>    
-        <asp:TemplateField headertext="Last Name">
-            <HeaderStyle HorizontalAlign="Left" Width="200px" />
-            <ItemStyle HorizontalAlign="Left" Width="200px"/>
-            <ItemTemplate> <%#Eval("LastName")%></ItemTemplate>
-            <EditItemTemplate>
-              <asp:TextBox id="txtLast" Width="170px" text='<%# Eval("LastName")%>' runat="server"/>                                            
-            </EditItemTemplate>                   
-        </asp:TemplateField>
-        <asp:TemplateField headertext="Email">
-            <HeaderStyle HorizontalAlign="Left" Width="200px" />
-            <ItemStyle HorizontalAlign="Left" Width="200px"/>
-            <ItemTemplate> <%#Eval("Email")%></ItemTemplate>
-            <EditItemTemplate>
-              <asp:TextBox id="txtTeamEmail" Width="170px" text='<%# Eval("Email")%>' runat="server"/>                                            
-            </EditItemTemplate>                   
-        </asp:TemplateField>
-        <asp:TemplateField headertext="Food Allergy">
-            <HeaderStyle HorizontalAlign="Left" Width="200px" />
-            <ItemStyle HorizontalAlign="Left" Width="200px"/>
-            <ItemTemplate> <%#Eval("FoodAllergy")%></ItemTemplate>
-            <EditItemTemplate>
-              <asp:TextBox id="txtFood" Width="170px" text='<%# Eval("FoodAllergy")%>' runat="server"/>                                            
-            </EditItemTemplate>                   
-        </asp:TemplateField>
-        <asp:TemplateField headertext="Shirt Size">
-            <HeaderStyle HorizontalAlign="Left" Width="150px" />
-            <ItemStyle HorizontalAlign="Left" />
-            <ItemTemplate> <%#Eval("ShirtSize")%></ItemTemplate>
-            <EditItemTemplate>
-             <asp:DropDownList ID="ddlShirt" runat="server" > </asp:DropDownList>                                      
-            </EditItemTemplate>                   
-        </asp:TemplateField>
-        <asp:TemplateField headertext="Phone Number">
-            <HeaderStyle HorizontalAlign="Left" Width="200px" />
-            <ItemStyle HorizontalAlign="Left" Width="200px"/>
-            <ItemTemplate> <%#Eval("PhoneNumber")%></ItemTemplate>
-            <EditItemTemplate>
-              <asp:TextBox id="txtPhoneNumb" Width="170px" text='<%# Eval("PhoneNumber")%>' runat="server"/>                                            
-            </EditItemTemplate>                   
-        </asp:TemplateField>
-
-        <asp:TemplateField headertext="Vegan">
-            <HeaderStyle HorizontalAlign="Left" Width="150px" />
-            <ItemStyle HorizontalAlign="Left" />
-            <ItemTemplate> <%#Eval("Vegan")%></ItemTemplate>
-            <EditItemTemplate>                  
-                <asp:PlaceHolder ID="plVegan" runat="server"></asp:PlaceHolder>
-                <asp:HiddenField ID="hflVegan" Value='<%#Eval("Vegan")%>' runat="server" />
-            </EditItemTemplate>                   
-        </asp:TemplateField>    
-
-                                    
-        <asp:TemplateField>
-        <ItemTemplate>
-           <asp:LinkButton ID="btnedit" runat="server" CommandName="Edit" Text="Edit"/>                 
-        </ItemTemplate>
-        <EditItemTemplate>
-           <asp:LinkButton ID="btnupdate" runat="server" CommandName="Update" Text="Update" />
-           <asp:LinkButton ID="btncancel" runat="server" CommandName="Cancel" Text="Cancel"/>               
-        </EditItemTemplate>             
-        </asp:TemplateField>                                         
-    </Columns>
-</asp:gridview>
-
---%>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <div class="row center">
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="MemberID" DataSourceID="SqlDataSource1" Width="100%" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" AllowSorting="True">
+    <asp:GridView ID="GridView1" runat="server" OnRowUpdating="GridView1_RowUpdating" AutoGenerateColumns="False" DataKeyNames="MemberID" DataSourceID="SqlDataSource1" Width="100%" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" AllowSorting="True">
         <Columns>
             <asp:BoundField DataField="FirstName" HeaderText="First Name" SortExpression="FirstName" >
                 <ControlStyle CssClass="center" />
@@ -139,11 +35,20 @@
                 <HeaderStyle CssClass="center" />
                 <ItemStyle CssClass="center" />
                 </asp:BoundField>
-            <asp:BoundField DataField="Vegan" HeaderText="Vegan" SortExpression="Vegan" ApplyFormatInEditMode="True" >
+            <asp:TemplateField HeaderText="Vegan" SortExpression="Vegan">
+                <EditItemTemplate>
+                 <asp:RadioButtonList ID="radioVegan" runat="server">
+                     <asp:ListItem Value="0">No</asp:ListItem>
+                     <asp:ListItem Value="1">Yes</asp:ListItem>
+                 </asp:RadioButtonList>
+                </EditItemTemplate>
+                <ItemTemplate>
+                    <asp:Label ID="Label1" runat="server" Text='<%# Bind("Vegan") %>'></asp:Label>
+                </ItemTemplate>
                 <ControlStyle CssClass="center" />
                 <HeaderStyle CssClass="center" />
                 <ItemStyle CssClass="center" />
-                </asp:BoundField>
+            </asp:TemplateField>
             <asp:CommandField ShowEditButton="True" ShowDeleteButton="True" />
         </Columns>
         <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
@@ -155,7 +60,7 @@
         <SortedDescendingCellStyle BackColor="#E5E5E5" />
         <SortedDescendingHeaderStyle BackColor="#242121" />
     </asp:GridView>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="select MemberId, TeamId, FirstName, LastName, Email, FoodAllergy, ShirtSize, PhoneNumber, CASE WHEN Vegan = 1 THEN 'Yes' ELSE 'No' END AS Vegan From [Members] where TeamID = (select TeamID FROM TEAM where TeamName = (select Username FROM AspNetUsers where Id = @ID))"  UpdateCommand="UPDATE [Members] SET [FirstName] = @FirstName, [LastName] = @LastName, [Email] = @Email, [PhoneNumber] = @PhoneNumber, [ShirtSize] = @ShirtSize, [FoodAllergy] = @FoodAllergy, [Vegan] = @Vegan WHERE [MemberID] = @original_MemberID" OldValuesParameterFormatString="original_{0}" DeleteCommand="DELETE FROM [Members] where [MemberID] = @original_MemberID">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="select MemberId, TeamId, FirstName, LastName, Email, FoodAllergy, ShirtSize, PhoneNumber, CASE WHEN Vegan = 1 THEN 'Yes' ELSE 'No' END AS Vegan From [Members] where TeamID = (select TeamID FROM TEAM where TeamName = (select Username FROM AspNetUsers where Id = @ID))"  UpdateCommand="UPDATE [Members] SET [FirstName] = @FirstName, [LastName] = @LastName, [Email] = @Email, [PhoneNumber] = @PhoneNumber, [ShirtSize] = @ShirtSize, [FoodAllergy] = @FoodAllergy, [Vegan] = @Vegans WHERE [MemberID] = @original_MemberID" OldValuesParameterFormatString="original_{0}" DeleteCommand="DELETE FROM [Members] where [MemberID] = @original_MemberID">
 <SelectParameters>
     <asp:Parameter Name="ID" Type="String"/>
 </SelectParameters>        
@@ -170,7 +75,7 @@
               <asp:Parameter Name="PhoneNumber" Type="String" />
               <asp:Parameter Name="ShirtSize" Type="String" />
               <asp:Parameter Name="FoodAllergy" Type="String" />
-              <asp:Parameter Name="Vegan" Type="string" />
+              <asp:Parameter Name="Vegans" Type="string" />
           </UpdateParameters>
                 </asp:SqlDataSource>
         </div>
@@ -289,4 +194,7 @@
         <hr />
     </div>
 
+      <div class="bottomdiv">
+         <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="Hub.aspx" CssClass="hyperlink">Return to Hub</asp:HyperLink>
+    </div>
 </asp:Content>

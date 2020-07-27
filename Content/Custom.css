@@ -60,7 +60,7 @@
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
-    color: white;
+    color: rgb(255,223,0);
     background-color: #222222;
 }
 
@@ -130,12 +130,18 @@
 }
 
 .grey {
-    background-color: lightgrey;
+    background-color: rgb(211, 211, 211);
     color: black;
     width: 95%;
     font-weight: bold;
     font-weight: bolder;
+<<<<<<< HEAD
     border-radius: 20px;
+=======
+    font-size: 15px;
+    text-align: center;
+    border-radius: 10px;
+>>>>>>> zach
 }
 
 .grey:hover {
@@ -153,6 +159,23 @@
     overflow-wrap: break-word;
     white-space: pre-wrap;
 }
+
+/*Yanni try to find some wraps*/
+.editbox {
+    min-width: 100%;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+.ArchBox {
+    min-width: 100%;
+    margin-left: 10px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+}
+
 .border {
     border-color: rgba(255,223,0,0.75);
 }
@@ -209,6 +232,10 @@
 
 .padding{
     padding-left: 10px;
+}
+
+.smpadding {
+    padding-left: 5px;
 }
 .newspadding {
     padding-top: 25px;
@@ -268,5 +295,59 @@
     color: white ;
 }
 
+.hyperlink {
+    color: black;
+    font-size: 20px;
+}
+.hyperlink:hover {
+    color: rgb(255,223,0)
+}
+.bottomdiv {
+    position: absolute;
+    flex: inherit;
+    bottom: 20vh;
+}
+.stickydiv {
+    position: sticky;
+    flex: inherit;
+
+}
+.rightdiv {
+    float:right
+}
 
 
+.nav navbar-nav navbar-right li a{
+    color:blue;
+}
+
+.nav navbar-nav navbar-right li a:hover {
+    color: yellow;
+}
+
+.newsss {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 0px;
+    padding-right: 5px;
+    text-align: left;
+}
+
+.button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 0px;
+}
+
+.Grid {
+    table-layout: fixed;
+    width: 100%;
+}
+
+    .Grid .Shorter {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }

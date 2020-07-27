@@ -1,11 +1,15 @@
 ﻿<%@ Page Title="Team Information" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="TeamInfo.aspx.cs" Inherits="CaseCompetitionApp.TeamInfo" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h2 class="center gold"><%: Title %></h2>
-    <h3>
+    <h3 class="center">
         View Team Information for the CyHawk Case Competition 2020
     </h3>
     <div class="row col-md-12">
-        <br />
+        <hr />
+    </div>
+
+    <div id="empty" runat="server" class="center">
+      <asp:Label ID="lblEmpty" Font-Size="X-Large" runat="server" Text="No Current Competition is available at this time. Please check back later."></asp:Label>
     </div>
 
     <div class="row" >
@@ -42,7 +46,7 @@
             <SortedDescendingCellStyle BackColor="#E5E5E5" />
             <SortedDescendingHeaderStyle BackColor="#242121" />
         </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT * FROM [TEAM]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT TeamID, TeamName, FORMAT([Timeslots], 'hh:mm tt') AS Timeslots, RoomNumber FROM [TEAM] WHERE CompetitionID IS NULL ORDER BY Timeslots"></asp:SqlDataSource>
     </div>
     <div class="col-md-5">
         <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataKeyNames="MemberID" DataSourceID="SqlDataSource2" Width="95%" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal">

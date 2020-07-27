@@ -16,6 +16,7 @@
                             <asp:Literal runat="server" ID="FailureText" />
                         </p>
                     </asp:PlaceHolder>
+                     <asp:Panel ID="login" runat="server" DefaultButton="BtnLogin">
                     <div class="form-group">
                         <asp:Label runat="server" AssociatedControlID="user" CssClass="col-md-2 control-label">Username / Team name</asp:Label>
                         <div class="col-md-10">
@@ -41,11 +42,12 @@
                     </div>
                     <div class="form-group">
                         <div class="col-md-offset-2 col-md-10">
-                            <asp:Button runat="server" OnClick="LogIn" Text="Log in" CssClass="btn btn-default" />
+                            <asp:Button ID="BtnLogin" runat="server" OnClick="LogIn" Text="Log in" CssClass="btn btn-default" />
                         </div>
                     </div>
+                         </asp:Panel>
                 </div>
-
+                
                 <hr />
 
                 <div class="col-md-4">

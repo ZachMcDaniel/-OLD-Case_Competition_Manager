@@ -21,7 +21,7 @@
                 List of This Year's Judges and Their Companies
             </p>
             <p>                
-                 <a class="btn btn-default grey"  href="../JudgeInfo">View Judges &raquo;</a>
+                 <a class="btn btn-default grey"  href="../JudgeInfo" style=" font-size: 16px">View Judges &raquo;</a>
             </p>
         </div>
         <div class="center col-md-4">
@@ -30,7 +30,7 @@
                 List of This Year's Teams
             </p>
             <p>                
-                <a class="btn btn-default grey"  href="../TeamInfo">View Teams &raquo;</a>            
+                <a class="btn btn-default grey"  href="../TeamInfo" style=" font-size: 16px">View Teams &raquo;</a>            
             </p>
         </div>
         <div class="center col-md-4">
@@ -39,7 +39,7 @@
                 Access Previous Competitions and Results
             </p>
              <p>                
-                <a class="btn btn-default grey"  href="../Archive">View Archive &raquo;</a>            
+                <a class="btn btn-default grey"  href="../Archive" style=" font-size: 16px">View Archive &raquo;</a>            
             </p>
            
         </div> 

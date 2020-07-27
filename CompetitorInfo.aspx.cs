@@ -9,7 +9,7 @@ using System.Web.UI.WebControls;
 
 namespace CaseCompetitionApp
 {
-    public partial class News : System.Web.UI.Page
+    public partial class CompetitorInfo : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -18,7 +18,7 @@ namespace CaseCompetitionApp
             con.Open();
             SqlCommand sqlcomm = new SqlCommand();
 
-            string check = "SELECT FEED FROM News;";
+            string check = "SELECT [TeamID] FROM [TEAM] where competitionID IS NULL;";
             SqlCommand command = new SqlCommand(check, con);
 
             SqlDataReader reader = command.ExecuteReader();
@@ -31,7 +31,6 @@ namespace CaseCompetitionApp
             {
                 empty.Visible = false;
             }
-
         }
     }
 }

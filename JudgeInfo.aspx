@@ -1,20 +1,19 @@
 ﻿<%@ Page Title="Meet the Judges" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="JudgeInfo.aspx.cs" Inherits="CaseCompetitionApp.JudgeInfo" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <h2>
+    <h2 class=" center gold">
         Meet the Judges!
     </h2>
-    <h3>
+    <h3 class="center">
         This year's judges can be found below, along with the company they work for. Make sure to check this out!
     </h3>
-    <br/>
+    <hr/>
+    <div id="empty" runat="server" class="center">
+      <asp:Label ID="lblEmpty" Font-Size="X-Large" runat="server" Text="There is no current judges information available at this time. Please check back later."></asp:Label>
+    </div>
+
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSourcejudge" Width="95%" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal">
         <Columns>
-            <asp:BoundField DataField="FirstName" HeaderText="First Name" SortExpression="FirstName" >
-                <ControlStyle CssClass="center" />
-                <HeaderStyle CssClass="center" />
-                <ItemStyle CssClass="center" />
-                </asp:BoundField>
-            <asp:BoundField DataField="LastName" HeaderText="Last Name" SortExpression="LastName" >
+            <asp:BoundField DataField="JudgeName" HeaderText="Judge Name" SortExpression="JudgeName" >
                 <ControlStyle CssClass="center" />
                 <HeaderStyle CssClass="center" />
                 <ItemStyle CssClass="center" />
@@ -41,7 +40,7 @@
     </asp:GridView>
 
 
-    <asp:SqlDataSource ID="SqlDataSourcejudge" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [FirstName], [LastName], [Company], [CompanySite] FROM [Judges]" ></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSourcejudge" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [JudgeID], concat([FirstName], ' ', [LastName]) AS JudgeName, [Company], [CompanySite] FROM [Judges] WHERE CompetitionID IS NULL" ></asp:SqlDataSource>
 
 
 </asp:Content>
