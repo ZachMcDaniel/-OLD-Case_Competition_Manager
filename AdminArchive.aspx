@@ -81,10 +81,8 @@
             <SortedDescendingCellStyle BackColor="#E5E5E5" />
             <SortedDescendingHeaderStyle BackColor="#242121" />
             </asp:GridView>
-            <asp:SqlDataSource ID="SqlCompetition"  runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT CompetitionId, CompetitionName, FORMAT([CompetitionDate], 'MM/dd/yy') AS CompetitionDate FROM [Competition]" UpdateCommand="UPDATE [Competition] SET [CompetitionName] = @CompetitionName, [CompetitionDate]=@CompetitionDate WHERE [CompetitionID] = @original_CompetitionID"  OldValuesParameterFormatString="original_{0}">
+            <asp:SqlDataSource ID="SqlCompetition"  runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT CompetitionId, CompetitionName, FORMAT([CompetitionDate], 'MM/dd/yy') AS CompetitionDate FROM [Competition]" UpdateCommand="UpdateCompetition"  OldValuesParameterFormatString="original_{0}" UpdateCommandType="StoredProcedure">
                 <UpdateParameters>
-                    <asp:Parameter Name="CompetitionName" />
-                    <asp:Parameter Name="CompetitionDate" />
                     <asp:Parameter Name="original_CompetitionID" />
                 </UpdateParameters>
             </asp:SqlDataSource>
@@ -108,7 +106,8 @@
     
     <div class="row">
         <div class="col-md-12">
-            <asp:GridView ID="GridView1" runat="server" CssClass="Grid" AutoGenerateColumns="False" DataSourceID="SqlCompetition" Width="100%" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" DataKeyNames="CompetitionID">
+           <asp:RequiredFieldValidator ID="rfvDate" runat="server" ErrorMessage="RequiredFieldValidator" ControlToValidate="txtDate" CssClass="text-danger">Date Required</asp:RequiredFieldValidator>
+            <asp:GridView ID="GridView1" runat="server" CssClass="Grid" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" Width="100%" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" DataKeyNames="CompetitionID">
                 <Columns>
                     <asp:BoundField DataField="CompetitionId" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="CompetitionId" >
                     <HeaderStyle CssClass="padding" />
