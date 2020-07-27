@@ -67,6 +67,7 @@ namespace CaseCompetitionApp
                 con.Close();
 
                 Response.Redirect("AdminArchive.aspx");
+
             }
 
 
@@ -77,6 +78,7 @@ namespace CaseCompetitionApp
             editarchive.Visible = false;
             archives.Visible = true;
             gvCompete.Visible = true;
+
             btnShowArchives.Style.Add("background-color", "rgba(255, 223, 0, 0.75)");
             btnShowArchives.Style.Add("font-weight", "bold");
             btnEditArchives.Style.Remove("background-color");
@@ -88,6 +90,7 @@ namespace CaseCompetitionApp
             editarchive.Visible = true;
             gvCompete.Visible = false;
             archives.Visible = false;
+
             btnEditArchives.Style.Add("background-color", "rgba(255, 223, 0, 0.75)");
             btnEditArchives.Style.Add("font-weight", "bold");
             btnShowArchives.Style.Remove("background-color");
@@ -113,6 +116,5 @@ namespace CaseCompetitionApp
             }
         }
 
-        }
     }
 }

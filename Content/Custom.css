@@ -340,3 +340,14 @@
     text-decoration: underline;
     padding: 0px;
 }
+
+.Grid {
+    table-layout: fixed;
+    width: 100%;
+}
+
+    .Grid .Shorter {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
