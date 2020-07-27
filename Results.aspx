@@ -190,10 +190,9 @@
 
     <div class="center">
         <br />
-            <div class="bottomdiv">
+            
         <h3>
             Thank you to all competitors for the hard work at this year's competition!
         </h3>
-            </div>
     </div>
 </asp:Content>
