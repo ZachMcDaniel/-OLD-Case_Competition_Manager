@@ -3,51 +3,52 @@
     <h2 class="center gold">Team Managment</h2>
 
 <div class="row center">
-    <asp:GridView ID="GridView1" runat="server" OnRowUpdating="GridView1_RowUpdating" AutoGenerateColumns="False" DataKeyNames="MemberID" DataSourceID="SqlDataSource1" Width="100%" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" AllowSorting="True">
+    <asp:GridView ID="GridView1" CssClass="Grid" runat="server" OnRowUpdating="GridView1_RowUpdating" AutoGenerateColumns="False" DataKeyNames="MemberID" DataSourceID="SqlDataSource1" Width="100%" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" AllowSorting="True">
         <Columns>
             <asp:BoundField DataField="FirstName" HeaderText="First Name" SortExpression="FirstName" >
-                <ControlStyle CssClass="center" />
-                <HeaderStyle CssClass="center" />
-                <ItemStyle CssClass="center" />
+                <ControlStyle CssClass="center Smaller" />
+                <HeaderStyle CssClass="center Smaller" />
+                <ItemStyle CssClass="center Smaller" />
                 </asp:BoundField>
             <asp:BoundField DataField="LastName" HeaderText="Last Name" SortExpression="LastName" >
-                <ControlStyle CssClass="center" />
-                <HeaderStyle CssClass="center" />
-                <ItemStyle CssClass="center" />
+                <ControlStyle CssClass="center Smaller" />
+                <HeaderStyle CssClass="center Smaller" />
+                <ItemStyle CssClass="center Smaller" />
                 </asp:BoundField>
             <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" >
-                <ControlStyle CssClass="center" />
-                <HeaderStyle CssClass="center" />
-                <ItemStyle CssClass="center" />
+                <ControlStyle CssClass="center Smaller" />
+                <HeaderStyle CssClass="center Smaller" />
+                <ItemStyle CssClass="center Smaller" />
                 </asp:BoundField>
             <asp:BoundField DataField="PhoneNumber" HeaderText="Phone Number" SortExpression="PhoneNumber" >
-                <ControlStyle CssClass="center" />
-                <HeaderStyle CssClass="center" />
-                <ItemStyle CssClass="center" />
+                <ControlStyle CssClass="center Smaller" />
+                <HeaderStyle CssClass="center Smaller" />
+                <ItemStyle CssClass="center Smaller" />
                 </asp:BoundField>
             <asp:BoundField DataField="ShirtSize" HeaderText="Shirt Size" SortExpression="ShirtSize" >
-                <ControlStyle CssClass="center" />
-                <HeaderStyle CssClass="center" />
-                <ItemStyle CssClass="center" />
+                <ControlStyle CssClass="center Smaller" />
+                <HeaderStyle CssClass="center Smaller" />
+                <ItemStyle CssClass="center Smaller" />
                 </asp:BoundField>
             <asp:BoundField DataField="FoodAllergy" HeaderText="Food Allergy" SortExpression="FoodAllergy" >
-                <ControlStyle CssClass="center" />
-                <HeaderStyle CssClass="center" />
-                <ItemStyle CssClass="center" />
+                <ControlStyle CssClass="centerSmaller" />
+                <HeaderStyle CssClass="center Smaller" />
+                <ItemStyle CssClass="center Smaller" />
                 </asp:BoundField>
             <asp:TemplateField HeaderText="Vegan" SortExpression="Vegan">
                 <EditItemTemplate>
-                 <asp:RadioButtonList ID="radioVegan" runat="server">
+                    <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("VeganNum") %>'></asp:TextBox>
+                 <%--<asp:RadioButtonList ID="radioVegan" runat="server">
                      <asp:ListItem Value="0">No</asp:ListItem>
                      <asp:ListItem Value="1">Yes</asp:ListItem>
-                 </asp:RadioButtonList>
+                 </asp:RadioButtonList>--%>
                 </EditItemTemplate>
                 <ItemTemplate>
                     <asp:Label ID="Label1" runat="server" Text='<%# Bind("Vegan") %>'></asp:Label>
                 </ItemTemplate>
-                <ControlStyle CssClass="center" />
-                <HeaderStyle CssClass="center" />
-                <ItemStyle CssClass="center" />
+                <ControlStyle CssClass="center Smaller" />
+                <HeaderStyle CssClass="center Smaller" />
+                <ItemStyle CssClass="center Smaller" />
             </asp:TemplateField>
             <asp:CommandField ShowEditButton="True" ShowDeleteButton="True" />
         </Columns>
@@ -60,7 +61,7 @@
         <SortedDescendingCellStyle BackColor="#E5E5E5" />
         <SortedDescendingHeaderStyle BackColor="#242121" />
     </asp:GridView>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="select MemberId, TeamId, FirstName, LastName, Email, FoodAllergy, ShirtSize, PhoneNumber, CASE WHEN Vegan = 1 THEN 'Yes' ELSE 'No' END AS Vegan From [Members] where TeamID = (select TeamID FROM TEAM where TeamName = (select Username FROM AspNetUsers where Id = @ID))"  UpdateCommand="UPDATE [Members] SET [FirstName] = @FirstName, [LastName] = @LastName, [Email] = @Email, [PhoneNumber] = @PhoneNumber, [ShirtSize] = @ShirtSize, [FoodAllergy] = @FoodAllergy, [Vegan] = @Vegans WHERE [MemberID] = @original_MemberID" OldValuesParameterFormatString="original_{0}" DeleteCommand="DELETE FROM [Members] where [MemberID] = @original_MemberID">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="select MemberId, TeamId, FirstName, LastName, Email, FoodAllergy, ShirtSize, PhoneNumber, CASE WHEN Vegan = 1 THEN 'Yes' ELSE 'No' END AS Vegan, Vegan AS VeganNum From [Members] where TeamID = (select TeamID FROM TEAM where TeamName = (select Username FROM AspNetUsers where Id = @ID))"  UpdateCommand="UPDATE [Members] SET [FirstName] = @FirstName, [LastName] = @LastName, [Email] = @Email, [PhoneNumber] = @PhoneNumber, [ShirtSize] = @ShirtSize, [FoodAllergy] = @FoodAllergy, [Vegan] = @VeganNum WHERE [MemberID] = @original_MemberID" OldValuesParameterFormatString="original_{0}" DeleteCommand="DELETE FROM [Members] where [MemberID] = @original_MemberID">
 <SelectParameters>
     <asp:Parameter Name="ID" Type="String"/>
 </SelectParameters>        
@@ -75,7 +76,7 @@
               <asp:Parameter Name="PhoneNumber" Type="String" />
               <asp:Parameter Name="ShirtSize" Type="String" />
               <asp:Parameter Name="FoodAllergy" Type="String" />
-              <asp:Parameter Name="Vegans" Type="string" />
+              <asp:Parameter Name="VeganNum" Type="string" />
           </UpdateParameters>
                 </asp:SqlDataSource>
         </div>
