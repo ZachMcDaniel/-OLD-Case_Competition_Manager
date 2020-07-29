@@ -2,55 +2,107 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h2 class="center gold">Team Managment</h2>
 
-<div class="row center">
-    <asp:GridView ID="GridView1" CssClass="Grid" runat="server" OnRowUpdating="GridView1_RowUpdating" AutoGenerateColumns="False" DataKeyNames="MemberID" DataSourceID="SqlDataSource1" Width="100%" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" AllowSorting="True">
+<div class="row center"> 
+    <asp:ValidationSummary ID="ValidationSummary1" ValidationGroup="Grid" runat="server" />
+    <asp:GridView ID="GridView1" CssClass="Grid" runat="server" AutoGenerateColumns="False" DataKeyNames="MemberID" DataSourceID="SqlDataSource1" Width="100%" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" AllowSorting="True">
         <Columns>
-            <asp:BoundField DataField="FirstName" HeaderText="First Name" SortExpression="FirstName" >
-                <ControlStyle CssClass="center Smaller" />
-                <HeaderStyle CssClass="center Smaller" />
-                <ItemStyle CssClass="center Smaller" />
-                </asp:BoundField>
-            <asp:BoundField DataField="LastName" HeaderText="Last Name" SortExpression="LastName" >
-                <ControlStyle CssClass="center Smaller" />
-                <HeaderStyle CssClass="center Smaller" />
-                <ItemStyle CssClass="center Smaller" />
-                </asp:BoundField>
-            <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" >
-                <ControlStyle CssClass="center Smaller" />
-                <HeaderStyle CssClass="center Smaller" />
-                <ItemStyle CssClass="center Smaller" />
-                </asp:BoundField>
-            <asp:BoundField DataField="PhoneNumber" HeaderText="Phone Number" SortExpression="PhoneNumber" >
-                <ControlStyle CssClass="center Smaller" />
-                <HeaderStyle CssClass="center Smaller" />
-                <ItemStyle CssClass="center Smaller" />
-                </asp:BoundField>
-            <asp:BoundField DataField="ShirtSize" HeaderText="Shirt Size" SortExpression="ShirtSize" >
-                <ControlStyle CssClass="center Smaller" />
-                <HeaderStyle CssClass="center Smaller" />
-                <ItemStyle CssClass="center Smaller" />
-                </asp:BoundField>
-            <asp:BoundField DataField="FoodAllergy" HeaderText="Food Allergy" SortExpression="FoodAllergy" >
-                <ControlStyle CssClass="centerSmaller" />
-                <HeaderStyle CssClass="center Smaller" />
-                <ItemStyle CssClass="center Smaller" />
-                </asp:BoundField>
+            <asp:TemplateField HeaderText="First Name" SortExpression="FirstName">
+                <EditItemTemplate>
+                    <asp:TextBox ID="FName" runat="server" Text='<%# Bind("FirstName") %>'></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="FirstValidate" ValidationGroup="Grid" runat="server" ControlToValidate="FName" ErrorMessage="First Name is required"></asp:RequiredFieldValidator>
+                </EditItemTemplate>
+                <ItemTemplate>
+                    <asp:Label ID="Label2" runat="server" Text='<%# Bind("FirstName") %>'></asp:Label>
+                </ItemTemplate>
+                <ControlStyle CssClass="Shorter" />
+                <HeaderStyle CssClass="center Shorter" />
+                <ItemStyle CssClass="center Shorter" />
+            </asp:TemplateField>
+            <asp:TemplateField HeaderText="Last Name" SortExpression="LastName">
+                <EditItemTemplate>
+                    <asp:TextBox ID="LName" runat="server" Text='<%# Bind("LastName") %>'></asp:TextBox>
+                         <asp:RequiredFieldValidator ID="LastValidate" ValidationGroup="Grid" runat="server" ControlToValidate="LName" ErrorMessage="Last Name is required"></asp:RequiredFieldValidator>
+                </EditItemTemplate>
+                <ItemTemplate>
+                    <asp:Label ID="Label3" runat="server" Text='<%# Bind("LastName") %>'></asp:Label>
+                </ItemTemplate>
+                <ControlStyle CssClass="Shorter" />
+                <HeaderStyle CssClass="center Shorter" />
+                <ItemStyle CssClass="center Shorter" />
+            </asp:TemplateField>
+            <asp:TemplateField HeaderText="Email" SortExpression="Email">
+                <EditItemTemplate>
+                    <asp:TextBox ID="Email" runat="server" Text='<%# Bind("Email") %>'></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="EmailValidate" ValidationGroup="Grid" runat="server" ControlToValidate="Email" ErrorMessage="Email is required"></asp:RequiredFieldValidator>
+                </EditItemTemplate>
+                <ItemTemplate>
+                    <asp:Label ID="Label4" runat="server" Text='<%# Bind("Email") %>'></asp:Label>
+                </ItemTemplate>
+                <ControlStyle CssClass="Shorter" />
+                <HeaderStyle CssClass="center Shorter" />
+                <ItemStyle CssClass="center Shorter" />
+            </asp:TemplateField>
+            <asp:TemplateField HeaderText="Phone Number" SortExpression="PhoneNumber">
+                <EditItemTemplate>
+                    <asp:TextBox ID="Phone" TextMode="Phone" runat="server" Text='<%# Bind("PhoneNumber") %>'></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="PhoneValidate" ValidationGroup="Grid" runat="server" ControlToValidate="Phone" ErrorMessage="Phone number required"></asp:RequiredFieldValidator>             
+                    </EditItemTemplate>
+                <ItemTemplate>
+                    <asp:Label ID="Label5" runat="server" Text='<%# Bind("PhoneNumber") %>'></asp:Label>
+                </ItemTemplate>
+                <ControlStyle CssClass="Shorter" />
+                <HeaderStyle CssClass="center Shorter" />
+                <ItemStyle CssClass="center Shorter" />
+            </asp:TemplateField>
+            <asp:TemplateField HeaderText="Shirt Size" SortExpression="ShirtSize">
+                <EditItemTemplate>
+                    <asp:TextBox ID="Shirt" runat="server" Text='<%# Bind("ShirtSize") %>'></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="ShirtValidate" ValidationGroup="Grid" runat="server" ControlToValidate="Shirt" ErrorMessage="Shirt size is required"></asp:RequiredFieldValidator>
+                </EditItemTemplate>
+                <ItemTemplate>
+                    <asp:Label ID="Label6" runat="server" Text='<%# Bind("ShirtSize") %>'></asp:Label>
+                </ItemTemplate>
+                <ControlStyle CssClass="Shorter" />
+                <HeaderStyle CssClass="center Shorter" Width="75px" />
+                <ItemStyle CssClass="center Shorter" />
+            </asp:TemplateField>
+            <asp:TemplateField HeaderText="Food Allergy" SortExpression="FoodAllergy">
+                <EditItemTemplate>
+                    <asp:TextBox ID="TextBox6" runat="server" Text='<%# Bind("FoodAllergy") %>'></asp:TextBox>
+                </EditItemTemplate>
+                <ItemTemplate>
+                    <asp:Label ID="Label7" runat="server" Text='<%# Bind("FoodAllergy") %>'></asp:Label>
+                </ItemTemplate>
+                <ControlStyle CssClass="Shorter" />
+                <HeaderStyle CssClass="center Shorter" />
+                <ItemStyle CssClass="center Shorter" />
+            </asp:TemplateField>
             <asp:TemplateField HeaderText="Vegan" SortExpression="Vegan">
                 <EditItemTemplate>
-                    <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("VeganNum") %>'></asp:TextBox>
-                 <%--<asp:RadioButtonList ID="radioVegan" runat="server">
-                     <asp:ListItem Value="0">No</asp:ListItem>
-                     <asp:ListItem Value="1">Yes</asp:ListItem>
-                 </asp:RadioButtonList>--%>
-                </EditItemTemplate>
+                    <asp:TextBox ID="txtVegan" runat="server" Text='<%# Bind("VeganNum") %>'></asp:TextBox>
+                            <asp:RangeValidator ID="ValidateVegan" ValidationGroup="Grid" runat="server" MinimumValue="0" MaximumValue="1" ControlToValidate="txtVegan" Display="None" ErrorMessage="For Vegan, please input 1 for yes or 0 for no"></asp:RangeValidator>
+                    <asp:RequiredFieldValidator ID="VeganRequired" ValidationGroup="Grid" runat="server" ControlToValidate="txtVegan" ErrorMessage="Please let us know if you are Vegan"></asp:RequiredFieldValidator>            
+                    </EditItemTemplate>
                 <ItemTemplate>
                     <asp:Label ID="Label1" runat="server" Text='<%# Bind("Vegan") %>'></asp:Label>
                 </ItemTemplate>
-                <ControlStyle CssClass="center Smaller" />
-                <HeaderStyle CssClass="center Smaller" />
-                <ItemStyle CssClass="center Smaller" />
+                 <ControlStyle CssClass="Shorter" />
+                <HeaderStyle CssClass="center Shorter" Width="75px" />
+                <ItemStyle CssClass="center Shorter" />
             </asp:TemplateField>
-            <asp:CommandField ShowEditButton="True" ShowDeleteButton="True" />
+            <asp:TemplateField ShowHeader="False">
+                <EditItemTemplate>
+                    <asp:LinkButton ID="LinkButton1" runat="server" ValidationGroup="Grid" CausesValidation="True" CommandName="Update" Text="Update"></asp:LinkButton>
+                    &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel"></asp:LinkButton>
+                </EditItemTemplate>
+                <ItemTemplate>
+                    <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" CommandName="Edit" Text="Edit"></asp:LinkButton>
+                    &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete" OnClientClick="return confirm('Are you sure you want to delete team member?');"></asp:LinkButton>
+                </ItemTemplate>
+                 <ControlStyle CssClass="Shorter" />
+                <HeaderStyle CssClass="Shorter" />
+                <ItemStyle CssClass="Shorter" />
+            </asp:TemplateField>
         </Columns>
         <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
         <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
@@ -84,14 +136,13 @@
 
 
 
-
     <div class="row col-md-12">
       <br />
     </div>
 
     <div class="row">
         <div class="col-md-3">
-                <asp:Button ID="BtnNewMember" CssClass="btn btn-default grey" runat="server" Text="Add Members" OnClick="BtnAddMember_Click" />
+                <asp:Button ID="BtnNewMember" CausesValidation="false" CssClass="btn btn-default grey" runat="server" Text="Add Members" OnClick="BtnAddMember_Click" />
         </div>
         <div class="col-md-9">
 
@@ -114,7 +165,7 @@
             <asp:TextBox ID="txtFirstName" runat="server"></asp:TextBox>
         </div>
         <div class="col-sm-4">
-            <asp:RequiredFieldValidator ID="rfvFirstName" runat="server" ErrorMessage="Require First Name" CssClass="text-danger" Text="Required" Display="Dynamic" ControlToValidate="txtFirstName">Required</asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="rfvFirstName" ValidationGroup="new" runat="server" ErrorMessage="Require First Name" CssClass="text-danger" Text="Required" Display="Dynamic" ControlToValidate="txtFirstName">Required</asp:RequiredFieldValidator>
               </div>
     </div>
 
@@ -124,28 +175,32 @@
             <asp:TextBox ID="txtLName" runat="server"></asp:TextBox>
         </div>
         <div class="col-sm-4">
-            <asp:RequiredFieldValidator ID="rfvLName" runat="server" ErrorMessage="Require Last Name" CssClass="text-danger" Text="Required" Display="Dynamic" ControlToValidate="txtLName">Required</asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="rfvLName" ValidationGroup="new" runat="server" ErrorMessage="Require Last Name" CssClass="text-danger" Text="Required" Display="Dynamic" ControlToValidate="txtLName">Required</asp:RequiredFieldValidator>
               </div>
     </div> 
     
     <div class="form-group col-md-12">
         <asp:Label class="control-label col-sm-3" ID="lblEmail" runat="server" Text="Email:"></asp:Label>
         <div class="col-sm-5">
-            <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtEmail" placeholder="example@example.com" Textmode="Email" runat="server"></asp:TextBox>
         </div>
         <div class="col-sm-4">
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Require Email" CssClass="text-danger" Text="Required" Display="Dynamic" ControlToValidate="txtEmail">Required</asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ValidationGroup="new" runat="server" ErrorMessage="Require Email" CssClass="text-danger" Text="Required" Display="Dynamic" ControlToValidate="txtEmail">Required</asp:RequiredFieldValidator>
               </div>
     </div>  
     
     <div class="form-group col-md-12">
         <asp:Label class="control-label col-sm-3" ID="lblPhone" runat="server" Text="Phone Number:"></asp:Label>
         <div class="col-sm-5">
-            <asp:TextBox ID="txtPhone" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtPhone" placeholder="###-###-####" TextMode="Phone" runat="server"></asp:TextBox>
         </div>
         <div class="col-sm-4">
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Require Phone" CssClass="text-danger" Text="Required" Display="Dynamic" ControlToValidate="txtPhone">Required</asp:RequiredFieldValidator>
-              </div>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" ValidationGroup="new" runat="server" ErrorMessage="Require Phone" CssClass="text-danger" Text="Required" Display="Dynamic" ControlToValidate="txtPhone">Required</asp:RequiredFieldValidator>
+            <asp:RegularExpressionValidator ID="revPhone" runat="server"
+   ErrorMessage="Please enter number as ###-###-####" ControlToValidate="txtPhone" 
+   ValidationExpression="^[01]?[- .]?(\([2-9]\d{2}\)|[2-9]\d{2})[- .]?\d{3}[- .]?\d{4}$">
+</asp:RegularExpressionValidator>      
+        </div>
     </div>  
 
 
@@ -155,7 +210,7 @@
             <asp:TextBox ID="txtShirt" runat="server"></asp:TextBox>
         </div>
         <div class="col-sm-4">
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Require Shirt" CssClass="text-danger" Text="Required" Display="Dynamic" ControlToValidate="txtShirt">Required</asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ValidationGroup="new" runat="server" ErrorMessage="Require Shirt" CssClass="text-danger" Text="Required" Display="Dynamic" ControlToValidate="txtShirt">Required</asp:RequiredFieldValidator>
               </div>
     </div>  
 
@@ -168,6 +223,7 @@
             </asp:RadioButtonList>
         </div>
         <div class="col-sm-4">
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ValidationGroup="new" ControlToValidate="rbtnVegan" CssClass="text-danger" ErrorMessage="Require Vegan Preference" Text="Required"></asp:RequiredFieldValidator>
               </div>
     </div>  
 
@@ -184,8 +240,8 @@
      <div class="form-group col-md-12">
         <div class="col-sm-3"></div>
         <div class="col-sm-5">
-        <asp:Button ID="btnSubmit" runat="server" Text="Submit" CssClass="btn btn-default grey"  OnClick="btnSubmit_Click" Width="125px" />
-        <asp:Button ID="btnClear" runat="server" Text="Clear" CssClass="btn btn-default grey"  OnClick="btnClear_Click" Width="125px" />
+        <asp:Button ID="btnSubmit" runat="server" ValidationGroup="new" Text="Submit" CssClass="btn btn-default grey"  OnClick="btnSubmit_Click" Width="125px" />
+        <asp:Button ID="btnClear" runat="server" CausesValidation="false" Text="Clear" CssClass="btn btn-default grey"  OnClick="btnClear_Click" Width="125px" />
         </div>
     </div>
 </fieldset>

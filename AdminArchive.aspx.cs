@@ -66,8 +66,13 @@ namespace CaseCompetitionApp
 
                 con.Close();
 
-                Response.Redirect("AdminArchive.aspx");
+                SqlCompetition.EnableCaching = false;
+                gvCompete.DataBind();
+                SqlCompetition.EnableCaching = true;
 
+                SqlDataSource1.EnableCaching = false;
+                GridView1.DataBind();
+                SqlDataSource1.EnableCaching = true;
             }
 
 
@@ -83,10 +88,15 @@ namespace CaseCompetitionApp
             btnShowArchives.Style.Add("font-weight", "bold");
             btnEditArchives.Style.Remove("background-color");
             btnEditArchives.Style.Remove("font-weight");
+
         }
 
         protected void btnEditArchives_Click(object sender, EventArgs e)
         {
+            SqlDataSource1.EnableCaching = false;
+            GridView1.DataBind();
+            SqlDataSource1.EnableCaching = true;
+
             editarchive.Visible = true;
             gvCompete.Visible = false;
             archives.Visible = false;

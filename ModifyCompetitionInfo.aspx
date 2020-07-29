@@ -37,17 +37,17 @@
     <%--Team Table--%>
         <div class="row">
             <div class="col-md-12">
-                <asp:GridView ID="gvCompete" DataKeyNames="TeamID" runat="server"  AutoGenerateColumns="False" DataSourceID="SqlDataSource1" Width="100%">
+                <asp:GridView ID="gvCompete" CssClass="Grid" DataKeyNames="TeamID" runat="server"  AutoGenerateColumns="False" DataSourceID="SqlDataSource1" Width="100%">
                     <Columns>
                         <asp:BoundField DataField="TeamName" HeaderText="Team Name" SortExpression="TeamName" ReadOnly="True" >
-                        <ControlStyle CssClass="padding" />
-                        <HeaderStyle CssClass="padding" />
-                        <ItemStyle CssClass="padding" />
+                        <ControlStyle CssClass="Shorter" />
+                        <HeaderStyle CssClass="padding Shorter" />
+                        <ItemStyle CssClass="padding Shorter" />
                         </asp:BoundField>
                         <asp:BoundField DataField="School" HeaderText="School" SortExpression="School" ReadOnly="True" >
-                        <ControlStyle CssClass="padding" />
-                        <HeaderStyle CssClass="padding" />
-                        <ItemStyle CssClass="padding" />
+                        <ControlStyle CssClass="Shorter" />
+                        <HeaderStyle CssClass="padding Shorter" />
+                        <ItemStyle CssClass="padding Shorter" />
                         </asp:BoundField>
                         <asp:TemplateField HeaderText="Timeslot" SortExpression="Timeslots">
                             <EditItemTemplate>
@@ -56,25 +56,33 @@
                             <ItemTemplate>
                                 <asp:Label ID="Label1" runat="server" Text='<%# Bind("Timeslots") %>'></asp:Label>
                             </ItemTemplate>
-                            <ControlStyle CssClass="padding" />
-                            <HeaderStyle CssClass="padding" />
-                            <ItemStyle CssClass="padding" />
+                            <ControlStyle CssClass="Shorter" />
+                            <HeaderStyle CssClass="padding Shorter" />
+                            <ItemStyle CssClass="padding Shorter" />
                         </asp:TemplateField>
                         <asp:BoundField DataField="RoomNumber" HeaderText="Room Number" SortExpression="RoomNumber" >
-                        <ControlStyle CssClass="padding" />
-                        <HeaderStyle CssClass="padding" />
-                        <ItemStyle CssClass="padding" />
+                        <ControlStyle CssClass="Shorter" />
+                        <HeaderStyle CssClass="padding Shorter" />
+                        <ItemStyle CssClass="padding Shorter" />
                         </asp:BoundField>
                         <asp:BoundField DataField="Ranking" HeaderText="Team Ranking" SortExpression="Ranking">
-                        <ControlStyle CssClass="padding" />
-                        <HeaderStyle CssClass="center" />
-                        <ItemStyle CssClass="padding" />
+                        <ControlStyle CssClass="Shorter" />
+                        <HeaderStyle CssClass="padding Shorter" />
+                        <ItemStyle CssClass="padding Shorter" />
                         </asp:BoundField>
-                        <asp:CommandField HeaderText="Edit" ShowDeleteButton="True" ShowEditButton="True" >
-                        <ControlStyle CssClass="smpadding" />
-                        <HeaderStyle CssClass="padding" />
-                        <ItemStyle CssClass="smpadding" />
-                        </asp:CommandField>
+                        <asp:TemplateField HeaderText="Edit" ShowHeader="False">
+                            <EditItemTemplate>
+                                <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="True" CommandName="Update" Text="Update"></asp:LinkButton>
+                                &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel"></asp:LinkButton>
+                            </EditItemTemplate>
+                            <ItemTemplate>
+                                <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" CommandName="Edit" Text="Edit"></asp:LinkButton>
+                                &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="False" OnClientClick="return confirm('Are you sure you want to delete team?');" CommandName="Delete" Text="Delete"></asp:LinkButton>
+                            </ItemTemplate>
+                            <ControlStyle CssClass="smpadding" />
+                            <HeaderStyle CssClass="padding" />
+                            <ItemStyle CssClass="smpadding" />
+                        </asp:TemplateField>
                     </Columns>
                         <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
                         <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
@@ -102,48 +110,56 @@
     <%--Member Table--%>
     <div class="row">
         <div class="col-md-12">
-            <asp:GridView ID="gvMember" runat="server" AutoGenerateColumns="False"  DataKeyNames="MemberID" DataSourceID="SqlDataSource2" Width="100%">
+            <asp:GridView ID="gvMember" CssClass="Grid" runat="server" AutoGenerateColumns="False"  DataKeyNames="MemberID" DataSourceID="SqlDataSource2" Width="100%">
                 <Columns>
                     <asp:BoundField DataField="FirstName" HeaderText="First Name" SortExpression="FirstName">
-                    <ControlStyle CssClass="padding" />
-                    <HeaderStyle CssClass="padding" />
-                    <ItemStyle CssClass="padding" />
+                    <ControlStyle CssClass="Shorter" />
+                    <HeaderStyle CssClass="padding Shorter" />
+                    <ItemStyle CssClass="padding Shorter" />
                     </asp:BoundField>
                     <asp:BoundField DataField="LastName" HeaderText="Last Name" SortExpression="LastName">
-                    <ControlStyle CssClass="padding" />
-                    <HeaderStyle CssClass="padding" />
-                    <ItemStyle CssClass="padding" />
+                    <ControlStyle CssClass="Shorter" />
+                    <HeaderStyle CssClass="padding Shorter" />
+                    <ItemStyle CssClass="padding Shorter" />
                     </asp:BoundField>
                     <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email">
-                    <ControlStyle CssClass="padding" />
-                    <HeaderStyle CssClass="padding" />
-                    <ItemStyle CssClass="padding" />
+                    <ControlStyle CssClass="Shorter" />
+                    <HeaderStyle CssClass="padding Shorter" />
+                    <ItemStyle CssClass="padding Shorter" />
                     </asp:BoundField>
                     <asp:BoundField DataField="FoodAllergy" HeaderText="Food Allergy" SortExpression="FoodAllergy">
-                    <ControlStyle CssClass="padding" />
-                    <HeaderStyle CssClass="padding" />
-                    <ItemStyle CssClass="padding" />
+                    <ControlStyle CssClass="Shorter" />
+                    <HeaderStyle CssClass="padding Shorter" />
+                    <ItemStyle CssClass="padding Shorter" />
                     </asp:BoundField>
                     <asp:BoundField DataField="ShirtSize" HeaderText="Shirt Size" SortExpression="ShirtSize">
-                    <ControlStyle CssClass="padding" />
-                    <HeaderStyle CssClass="padding" />
-                    <ItemStyle CssClass="padding" />
+                    <ControlStyle CssClass="Shorter" />
+                    <HeaderStyle CssClass="padding Shorter" />
+                    <ItemStyle CssClass="padding Shorter" />
                     </asp:BoundField>
                     <asp:BoundField DataField="PhoneNumber" HeaderText="Phone Number" SortExpression="PhoneNumber">
-                    <ControlStyle CssClass="padding" />
-                    <HeaderStyle CssClass="padding" />
-                    <ItemStyle CssClass="padding" />
+                    <ControlStyle CssClass="Shorter" />
+                    <HeaderStyle CssClass="padding Shorter" />
+                    <ItemStyle CssClass="padding Shorter" />
                     </asp:BoundField>
                     <asp:BoundField DataField="Vegan" HeaderText="Vegan" SortExpression="Vegan">
-                    <ControlStyle CssClass="padding" />
-                    <HeaderStyle CssClass="padding" />
-                    <ItemStyle CssClass="padding" />
+                    <ControlStyle CssClass="Shorter" />
+                    <HeaderStyle CssClass="padding Shorter" />
+                    <ItemStyle CssClass="padding Shorter" />
                     </asp:BoundField>
-                    <asp:CommandField HeaderText="Edit" ShowDeleteButton="True" ShowEditButton="True" ShowHeader="True">
-                    <ControlStyle CssClass="smpadding" />
-                    <HeaderStyle CssClass="padding" />
-                    <ItemStyle CssClass="smpadding" />
-                    </asp:CommandField>
+                    <asp:TemplateField HeaderText="Edit">
+                        <EditItemTemplate>
+                            <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="True" CommandName="Update" Text="Update"></asp:LinkButton>
+                            &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel"></asp:LinkButton>
+                        </EditItemTemplate>
+                        <ItemTemplate>
+                            <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" CommandName="Edit" Text="Edit"></asp:LinkButton>
+                            &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="False" OnClientClick="return confirm('Are you sure you want to delete team member?');" CommandName="Delete" Text="Delete"></asp:LinkButton>
+                        </ItemTemplate>
+                        <ControlStyle CssClass="smpadding" />
+                        <HeaderStyle CssClass="padding" />
+                        <ItemStyle CssClass="smpadding" />
+                    </asp:TemplateField>
                 </Columns>
                         <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
                         <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
@@ -176,38 +192,46 @@
     <%--Judge Table--%>
     <div class="row">
         <div class="col-md-12">
-            <asp:GridView ID="gvJudge" runat="server"  AutoGenerateColumns="False" DataKeyNames="JudgeID" DataSourceID="SqlDataSource3" Width="100%">
+            <asp:GridView ID="gvJudge" runat="server" CssClass="Grid" AutoGenerateColumns="False" DataKeyNames="JudgeID" DataSourceID="SqlDataSource3" Width="100%">
                 <Columns>
                     <asp:BoundField DataField="FirstName" HeaderText="First Name" SortExpression="FirstName">
-                    <ControlStyle CssClass="padding" />
-                    <HeaderStyle CssClass="padding" />
-                    <ItemStyle CssClass="padding" />
+                    <ControlStyle CssClass="Shorter" />
+                    <HeaderStyle CssClass="padding Shorter" />
+                    <ItemStyle CssClass="padding Shorter" />
                     </asp:BoundField>
                     <asp:BoundField DataField="LastName" HeaderText="Last Name" SortExpression="LastName">
-                    <ControlStyle CssClass="padding" />
-                    <HeaderStyle CssClass="padding" />
-                    <ItemStyle CssClass="padding" />
+                    <ControlStyle CssClass="Shorter" />
+                    <HeaderStyle CssClass="padding Shorter" />
+                    <ItemStyle CssClass="padding Shorter" />
                     </asp:BoundField>
                     <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email">
-                    <ControlStyle CssClass="padding" />
-                    <HeaderStyle CssClass="padding" />
-                    <ItemStyle CssClass="padding" />
+                    <ControlStyle CssClass="Shorter" />
+                    <HeaderStyle CssClass="padding Shorter" />
+                    <ItemStyle CssClass="padding Shorter" />
                     </asp:BoundField>
                     <asp:BoundField DataField="Company" HeaderText="Company" SortExpression="Company">
-                    <ControlStyle CssClass="padding" />
-                    <HeaderStyle CssClass="padding" />
-                    <ItemStyle CssClass="padding" />
+                    <ControlStyle CssClass="Shorter" />
+                    <HeaderStyle CssClass="padding Shorter" />
+                    <ItemStyle CssClass="padding Shorter" />
                     </asp:BoundField>
                     <asp:BoundField DataField="CompanySite" HeaderText="Company Site" SortExpression="CompanySite">
-                    <ControlStyle CssClass="padding" />
-                    <HeaderStyle CssClass="padding" />
-                    <ItemStyle CssClass="padding" />
+                    <ControlStyle CssClass="Shorter" />
+                    <HeaderStyle CssClass="padding Shorter" />
+                    <ItemStyle CssClass="padding Shorter" />
                     </asp:BoundField>
-                    <asp:CommandField HeaderText="Edit" ShowDeleteButton="True" ShowEditButton="True" ShowHeader="True" >
-                    <ControlStyle CssClass="smpadding" />
-                    <ItemStyle CssClass="smpadding" />
-                    <HeaderStyle CssClass="padding" />
-                    </asp:CommandField>
+                    <asp:TemplateField HeaderText="Edit">
+                        <EditItemTemplate>
+                            <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="True" CommandName="Update" Text="Update"></asp:LinkButton>
+                            &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel"></asp:LinkButton>
+                        </EditItemTemplate>
+                        <ItemTemplate>
+                            <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" CommandName="Edit" Text="Edit"></asp:LinkButton>
+                            &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="False" OnClientClick="return confirm('Are you sure you want to delete judge?');" CommandName="Delete" Text="Delete"></asp:LinkButton>
+                        </ItemTemplate>
+                        <ControlStyle CssClass="smpadding" />
+                        <HeaderStyle CssClass="padding" />
+                        <ItemStyle CssClass="smpadding" />
+                    </asp:TemplateField>
                 </Columns>
                         <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
                         <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
