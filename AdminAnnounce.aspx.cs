@@ -67,28 +67,6 @@ namespace CaseCompetitionApp
             Response.Redirect("AdminAnnounce.aspx");
         }
 
-        //void AuthorsGridView_RowUpdating(Object sender, GridViewUpdateEventArgs e)
-        //{
-
-        //    // The GridView control does not automatically extract updated values 
-        //    // from TemplateField column fields. These values must be added manually 
-        //    // to the NewValues dictionary.
-
-        //    // Get the GridViewRow object that represents the row being edited
-        //    // from the Rows collection of the GridView control.
-        //    int index = GVNews.EditIndex;
-        //    GridViewRow row = GVNews.Rows[index];
-
-        //    // Get the controls that contain the updated values. In this
-        //    // example, the updated values are contained in the TextBox 
-        //    // controls declared in the edit item templates of each TemplateField 
-        //    // column fields in the GridView control.
-        //    TextBox Feed = (TextBox)row.FindControl("txtFeed");
-
-        //    // Add the updated values to the NewValues dictionary. Use the
-        //    // parameter names declared in the parameterized update query 
-        //    // string for the key names.
-        //    e.NewValues["Feed"] = Feed.Text;
-        //}
+       
     }
 }

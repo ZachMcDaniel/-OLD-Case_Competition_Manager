@@ -22,6 +22,7 @@ namespace CaseCompetitionApp
 
             string user = Convert.ToString(userID);
 
+
             if (!IsPostBack)
             {
                 clearfields();
@@ -78,13 +79,16 @@ namespace CaseCompetitionApp
 
         protected void BtnAddMember_Click(object sender, EventArgs e)
         {
-            NewMember.Visible = true;
+            if(NewMember.Visible == true)
+            {
+                NewMember.Visible = false;
+            }
+            
+            else
+            {
+                NewMember.Visible = true;
+            }
         }
 
-        protected void GridView1_RowUpdating(object sender, GridViewUpdateEventArgs e)
-        {
-            //string value = (GridView1.FindControl("radioVegan") as RadioButtonList).SelectedValue;
-
-        }
     }
 }

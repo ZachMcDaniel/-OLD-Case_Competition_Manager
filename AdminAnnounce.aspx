@@ -60,19 +60,26 @@
     </div>
     </div>
     <div class="row">
-            <div class="col-md-8">
+            <asp:UpdatePanel runat="server" ID="newsupdate" UpdateMode="Conditional">
+                <ContentTemplate>
+                     <div class="col-md-8">
             <asp:TextBox ID="txtNews" runat="server" class="txtbox" TextMode="MultiLine" Wrap="True"></asp:TextBox> <%--YEET--%>
                 <br />
                 <asp:RegularExpressionValidator ID="REVEntry" runat="server" ErrorMessage="RegularExpressionValidator" ControlToValidate="txtNews" ValidationExpression="^[\s\S]{0,1000}$" CssClass="text-danger" style="font:bold">1000 word limit on news posts</asp:RegularExpressionValidator>
                 <asp:RequiredFieldValidator ID="rfVEntry" runat="server"  CssClass="text-danger" ControlToValidate="txtNews" ErrorMessage="RequiredFieldValidator">News Entry Required</asp:RequiredFieldValidator>
                 </div>
-
             <div class="col-md-2">
                 <asp:Button ID="btnNews" CssClass="btn btn-default grey" width="100%" runat="server" Text="Insert News" OnClick="btnNewsClick" />
              </div>
                     <div class="col-md-2">
-                <asp:Button ID="btncancel" CssClass="btn btn-default grey" width="100%" runat="server" Text="Clear" OnClick="btnClear_Click" />
+                        <Triggers>
+                        <asp:AsyncPostBackTrigger ControlID="btnNews" EventName="btnNewsClick"/>
+                        </Triggers>
+                <asp:Button ID="btncancel" CausesValidation="false" CssClass="btn btn-default grey" width="100%" runat="server" Text="Clear" OnClick="btnClear_Click" />
              </div>
+                         </ContentTemplate>   
+                        </asp:UpdatePanel>
+
     </div>
 
     <div class="col-md-12">

@@ -19,6 +19,8 @@
       <hr style="border: .25px solid rgb(0,0,0)" />
 
     <div id="archives" runat="server">
+        <asp:UpdatePanel runat="server" ID="ArchiveUpdates" UpdateMode="Conditional">
+            <ContentTemplate>
     <div class="row">
         <div>
              <div class="col-md-2" style="text-align:right;vertical-align:central">
@@ -44,6 +46,7 @@
           <div class="col-md-2">
             <asp:Button ID="BtnArchive" CssClass="btn btn-default" Style="padding-bottom:0px; padding-top:0px; margin-top:0px;text-align:center" runat="server" OnClientClick="return confirm('Are you sure you want to archive the current competition?')" Text="Archive Competition" Height="26px" OnClick="Btn_Archive" />
               <asp:Label ID="lblEmpty" runat="server" CssClass="text-danger" Text=""></asp:Label>
+    <asp:AsyncPostBackTrigger ControlID="BtnArchive" EventName="Btn_Archive"/>
           </div>
     </div>
        <hr />
@@ -89,7 +92,8 @@
         </div>
     </div>
     <br />
-
+</ContentTemplate>
+        </asp:UpdatePanel>
 </div>
     
 
