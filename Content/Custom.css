@@ -307,10 +307,23 @@
     flex: inherit;
     bottom: 20vh;
 }
-.stickydiv {
-    position: sticky;
-    flex: inherit;
 
+.bottomrightdiv {
+    position: absolute;
+    
+    flex: inherit;
+    bottom: 20vh;
+}
+.stickydiv {
+position: sticky;
+flex: inherit;
+
+}
+
+.stickyrightdiv {
+    position: sticky;
+    float: right;
+    flex: inherit;
 }
 .rightdiv {
     float:right
