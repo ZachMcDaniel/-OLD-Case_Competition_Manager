@@ -319,6 +319,12 @@ position: sticky;
 flex: inherit;
 
 }
+
+.stickyrightdiv {
+    position: sticky;
+    float: right;
+    flex: inherit;
+}
 .rightdiv {
     float:right
 }
