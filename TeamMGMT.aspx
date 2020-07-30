@@ -251,7 +251,7 @@
         <hr />
     </div>
 
-      <div class="stickydiv">
+      <div class="bottomdiv">
          <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="Hub.aspx" CssClass="hyperlink">Return to Hub</asp:HyperLink>
     </div>
 </asp:Content>
