@@ -16,7 +16,7 @@
     <div class="row">
        
         <div class=" center col-md-4">
-            <h2 class="center">Meet the Judges</h2>
+            <h2 class="center">Meet This Year's Judges</h2>
             <p class="center">
                 List of This Year's Judges and Their Companies
             </p>

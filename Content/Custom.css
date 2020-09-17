@@ -134,14 +134,10 @@
     color: black;
     width: 95%;
     font-weight: bold;
-    font-weight: bolder;
-<<<<<<< HEAD
     border-radius: 20px;
-=======
     font-size: 15px;
     text-align: center;
-    border-radius: 10px;
->>>>>>> zach
+
 }
 
 .grey:hover {
