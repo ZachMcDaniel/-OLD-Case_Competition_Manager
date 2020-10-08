@@ -180,6 +180,7 @@
     <Content Include="Content\Custom.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
+    <Content Include="EventInformation.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="FileReview.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -425,6 +426,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EventInformation.aspx.cs">
+      <DependentUpon>EventInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EventInformation.aspx.designer.cs">
+      <DependentUpon>EventInformation.aspx</DependentUpon>
     </Compile>
     <Compile Include="FileReview.aspx.cs">
       <DependentUpon>FileReview.aspx</DependentUpon>

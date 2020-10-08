@@ -11,7 +11,7 @@
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
-    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/Images/CyHawk1.ico" rel="shortcut icon" type="image/x-icon" />
 
 </head>
@@ -49,33 +49,45 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" id="white" href="~/Hub">Hub</a></li>
-                        <li><a runat="server" id="white1" href="~/News">News</a></li>
-                         <li class="dropdown">
-                          <button class="dropbtn">Competition Info</button>
-                          <div class="dropdown-content">
-                            <a runat="server" href="~/TeamInfo">Team Info</a>
-                            <a runat="server" href="~/Results">Results</a>
-                          </div>
-                        </li>
-                         <li class="customclass1">
-                             <asp:LoginView runat="server">
-                            <RoleGroups>
-                                <asp:RoleGroup Roles="admin">
-                                    <ContentTemplate>
-                                             <a runat="server" href="~/Maintenance">Admin</a>
+                        <%--                          <li><a runat="server" id="white" href="~/hub">hub</a></li> --%>
+                        <li class="customclass1">
+                            <asp:LoginView runat="server">
+                                <RoleGroups>
+                                    <asp:RoleGroup Roles="competitor, admin, judge">
+                                        <ContentTemplate>
+                                            <a runat="server" id="white" href="~/Hub">HUB</a>
                                         </ContentTemplate>
                                     </asp:RoleGroup>
                                 </RoleGroups>
-                                 </asp:LoginView>
-                                 </li>
+                            </asp:LoginView>
+                        </li>
+                        <li class="dropdown">
+                            <button class="dropbtn">Competition Info</button>
+                            <div class="dropdown-content">
+                                <a runat="server" href="~/EventInformation">Event Details</a>
+                                <a runat="server" href="~/TeamInfo">Team Info</a>
+                                <a runat="server" href="~/Results">Results</a>
+                            </div>
+                        </li>
+                        <li><a runat="server" id="white1" href="~/News">News</a></li>
+                        <li class="customclass1">
+                            <asp:LoginView runat="server">
+                                <RoleGroups>
+                                    <asp:RoleGroup Roles="admin">
+                                        <ContentTemplate>
+                                            <a runat="server" href="~/Maintenance">Admin</a>
+                                        </ContentTemplate>
+                                    </asp:RoleGroup>
+                                </RoleGroups>
+                            </asp:LoginView>
+                        </li>
                     </ul>
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
                             <ul class="nav navbar-nav navbar-right">
                                 <li class="customclass1"><a runat="server" href="~/Account/JudgeRegister">Register Judge</a></li>
                                 <li class="customclass1"><a runat="server" href="~/Account/Register">Register Team</a></li>
-                                <li class="customclass1"><a runat="server"  href="~/Account/Login">Log in</a></li>
+                                <li class="customclass1"><a runat="server" href="~/Account/Login">Log in</a></li>
                             </ul>
                         </AnonymousTemplate>
                         <LoggedInTemplate>
@@ -90,20 +102,21 @@
                 </div>
             </div>
         </div>
-        <div class="container body-content" style="min-height:75vh"> <%--the style is what sets footer to bottom of the page--%>
+        <div class="container body-content" style="min-height: 75vh">
+            <%--the style is what sets footer to bottom of the page--%>
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
+        </div>
+        <hr />
+        <footer class="footer">
+            <div class="row">
+                <p class="center col-md-12"><a runat="server" class="center white" href="~/ContactInfo">Contact Us</a> </p>
+                <p class="center col-md-12"><a runat="server" class="center white" href="~/CompetitionSupport">Competition Support</a> </p>
+                <hr style="border: 1px solid rgb(255,223,0)" />
+                <p class="center whitefoot col-md-12">&copy; <%: DateTime.Now.Year %> - University of Iowa Tippie Technology and Innovation</p>
             </div>
-            <hr />
-  <footer class="footer">
-      <div class="row">
-        <p class="center col-md-12" >  <a runat="server" class="center white" href="~/ContactInfo">Contact Us</a> </p>
-        <p class="center col-md-12" >  <a runat="server" class="center white" href="~/CompetitionSupport">Competition Support</a> </p>
-          <hr style="border: 1px solid rgb(255,223,0)"/>
-        <p class="center whitefoot col-md-12">&copy; <%: DateTime.Now.Year %> - University of Iowa Tippie Technology and Innovation</p>
-         </div>
-  </footer>
-            
+        </footer>
+
     </form>
 </body>
 </html>
