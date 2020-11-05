@@ -52,7 +52,7 @@
                         <asp:Button ID="BTNAnnounce" runat="server" Text="Modify Announcements"  OnClick="BTNAnnounce_Click" Class="btn btn-default wide grey"/>
                      </div>
                      <div class="col-md-4">
-                        <asp:Button ID="BTNDownCaseFile" runat="server" Text="Submissions"  OnClick="BTNDownCaseFile_Click" Class="btn btn-default wide grey"/>
+                         <a class="btn btn-default wide grey"  href="../AdminEventInfo">Update Event Info &raquo;</a>    
                      </div>
                  </div> 
 
@@ -75,6 +75,18 @@
                     </div>
                 </div>
 
+               <div class="row">
+                         <br />
+                         <br />
+                       
+                     </div>
+
+                <%--third row--%>
+                <div class="row">
+                     <div class="col-md-6 col-md-offset-3">
+                        <asp:Button ID="BTNDownCaseFile" runat="server" Text="Submissions"  OnClick="BTNDownCaseFile_Click" Class="btn btn-default wide grey"/>
+                     </div>
+                
                  </ContentTemplate>        
           </asp:RoleGroup>   
          </RoleGroups>

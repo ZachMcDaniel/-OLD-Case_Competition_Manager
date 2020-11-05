@@ -168,6 +168,7 @@
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="AdminAnnounce.aspx" />
     <Content Include="AdminArchive.aspx" />
+    <Content Include="AdminEventInfo.aspx" />
     <Content Include="Archive.aspx" />
     <Content Include="CaseFiles.aspx" />
     <Content Include="CompetitionSupport.aspx" />
@@ -380,6 +381,13 @@
     </Compile>
     <Compile Include="AdminArchive.aspx.designer.cs">
       <DependentUpon>AdminArchive.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminEventInfo.aspx.cs">
+      <DependentUpon>AdminEventInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminEventInfo.aspx.designer.cs">
+      <DependentUpon>AdminEventInfo.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
