@@ -86,6 +86,7 @@
                      <div class="col-md-6 col-md-offset-3">
                         <asp:Button ID="BTNDownCaseFile" runat="server" Text="Submissions"  OnClick="BTNDownCaseFile_Click" Class="btn btn-default wide grey"/>
                      </div>
+                    </div>
                 
                  </ContentTemplate>        
           </asp:RoleGroup>   
