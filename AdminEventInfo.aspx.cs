@@ -23,6 +23,7 @@ namespace CaseCompetitionApp
             Application["Box1"] = txtFirstBox.Text;
             Application["Box2"] = txtSecondBox.Text;
             Application["Box3"] = txtThirdBox.Text;
+
             Response.Redirect("~/EventInformation.aspx");
         }
 

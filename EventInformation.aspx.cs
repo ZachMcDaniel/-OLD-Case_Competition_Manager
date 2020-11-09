@@ -14,11 +14,34 @@ namespace CaseCompetitionApp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Application["Box1"] != null)
+            {
+                LblBox1.Text = Application["Box1"].ToString();
+            }
+            else
+            {
+                LblBox1.Text = "Coming Soon...";
+            }
 
-            LblBox1.Text = Application["Box1"].ToString();
-            LblBox2.Text = Application["Box2"].ToString();
-            LblBox3.Text = Application["Box3"].ToString();
-        
+            if (Application["Box2"] != null)
+            {
+                LblBox2.Text = Application["Box2"].ToString();
+            }
+            else
+            {
+                LblBox2.Text = "Coming Soon...";
+            }
+
+            if (Application["Box3"] != null)
+            {
+                LblBox3.Text = Application["Box3"].ToString();
+            }
+            else
+            {
+                LblBox3.Text = "Coming Soon...";
+            }
+
+
 
             string CS = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
             using (SqlConnection con = new SqlConnection(CS))
