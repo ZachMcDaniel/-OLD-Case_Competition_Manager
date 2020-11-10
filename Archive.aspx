@@ -7,8 +7,8 @@
     <h3 class="center">
         Access all previous competitions and results
     </h3>
+    <hr class="style-four">
 
-    <hr />
      <asp:LoginView runat="server">     
          <RoleGroups>       
           <asp:RoleGroup Roles="admin">  
