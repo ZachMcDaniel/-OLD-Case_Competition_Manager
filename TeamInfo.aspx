@@ -2,8 +2,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h2 class="center gold"><%: Title %></h2>
     <h3 class="center">
-        View Team Information for the CyHawk Case Competition 2020
+        View Team Information for the Current Case Competition
     </h3>
+    <hr class="style-four">
     <div class="row col-md-12">
         <hr />
     </div>

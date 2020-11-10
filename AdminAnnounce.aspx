@@ -6,6 +6,7 @@
     <h3 class="center">
         Add or Remove Announcements on the News Page
     </h3>
+    <hr class="style-four">
 
     <br />
     <div class="row">

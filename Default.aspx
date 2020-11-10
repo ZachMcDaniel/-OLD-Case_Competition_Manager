@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Home" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="CaseCompetitionApp._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <h1 class="center gold" >CyHawk Case Competition</h1>
+    <h1 class="center gold" >Case Competition Manager</h1>
     <div class="jumbotron center">
         
         <asp:Image ID="Image1" runat="server" />
@@ -9,9 +9,16 @@
 
     <br />
     <div>
+        <h1 class="center bold">Current Competition</h1>
+        <hr class="style-four">
         <h2 class="center">The CyHawk Case Competition is an annual event hosted by the University of Iowa and Iowa State University</h2>
     </div>
     <br />
+
+                     <div class ="row">
+                         <br />
+                         <br />
+                     </div>
 
     <div class="row">
        
@@ -44,5 +51,11 @@
            
         </div> 
     </div>
+
+                     <div class ="row">
+                         <br />
+                         <br />
+                       
+                     </div>
 
 </asp:Content>

@@ -6,6 +6,7 @@
     <h3 class="center">
         Access to all team and case information
     </h3>
+    <hr class="style-four">
 
     <%--Competitor view btn info--%>
      <asp:LoginView runat="server">     
@@ -29,14 +30,15 @@
                              </p>
                          </div> 
                      </div>
+                        <div class="col-md-12">
+                             <hr style="border: .25px solid rgb(0,0,0)" />
+                      </div>
                 </ContentTemplate>        
          </asp:RoleGroup>   
          </RoleGroups>
      </asp:LoginView>
 
-    <div class="col-md-12">
-        <hr style="border: .25px solid rgb(0,0,0)" />
-   </div>
+
   
     <div class="center">
     <%--Admin View--%>
@@ -44,6 +46,9 @@
          <RoleGroups>       
          <asp:RoleGroup Roles="admin">           
                  <ContentTemplate>
+                         <div class ="row">
+                         <br />
+                     </div>
                     <div class="row">
                       <div class="col-md-4">
                         <asp:Button ID="BTNCompetitionInfo" runat="server" Text="Modify Competition Info"  OnClick="BTNModifyCompetitionInfo" Class="btn btn-default wide grey"/>
@@ -81,13 +86,6 @@
                        
                      </div>
 
-                <%--third row--%>
-                <div class="row">
-                     <div class="col-md-6 col-md-offset-3">
-                        <asp:Button ID="BTNDownCaseFile" runat="server" Text="Submissions"  OnClick="BTNDownCaseFile_Click" Class="btn btn-default wide grey"/>
-                     </div>
-                    </div>
-                
                  </ContentTemplate>        
           </asp:RoleGroup>   
          </RoleGroups>
@@ -100,13 +98,8 @@
                  
                  <ContentTemplate>   
                      <div class="row">
-                     <div class="col-md-6">
-                     <asp:Button ID="BTNFileReview" runat="server" Text="File Review"  OnClick="BTNFileReview_Click" Class="btn btn-default wide grey"/>
-                         
-                     </div>
-                     <div class="col-md-6">
                      <asp:Button ID="BTNJudgeModify" runat="server" Text="Modify Information"  OnClick="BTNJudgeModify_Click" Class="btn btn-default wide grey"/>
-                     </div>
+      
                     </div>
 
                  </ContentTemplate>        
@@ -124,12 +117,7 @@
                     <div class="col-md-12 center">
                       <asp:Button ID="BTNTeamMGMT" runat="server" Text="Team Managment"  OnClick="BTNTeamMGMT_Click" Class="btn btn-default wide grey"/>
                         </div>                                      
-                     <%-- <div class="col-md-4">
-                      <asp:Button ID="BTNDeliverables" runat="server" Text="Download Case Files"  OnClick="BTNDeliverables_Click" Class="btn btn-default wide grey "/>
-                          </div>
-                      <div class="col-md-4">
-                      <asp:Button ID="BTNSubmissions" runat="server" Text="Upload Submissions"  OnClick="BTNSubmissions_Click" Class="btn btn-default wide grey"/>
-                          </div>--%>
+            
                  </ContentTemplate>        
 
          </asp:RoleGroup>   

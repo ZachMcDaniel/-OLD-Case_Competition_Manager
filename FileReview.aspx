@@ -7,9 +7,7 @@
         Access the scoring rubric and competitor submissions
     </h3>
 
-    <div class="col-md-12">
-        <hr style="border: .25px solid rgb(0,0,0)" />
-    </div>
+   <hr class="style-four">
 
     <div class ="col-md-12 center">
         <a class="btn btn-default grey" target="_blank"  href="https://www.dropbox.com/sh/8h7pjqsrrzyo3u8/AADfweW9pktF6cT8kFmJqJP_a?dl=0">Dropbox &raquo;</a>

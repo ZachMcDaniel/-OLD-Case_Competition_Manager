@@ -1,6 +1,16 @@
 ﻿<%@ Page Title="Results" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Results.aspx.cs" Inherits="CaseCompetitionApp.Results" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+   <h2 class="center gold"><%: Title %></h2>
+    <h3 class ="center">View the Results for the Current Competition</h3>
+    <hr class="style-four">
     <div class="row">
+
+
+                                <div class ="row">
+                                    <br />
+                                    <br />
+                                </div>
+
 
         <div class="center col-md-4">
         <h2 class="center">1st Place</h2>
@@ -31,9 +41,15 @@
                     </SelectParameters>
                 </asp:SqlDataSource>
                  </h4>
+                      <%--Break--%>
+                        <div class ="row">
+                                 <br />
+                                 <br />
+                             </div>
                  <p style="font: bold;">
                     Members
                 </p>
+                        
                 <%--Members names div--%>
                 <div class="center">
                     <asp:GridView ID="GridView1" HorizontalAlign="Center" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource3" ForeColor="Black" GridLines="Horizontal" Width="100%">
@@ -66,7 +82,7 @@
 
             </div>
         </div>
-
+      
         <div class="center col-md-4">
             <h2 class="center">2nd Place</h2>
             <h4 class="center">
@@ -93,6 +109,12 @@
                     </SelectParameters>
                 </asp:SqlDataSource>
             </h4>
+              <%--Break--%>
+                <div class ="row">
+                         <br />
+                         <br />
+                     </div>
+
             <p style="font: bold;">
                 Members
             </p>
@@ -153,6 +175,13 @@
                     </SelectParameters>
                 </asp:SqlDataSource>
             </h4>
+
+              <%--Break--%>
+                <div class ="row">
+                         <br />
+                         <br />
+                     </div>
+
              <p style="font: bold;">
                 Members
             </p>

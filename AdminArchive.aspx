@@ -6,7 +6,7 @@
     <h3 class="center">
         Modify Competition Archives and Results
     </h3>
-
+    <hr class="style-four">
     <hr />
     <div class="row center">
             <div class="col-md-6">

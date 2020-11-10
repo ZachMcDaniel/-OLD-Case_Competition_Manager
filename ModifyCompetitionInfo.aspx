@@ -6,6 +6,7 @@
     <h3 class="center">
         Add or remove information on the competition info pages
     </h3>
+    <hr class="style-four">
     <br />
 
     <%--Buttons--%>
