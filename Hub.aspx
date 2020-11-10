@@ -13,6 +13,56 @@
          <RoleGroups>       
           <asp:RoleGroup Roles="competitor">  
                 <ContentTemplate>
+                    
+                    <script>
+                        function Time(endTime) {
+
+                            return parseInt((endTime - (new Date().getTime())) / 1000);
+                            var offset_GMT = new Date().getTimezoneOffset(); // dec utc0
+                            var dec = endTime - (new Date().getTime() + offset_GMT * 60 * 1000) / 1000;//sec
+                            console.log(dec);
+                            return parseInt(dec);
+
+                        }
+                        Time(1604976963);
+
+                        var _t;
+                        var _h = 4;
+                        var _m = 0;
+                        var _s = 0;
+                        var _v = formatTime("End in " + _h + ':' + _m + ':' + _s);
+                        function doTime(time) {
+
+                            var _i = Time(time);
+
+                            _h = parseInt(_i / 3600);
+                            _m = parseInt((_i - 3600 * _h) / 60);
+                            _s = _i - 3600 * _h - 60 * _m;
+                            var _b = _i <= 0;
+                            // var _b = ((_h == 0) && (_m == 0) && (_s == 0));
+                            if (_b) {
+                                _v = "It's time to go!";
+                                clearTimeout(_t);
+                            }
+                            else {
+                                _v = formatTime("End in " + (_h) + ':' + (_m) + ':' + _s);
+                                _t = setTimeout('doTime(' + time + ')', 1000);
+                            }
+                            document.all.oTime.innerHTML = _v;
+                        }
+                        function formatTime(_time) {
+                            return _time.replace(/\b(\w)\b/g, '0$1');
+                        }
+                        function start_time(time) {
+                            document.all.oTime.innerHTML = _v;
+                            _t = setTimeout('doTime(' + time + ')', 1000);
+                            document.getElementById("hide").style.display = 'none';
+                        }
+
+</script>
+<span id='oTime' style="color:darkgoldenrod;font-size:20px"></span>
+<div id="hide"; style="display:block;"> <input style="background-color:yellow; width: 74px; height: 39px; font-size: 20px" type="button" name="button2" value="Timer" onclick='start_time(new Date("2020-11-10 15:00:00").getTime())' > </div>
+                    
                     <div class="row center">
          
                          <div class="col-md-12 left">
