@@ -4,7 +4,7 @@
     <h2 class=" center gold">
        Team Information
      </h2>
-    <h3>View Team Information & Emails
+    <h3 class ="center">View Team Information & Emails
     </h3>
     <hr class="style-four">
     <hr />
