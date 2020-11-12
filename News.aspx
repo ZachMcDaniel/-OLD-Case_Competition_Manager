@@ -4,9 +4,9 @@
         News & Information
     </h2>
     <h3 class="center">
-        This news feed will contain all information related to the CyHawk Case Competition
+        Updates and Information About the Current Case Competition
     </h3>
-
+    <hr class="style-four">
     <br />
 
     <div id="empty" runat="server" class="center">

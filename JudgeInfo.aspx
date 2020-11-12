@@ -6,7 +6,7 @@
     <h3 class="center">
         This year's judges can be found below, along with the company they work for. Make sure to check this out!
     </h3>
-    <hr/>
+    <hr class="style-four">
     <div id="empty" runat="server" class="center">
       <asp:Label ID="lblEmpty" Font-Size="X-Large" runat="server" Text="There is no current judges information available at this time. Please check back later."></asp:Label>
     </div>
