@@ -8,30 +8,42 @@
     </div>
     <div class="form">
         <div class="form-group, center">
-            <h3>Competition Awards</h3>
-    <%--            <h2><asp:TextBox ID="txtFirstBoxtitle" runat="server" TextMode="SingleLine" Width="1024px"></asp:TextBox></h2>--%>
-            <h5><asp:TextBox ID="txtFirstBox" runat="server" Rows="10" TextMode="MultiLine" Width="1024px"></asp:TextBox></h5>
-        </div>
-        <br />
-        <div class="form-group, center">
-            <h3>Team Rules & Requirements</h3>
-    <%--            <h2><asp:TextBox ID="txtSecondBoxtitle" runat="server" TextMode="SingleLine" Width="1024px"></asp:TextBox></h2>--%>
-            <h5><asp:TextBox ID="txtSecondBox" runat="server" Rows="10" TextMode="MultiLine" Width="1024px"></asp:TextBox></h5>
-        </div>
-        <br />
-        <div class="form-group, center">
-            <h3>Judging Criteria</h3>
-    <%--            <h2><asp:TextBox ID="txtThirdBoxtitle" runat="server" TextMode="SingleLine" Width="1024px"></asp:TextBox></h2>--%>
-            <h5><asp:TextBox ID="txtThirdBox" runat="server" Rows="10" TextMode="MultiLine" Width="1024px"></asp:TextBox></h5>
-        </div>
-        <br />
-        <div class="row">
-            <div class="col-md-6 col-md-offset-6">
-                <asp:Button ID="BtnUpdate" runat="server" Text="Update" OnClick="BtnUpdate_Click" />
-                <br />
-                <br />
-                <asp:Label ID="LblStatus3" runat="server" Text="Success!" CssClass="alert-success" OnDataBinding="BtnUpdate_Click" Visible="False"></asp:Label>
+            <h3><asp:TextBox ID="txtFirstBoxtitle" runat="server" TextMode="SingleLine" Width="1024px" AutoPostBack="True" OnTextChanged="txtFirstBoxtitle_TextChanged"></asp:TextBox></h3>
+            <h5><asp:TextBox ID="txtFirstBox" runat="server" Rows="10" TextMode="MultiLine" Width="1024px" AutoPostBack="True" OnTextChanged="txtFirstBox_TextChanged"></asp:TextBox></h5>
+            <br />
+            <div class="row">
+                <div class="col-md-5 col-md-offset-4">
+                    <asp:Button ID="BtnUpdateBox1" runat="server" Text="Update" OnClick="BtnUpdate1_Click" ValidationGroup="FirstSection" />
+                    <br />
+                    <br />
                 </div>
+            </div>
+        </div>
+        <br />
+        <div class="form-group, center">
+            <h3><asp:TextBox ID="txtSecondBoxtitle" runat="server" TextMode="SingleLine" Width="1024px" OnTextChanged="txtSecondBoxtitle_TextChanged" AutoPostBack="True"></asp:TextBox></h3>
+            <h5><asp:TextBox ID="txtSecondBox" runat="server" Rows="10" TextMode="MultiLine" Width="1024px" AutoPostBack="True" OnTextChanged="txtSecondBox_TextChanged"></asp:TextBox></h5>
+            <br />
+            <div class="row">
+                <div class="col-md-5 col-md-offset-4">
+                    <asp:Button ID="BtnUpdateBox2" runat="server" Text="Update" OnClick="BtnUpdate2_Click" />
+                    <br />
+                    <br />
+                 </div>
+            </div>
+        </div>
+        <br />
+        <div class="form-group, center">
+            <h2><asp:TextBox ID="txtThirdBoxtitle" runat="server" TextMode="SingleLine" Width="1024px" AutoPostBack="True" OnTextChanged="txtThirdBoxtitle_TextChanged"></asp:TextBox></h2>
+            <h5><asp:TextBox ID="txtThirdBox" runat="server" Rows="10" TextMode="MultiLine" Width="1024px" OnTextChanged="txtThirdBox_TextChanged" AutoPostBack="True"></asp:TextBox></h5>
+            <br />
+            <div class="row">
+                <div class="col-md-5 col-md-offset-4">
+                    <asp:Button ID="BtnUpdateBox3" runat="server" Text="Update" OnClick="BtnUpdate3_Click" />
+                    <br />
+                    <br />
+                </div>
+            </div>
         </div>
         <br />
         <br />

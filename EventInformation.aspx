@@ -6,20 +6,21 @@
     <div class="row">
         <img src="Images\CyHawk1.ico" class="col-md-5 col-md-offset-4 img-responsive" />
     </div>
+    <br />
     <div class="form">
         <div class="form-group, center">
-                <h3>Competition Awards</h3>
+                <h3><asp:Label ID="LblBox1a" runat="server"></asp:Label></h3>
                 <h5><asp:Label ID="LblBox1" runat="server" Font-Size="Medium"></asp:Label></h5>
             </div>
             <br />
         <div class="form-group, center">
-                <h3>Team Rules & Requirements</h3>
+                <h3><asp:Label ID="LblBox2a" runat="server"></asp:Label></h3>
                 <h5><asp:Label ID="LblBox2" runat="server" Font-Size="Medium"></asp:Label></h5>
             </div>
             <br />
         <div class="form-group, center">
-                <h3>Judging Criteria</h3>
-                <h5><asp:Label ID="LblBox3" runat="server" Font-Size="Medium"></asp:Label></h5>
+                <h3><asp:Label ID="LblBox3a" runat="server"></asp:Label></h3>
+                <h5><asp:Label ID="LblBox3" runat="server" Text="Label Text" Font-Size="Medium"></asp:Label></h5>
             </div>
             <br />
         <div class="form-group, center">
@@ -45,7 +46,7 @@
                     <SortedDescendingCellStyle BackColor="#E5E5E5" />
                     <SortedDescendingHeaderStyle BackColor="#242121" />
                 </asp:GridView></h5>  
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:casecompetitionConnectionString %>" SelectCommand="SELECT * FROM [EventInfo] ORDER BY [EventDate], [EventStartTime] DESC, [EventName]"></asp:SqlDataSource>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:casecompetitionConnectionString %>" SelectCommand="SELECT * FROM [EventInfo]"></asp:SqlDataSource>
             </div>
         </div>
     </div>

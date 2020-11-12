@@ -14,13 +14,31 @@ namespace CaseCompetitionApp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Application["Box1a"] != null)
+            {
+                LblBox1a.Text = Application["Box1a"].ToString();
+            }
+            else
+            {
+                LblBox1a.Text = "Coming Soon...";
+            }
+
             if (Application["Box1"] != null)
             {
                 LblBox1.Text = Application["Box1"].ToString();
             }
             else
             {
-                LblBox1.Text = "Coming Soon...";
+                LblBox1.Text = " ";
+            }
+
+            if (Application["Box2a"] != null)
+            {
+                LblBox2a.Text = Application["Box2a"].ToString();
+            }
+            else
+            {
+                LblBox2a.Text = " ";
             }
 
             if (Application["Box2"] != null)
@@ -29,7 +47,16 @@ namespace CaseCompetitionApp
             }
             else
             {
-                LblBox2.Text = "Coming Soon...";
+                LblBox2.Text = " ";
+            }
+
+            if (Application["Box3a"] != null)
+            {
+                LblBox3a.Text = Application["Box3a"].ToString();
+            }
+            else
+            {
+                LblBox3a.Text = " ";
             }
 
             if (Application["Box3"] != null)
@@ -38,7 +65,7 @@ namespace CaseCompetitionApp
             }
             else
             {
-                LblBox3.Text = "Coming Soon...";
+                LblBox3.Text = " ";
             }
 
 

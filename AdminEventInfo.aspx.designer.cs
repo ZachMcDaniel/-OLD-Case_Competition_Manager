@@ -15,6 +15,15 @@ namespace CaseCompetitionApp
     {
 
         /// <summary>
+        /// txtFirstBoxtitle control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtFirstBoxtitle;
+
+        /// <summary>
         /// txtFirstBox control.
         /// </summary>
         /// <remarks>
@@ -22,6 +31,24 @@ namespace CaseCompetitionApp
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtFirstBox;
+
+        /// <summary>
+        /// BtnUpdateBox1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnUpdateBox1;
+
+        /// <summary>
+        /// txtSecondBoxtitle control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtSecondBoxtitle;
 
         /// <summary>
         /// txtSecondBox control.
@@ -33,6 +60,24 @@ namespace CaseCompetitionApp
         protected global::System.Web.UI.WebControls.TextBox txtSecondBox;
 
         /// <summary>
+        /// BtnUpdateBox2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnUpdateBox2;
+
+        /// <summary>
+        /// txtThirdBoxtitle control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtThirdBoxtitle;
+
+        /// <summary>
         /// txtThirdBox control.
         /// </summary>
         /// <remarks>
@@ -42,22 +87,13 @@ namespace CaseCompetitionApp
         protected global::System.Web.UI.WebControls.TextBox txtThirdBox;
 
         /// <summary>
-        /// BtnUpdate control.
+        /// BtnUpdateBox3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnUpdate;
-
-        /// <summary>
-        /// LblStatus3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblStatus3;
+        protected global::System.Web.UI.WebControls.Button BtnUpdateBox3;
 
         /// <summary>
         /// GridView1 control.

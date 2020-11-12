@@ -15,6 +15,15 @@ namespace CaseCompetitionApp
     {
 
         /// <summary>
+        /// LblBox1a control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblBox1a;
+
+        /// <summary>
         /// LblBox1 control.
         /// </summary>
         /// <remarks>
@@ -24,6 +33,15 @@ namespace CaseCompetitionApp
         protected global::System.Web.UI.WebControls.Label LblBox1;
 
         /// <summary>
+        /// LblBox2a control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblBox2a;
+
+        /// <summary>
         /// LblBox2 control.
         /// </summary>
         /// <remarks>
@@ -31,6 +49,15 @@ namespace CaseCompetitionApp
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LblBox2;
+
+        /// <summary>
+        /// LblBox3a control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblBox3a;
 
         /// <summary>
         /// LblBox3 control.
