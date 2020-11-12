@@ -61,8 +61,12 @@
 
 </script>
 <span id='oTime' style="color:darkgoldenrod;font-size:20px"></span>
-<div id="hide"; style="display:block;"> <input style="background-color:yellow; width: 74px; height: 39px; font-size: 20px" type="button" name="button2" value="Timer" onclick='start_time(new Date("2020-11-10 15:00:00").getTime())' > </div>
-                    
+<div id="hide"; style="display:block;"> <input class ="grey" style="background-color: rgb(211,211,211); width: 74px; height: 39px; font-size: 16px" type="button" name="button2" value="Timer" onclick='start_time(new Date("2020-11-10 15:00:00").getTime())' > </div>
+                      
+                    <div class ="row">
+                         <br />
+                     </div>
+
                     <div class="row center">
          
                          <div class="col-md-12 left">
