@@ -49,9 +49,9 @@
         <br />
         <br />
         <div class="form-group, center">
-            <h3>Event Schedule</h3>
+            <h3 class ="center">Event Schedule</h3>
             <div class="row">
-                <h5><asp:GridView ID="GridView1" runat="server" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="2" CellSpacing="2" ForeColor="Black" AutoGenerateColumns="False" DataKeyNames="EventID" DataSourceID="SqlDataSource1" Width="1024px" ShowHeaderWhenEmpty="True" ShowFooter="True" HorizontalAlign="Center">
+                <h5><asp:GridView ID="GridView1" runat="server" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="2" CellSpacing="2" ForeColor="Black" AutoGenerateColumns="False" DataKeyNames="EventID" DataSourceID="SqlDataSource1" Width="1024px" ShowHeaderWhenEmpty="True" ShowFooter="True" HorizontalAlign="Center" class ="center">
                     <Columns>
                         <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
                         <asp:TemplateField HeaderText="Event ID" InsertVisible="False" SortExpression="EventID">
