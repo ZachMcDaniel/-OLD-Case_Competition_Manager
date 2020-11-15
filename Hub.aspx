@@ -61,8 +61,12 @@
 
 </script>
 <span id='oTime' style="color:darkgoldenrod;font-size:20px"></span>
-<div id="hide"; style="display:block;"> <input style="background-color:yellow; width: 74px; height: 39px; font-size: 20px" type="button" name="button2" value="Timer" onclick='start_time(new Date("2020-11-10 15:00:00").getTime())' > </div>
-                    
+<div id="hide"; style="display:block;"> <input class ="grey" style="background-color: rgb(211,211,211); width: 74px; height: 39px; font-size: 16px" type="button" name="button2" value="Timer" onclick='start_time(new Date("2020-11-10 15:00:00").getTime())' > </div>
+                      
+                    <div class ="row">
+                         <br />
+                     </div>
+
                     <div class="row center">
          
                          <div class="col-md-12 left">
@@ -129,6 +133,17 @@
                          <a class="btn btn-default wide grey"  href="../Account/RegisterAdmin">Register Admin &raquo;</a>    
                     </div>
                 </div>
+                        <div class="row">
+                         <br />
+                         <br />
+                     </div>
+
+                      <%--third row--%>
+                <div class="row">
+                     <div class="col-md-6 col-md-offset-3">
+                        <asp:Button ID="BTNDownCaseFile" runat="server" Text="Submissions"  OnClick="BTNDownCaseFile_Click" Class="btn btn-default wide grey"/>
+                     </div>
+                    </div>
 
                <div class="row">
                          <br />
@@ -141,38 +156,44 @@
          </RoleGroups>
     </asp:LoginView>
 
-        <%--judge view--%>
-      <asp:LoginView runat="server">    
-         <RoleGroups>       
-         <asp:RoleGroup Roles="judge">           
+    <%--Judge view--%>
+    <asp:LoginView runat="server">    
+        <RoleGroups>       
+        <asp:RoleGroup Roles="judge">           
                  
-                 <ContentTemplate>   
-                     <div class="row">
-                     <asp:Button ID="BTNJudgeModify" runat="server" Text="Modify Information"  OnClick="BTNJudgeModify_Click" Class="btn btn-default wide grey"/>
-      
+                <ContentTemplate>   
+                    <div class="row">
+                        <div class="col-md-6">
+                        <asp:Button ID="BTNJudgeModify" runat="server" Text="Modify Information"  OnClick="BTNJudgeModify_Click" Class="btn btn-default wide grey"/>
+                      
                     </div>
 
-                 </ContentTemplate>        
+                    <div class="col-md-6">
+                            <asp:Button ID="BTNFileReview" runat="server" Text="File Review"  OnClick="BTNFileReview_Click" Class="btn btn-default wide grey"/>
+                        </div>
+                    </div>
 
-         </asp:RoleGroup>   
-         </RoleGroups>
-       </asp:LoginView>
+                </ContentTemplate>        
+
+        </asp:RoleGroup>   
+        </RoleGroups>
+    </asp:LoginView>
       
-        <%--Competitor view--%>
-      <asp:LoginView runat="server">    
-         <RoleGroups>       
-         <asp:RoleGroup Roles="competitor">           
-                 <ContentTemplate>           
+    <%--Competitor view--%>
+    <asp:LoginView runat="server">    
+        <RoleGroups>       
+        <asp:RoleGroup Roles="competitor">           
+                <ContentTemplate>           
 
-                    <div class="col-md-12 center">
-                      <asp:Button ID="BTNTeamMGMT" runat="server" Text="Team Managment"  OnClick="BTNTeamMGMT_Click" Class="btn btn-default wide grey"/>
-                        </div>                                      
+                <div class="col-md-12 center">
+                    <asp:Button ID="BTNTeamMGMT" runat="server" Text="Team Managment"  OnClick="BTNTeamMGMT_Click" Class="btn btn-default wide grey"/>
+                    </div>                                      
             
-                 </ContentTemplate>        
+                </ContentTemplate>        
 
-         </asp:RoleGroup>   
-         </RoleGroups>
-      </asp:LoginView>
+        </asp:RoleGroup>   
+        </RoleGroups>
+    </asp:LoginView>
     </div>
    
 </asp:Content>

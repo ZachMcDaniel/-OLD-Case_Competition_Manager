@@ -47,6 +47,7 @@
                     </div>
                 </div>
             </div>
+<<<<<<< HEAD
             <br />
             <br />
             <br />
@@ -57,6 +58,72 @@
                         <Columns>
                             <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
                             <asp:TemplateField HeaderText="Event ID" InsertVisible="False" SortExpression="EventID">
+=======
+        </div>
+        <br />
+        <br />
+        <br />
+        <div class="form-group, center">
+            <h3 class ="center">Event Schedule</h3>
+            <div class="row">
+                <h5><asp:GridView ID="GridView1" runat="server" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="2" CellSpacing="2" ForeColor="Black" AutoGenerateColumns="False" DataKeyNames="EventID" DataSourceID="SqlDataSource1" Width="1024px" ShowHeaderWhenEmpty="True" ShowFooter="True" HorizontalAlign="Center" class ="center">
+                    <Columns>
+                        <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
+                        <asp:TemplateField HeaderText="Event ID" InsertVisible="False" SortExpression="EventID">
+                            <EditItemTemplate>
+                                <asp:Label ID="EventID" runat="server" Text='<%# Eval("EventID") %>'></asp:Label>
+                            </EditItemTemplate>
+                            <ItemTemplate>
+                                <asp:Label ID="lblEventID" runat="server" Text='<%# Bind("EventID") %>'></asp:Label>
+                            </ItemTemplate>
+                            <FooterTemplate>
+                                <asp:LinkButton ValidationGroup="INSERT" OnClick="LbInsert_Click" ID="lbInsert" runat="server">Insert</asp:LinkButton>
+                            </FooterTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Date: " SortExpression="EventDate">
+                            <EditItemTemplate>
+                                <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("EventDate") %>'></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="rfvEditEventDate" runat="server" ErrorMessage="Enter Event Date" ControlToValidate="TextBox1" Text="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                            </EditItemTemplate>
+                            <ItemTemplate>
+                                <asp:Label ID="lblEventDate" runat="server" Text='<%# Bind("EventDate") %>'></asp:Label>
+                            </ItemTemplate>
+                            <FooterTemplate>
+                                <asp:TextBox ID="txtEventDate" runat="server"></asp:TextBox>
+                                <asp:RequiredFieldValidator ValidationGroup="INSERT" ID="rfvInsertEventDate" runat="server" ErrorMessage="Enter Event Date" ControlToValidate="txtEventDate" Text="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                            </FooterTemplate>
+                            <ItemStyle Wrap="False" />
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Begins: " SortExpression="EventStartTime">
+                            <EditItemTemplate>
+                                <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("EventStartTime") %>'></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="rfvEditEventStartTime" runat="server" ErrorMessage="Enter Start Time" ControlToValidate="TextBox2" Text="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                            </EditItemTemplate>
+                            <ItemTemplate>
+                                <asp:Label ID="lblEventStartTime" runat="server" Text='<%# Bind("EventStartTime") %>'></asp:Label>
+                            </ItemTemplate>
+                            <FooterTemplate>
+                                <asp:TextBox ID="txtEventStartTime" runat="server"></asp:TextBox>
+                                <asp:RequiredFieldValidator ValidationGroup="INSERT" ID="rfvInsertEventStartTime" runat="server" ErrorMessage="Enter Start Time" ControlToValidate="txtEventStartTime" Text="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                            </FooterTemplate>
+                            <ItemStyle Wrap="False" />
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Ends: " SortExpression="EventEndTime">
+                            <EditItemTemplate>
+                                <asp:TextBox ID="TextBox3" runat="server" Text='<%# Bind("EventEndTime") %>'></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="rfvEditEventEndTime" runat="server" ErrorMessage="Enter End Time" ControlToValidate="TextBox3" Text="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                            </EditItemTemplate>
+                            <ItemTemplate>
+                                <asp:Label ID="lblEventEndTime" runat="server" Text='<%# Bind("EventEndTime") %>'></asp:Label>
+                            </ItemTemplate>
+                            <FooterTemplate>
+                                <asp:TextBox ID="txtEventEndTime" runat="server"></asp:TextBox>
+                                <asp:RequiredFieldValidator ValidationGroup="INSERT" ID="rfvInsertEventEndTime" runat="server" ErrorMessage="Enter End Time" ControlToValidate="txtEventEndTime" Text="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                            </FooterTemplate>
+                            <ItemStyle Wrap="False" />
+                        </asp:TemplateField>
+                            <asp:TemplateField HeaderText="Location: " SortExpression="EventLocation">
+>>>>>>> 8233d85b378cf750963917c8ef4ef4edb9d86232
                                 <EditItemTemplate>
                                     <asp:Label ID="EventID" runat="server" Text='<%# Eval("EventID") %>'></asp:Label>
                                 </EditItemTemplate>
