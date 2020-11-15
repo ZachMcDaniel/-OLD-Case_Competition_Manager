@@ -34,9 +34,6 @@ namespace CaseCompetitionApp
         protected void BtnUpdate1_Click(object sender, EventArgs e)
         {
 
-            Application["Box1a"] = txtFirstBoxtitle.Text;
-            Application["Box1"] = txtFirstBox.Text;
-
             Response.Redirect("~/EventInformation.aspx");
 
         }
@@ -53,8 +50,6 @@ namespace CaseCompetitionApp
 
         protected void BtnUpdate2_Click(object sender, EventArgs e)
         {
-            Application["Box2a"] = txtSecondBoxtitle.Text;
-            Application["Box2"] = txtSecondBox.Text;
 
             Response.Redirect("~/EventInformation.aspx");
         }
@@ -70,9 +65,6 @@ namespace CaseCompetitionApp
         }
         protected void BtnUpdate3_Click(object sender, EventArgs e)
         {
-            Application["Box3a"] = txtThirdBoxtitle.Text;
-            Application["Box3"] = txtThirdBox.Text;
-
             Response.Redirect("~/EventInformation.aspx");
         }
 
