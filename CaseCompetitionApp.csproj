@@ -247,6 +247,7 @@
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
     <Content Include="Submissions.aspx" />
+    <Content Include="TeamHost.aspx" />
     <Content Include="TeamInfo.aspx" />
     <Content Include="TeamMGMT.aspx" />
     <Content Include="Testtimer.aspx" />
@@ -524,6 +525,13 @@
     </Compile>
     <Compile Include="Submissions.aspx.designer.cs">
       <DependentUpon>Submissions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeamHost.aspx.cs">
+      <DependentUpon>TeamHost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeamHost.aspx.designer.cs">
+      <DependentUpon>TeamHost.aspx</DependentUpon>
     </Compile>
     <Compile Include="TeamInfo.aspx.cs">
       <DependentUpon>TeamInfo.aspx</DependentUpon>

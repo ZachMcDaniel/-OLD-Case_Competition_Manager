@@ -4,7 +4,7 @@
         Competition Hub
     </H2>
     <h3 class="center">
-        Access to all team and case information
+        Access to User and Case Information
     </h3>
     <hr class="style-four">
 
@@ -93,8 +93,31 @@
      </asp:LoginView>
 
 
+ <div class="center">
+
+        <%--Competitor view--%>
+    <asp:LoginView runat="server">    
+        <RoleGroups>       
+        <asp:RoleGroup Roles="competitor">           
+                <ContentTemplate>           
+
+             <div class ="row">
+                <div class="col-md-6 center">
+                    <asp:Button ID="BTNTeamMGMT" runat="server" Text="Team Managment"  OnClick="BTNTeamMGMT_Click" Class="btn btn-default wide grey"/>
+                </div> 
+                <div class ="col-md-6 center">
+                    <a class="btn btn-default wide grey"  href="../TeamHost">Team Host &raquo;</a>    
+                </div>
+            </div>
+                </ContentTemplate>        
+
+        </asp:RoleGroup>   
+        </RoleGroups>
+    </asp:LoginView>
   
-    <div class="center">
+  
+
+
     <%--Admin View--%>
     <asp:LoginView runat="server">     
          <RoleGroups>       
@@ -179,21 +202,6 @@
         </RoleGroups>
     </asp:LoginView>
       
-    <%--Competitor view--%>
-    <asp:LoginView runat="server">    
-        <RoleGroups>       
-        <asp:RoleGroup Roles="competitor">           
-                <ContentTemplate>           
-
-                <div class="col-md-12 center">
-                    <asp:Button ID="BTNTeamMGMT" runat="server" Text="Team Managment"  OnClick="BTNTeamMGMT_Click" Class="btn btn-default wide grey"/>
-                    </div>                                      
-            
-                </ContentTemplate>        
-
-        </asp:RoleGroup>   
-        </RoleGroups>
-    </asp:LoginView>
-    </div>
+</div>
    
 </asp:Content>

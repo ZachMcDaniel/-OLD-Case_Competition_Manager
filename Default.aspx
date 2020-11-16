@@ -2,27 +2,35 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h1 class="center gold" >Case Competition Manager</h1>
+    <%--Jumbotron--%>
     <div class="jumbotron center">
         
         <asp:Image ID="Image1" runat="server" />
     </div>
 
     <br />
+
+    <%--Current competition--%>
     <div>
         <h1 class="center bold">Current Competition</h1>
         <hr class="style-four">
         <h2 class="center">The CyHawk Case Competition is an annual event hosted by the University of Iowa and Iowa State University</h2>
     </div>
+
     <br />
+
+    <%--Event info button--%>
     <div class ="row">
         <div class="center col-md-12">
-             <a class="btn btn-default grey"  href="../EventInformation" style=" font-size: 20px">View Current Event Details &raquo;</a>
+             <a class="btn btn-default grey"  href="../EventInformation" style=" font-size: 20px">Event Details &raquo;</a>
         </div>
     </div>
+
                      <div class ="row">
                          <br />
                          <br />
                      </div>
+    <%--Buttons row--%>
     <div class="row">
        
         <div class=" center col-md-4">

@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Team Management" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="TeamMGMT.aspx.cs" Inherits="CaseCompetitionApp.TeamMGMT" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h2 class="center gold">Team Managment</h2>
-    <h3>Add or Remove Members and Edit Information</h3>
+    <h3 class ="center">Add or Remove Members and Edit Information</h3>
     <hr class="style-four">
 
 <div class="row center"> 
