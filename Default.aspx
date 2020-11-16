@@ -14,12 +14,15 @@
         <h2 class="center">The CyHawk Case Competition is an annual event hosted by the University of Iowa and Iowa State University</h2>
     </div>
     <br />
-
+    <div class ="row">
+        <div class="center col-md-12">
+             <a class="btn btn-default grey"  href="../EventInformation" style=" font-size: 20px">View Current Event Details &raquo;</a>
+        </div>
+    </div>
                      <div class ="row">
                          <br />
                          <br />
                      </div>
-
     <div class="row">
        
         <div class=" center col-md-4">
