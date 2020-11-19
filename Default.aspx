@@ -3,10 +3,10 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h1 class="center gold" >Case Competition Manager</h1>
     <%--Jumbotron--%>
-    <div class="jumbotron center">
+    <%--<div class="jumbotron center">
         
         <asp:Image ID="Image1" runat="server" />
-    </div>
+    </div>--%>
 
     <br />
 
