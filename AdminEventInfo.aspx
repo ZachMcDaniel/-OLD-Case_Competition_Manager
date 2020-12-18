@@ -4,10 +4,13 @@
     
 <div class="container">
     <div class="form">
-        <div class="row">
-            <img src="Images\CyHawk1.ico" class="col-md-5 col-md-offset-4 img-responsive" />
-        </div>
-        <br />
+       <%--Jumbotron--%>
+
+    <div class="jumbotron center">
+        <asp:Image ID="Image1" runat="server" />
+    </div>
+
+    <br />
         <div class="row">
             <div class="form-group, center">
                 <h3><asp:TextBox ID="txtFirstBoxtitle" runat="server" TextMode="SingleLine" Width="1024px" AutoPostBack="True" OnTextChanged="txtFirstBoxtitle_TextChanged"></asp:TextBox></h3>

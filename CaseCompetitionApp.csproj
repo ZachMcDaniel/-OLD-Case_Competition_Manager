@@ -200,6 +200,9 @@
     <Content Include="Images\CyHawk1.ico" />
     <Content Include="Images\first.jpeg" />
     <Content Include="Images\Herky-vs-Cy.jpg" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\logo2.png" />
+    <Content Include="Images\logo3.png" />
     <Content Include="Images\second.jpeg" />
     <Content Include="Images\third.jpeg" />
     <Content Include="JudgeInfo.aspx" />
