@@ -90,7 +90,7 @@
 
                 </div>
                 <%--dropbox--%>
-                <asp:GridView ID="gvdropbox" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource4" DataKeyNames="TeamID">
+                <asp:GridView ID="gvdropbox" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource4" DataKeyNames="TeamID" Width="100%">
                     <Columns>
                         <asp:BoundField DataField="TeamID" HeaderText="TeamID" SortExpression="TeamID" InsertVisible="False" ReadOnly="True">
                         </asp:BoundField>
