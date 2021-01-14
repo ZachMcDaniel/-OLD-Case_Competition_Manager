@@ -12,31 +12,16 @@
         <div class="col-md-12">
             <asp:GridView ID="gvJudge" runat="server"  AutoGenerateColumns="False" DataKeyNames="JudgeID" DataSourceID="SqlDataSource3" Width="100%">
                 <Columns>
-                    <asp:BoundField DataField="FirstName" HeaderText="First Name" SortExpression="FirstName">
-                    <ControlStyle CssClass="padding" />
-                    <HeaderStyle CssClass="padding" />
-                    <ItemStyle CssClass="padding" />
+                    <asp:BoundField DataField="FirstName" HeaderText="FirstName" SortExpression="FirstName">
                     </asp:BoundField>
-                    <asp:BoundField DataField="LastName" HeaderText="Last Name" SortExpression="LastName">
-                    <ControlStyle CssClass="padding" />
-                    <HeaderStyle CssClass="padding" />
-                    <ItemStyle CssClass="padding" />
+                    <asp:BoundField DataField="LastName" HeaderText="LastName" SortExpression="LastName">
                     </asp:BoundField>
                     <asp:BoundField DataField="Company" HeaderText="Company" SortExpression="Company">
-                    <ControlStyle CssClass="padding" />
-                    <HeaderStyle CssClass="padding" />
-                    <ItemStyle CssClass="padding" />
                     </asp:BoundField>
                     <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email">
-                    <ControlStyle CssClass="padding" />
-                    <HeaderStyle CssClass="padding" />
-                    <ItemStyle CssClass="padding" />
                     </asp:BoundField>
-                    <asp:BoundField DataField="CompanySite" HeaderText="Company Site" SortExpression="CompanySite">
-                    <ControlStyle CssClass="padding" />
-                    <HeaderStyle CssClass="padding" />
-                    <ItemStyle CssClass="padding" />
-                    </asp:BoundField>
+                    <asp:BoundField DataField="CompanySite" HeaderText="CompanySite" SortExpression="CompanySite" />
+                    <asp:BoundField DataField="Website2" HeaderText="Personal Site" SortExpression="Website2" />
                     <asp:CommandField HeaderText="Edit" ShowDeleteButton="True" ShowEditButton="True" ShowHeader="True" />
                 </Columns>
                         <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
@@ -48,7 +33,7 @@
                         <SortedDescendingCellStyle BackColor="#E5E5E5" />
                         <SortedDescendingHeaderStyle BackColor="#242121" />
             </asp:GridView>
-            <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [JudgeID], [FirstName], [LastName], [Company], [Email], [CompanySite] FROM [Judges] where Username = (select Username FROM AspNetUsers where Id = @ID)" UpdateCommand="UPDATE [Judges] SET [FirstName] = @FirstName, [LastName]=@LastName, [Company]=@Company, [Email]=@Email, [CompanySite]=@CompanySite  WHERE [JudgeID] = @original_JudgeID  " OldValuesParameterFormatString="original_{0}" DeleteCommand="DELETE FROM [Judges] where [JudgeID] = @original_JudgeID">
+            <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [JudgeID], [FirstName], [LastName], [Company], [Email], [CompanySite], [Website2] FROM [Judges] where Username = (select Username FROM AspNetUsers where Id = @ID)" UpdateCommand="UPDATE [Judges] SET [FirstName] = @FirstName, [LastName]=@LastName, [Company]=@Company, [Email]=@Email, [CompanySite]=@CompanySite, [Website2]=@Website2  WHERE [JudgeID] = @original_JudgeID  " OldValuesParameterFormatString="original_{0}" DeleteCommand="DELETE FROM [Judges] where [JudgeID] = @original_JudgeID">
                 <SelectParameters>
     <asp:Parameter Name="ID" Type="String"/>
 </SelectParameters>         
@@ -61,6 +46,8 @@
                     <asp:Parameter Name="Company" Type="String" />
                     <asp:Parameter Name="Email" Type="String" />
                     <asp:Parameter Name="CompanySite" Type="String" />
+                     <asp:Parameter Name="Website2" Type="String" />
+                     <asp:Parameter Name="original_JudgeID" />
                  </UpdateParameters>
             </asp:SqlDataSource>
         </div>
