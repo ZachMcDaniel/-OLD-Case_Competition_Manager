@@ -63,7 +63,9 @@
     color: rgb(255,223,0);
     background-color: #222222;
 }
-
+.none{
+    resize: none;
+}
 .center{
     text-align:center;
     align-content: center;

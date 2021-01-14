@@ -110,7 +110,7 @@
     
     <div class="row">
         <div class="col-md-12">
-           <asp:RequiredFieldValidator ID="rfvDate" runat="server" ErrorMessage="RequiredFieldValidator" ControlToValidate="txtDate" CssClass="text-danger">Date Required</asp:RequiredFieldValidator>
+           <%--<asp:RequiredFieldValidator ID="rfvDate" runat="server" ErrorMessage="RequiredFieldValidator" ControlToValidate="txtDate" CssClass="text-danger">Date Required</asp:RequiredFieldValidator>--%>
             <asp:GridView ID="GridView1" runat="server" CssClass="Grid" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" Width="100%" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" DataKeyNames="CompetitionID">
                 <Columns>
                     <asp:BoundField DataField="CompetitionId" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="CompetitionId" >
@@ -131,6 +131,10 @@
                         <HeaderStyle CssClass="padding Shorter" />
                         <ItemStyle CssClass="padding" />
                     </asp:TemplateField>
+                    <asp:BoundField DataField="Dropbox" HeaderText="Dropbox" SortExpression="Dropbox" >
+                    <HeaderStyle CssClass="padding Shorter" />
+                    <ItemStyle CssClass="padding" />
+                    </asp:BoundField>
                     <asp:CommandField SelectText="View Details" ShowSelectButton="True" ShowEditButton="True" >
                         <ControlStyle CssClass="smpadding" />
                     <HeaderStyle CssClass="padding" />
@@ -146,7 +150,7 @@
             <SortedDescendingCellStyle BackColor="#E5E5E5" />
             <SortedDescendingHeaderStyle BackColor="#242121" />
             </asp:GridView>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT CompetitionId, CompetitionName, FORMAT([CompetitionDate], 'MM/dd/yy') AS CompetitionDate FROM [Competition]" UpdateCommand="UPDATE [Competition] SET [CompetitionName] = @CompetitionName, [CompetitionDate]=@CompetitionDate WHERE [CompetitionID] = @original_CompetitionID" OldValuesParameterFormatString="original_{0}">
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT CompetitionId, CompetitionName, FORMAT([CompetitionDate], 'MM/dd/yy') AS CompetitionDate, Dropbox FROM [Competition]" UpdateCommand="UPDATE [Competition] SET [CompetitionName] = @CompetitionName, [CompetitionDate]=@CompetitionDate, [Dropbox]=@Dropbox WHERE [CompetitionID] = @original_CompetitionID" OldValuesParameterFormatString="original_{0}">
                  <DeleteParameters>
                     <asp:Parameter Name="original_CompetitionID" Type="String" />
                  </DeleteParameters>
@@ -154,6 +158,7 @@
                     <asp:Parameter Name="CompetitionID" Type="String" />
                     <asp:Parameter Name="CompetitionName" Type="String" />
                     <asp:Parameter Name="CompetitionDate" Type="String" />
+                     <asp:Parameter Name="Dropbox" Type="String" />
                  </UpdateParameters></asp:SqlDataSource>
         </div>
     </div>

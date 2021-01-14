@@ -16,6 +16,7 @@ namespace CaseCompetitionApp
             if (!IsPostBack)
             {
                 gvCompete.Visible = false;
+                gvdropbox.Visible = false;
                 gvMember.Visible = false;
                 gvJudge.Visible = false;
                 empty.Visible = false;
@@ -26,6 +27,7 @@ namespace CaseCompetitionApp
         protected void BTNClickTeamInfo(object sender, EventArgs e)
         {
             gvCompete.Visible = true;
+            gvdropbox.Visible = true;
             gvMember.Visible = false;
             gvJudge.Visible = false;
             //"add the other gv ids as false under this btn"
@@ -58,6 +60,7 @@ namespace CaseCompetitionApp
         protected void BTNClickMemberInfo(object sender, EventArgs e)
         {
             gvCompete.Visible = false;
+            gvdropbox.Visible = false;
             gvMember.Visible = true;
             gvJudge.Visible = false;
             //"add the other gv ids as false under this btn"
@@ -91,6 +94,7 @@ namespace CaseCompetitionApp
         protected void BTNClickJudgeInfo(object sender, EventArgs e)
         {
             gvCompete.Visible = false;
+            gvdropbox.Visible = false;
             gvMember.Visible = false;
             gvJudge.Visible = true;
             //"add the other gv ids as false under this btn"

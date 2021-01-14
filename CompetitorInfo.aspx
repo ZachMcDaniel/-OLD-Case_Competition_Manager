@@ -49,11 +49,11 @@
                 <ItemStyle CssClass="padding" />
 
             </asp:TemplateField>
-            <asp:BoundField DataField="Dropbox" HeaderText="Dropbox" SortExpression="Dropbox">
-                <ControlStyle CssClass="padding center" />
+              <asp:HyperLinkField runat="server" DataNavigateUrlFields="Dropbox" DataTextField="Dropbox" target="_blank" HeaderText="Dropbox" SortExpression="Dropbox" DataNavigateUrlFormatString="http://{0}" >
+                <ControlStyle CssClass="center" />
                 <HeaderStyle CssClass="center" />
-                <ItemStyle CssClass="padding" />
-                </asp:BoundField>
+                <ItemStyle CssClass="center" />
+            </asp:HyperLinkField>
         </Columns>
         <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
             <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />

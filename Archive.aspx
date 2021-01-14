@@ -39,6 +39,11 @@
                     <HeaderStyle CssClass="padding" />
                     <ItemStyle CssClass="padding" />
                     </asp:BoundField>
+                     <asp:HyperLinkField runat="server" DataNavigateUrlFields="Dropbox" DataTextField="Dropbox" target="_blank" HeaderText="Dropbox" SortExpression="Dropbox" DataNavigateUrlFormatString="http://{0}" >
+                <ControlStyle CssClass="center" />
+                <HeaderStyle CssClass="center" />
+                <ItemStyle CssClass="center" />
+            </asp:HyperLinkField>
                     <asp:CommandField SelectText="View Details" ShowSelectButton="True" >
                         <ControlStyle CssClass="padding" />
                     <HeaderStyle CssClass="padding" />
@@ -54,7 +59,7 @@
             <SortedDescendingCellStyle BackColor="#E5E5E5" />
             <SortedDescendingHeaderStyle BackColor="#242121" />
             </asp:GridView>
-            <asp:SqlDataSource ID="SqlCompetition" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT CompetitionId, CompetitionName, FORMAT([CompetitionDate], 'MM/dd/yy') AS CompetitionDate FROM [Competition]"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="SqlCompetition" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT CompetitionId, CompetitionName, FORMAT([CompetitionDate], 'MM/dd/yy') AS CompetitionDate,Dropbox FROM [Competition]"></asp:SqlDataSource>
         </div>
     </div>
     <br />
