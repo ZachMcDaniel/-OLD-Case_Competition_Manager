@@ -11,22 +11,27 @@
       <asp:Label ID="lblEmpty" Font-Size="X-Large" runat="server" Text="There is no current judges information available at this time. Please check back later."></asp:Label>
     </div>
 
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSourcejudge" Width="95%" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal">
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSourcejudge" Width="95%" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" DataKeyNames="JudgeID">
         <Columns>
-            <asp:BoundField DataField="JudgeName" HeaderText="Judge Name" SortExpression="JudgeName" >
-                <ControlStyle CssClass="center" />
-                <HeaderStyle CssClass="center" />
-                <ItemStyle CssClass="center" />
-                </asp:BoundField>
-            <asp:BoundField DataField="Company" HeaderText="Company" SortExpression="Company" >
+            <asp:BoundField DataField="JudgeName" HeaderText="JudgeName" SortExpression="JudgeName" ReadOnly="True" >
                  <ControlStyle CssClass="center" />
                 <HeaderStyle CssClass="center" />
                 <ItemStyle CssClass="center" />
-                 </asp:BoundField>
+            </asp:BoundField>
+            <asp:BoundField DataField="Company" HeaderText="Company" SortExpression="Company">
+                 <ControlStyle CssClass="center" />
+                <HeaderStyle CssClass="center" />
+                <ItemStyle CssClass="center" />
+            </asp:BoundField>
             <asp:HyperLinkField runat="server" DataNavigateUrlFields="CompanySite" DataTextField="CompanySite" target="_blank" HeaderText="Company Site" SortExpression="CompanySite" DataNavigateUrlFormatString="http://{0}" >
-            <ControlStyle CssClass="center" />
-            <HeaderStyle CssClass="center" />
-            <ItemStyle CssClass="center" />
+                <ControlStyle CssClass="center" />
+                <HeaderStyle CssClass="center" />
+                <ItemStyle CssClass="center" />
+            </asp:HyperLinkField>
+            <asp:HyperLinkField runat="server" DataNavigateUrlFields="Website2" DataTextField="Website2" target="_blank" HeaderText="Personal Site" SortExpression="Website2" DataNavigateUrlFormatString="http://{0}" >
+                <ControlStyle CssClass="center" />
+                <HeaderStyle CssClass="center" />
+                <ItemStyle CssClass="center" />
             </asp:HyperLinkField>
         </Columns>
         <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
@@ -40,7 +45,7 @@
     </asp:GridView>
 
 
-    <asp:SqlDataSource ID="SqlDataSourcejudge" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [JudgeID], concat([FirstName], ' ', [LastName]) AS JudgeName, [Company], [CompanySite] FROM [Judges] WHERE CompetitionID IS NULL" ></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSourcejudge" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [JudgeID], concat([FirstName], ' ', [LastName]) AS JudgeName, [Company], [CompanySite], [Website2] FROM [Judges] WHERE CompetitionID IS NULL" ></asp:SqlDataSource>
 
 
 </asp:Content>
