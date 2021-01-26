@@ -313,9 +313,92 @@
             </asp:SqlDataSource>
         </div>
     </div>
+     
+     <%--Break--%>
+    <div>
+        <br />
+        <br />
+    </div>
+
+    <%--Add Mentor--%>
+      <div class="row">
+      <%--  <div class="col-md-3">
+                <asp:Button ID="BtnNewHost" CausesValidation="false" CssClass="btn btn-default grey" runat="server" Text="Add Team Host" OnClick=" BTNClickHostInfo" />
+        </div>--%>
+        <div class="col-md-9">
+
+        </div>
+        </div>
+
+     <div class="col-md-12">
+      <br />
+    </div>
+
+    <div class="col-md-12"> 
+<fieldset id="NewHost"  runat="server" method="post" class="form-horizontal expandedbox" defaultfocus="txtEmail1" defaultbutton="btnSubmit">
+    <div class="col-md-12">
+    <br />
+    </div>
+
+    <div class="form-group col-md-12">
+        <asp:Label class="control-label col-sm-3" ID="lblFirst" runat="server" Text="Host Name:"></asp:Label>
+        <div class="col-sm-5">
+            <asp:TextBox ID="txtHost" runat="server"></asp:TextBox>
+        </div>
+        <div class="col-sm-4">
+            <asp:RequiredFieldValidator ID="rfvHost" ValidationGroup="new" runat="server" ErrorMessage="Require Host Name" CssClass="text-danger" Text="Required" Display="Dynamic" ControlToValidate="txtHost">Required</asp:RequiredFieldValidator>
+              </div>
+    </div>
+
+      <div class="form-group col-md-12">
+        <asp:Label class="control-label col-sm-3" ID="lblWebsite" runat="server" Text="Website :"></asp:Label>
+        <div class="col-sm-5">
+            <asp:TextBox ID="txtWebsite" runat="server"></asp:TextBox>
+        </div>
+    </div> 
+    
+    <div class="form-group col-md-12">
+        <asp:Label class="control-label col-sm-3" ID="lblContact" runat="server" Text="Contact :"></asp:Label>
+        <div class="col-sm-5">
+            <asp:TextBox ID="txtContact" placeholder="###-###-####" TextMode="Phone" runat="server"></asp:TextBox>
+        </div>
+        <div class="col-sm-4">
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" ValidationGroup="new" runat="server" ErrorMessage="Require Contact" CssClass="text-danger" Text="Required" Display="Dynamic" ControlToValidate="txtContact">Required</asp:RequiredFieldValidator>
+            <asp:RegularExpressionValidator ID="revContact" runat="server"
+   ErrorMessage="Please enter number as ###-###-####" ControlToValidate="txtContact" 
+   ValidationExpression="^[01]?[- .]?(\([2-9]\d{2}\)|[2-9]\d{2})[- .]?\d{3}[- .]?\d{4}$">
+</asp:RegularExpressionValidator>      
+        </div>
+    </div>  
 
 
-    <div class="stickydiv">
+    <div class="form-group col-md-12">
+        <asp:Label class="control-label col-sm-3" ID="lblTeam" runat="server" Text="Team Assignment:"></asp:Label>
+        <div class="col-sm-5">
+            <asp:TextBox ID="txtTeam" runat="server"></asp:TextBox>
+        </div>
+        <div class="col-sm-4">
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ValidationGroup="new" runat="server" ErrorMessage="Require Team" CssClass="text-danger" Text="Required" Display="Dynamic" ControlToValidate="txtTeam">Required</asp:RequiredFieldValidator>
+              </div>
+    </div>  
+
+     <div class="form-group col-md-12">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-5">
+        <asp:Button ID="btnSubmit" runat="server" ValidationGroup="new" Text="Submit" CssClass="btn btn-default grey"  OnClick="btnSubmit_Click" Width="125px" />
+        <asp:Button ID="btnClear" runat="server" CausesValidation="false" Text="Clear" CssClass="btn btn-default grey"  OnClick="btnClear_Click" Width="125px" />
+        </div>
+    </div>
+</fieldset>
+    </div>
+
+    <%--Break--%>
+    <div>
+        <br />
+        <br />
+    </div>
+
+    <div class="stickyrightdiv">
         <br />
          <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="Hub.aspx" CssClass="hyperlink">Return to Hub</asp:HyperLink>
     </div>

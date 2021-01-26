@@ -20,6 +20,7 @@ namespace CaseCompetitionApp
                 gvMember.Visible = false;
                 gvJudge.Visible = false;
                 gvHost.Visible = false;
+                NewHost.Visible = false;
 
                 empty.Visible = false;
             }
@@ -142,6 +143,9 @@ namespace CaseCompetitionApp
             gvMember.Visible = false;
             gvJudge.Visible = false;
             gvHost.Visible = true;
+            NewHost.Visible = true;
+            
+
             //"add the other gv ids as false under this btn"
             BTNHost.Style.Add("background-color", "rgba(255, 223, 0, 0.75)");
             BTNHost.Style.Add("font-weight", "bold");
@@ -170,7 +174,58 @@ namespace CaseCompetitionApp
             {
                 empty.Visible = false;
             }
+
         }
+        protected void btnSubmit_Click(object sender, EventArgs e)
+        {
+            if (Page.IsValid)
+            {
+               
+
+                string mainconn = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+                SqlConnection con = new SqlConnection(mainconn);
+                con.Open();
+                SqlCommand sqlcomm = new SqlCommand();
+                string insertSql = "INSERT INTO [Team_host](Host, Website, Contact, Team) OUTPUT INSERTED.HostID VALUES (@Host, @Website, @Contact, @Team);";
+                SqlCommand cmd = new SqlCommand(insertSql, con);
+                cmd.Parameters.AddWithValue("@Host", txtHost.Text);
+                cmd.Parameters.AddWithValue("@Website", txtWebsite.Text);
+                cmd.Parameters.AddWithValue("@Contact", txtContact.Text);
+                cmd.Parameters.AddWithValue("@Team", txtTeam.Text);
+
+
+                var HostID = (int)cmd.ExecuteScalar();
+
+                Response.Redirect("ModifyCompetitionInfo.aspx");
+            }
+        }
+
+        protected void btnClear_Click(object sender, EventArgs e)
+        {
+            clearfields();
+        }
+
+        protected void clearfields()
+        {
+            txtHost.Text = "";
+            txtWebsite.Text = "";
+            txtContact.Text = "";
+            txtTeam.Text = "";
+        }
+
+        //protected void BtnAddHost_Click(object sender, EventArgs e)
+        //{
+        //    if (NewHost.Visible == true)
+        //    {
+        //        NewHost.Visible = false;
+        //    }
+
+        //    else
+        //    {
+        //        NewHost.Visible = true;
+        //    }
+        //}
+
         protected void UnarchiveLink_Click(object sender, EventArgs e)
         {
             Response.Redirect("AdminArchive.aspx");
