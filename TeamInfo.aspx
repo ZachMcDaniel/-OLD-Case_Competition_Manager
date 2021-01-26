@@ -6,7 +6,7 @@
     </h3>
     <hr class="style-four">
     <div class="row col-md-12">
-        <hr />
+       
     </div>
 
     <div id="empty" runat="server" class="center">
