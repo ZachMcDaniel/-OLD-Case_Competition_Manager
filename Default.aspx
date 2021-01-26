@@ -13,7 +13,7 @@
 
     <%--Current competition--%>
     <div>
-        <h1 class="center gold bold">Current Competition</h1>
+        <h2 class="center gold">Current Competition</h2>
         <hr class="style-four">
         <h2 class="center">The CyHawk Case Competition is an annual event hosted by the University of Iowa and Iowa State University</h2>
           

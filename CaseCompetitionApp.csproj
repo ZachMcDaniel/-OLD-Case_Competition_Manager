@@ -150,6 +150,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="About.aspx" />
     <Content Include="Account\AddPhoneNumber.aspx" />
     <Content Include="Account\Confirm.aspx" />
     <Content Include="Account\Forgot.aspx" />
@@ -195,6 +196,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Account\Web.config" />
+    <Content Include="Images\About %282%29.jpg" />
     <Content Include="Images\BLOG-IA-vs-ISU_930x402.jpg" />
     <Content Include="Images\CyHawk.jpg" />
     <Content Include="Images\CyHawk1.ico" />
@@ -260,6 +262,13 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Account\AddPhoneNumber.aspx.cs">
       <DependentUpon>AddPhoneNumber.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

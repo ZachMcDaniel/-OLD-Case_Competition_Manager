@@ -70,6 +70,7 @@
                             </div>
                         </li>
                         <li><a runat="server" id="white1" href="~/News">News</a></li>
+                        <li class="customclass1"><a runat="server" id="white3" href="~/About">About</a></li>
                         <li class="customclass1">
                             <asp:LoginView runat="server">
                                 <RoleGroups>
