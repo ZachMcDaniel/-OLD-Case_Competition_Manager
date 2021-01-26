@@ -5,5 +5,10 @@
        About
      </h2>
     </div>
-    <img src="Images/About%20(2).jpg" />
+      <%--Jumbotron--%>
+
+<div class="jumbotron center">
+        
+        <asp:Image ID="Image1" runat="server" />
+  </div>
 </asp:Content>

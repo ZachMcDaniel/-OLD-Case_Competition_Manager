@@ -84,16 +84,15 @@
 }
 
 .jumbotron {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    margin-bottom: 30px;
+   
     color: #FFFFFF;
-    background-image: url('../Images/BLOG-IA-vs-ISU_930x402.jpg');
+    background-image: url('../Images/About.jpg');
     background-position: center;
-    height: 20em;
+    height: 35em;
+    width: 100%;
     border-color: black;
     border-width: 2px;
-    background-size: contain;
+    background-size: cover ;
     background-repeat: no-repeat;
     background-color: transparent;
 }
