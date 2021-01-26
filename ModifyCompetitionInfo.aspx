@@ -11,16 +11,19 @@
 
     <%--Buttons--%>
     <div class="row">
-        <div class="col-md-4 center">
+        <div class="col-md-3 center">
             <asp:Button ID="BTNTeamInfo" runat="server" Text="Modify Team Info" OnClick="BTNClickTeamInfo" width="100%" CssClass="btn btn-default wide grey"/>
         </div>
 
-        <div class="col-md-4 center">
+        <div class="col-md-3 center">
             <asp:Button ID="BTNMemberInfo" runat="server" Text="Modify Member Info" OnClick="BTNClickMemberInfo" width="100%" CssClass="btn btn-default wide grey" />
         </div>
 
-        <div class="col-md-4 center">
+        <div class="col-md-3 center">
             <asp:Button ID="BTNJudgeInfo" runat="server" Text="Modify Judge Info" OnClick="BTNClickJudgeInfo" width="100%" CssClass="btn btn-default wide grey"/>
+        </div>
+        <div class="col-md-3 center">
+             <asp:Button ID="BTNHost" runat="server" Text="Modify Host Info" OnClick="BTNClickHostInfo" width="100%" CssClass="btn btn-default wide grey"/>
         </div>
     </div>
 
@@ -97,9 +100,22 @@
                         <asp:BoundField DataField="TeamName" HeaderText="Team Name" SortExpression="TeamName">
                         </asp:BoundField>
                         <asp:BoundField DataField="Dropbox" HeaderText="Dropbox" SortExpression="Dropbox" />
-                         <asp:CommandField HeaderText="Edit" ShowDeleteButton="True" ShowEditButton="True" ShowHeader="True" >
+                        <%-- <asp:CommandField HeaderText="Edit" ShowDeleteButton="True" ShowEditButton="True" ShowHeader="True" >
                         <HeaderStyle CssClass="center" />
-                        </asp:CommandField>
+                        </asp:CommandField>--%>
+                        <asp:TemplateField HeaderText="Edit" ShowHeader="False">
+                            <EditItemTemplate>
+                                <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="True" CommandName="Update" Text="Update"></asp:LinkButton>
+                                &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel"></asp:LinkButton>
+                            </EditItemTemplate>
+                            <ItemTemplate>
+                                <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" CommandName="Edit" Text="Edit"></asp:LinkButton>
+                                &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="False" OnClientClick="return confirm('Are you sure you want to delete team host?');" CommandName="Delete" Text="Delete"></asp:LinkButton>
+                            </ItemTemplate>
+                            <ControlStyle CssClass="smpadding" />
+                            <HeaderStyle CssClass="padding" />
+                            <ItemStyle CssClass="smpadding" />
+                        </asp:TemplateField>
                     </Columns>
                      <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
                         <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
@@ -261,6 +277,43 @@
             </asp:SqlDataSource>
         </div>
     </div>
+    <%--Host Table--%>
+    <div class="row">
+        <div class="col-md-12">
+            <asp:GridView ID="gvHost" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource5" DataKeyNames="HostID" Width="100%">
+                <Columns>
+                    <asp:BoundField DataField="Host" HeaderText="Host" SortExpression="Host" />
+                    <asp:BoundField DataField="Website" HeaderText="Website" SortExpression="Website" />
+                    <asp:BoundField DataField="Contact" HeaderText="Contact" SortExpression="Contact" />
+                    <asp:BoundField DataField="Team" HeaderText="Team" SortExpression="Team" />
+                    <asp:CommandField HeaderText="Edit" ShowDeleteButton="True" ShowEditButton="True" ShowHeader="True" >
+                        <HeaderStyle CssClass="center" />
+                    </asp:CommandField>
+                </Columns>
+                        <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
+                        <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
+                        <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
+                        <SelectedRowStyle BackColor="#FFDF00" Font-Bold="True" ForeColor="Black" />
+                        <SortedAscendingCellStyle BackColor="#F7F7F7" />
+                        <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
+                        <SortedDescendingCellStyle BackColor="#E5E5E5" />
+                        <SortedDescendingHeaderStyle BackColor="#242121" />
+            </asp:GridView>
+            <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [HostID], [Host], [Website], [Contact], [Team] FROM [Team_host] WHERE ([CompetitionID] IS NULL)" UpdateCommand="UPDATE [Team_host] SET [Host] = @Host, [Website] = @Website, [Contact] = @Contact, [Team] = @Team WHERE [HostID] = @original_HostID" OldValuesParameterFormatString="original_{0}" DeleteCommand="DELETE FROM [Team_host] where [HostID] = @original_HostID">
+                <DeleteParameters>
+                    <asp:Parameter Name="original_HostID" Type="String" />
+                </DeleteParameters>
+                <UpdateParameters>
+                    <asp:Parameter Name="Host" Type="String" />
+                    <asp:Parameter Name="Website" Type="String" />
+                    <asp:Parameter Name="Contact" Type="String" />
+                    <asp:Parameter Name="Team" Type="String" />
+                    <asp:Parameter Name="original_HostID"></asp:Parameter>
+                </UpdateParameters>
+            </asp:SqlDataSource>
+        </div>
+    </div>
+
 
     <div class="stickydiv">
         <br />

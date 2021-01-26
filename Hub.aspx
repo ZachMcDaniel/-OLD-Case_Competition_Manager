@@ -4,7 +4,7 @@
         Competition Hub
     </H2>
     <h3 class="center">
-        Access to User and Case Information
+        Access to User and Competition Resources
     </h3>
     <hr class="style-four">
 
@@ -14,7 +14,7 @@
           <asp:RoleGroup Roles="competitor">  
                 <ContentTemplate>
                     
-                    <script>
+          <%--          <script>
                         function Time(endTime) {
 
                             return parseInt((endTime - (new Date().getTime())) / 1000);
@@ -60,8 +60,8 @@
                         }
 
 </script>
-<span id='oTime' style="color:darkgoldenrod;font-size:20px"></span>
-<div id="hide"; style="display:block;"> <input class ="grey" style="background-color: rgb(211,211,211); width: 74px; height: 39px; font-size: 16px" type="button" name="button2" value="Timer" onclick='start_time(new Date("2020-11-10 15:00:00").getTime())' > </div>
+<span id='oTime' style="color:darkgoldenrod;font-size:20px"></span>--%>
+<%--<div id="hide"; style="display:block;"> <input class ="grey" style="background-color: rgb(211,211,211); width: 74px; height: 39px; font-size: 16px" type="button" name="button2" value="Timer" onclick='start_time(new Date("2020-11-10 15:00:00").getTime())' > </div>--%>
                       
                     <div class ="row">
                          <br />
@@ -85,7 +85,7 @@
                          </div> 
                      </div>
                         <div class="col-md-12">
-                             <hr style="border: .25px solid rgb(0,0,0)" />
+                             <hr/>
                       </div>
                 </ContentTemplate>        
          </asp:RoleGroup>   

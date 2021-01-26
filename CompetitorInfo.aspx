@@ -68,7 +68,7 @@
     <asp:SqlDataSource ID="SqlTeams" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [TeamName], [School], [Timeslots], [RoomNumber], [Email], [Dropbox] FROM [TEAM] WHERE ([CompetitionID] IS NULL)">
 
     </asp:SqlDataSource>
-      <div class="bottomdiv">
+      <div class="stickydiv">
          <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="Hub.aspx" CssClass="hyperlink" >Return to Hub</asp:HyperLink>
     </div>
 </asp:Content>

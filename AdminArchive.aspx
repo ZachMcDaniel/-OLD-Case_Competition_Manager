@@ -111,7 +111,7 @@
     <div class="row">
         <div class="col-md-12">
            <%--<asp:RequiredFieldValidator ID="rfvDate" runat="server" ErrorMessage="RequiredFieldValidator" ControlToValidate="txtDate" CssClass="text-danger">Date Required</asp:RequiredFieldValidator>--%>
-            <asp:GridView ID="GridView1" runat="server" CssClass="Grid" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" Width="100%" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" DataKeyNames="CompetitionID">
+            <asp:GridView ID="GridView1" runat="server"  AutoGenerateColumns="False" DataSourceID="SqlDataSource1" Width="100%" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" DataKeyNames="CompetitionID">
                 <Columns>
                     <asp:BoundField DataField="CompetitionId" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="CompetitionId" >
                     <HeaderStyle CssClass="padding" />

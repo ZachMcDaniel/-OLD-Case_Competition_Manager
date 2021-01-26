@@ -6,9 +6,9 @@
     <div class="form">
      <%--Jumbotron--%>
 
-    <div class="jumbotron center">
+ <%--   <div class="jumbotron center">
         <asp:Image ID="Image1" runat="server" />
-    </div>
+    </div>--%>
 
     <br />
 
