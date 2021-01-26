@@ -7,7 +7,6 @@
         Modify Competition Archives and Results
     </h3>
     <hr class="style-four">
-    <hr />
     <div class="row center">
             <div class="col-md-6">
                 <asp:Button ID="btnShowArchives" CausesValidation="false" OnClick="btnShowArchives_Click" class="btn btn-default wide grey" runat="server" Text="Archive/Unarchive Competitions  &raquo;" />
@@ -16,7 +15,8 @@
                 <asp:Button ID="btnEditArchives" CausesValidation="false" OnClick="btnEditArchives_Click" class="btn btn-default wide grey" runat="server" Text="Edit Archived Competitions  &raquo;" />
             </div>
     </div>
-      <hr style="border: .25px solid rgb(0,0,0)" />
+      <%--<hr style="border: .25px solid rgb(0,0,0)" />--%>
+    <hr />
 
     <div id="archives" runat="server">
         <asp:UpdatePanel runat="server" ID="ArchiveUpdates" UpdateMode="Conditional">

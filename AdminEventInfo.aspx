@@ -4,11 +4,12 @@
     
 <div class="container">
     <div class="form">
-       <%--Jumbotron--%>
-
-    <div class="jumbotron center">
-        <asp:Image ID="Image1" runat="server" />
+        <h2 class=" center gold">
+      Update Event Details
+     </h2>
     </div>
+ 
+   <hr class="style-four">
 
     <br />
         <div class="row">
