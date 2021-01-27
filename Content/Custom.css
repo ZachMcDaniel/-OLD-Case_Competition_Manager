@@ -123,14 +123,14 @@
 }
 
 .gold {
-    background-color: rgba(255, 223, 0, 0.75);
+    background-color: rgb(255, 205,0);
     color: black;
     width: 100%;
     font-weight: bold;
     border-radius: 10px;
 }
 .gold2 {
-    background-color: rgba(255, 223, 0, 0.75);
+    background-color: rgb(255, 205, 0);
     color: black;
     width: 100%;
     font-size:44px ;
@@ -139,18 +139,16 @@
 }
 
 .grey {
-    background-color: rgb(211, 211, 211);
+    background-color: rgb(224, 224, 225);
     color: black;
-    width: 95%;
-    font-weight: bold;
-    border-radius: 20px;
-    font-size: 15px;
+    /*font: Antonio ;*/
+    font-size: 20px;
     text-align: center;
 
 }
 
 .grey:hover {
-    background-color: rgba(255,223,0,0.75);
+    background-color: rgb(255,205,0);
 }
 
 .button {
