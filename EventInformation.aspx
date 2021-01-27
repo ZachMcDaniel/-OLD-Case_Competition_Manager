@@ -4,11 +4,13 @@
 
 <div class="container">
     <div class="form">
-    <h2 class=" center gold">
-      Event Details
-     </h2>
+  <div>
+        <h2 style="font-size:65px; font-family: ZillaSlab-SemiBold">Event Details & Schedule</h2>
+        <div>
+            <hr style="border-top: 3px solid #FFCD00" />
+        </div>
+          
     </div>
-    <hr class="style-four">
 
     <br />
 
@@ -40,7 +42,6 @@
                 </div>
                 <br />
             <div class="form-group, center">
-                    <h3 class="center">Event Schedule</h3>
                 <div class="row center">
                     <h5 class="center"><asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="8" DataKeyNames="EventID" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="Horizontal" HorizontalAlign="Center" ShowHeaderWhenEmpty="True" CellSpacing="2" Width="100%">
                         <Columns>

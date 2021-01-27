@@ -4,9 +4,13 @@
     
 <div class="container">
     <div class="form">
-        <h2 class=" center gold">
-      Update Event Details
-     </h2>
+    <div>
+        <h2 style="font-size:65px; font-family: ZillaSlab-SemiBold">Update Event Details & Schedule</h2>
+        <div>
+            <hr style="border-top: 3px solid #FFCD00" />
+        </div>
+          <br />
+    </div>
     </div>
  
    <hr class="style-four">

@@ -1,12 +1,12 @@
 ﻿<%@ Page Title="Team Information" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="TeamInfo.aspx.cs" Inherits="CaseCompetitionApp.TeamInfo" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <h2 class="center gold"><%: Title %></h2>
-    <h3 class="center">
-        View Team Information for the Current Case Competition
-    </h3>
-    <hr class="style-four">
-    <div class="row col-md-12">
-       
+   <div>
+        <h2 style="font-size:65px; font-family: ZillaSlab-SemiBold">Team Information</h2>
+        <div>
+            <hr style="border-top: 3px solid #FFCD00" />
+        </div>
+        <h2 style="font-size: 30px; font-family: Roboto-Regular">View Team Information for the Current Case Competition</h2>
+          <br />
     </div>
 
     <div id="empty" runat="server" class="center">

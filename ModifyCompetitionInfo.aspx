@@ -1,29 +1,29 @@
 ﻿<%@ Page Title="Modify Info" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ModifyCompetitionInfo.aspx.cs" Inherits="CaseCompetitionApp.ModifyCompetitionInfo" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-     <h2 class=" center gold">
-       Modify Competition Info
-    </h2>
-    <h3 class="center">
-        Add or remove information on the competition info pages
-    </h3>
-    <hr class="style-four">
-    <br />
+<div>
+        <h2 style="font-size:65px; font-family: ZillaSlab-SemiBold">Modify Competition Info</h2>
+        <div>
+            <hr style="border-top: 3px solid #FFCD00" />
+        </div>
+        <h2 style="font-size: 30px; font-family: Roboto-Regular">Add or Remove Information on the Competition Info Pages</h2>
+          <br />
+    </div>
 
     <%--Buttons--%>
     <div class="row">
         <div class="col-md-3 center">
-            <asp:Button ID="BTNTeamInfo" runat="server" Text="Modify Team Info" OnClick="BTNClickTeamInfo" width="100%" CssClass="btn btn-default wide grey"/>
+            <asp:Button ID="BTNTeamInfo" runat="server" Text="Modify Team Info" OnClick="BTNClickTeamInfo" width="100%" CssClass="btn btn-default wide gold2"/>
         </div>
 
         <div class="col-md-3 center">
-            <asp:Button ID="BTNMemberInfo" runat="server" Text="Modify Member Info" OnClick="BTNClickMemberInfo" width="100%" CssClass="btn btn-default wide grey" />
+            <asp:Button ID="BTNMemberInfo" runat="server" Text="Modify Member Info" OnClick="BTNClickMemberInfo" width="100%" CssClass="btn btn-default wide gold2" />
         </div>
 
         <div class="col-md-3 center">
-            <asp:Button ID="BTNJudgeInfo" runat="server" Text="Modify Judge Info" OnClick="BTNClickJudgeInfo" width="100%" CssClass="btn btn-default wide grey"/>
+            <asp:Button ID="BTNJudgeInfo" runat="server" Text="Modify Judge Info" OnClick="BTNClickJudgeInfo" width="100%" CssClass="btn btn-default wide gold2"/>
         </div>
         <div class="col-md-3 center">
-             <asp:Button ID="BTNHost" runat="server" Text="Modify Host Info" OnClick="BTNClickHostInfo" width="100%" CssClass="btn btn-default wide grey"/>
+             <asp:Button ID="BTNHost" runat="server" Text="Modify Host Info" OnClick="BTNClickHostInfo" width="100%" CssClass="btn btn-default wide gold2"/>
         </div>
     </div>
 

@@ -1,13 +1,13 @@
 ﻿<%@ Page Title="News" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="News.aspx.cs" Inherits="CaseCompetitionApp.News" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <h2 class=" center gold">
-        News & Information
-    </h2>
-    <h3 class="center">
-        Updates and Information About the Current Case Competition
-    </h3>
-    <hr class="style-four">
-    <br />
+   <div>
+        <h2 style="font-size:65px; font-family: ZillaSlab-SemiBold">News & Information</h2>
+        <div>
+            <hr style="border-top: 3px solid #FFCD00" />
+        </div>
+        <h2 style="font-size: 30px; font-family: Roboto-Regular">Updates and information about the current case competition</h2>
+        <br />  
+    </div>
 
     <div id="empty" runat="server" class="center">
         <hr />

@@ -1,12 +1,13 @@
 ﻿<%@ Page Title="Admin Announcements" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AdminAnnounce.aspx.cs" Inherits="CaseCompetitionApp.AdminAnnounce" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-     <h2 class=" center gold">
-       Update News Feed
-    </h2>
-    <h3 class="center">
-        Add or Remove Announcements on the News Page
-    </h3>
-    <hr class="style-four">
+ <div>
+        <h2 style="font-size:65px; font-family: ZillaSlab-SemiBold">Update News Feed</h2>
+        <div>
+            <hr style="border-top: 3px solid #FFCD00" />
+        </div>
+        <h2 style="font-size: 30px; font-family: Roboto-Regular">Add or Remove Announcements on the News Page</h2>
+          <br />
+    </div>
 
     <br />
     <div class="row">

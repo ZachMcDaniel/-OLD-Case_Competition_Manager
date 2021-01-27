@@ -1,13 +1,14 @@
 ﻿<%@ Page Title="Team Info" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CompetitorInfo.aspx.cs" Inherits="CaseCompetitionApp.CompetitorInfo" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-    <h2 class=" center gold">
-       Team Information
-     </h2>
-    <h3 class ="center">View Team Information & Emails
-    </h3>
-    <hr class="style-four">
-    <hr />
+    <div>
+        <h2 style="font-size:65px; font-family: ZillaSlab-SemiBold">Team Information</h2>
+        <div>
+            <hr style="border-top: 3px solid #FFCD00" />
+        </div>
+        <h2 style="font-size: 30px; font-family: Roboto-Regular">View Team's Email & Dropbox</h2>
+          <br />
+    </div>
 
     <div id="empty" runat="server" class="center">
       <asp:Label ID="lblEmpty" Font-Size="X-Large" runat="server" Text="No Current Competition is running. Please check archives for any data"></asp:Label>

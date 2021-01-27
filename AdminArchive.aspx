@@ -1,21 +1,21 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AdminArchive.aspx.cs" Inherits="CaseCompetitionApp.AdminArchive" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <h2 class=" center gold">
-       Admin Competition Archive
-     </h2>
-    <h3 class="center">
-        Modify Competition Archives and Results
-    </h3>
-    <hr class="style-four">
+    <div>
+        <h2 style="font-size:65px; font-family: ZillaSlab-SemiBold">Admin Competition Archive</h2>
+        <div>
+            <hr style="border-top: 3px solid #FFCD00" />
+        </div>
+        <h2 style="font-size: 30px; font-family: Roboto-Regular">Modify Competition Archives & Results</h2>
+          <br />
+    </div>
     <div class="row center">
             <div class="col-md-6">
-                <asp:Button ID="btnShowArchives" CausesValidation="false" OnClick="btnShowArchives_Click" class="btn btn-default wide grey" runat="server" Text="Archive/Unarchive Competitions  &raquo;" />
+                <asp:Button ID="btnShowArchives" CausesValidation="false" OnClick="btnShowArchives_Click" class="btn btn-default wide gold2" runat="server" Text="Archive/Unarchive Competitions" />
             </div>
              <div class="col-md-6">
-                <asp:Button ID="btnEditArchives" CausesValidation="false" OnClick="btnEditArchives_Click" class="btn btn-default wide grey" runat="server" Text="Edit Archived Competitions  &raquo;" />
+                <asp:Button ID="btnEditArchives" CausesValidation="false" OnClick="btnEditArchives_Click" class="btn btn-default wide gold2" runat="server" Text="Edit Archived Competitions" />
             </div>
     </div>
-      <%--<hr style="border: .25px solid rgb(0,0,0)" />--%>
     <hr />
 
     <div id="archives" runat="server">

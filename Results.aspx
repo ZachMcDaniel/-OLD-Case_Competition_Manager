@@ -1,9 +1,14 @@
 ﻿<%@ Page Title="Results" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Results.aspx.cs" Inherits="CaseCompetitionApp.Results" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-   <h2 class="center gold"><%: Title %></h2>
-    <h3 class ="center">View the Results for the Current Competition</h3>
-    <hr class="style-four">
-    <div class="row">
+   <div>
+        <h2 style="font-size:65px; font-family: ZillaSlab-SemiBold">Results</h2>
+        <div>
+            <hr style="border-top: 3px solid #FFCD00" />
+        </div>
+        <%--<hr class="style-four">--%>
+        <h2 style="font-size: 30px; font-family: Roboto-Regular">View the results for the current competition. Thank you to all competitors for the hard work at this year's competition!</h2>
+          
+    
 
 
                                 <div class ="row">
@@ -217,11 +222,4 @@
         </div>
     </div>
 
-    <div class="center">
-        <br />
-            
-        <h3>
-            Thank you to all competitors for the hard work at this year's competition!
-        </h3>
-    </div>
 </asp:Content>

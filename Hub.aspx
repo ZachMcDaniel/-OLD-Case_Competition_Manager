@@ -1,12 +1,13 @@
 ﻿<%@ Page Title="Hub" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Hub.aspx.cs" Inherits="CaseCompetitionApp.Hub" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <H2 class="center gold">
-        Competition Hub
-    </H2>
-    <h3 class="center">
-        Access to User and Competition Resources
-    </h3>
-    <hr class="style-four">
+ <div>
+        <h2 style="font-size:65px; font-family: ZillaSlab-SemiBold">Competition HUB</h2>
+        <div>
+            <hr style="border-top: 3px solid #FFCD00" />
+        </div>
+        <h2 style="font-size: 30px; font-family: Roboto-Regular">Access User and Competition Resources</h2>
+          <br />
+    </div>
 
     <%--Competitor view btn info--%>
      <asp:LoginView runat="server">     
@@ -70,16 +71,16 @@
                     <div class="row center">
          
                          <div class="col-md-12 left">
-                             <h4>
+                             <h4 style="font-family:Roboto-Bold; font-size:25px">
                                 To Access Team Material and Submission Folder
                              </h4>                        
-                             <p class="left">
+                             <p class="left" style="font-family:Roboto-Regular; font-size:15px">
                                  1.) At the start of your session refer to team registered <br /> email and follow dropbox link                                                                 
                              </p>
-                             <p class="left">
+                             <p class="left"style="font-family:Roboto-Regular; font-size:15px">
                                  2.) This folder contains competition files, and will act as your submission folder
                              </p>
-                             <p class="left">
+                             <p class="left"style="font-family:Roboto-Regular; font-size:15px">
                                  3.) At the end of the alloted time please drag and drop your team's presentation to the same folder
                              </p>
                          </div> 
@@ -103,10 +104,11 @@
 
              <div class ="row">
                 <div class="col-md-6 center">
-                    <asp:Button ID="BTNTeamMGMT" runat="server" Text="Team Managment"  OnClick="BTNTeamMGMT_Click" Class="btn btn-default wide grey"/>
+                    <%--<asp:Button ID="BTNTeamMGMT" runat="server" Text="Team Managment"  OnClick="BTNTeamMGMT_Click" Class="btn btn-default wide grey"/>--%>
+                    <a class="btn btn-default wide2 gold2"  href="../TeamMGMT">TEAM MANAGEMENT <img src="Images/arrow-BLACK.png" style="height: 20px; width:20px;" /></a>
                 </div> 
                 <div class ="col-md-6 center">
-                    <a class="btn btn-default wide grey"  href="../TeamHost">Team Host &raquo;</a>    
+                    <a class="btn btn-default wide2 gold2"  href="../TeamHost">TEAM HOST<img src="Images/arrow-BLACK.png" style="height: 20px; width:20px;" /></a>
                 </div>
             </div>
                 </ContentTemplate>        
@@ -128,13 +130,15 @@
                      </div>
                     <div class="row">
                       <div class="col-md-4">
-                        <asp:Button ID="BTNCompetitionInfo" runat="server" Text="Modify Competition Info"  OnClick="BTNModifyCompetitionInfo" Class="btn btn-default wide grey"/>
+                        <%--<asp:Button ID="BTNCompetitionInfo" runat="server" Text="Modify Competition Info"  OnClick="BTNModifyCompetitionInfo" Class="btn btn-default wide gold2"/>--%>
+                          <a class="btn btn-default wide gold2"  href="../ModifyCompetitionInfo">MODIFY COMPETITION INFO<img src="Images/arrow-BLACK.png" style="height: 20px; width:20px;" /></a>
                       </div>
                      <div class="col-md-4">
-                        <asp:Button ID="BTNAnnounce" runat="server" Text="Modify Announcements"  OnClick="BTNAnnounce_Click" Class="btn btn-default wide grey"/>
+                        <%--<asp:Button ID="BTNAnnounce" runat="server" Text="Modify Announcements"  OnClick="BTNAnnounce_Click" Class="btn btn-default wide gold2"/>--%>
+                         <a class="btn btn-default wide gold2"  href="../AdminAnnounce">MODIFY ANNOUNCEMENTS <img src="Images/arrow-BLACK.png" style="height: 20px; width:20px;" /></a>
                      </div>
                      <div class="col-md-4">
-                         <a class="btn btn-default wide grey"  href="../AdminEventInfo">Update Event Info &raquo;</a>    
+                         <a class="btn btn-default wide gold2"  href="../AdminEventInfo">UPDATE EVENT INFO <img src="Images/arrow-BLACK.png" style="height: 20px; width:20px;" /></a>    
                      </div>
                  </div> 
 
@@ -147,13 +151,13 @@
                 <%--second row--%>   
                 <div class="row">
                     <div class="col-md-4">
-                         <a class="btn btn-default wide grey"  href="../CompetitorInfo">Team Info &raquo;</a>    
+                         <a class="btn btn-default wide gold2"  href="../CompetitorInfo">TEAM INFO <img src="Images/arrow-BLACK.png" style="height: 20px; width:20px;" /></a>    
                     </div>
                     <div class="col-md-4">
-                         <a class="btn btn-default wide grey"  href="../AdminArchive">Archive Competition &raquo;</a>    
+                         <a class="btn btn-default wide gold2"  href="../AdminArchive">ARCHIVE COMPETITION <img src="Images/arrow-BLACK.png" style="height: 20px; width:20px;" /></a>    
                     </div>
                     <div class="col-md-4">
-                         <a class="btn btn-default wide grey"  href="../Account/RegisterAdmin">Register Admin &raquo;</a>    
+                         <a class="btn btn-default wide gold2"  href="../Account/RegisterAdmin">REGISTER ADMIN <img src="Images/arrow-BLACK.png" style="height: 20px; width:20px;" /></a>    
                     </div>
                 </div>
                         <div class="row">
@@ -164,7 +168,8 @@
                       <%--third row--%>
                 <div class="row">
                      <div class="col-md-6 col-md-offset-3">
-                        <asp:Button ID="BTNDownCaseFile" runat="server" Text="Submissions"  OnClick="BTNDownCaseFile_Click" Class="btn btn-default wide grey"/>
+                        <%--<asp:Button ID="BTNDownCaseFile" runat="server" Text="Submissions"  OnClick="BTNDownCaseFile_Click" Class="btn btn-default wide gold2"/>--%>
+                         <a class="btn btn-default wide gold2"  href="../FileReview">SUBMISSIONS <img src="Images/arrow-BLACK.png" style="height: 20px; width:20px;" /></a>
                      </div>
                     </div>
 

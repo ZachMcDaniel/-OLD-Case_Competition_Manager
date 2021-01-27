@@ -1,8 +1,14 @@
 ﻿<%@ Page Title="Team Host" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="TeamHost.aspx.cs" Inherits="CaseCompetitionApp.TeamHost" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <h2 class="center gold">Team Host</h2>
-    <h3 class ="center">Find Your Team Host for the Competition</h3>
-    <hr class="style-four">
+ <div>
+        <h2 style="font-size:65px; font-family: ZillaSlab-SemiBold">Team Host</h2>
+        <div>
+            <hr style="border-top: 3px solid #FFCD00" />
+        </div>
+       
+        <h2 style="font-size: 30px; font-family: Roboto-Regular">Find Your Team's Host for the Competition</h2>
+          
+    </div>
 
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" Width="100%">
         <Columns>

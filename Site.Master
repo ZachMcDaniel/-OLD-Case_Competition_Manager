@@ -37,7 +37,7 @@
             </Scripts>
         </asp:ScriptManager>
 
-        <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar navbar-inverse navbar-fixed-top" style="background-color:#000000">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -108,16 +108,19 @@
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
         </div>
-        <hr />
-        <footer class="footer">
-            <div class="row">
-                <p class="center col-md-12"><a runat="server" class="center white" href="~/ContactInfo">Contact Us</a> </p>
-                <p class="center col-md-12"><a runat="server" class="center white" href="~/CompetitionSupport">Competition Support</a> </p>
-                <hr style="border: 1px solid rgb(255,223,0)" />
-                <p class="center whitefoot col-md-12">&copy; <%: DateTime.Now.Year %> - University of Iowa Tippie Technology and Innovation</p>
+        <%--Footer--%>
+         <footer class="footer">
+            <div class="row" >
+                <a target="_blank" href="https://uiowa.edu/">
+                    <img src="Images/Block-IOWA-GOLD-ffcd00.png" style="height:75px; width:150px" />
+                </a>
+                <p class="col-md-12"><a runat="server" class="white"  style="text-align:left" href="~/ContactInfo">Contact Us</a> </p>
+                <p class="col-md-12"><a runat="server" class="white" href="~/CompetitionSupport">Competition Support</a> </p>
+                <p class="whitefoot col-md-12">&copy; <%: DateTime.Now.Year %> - University of Iowa Tippie Technology and Innovation</p>
             </div>
         </footer>
 
     </form>
+   
 </body>
 </html>

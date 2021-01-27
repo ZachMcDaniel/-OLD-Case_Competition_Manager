@@ -1,8 +1,14 @@
 ﻿<%@ Page Title="Team Management" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="TeamMGMT.aspx.cs" Inherits="CaseCompetitionApp.TeamMGMT" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <h2 class="center gold">Team Managment</h2>
-    <h3 class ="center">Add or Remove Members and Edit Information</h3>
-    <hr class="style-four">
+     <div>
+        <h2 style="font-size:65px; font-family: ZillaSlab-SemiBold">Team Management</h2>
+        <div>
+            <hr style="border-top: 3px solid #FFCD00" />
+        </div>
+       
+        <h2 style="font-size: 30px; font-family: Roboto-Regular">Add or Remove Members & Edit Information</h2>
+          <br />
+    </div>
 
 <div class="row center"> 
     <asp:ValidationSummary ID="ValidationSummary1" ValidationGroup="Grid" runat="server" />
@@ -144,7 +150,7 @@
 
     <div class="row">
         <div class="col-md-3">
-                <asp:Button ID="BtnNewMember" CausesValidation="false" CssClass="btn btn-default grey" runat="server" Text="Add Members" OnClick="BtnAddMember_Click" />
+                <asp:Button ID="BtnNewMember" CausesValidation="false" CssClass="btn btn-default gold2" runat="server" Text="ADD MEMBERS"  OnClick="BtnAddMember_Click" />
         </div>
         <div class="col-md-9">
 
