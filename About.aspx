@@ -1,13 +1,14 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="About.aspx.cs" Inherits="CaseCompetitionApp.About" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-   <div>
-    <h2 class=" center gold">
-      The Case Competition Manager Story
-     </h2>
-    </div>
- 
+  
    <hr class="style-four">
-
+    <div>
+        <h2 style="font-size:65px; font-family: ZillaSlab-SemiBold">The Case Competition Manager Story</h2>
+        <div>
+            <hr style="border-top: 3px solid #FFCD00" />
+        </div>
+          <br />
+    </div>
     <div>
         <h4>
             The Case Competition Manager app was created by students as a summer internship provided by Tippie College of Business and Tippie Analytics. Tippie Tech, a business student organization, and Tippie collaborated to create a meaningful experience for students whose internship opportunities were lost due to COVID-19.

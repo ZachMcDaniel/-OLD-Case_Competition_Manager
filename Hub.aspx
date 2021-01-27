@@ -130,11 +130,11 @@
                      </div>
                     <div class="row">
                       <div class="col-md-4">
-                        <%--<asp:Button ID="BTNCompetitionInfo" runat="server" Text="Modify Competition Info"  OnClick="BTNModifyCompetitionInfo" Class="btn btn-default wide gold2"/>--%>
+                      
                           <a class="btn btn-default wide gold2"  href="../ModifyCompetitionInfo">MODIFY COMPETITION INFO<img src="Images/arrow-BLACK.png" style="height: 20px; width:20px;" /></a>
                       </div>
                      <div class="col-md-4">
-                        <%--<asp:Button ID="BTNAnnounce" runat="server" Text="Modify Announcements"  OnClick="BTNAnnounce_Click" Class="btn btn-default wide gold2"/>--%>
+                      
                          <a class="btn btn-default wide gold2"  href="../AdminAnnounce">MODIFY ANNOUNCEMENTS <img src="Images/arrow-BLACK.png" style="height: 20px; width:20px;" /></a>
                      </div>
                      <div class="col-md-4">
@@ -168,7 +168,7 @@
                       <%--third row--%>
                 <div class="row">
                      <div class="col-md-6 col-md-offset-3">
-                        <%--<asp:Button ID="BTNDownCaseFile" runat="server" Text="Submissions"  OnClick="BTNDownCaseFile_Click" Class="btn btn-default wide gold2"/>--%>
+                       
                          <a class="btn btn-default wide gold2"  href="../FileReview">SUBMISSIONS <img src="Images/arrow-BLACK.png" style="height: 20px; width:20px;" /></a>
                      </div>
                     </div>
@@ -190,14 +190,18 @@
         <asp:RoleGroup Roles="judge">           
                  
                 <ContentTemplate>   
+                    <div>
+                        <br />
+                    </div>
                     <div class="row">
                         <div class="col-md-6">
-                        <asp:Button ID="BTNJudgeModify" runat="server" Text="Modify Information"  OnClick="BTNJudgeModify_Click" Class="btn btn-default wide grey"/>
+                        
+                           <a class="btn btn-default wide2 gold2"  href="../JudgeModify">MODIFY INFORMATION <img src="Images/arrow-BLACK.png" style="height: 20px; width:20px;" /></a>
                       
                     </div>
 
                     <div class="col-md-6">
-                            <asp:Button ID="BTNFileReview" runat="server" Text="File Review"  OnClick="BTNFileReview_Click" Class="btn btn-default wide grey"/>
+                        <a class="btn btn-default wide2 gold2"  href="../FileReview">FILE REVIEW <img src="Images/arrow-BLACK.png" style="height: 20px; width:20px;" /></a>
                         </div>
                     </div>
 
