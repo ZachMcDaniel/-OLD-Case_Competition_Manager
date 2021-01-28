@@ -41,18 +41,42 @@
     <%--Team Table--%>
         <div class="row">
             <div class="col-md-12">
-                <asp:GridView ID="gvCompete" CssClass="Grid" DataKeyNames="TeamID" runat="server"  AutoGenerateColumns="False" DataSourceID="SqlDataSource1" Width="100%">
+                <asp:GridView ID="gvCompete" CssClass="Grid" DataKeyNames="TeamID" runat="server"  AutoGenerateColumns="False" DataSourceID="SqlDataSource1" Width="100%" BackColor="White" BorderColor="#ffffff" BorderStyle="None" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="None">
+                    <AlternatingRowStyle BackColor="#CCCCCC" />
                     <Columns>
                         <asp:BoundField DataField="TeamID" HeaderText="TeamID" SortExpression="TeamID" ReadOnly="True" InsertVisible="False" >
+                            <HeaderStyle  Font-Names="roboto-bold" Font-Size="12pt" />
+                            <ItemStyle Font-Names="roboto-regular" Font-Size="12pt" />
                         </asp:BoundField>
-                        <asp:BoundField DataField="TeamName" HeaderText="TeamName" SortExpression="TeamName" >
+                        <asp:BoundField DataField="TeamName" HeaderText="Team Name" SortExpression="TeamName" >
+                            <HeaderStyle  Font-Names="roboto-bold" Font-Size="12pt" />
+                            <ItemStyle Font-Names="roboto-regular" Font-Size="12pt" />
                         </asp:BoundField>
                         <asp:BoundField DataField="School" HeaderText="School" SortExpression="School" >
+                            <HeaderStyle Font-Names="roboto-bold" Font-Size="12pt" />
+                            <ItemStyle Font-Names="roboto-regular" Font-Size="12pt" />
                         </asp:BoundField>
-                        <asp:BoundField DataField="Timeslots" HeaderText="Timeslots" SortExpression="Timeslots" ReadOnly="True">
-                        </asp:BoundField>
-                        <asp:BoundField DataField="RoomNumber" HeaderText="RoomNumber" SortExpression="RoomNumber" />
-                        <asp:BoundField DataField="Ranking" HeaderText="Ranking" SortExpression="Ranking" />
+                        <%--<asp:BoundField DataField="Timeslots" HeaderText="Timeslots" SortExpression="Timeslots" ReadOnly="True">
+                        </asp:BoundField>--%>
+                        <asp:TemplateField HeaderText="Timeslot" SortExpression="Timeslots">
+                            <EditItemTemplate>
+                                <asp:TextBox ID="TextBox1" runat="server" TextMode="Time" Text='<%# Bind("Timeslots") %>'></asp:TextBox>
+                            </EditItemTemplate>
+                            <ItemTemplate>
+                                <asp:Label ID="Label1" runat="server" Text='<%# Bind("Timeslots") %>'></asp:Label>
+                            </ItemTemplate>
+                            <ControlStyle CssClass="Shorter" />
+                            <HeaderStyle CssClass="padding Shorter" Font-Names="roboto-bold" Font-Size="12pt"/>
+                            <ItemStyle CssClass="padding Shorter" Font-Names="roboto-regular" Font-Size="12pt" />
+                        </asp:TemplateField>
+                        <asp:BoundField DataField="RoomNumber" HeaderText="Room Number" SortExpression="RoomNumber">
+                            <HeaderStyle Font-Names="roboto-bold" Font-Size="12pt" />
+                            <ItemStyle Font-Names="roboto-regular" Font-Size="12pt" />
+                            </asp:BoundField>
+                        <asp:BoundField DataField="Ranking" HeaderText="Ranking" SortExpression="Ranking" >
+                        <HeaderStyle Font-Names="roboto-bold" Font-Size="12pt" />
+                            <ItemStyle Font-Names="roboto-regular" Font-Size="12pt" />
+                            </asp:BoundField>
                         <asp:TemplateField HeaderText="Edit" ShowHeader="False">
                             <EditItemTemplate>
                                 <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="True" CommandName="Update" Text="Update"></asp:LinkButton>
@@ -63,18 +87,18 @@
                                 &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="False" OnClientClick="return confirm('Are you sure you want to delete team?');" CommandName="Delete" Text="Delete"></asp:LinkButton>
                             </ItemTemplate>
                             <ControlStyle CssClass="smpadding" />
-                            <HeaderStyle CssClass="padding" />
-                            <ItemStyle CssClass="smpadding" />
+                            <HeaderStyle CssClass="padding" Font-Names="roboto-bold" Font-Size="12pt"/>
+                            <ItemStyle CssClass="smpadding" Font-Names="roboto-regular" Font-Size="12pt"/>
                         </asp:TemplateField>
                     </Columns>
-                        <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
-                        <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
-                        <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
-                        <SelectedRowStyle BackColor="#FFDF00" Font-Bold="True" ForeColor="Black" />
-                        <SortedAscendingCellStyle BackColor="#F7F7F7" />
-                        <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
-                        <SortedDescendingCellStyle BackColor="#E5E5E5" />
-                        <SortedDescendingHeaderStyle BackColor="#242121" />
+                        <FooterStyle BackColor="#CCCCCC" />
+                        <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
+                        <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+                        <SelectedRowStyle BackColor="#FFCD00" Font-Bold="True" ForeColor="White" />
+                        <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                        <SortedAscendingHeaderStyle BackColor="#808080" />
+                        <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                        <SortedDescendingHeaderStyle BackColor="#383838" />
                 </asp:GridView>
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [TeamID], [TeamName],[School], FORMAT([Timeslots], 'hh:mm tt') AS Timeslots, [RoomNumber], [Ranking], [Dropbox] FROM [TEAM] where CompetitionId IS NULL" UpdateCommand="UPDATE [TEAM] SET [Timeslots] = @Timeslots, [RoomNumber] = @RoomNumber , [Ranking] = @Ranking, [Dropbox] = @Dropbox WHERE [TeamID] = @original_TeamID" OldValuesParameterFormatString="original_{0}" DeleteCommand="DELETE FROM [TEAM] where [TeamID] = @original_TeamID">
                      <DeleteParameters>
@@ -93,13 +117,21 @@
 
                 </div>
                 <%--dropbox--%>
-                <asp:GridView ID="gvdropbox" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource4" DataKeyNames="TeamID" Width="100%">
+                <asp:GridView ID="gvdropbox" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource4" DataKeyNames="TeamID" Width="100%" BackColor="White" BorderColor="#ffffff" BorderStyle="None" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="None">
+                    <AlternatingRowStyle BackColor="#CCCCCC" />
                     <Columns>
                         <asp:BoundField DataField="TeamID" HeaderText="TeamID" SortExpression="TeamID" InsertVisible="False" ReadOnly="True">
+                            <HeaderStyle  Font-Names="roboto-bold" Font-Size="12pt" />
+                            <ItemStyle Font-Names="roboto-regular" Font-Size="12pt" />
                         </asp:BoundField>
                         <asp:BoundField DataField="TeamName" HeaderText="Team Name" SortExpression="TeamName">
+                            <HeaderStyle Font-Names="roboto-bold" Font-Size="12pt" />
+                            <ItemStyle Font-Names="roboto-regular" Font-Size="12pt" />
                         </asp:BoundField>
-                        <asp:BoundField DataField="Dropbox" HeaderText="Dropbox" SortExpression="Dropbox" />
+                        <asp:BoundField DataField="Dropbox" HeaderText="Dropbox" SortExpression="Dropbox" >
+                            <HeaderStyle  Font-Names="roboto-bold" Font-Size="12pt" />
+                            <ItemStyle Font-Names="roboto-regular" Font-Size="12pt" />
+                            </asp:BoundField>
                         <%-- <asp:CommandField HeaderText="Edit" ShowDeleteButton="True" ShowEditButton="True" ShowHeader="True" >
                         <HeaderStyle CssClass="center" />
                         </asp:CommandField>--%>
@@ -112,19 +144,19 @@
                                 <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" CommandName="Edit" Text="Edit"></asp:LinkButton>
                                 &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="False" OnClientClick="return confirm('Are you sure you want to delete team host?');" CommandName="Delete" Text="Delete"></asp:LinkButton>
                             </ItemTemplate>
-                            <ControlStyle CssClass="smpadding" />
-                            <HeaderStyle CssClass="padding" />
-                            <ItemStyle CssClass="smpadding" />
+                            
+                            <HeaderStyle Font-Names="roboto-bold" Font-Size="12pt"/>
+                            <ItemStyle Font-Names="roboto-regular" Font-Size="11pt" />
                         </asp:TemplateField>
                     </Columns>
-                     <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
-                        <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
-                        <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
-                        <SelectedRowStyle BackColor="#FFDF00" Font-Bold="True" ForeColor="Black" />
-                        <SortedAscendingCellStyle BackColor="#F7F7F7" />
-                        <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
-                        <SortedDescendingCellStyle BackColor="#E5E5E5" />
-                        <SortedDescendingHeaderStyle BackColor="#242121" />
+                     <FooterStyle BackColor="#CCCCCC" />
+                        <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
+                        <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+                        <SelectedRowStyle BackColor="#FFCD00" Font-Bold="True" ForeColor="White" />
+                        <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                        <SortedAscendingHeaderStyle BackColor="#808080" />
+                        <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                        <SortedDescendingHeaderStyle BackColor="#383838" />
                 </asp:GridView>
                 <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [TeamID], [TeamName], [Dropbox] FROM [TEAM] WHERE ([CompetitionID] IS NULL)" UpdateCommand="UPDATE [TEAM] SET [Dropbox] = @Dropbox WHERE [TeamID] = @original_TeamID" OldValuesParameterFormatString="original_{0}" DeleteCommand="DELETE FROM [TEAM] where [TeamID] = @original_TeamID">
                     <DeleteParameters>
@@ -142,42 +174,43 @@
     <%--Member Table--%>
     <div class="row">
         <div class="col-md-12">
-            <asp:GridView ID="gvMember" CssClass="Grid" runat="server" AutoGenerateColumns="False"  DataKeyNames="MemberID" DataSourceID="SqlDataSource2" Width="100%">
+            <asp:GridView ID="gvMember"  runat="server" AutoGenerateColumns="False"  DataKeyNames="MemberID" DataSourceID="SqlDataSource2" Width="100%" BackColor="White" BorderColor="#ffffff" BorderStyle="None" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="None">
+                <AlternatingRowStyle BackColor="#CCCCCC" />
                 <Columns>
                     <asp:BoundField DataField="FirstName" HeaderText="First Name" SortExpression="FirstName">
                     <ControlStyle CssClass="Shorter" />
-                    <HeaderStyle CssClass="padding Shorter" />
-                    <ItemStyle CssClass="padding Shorter" />
+                    <HeaderStyle CssClass="padding Shorter" Font-Names="roboto-bold" Font-Size="12pt"/>
+                    <ItemStyle CssClass="padding Shorter" Font-Names="roboto-regular" Font-Size="12pt"/>
                     </asp:BoundField>
                     <asp:BoundField DataField="LastName" HeaderText="Last Name" SortExpression="LastName">
                     <ControlStyle CssClass="Shorter" />
-                    <HeaderStyle CssClass="padding Shorter" />
-                    <ItemStyle CssClass="padding Shorter" />
+                    <HeaderStyle CssClass="padding Shorter" Font-Names="roboto-bold" Font-Size="12pt"/>
+                    <ItemStyle CssClass="padding Shorter" Font-Names="roboto-regular" Font-Size="12pt" />
                     </asp:BoundField>
                     <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email">
                     <ControlStyle CssClass="Shorter" />
-                    <HeaderStyle CssClass="padding Shorter" />
-                    <ItemStyle CssClass="padding Shorter" />
+                    <HeaderStyle CssClass="padding Shorter" Font-Names="roboto-bold" Font-Size="12pt"/>
+                    <ItemStyle CssClass="padding Shorter" Font-Names="roboto-regular" Font-Size="12pt" />
                     </asp:BoundField>
                     <asp:BoundField DataField="FoodAllergy" HeaderText="Food Allergy" SortExpression="FoodAllergy">
                     <ControlStyle CssClass="Shorter" />
-                    <HeaderStyle CssClass="padding Shorter" />
-                    <ItemStyle CssClass="padding Shorter" />
+                    <HeaderStyle CssClass="padding Shorter" Font-Names="roboto-bold" Font-Size="12pt" />
+                    <ItemStyle CssClass="padding Shorter" Font-Names="roboto-regular" Font-Size="12pt" />
                     </asp:BoundField>
                     <asp:BoundField DataField="ShirtSize" HeaderText="Shirt Size" SortExpression="ShirtSize">
                     <ControlStyle CssClass="Shorter" />
-                    <HeaderStyle CssClass="padding Shorter" />
-                    <ItemStyle CssClass="padding Shorter" />
+                    <HeaderStyle CssClass="padding Shorter" Font-Names="roboto-bold" Font-Size="12pt"/>
+                    <ItemStyle CssClass="padding Shorter" Font-Names="roboto-regular" Font-Size="12pt" />
                     </asp:BoundField>
                     <asp:BoundField DataField="PhoneNumber" HeaderText="Phone Number" SortExpression="PhoneNumber">
                     <ControlStyle CssClass="Shorter" />
-                    <HeaderStyle CssClass="padding Shorter" />
-                    <ItemStyle CssClass="padding Shorter" />
+                    <HeaderStyle CssClass="padding Shorter" Font-Names="roboto-bold" Font-Size="12pt" />
+                    <ItemStyle CssClass="padding Shorter" Font-Names="roboto-regular" Font-Size="12pt" />
                     </asp:BoundField>
                     <asp:BoundField DataField="Vegan" HeaderText="Vegan" SortExpression="Vegan">
                     <ControlStyle CssClass="Shorter" />
-                    <HeaderStyle CssClass="padding Shorter" />
-                    <ItemStyle CssClass="padding Shorter" />
+                    <HeaderStyle CssClass="padding Shorter" Font-Names="roboto-bold" Font-Size="12pt" />
+                    <ItemStyle CssClass="padding Shorter" Font-Names="roboto-regular" Font-Size="12pt" />
                     </asp:BoundField>
                     <asp:TemplateField HeaderText="Edit">
                         <EditItemTemplate>
@@ -189,18 +222,18 @@
                             &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="False" OnClientClick="return confirm('Are you sure you want to delete team member?');" CommandName="Delete" Text="Delete"></asp:LinkButton>
                         </ItemTemplate>
                         <ControlStyle CssClass="smpadding" />
-                        <HeaderStyle CssClass="padding" />
-                        <ItemStyle CssClass="smpadding" />
+                        <HeaderStyle CssClass="padding" Font-Names="roboto-bold" Font-Size="12pt"/>
+                        <ItemStyle CssClass="smpadding" Font-Names="roboto-regular" Font-Size="12pt"/>
                     </asp:TemplateField>
                 </Columns>
-                        <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
-                        <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
-                        <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
-                        <SelectedRowStyle BackColor="#FFDF00" Font-Bold="True" ForeColor="Black" />
-                        <SortedAscendingCellStyle BackColor="#F7F7F7" />
-                        <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
-                        <SortedDescendingCellStyle BackColor="#E5E5E5" />
-                        <SortedDescendingHeaderStyle BackColor="#242121" />
+                        <FooterStyle BackColor="#CCCCCC" />
+                        <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
+                        <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+                        <SelectedRowStyle BackColor="#FFCD0" Font-Bold="True" ForeColor="White" />
+                        <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                        <SortedAscendingHeaderStyle BackColor="#808080" />
+                        <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                        <SortedDescendingHeaderStyle BackColor="#383838" />
             </asp:GridView>
             <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT * FROM [Members] join TEAM on Members.TeamID = TEAM.TeamID where CompetitionId IS NULL" UpdateCommand="UPDATE [Members] SET [FirstName] = @FirstName, [LastName] =@LastName, [Email]=@Email, [FoodAllergy]=@FoodAllergy, [ShirtSize]=@ShirtSize, [PhoneNumber]=@PhoneNumber, [Vegan]=@Vegan  WHERE [MemberID] = @original_MemberID  " OldValuesParameterFormatString="original_{0}" DeleteCommand="DELETE FROM [Members] where [MemberID] = @original_MemberID">
                      
@@ -224,20 +257,37 @@
     <%--Judge Table--%>
     <div class="row">
         <div class="col-md-12">
-            <asp:GridView ID="gvJudge" runat="server" CssClass="Grid" AutoGenerateColumns="False" DataKeyNames="JudgeID" DataSourceID="SqlDataSource3" Width="100%">
+            <asp:GridView ID="gvJudge" runat="server"  AutoGenerateColumns="False" DataKeyNames="JudgeID" DataSourceID="SqlDataSource3" Width="100%" BackColor="White" BorderColor="#ffffff" BorderStyle="None" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="None">
+                <AlternatingRowStyle BackColor="#CCCCCC" />
                 <Columns>
                     <asp:BoundField DataField="JudgeID" HeaderText="JudgeID" SortExpression="JudgeID" InsertVisible="False" ReadOnly="True">
+                        <HeaderStyle  Font-Names="roboto-bold" Font-Size="12pt" />
+                            <ItemStyle Font-Names="roboto-regular" Font-Size="12pt" />
                     </asp:BoundField>
-                    <asp:BoundField DataField="FirstName" HeaderText="FirstName" SortExpression="FirstName">
+                    <asp:BoundField DataField="FirstName" HeaderText="First Name" SortExpression="FirstName">
+                        <HeaderStyle  Font-Names="roboto-bold" Font-Size="12pt" />
+                            <ItemStyle Font-Names="roboto-regular" Font-Size="12pt" />
                     </asp:BoundField>
-                    <asp:BoundField DataField="LastName" HeaderText="LastName" SortExpression="LastName">
+                    <asp:BoundField DataField="LastName" HeaderText="Last Name" SortExpression="LastName">
+                        <HeaderStyle  Font-Names="roboto-bold" Font-Size="12pt" />
+                            <ItemStyle Font-Names="roboto-regular" Font-Size="12pt" />
                     </asp:BoundField>
                     <asp:BoundField DataField="Company" HeaderText="Company" SortExpression="Company">
+                        <HeaderStyle  Font-Names="roboto-bold" Font-Size="12pt" />
+                            <ItemStyle Font-Names="roboto-regular" Font-Size="12pt" />
                     </asp:BoundField>
                     <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email">
+                        <HeaderStyle  Font-Names="roboto-bold" Font-Size="12pt" />
+                            <ItemStyle Font-Names="roboto-regular" Font-Size="12pt" />
                     </asp:BoundField>
-                    <asp:BoundField DataField="CompanySite" HeaderText="CompanySite" SortExpression="CompanySite" />
-                    <asp:BoundField DataField="Website2" HeaderText="Personal Site" SortExpression="Website2" />
+                    <asp:BoundField DataField="CompanySite" HeaderText="CompanySite" SortExpression="CompanySite" >
+                        <HeaderStyle Font-Names="roboto-bold" Font-Size="12pt" />
+                            <ItemStyle Font-Names="roboto-regular" Font-Size="12pt" />
+                        </asp:BoundField>
+                    <asp:BoundField DataField="Website2" HeaderText="Personal Site" SortExpression="Website2" >
+                        <HeaderStyle  Font-Names="roboto-bold" Font-Size="12pt" />
+                            <ItemStyle Font-Names="roboto-regular" Font-Size="12pt" />
+                        </asp:BoundField>
                     <asp:TemplateField HeaderText="Edit">
                         <EditItemTemplate>
                             <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="True" CommandName="Update" Text="Update"></asp:LinkButton>
@@ -248,18 +298,18 @@
                             &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="False" OnClientClick="return confirm('Are you sure you want to delete judge?');" CommandName="Delete" Text="Delete"></asp:LinkButton>
                         </ItemTemplate>
                         <ControlStyle CssClass="smpadding" />
-                        <HeaderStyle CssClass="padding" />
-                        <ItemStyle CssClass="smpadding" />
+                        <HeaderStyle CssClass="padding" Font-Names="roboto-bold" Font-Size="12pt"/>
+                        <ItemStyle CssClass="smpadding" Font-Names="roboto-regular" Font-Size="12pt" />
                     </asp:TemplateField>
                 </Columns>
-                        <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
-                        <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
-                        <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
-                        <SelectedRowStyle BackColor="#FFDF00" Font-Bold="True" ForeColor="Black" />
-                        <SortedAscendingCellStyle BackColor="#F7F7F7" />
-                        <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
-                        <SortedDescendingCellStyle BackColor="#E5E5E5" />
-                        <SortedDescendingHeaderStyle BackColor="#242121" />
+                        <FooterStyle BackColor="#CCCCCC" />
+                        <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
+                        <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+                        <SelectedRowStyle BackColor="#FFCD00" Font-Bold="True" ForeColor="White" />
+                        <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                        <SortedAscendingHeaderStyle BackColor="#808080" />
+                        <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                        <SortedDescendingHeaderStyle BackColor="#383838" />
             </asp:GridView>
             <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [JudgeID], [FirstName], [LastName], [Company], [Email], [CompanySite], [Website2] FROM [Judges] where competitionID IS NULL" UpdateCommand="UPDATE [Judges] SET [FirstName] = @FirstName, [LastName]=@LastName, [Company]=@Company, [Email]=@Email, [CompanySite]=@CompanySite, [Website2]=@Website2  WHERE [JudgeID] = @original_JudgeID  " OldValuesParameterFormatString="original_{0}" DeleteCommand="DELETE FROM [Judges] where [JudgeID] = @original_JudgeID">
                  <DeleteParameters>
@@ -280,24 +330,38 @@
     <%--Host Table--%>
     <div class="row">
         <div class="col-md-12">
-            <asp:GridView ID="gvHost" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource5" DataKeyNames="HostID" Width="100%">
+            <asp:GridView ID="gvHost" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource5" DataKeyNames="HostID" Width="100%" BackColor="White" BorderColor="#ffffff" BorderStyle="None" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="None">
+                <AlternatingRowStyle BackColor="#CCCCCC" />
                 <Columns>
-                    <asp:BoundField DataField="Host" HeaderText="Host" SortExpression="Host" />
-                    <asp:BoundField DataField="Website" HeaderText="Website" SortExpression="Website" />
-                    <asp:BoundField DataField="Contact" HeaderText="Contact" SortExpression="Contact" />
-                    <asp:BoundField DataField="Team" HeaderText="Team" SortExpression="Team" />
+                    <asp:BoundField DataField="Host" HeaderText="Host" SortExpression="Host" >
+                    <HeaderStyle Font-Names="roboto-bold" Font-Size="12pt" />
+                            <ItemStyle Font-Names="roboto-regular" Font-Size="12pt" />
+                        </asp:BoundField>
+                    <asp:BoundField DataField="Website" HeaderText="Website" SortExpression="Website" >
+                    <HeaderStyle Font-Names="roboto-bold" Font-Size="12pt" />
+                            <ItemStyle Font-Names="roboto-regular" Font-Size="12pt" />
+                        </asp:BoundField>
+                    <asp:BoundField DataField="Contact" HeaderText="Contact" SortExpression="Contact" >
+                    <HeaderStyle Font-Names="roboto-bold" Font-Size="12pt" />
+                            <ItemStyle Font-Names="roboto-regular" Font-Size="12pt" />
+                        </asp:BoundField>
+                    <asp:BoundField DataField="Team" HeaderText="Team" SortExpression="Team" >
+                    <HeaderStyle Font-Names="roboto-bold" Font-Size="12pt" />
+                            <ItemStyle Font-Names="roboto-regular" Font-Size="12pt" />
+                        </asp:BoundField>
                     <asp:CommandField HeaderText="Edit" ShowDeleteButton="True" ShowEditButton="True" ShowHeader="True" >
-                        <HeaderStyle CssClass="center" />
+                        <HeaderStyle Font-Names="roboto-bold" Font-Size="12pt" />
+                            <ItemStyle Font-Names="roboto-regular" Font-Size="12pt" />
                     </asp:CommandField>
                 </Columns>
-                        <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
-                        <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
-                        <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
-                        <SelectedRowStyle BackColor="#FFDF00" Font-Bold="True" ForeColor="Black" />
-                        <SortedAscendingCellStyle BackColor="#F7F7F7" />
-                        <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
-                        <SortedDescendingCellStyle BackColor="#E5E5E5" />
-                        <SortedDescendingHeaderStyle BackColor="#242121" />
+                        <FooterStyle BackColor="#CCCCCC" />
+                        <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
+                        <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+                        <SelectedRowStyle BackColor="#FFCD00" Font-Bold="True" ForeColor="White" />
+                        <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                        <SortedAscendingHeaderStyle BackColor="#808080" />
+                        <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                        <SortedDescendingHeaderStyle BackColor="#383838" />
             </asp:GridView>
             <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [HostID], [Host], [Website], [Contact], [Team] FROM [Team_host] WHERE ([CompetitionID] IS NULL)" UpdateCommand="UPDATE [Team_host] SET [Host] = @Host, [Website] = @Website, [Contact] = @Contact, [Team] = @Team WHERE [HostID] = @original_HostID" OldValuesParameterFormatString="original_{0}" DeleteCommand="DELETE FROM [Team_host] where [HostID] = @original_HostID">
                 <DeleteParameters>
@@ -341,9 +405,9 @@
     </div>
 
     <div class="form-group col-md-12">
-        <asp:Label class="control-label col-sm-3" ID="lblFirst" runat="server" Text="Host Name:"></asp:Label>
+        <asp:Label class="control-label col-sm-3" ID="lblFirst" runat="server" Text="Host Name:" Font-Names="roboto-bold" Font-Size="12pt" ></asp:Label>
         <div class="col-sm-5">
-            <asp:TextBox ID="txtHost" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtHost" Width="50%" runat="server"></asp:TextBox>
         </div>
         <div class="col-sm-4">
             <asp:RequiredFieldValidator ID="rfvHost" ValidationGroup="new" runat="server" ErrorMessage="Require Host Name" CssClass="text-danger" Text="Required" Display="Dynamic" ControlToValidate="txtHost">Required</asp:RequiredFieldValidator>
@@ -351,16 +415,16 @@
     </div>
 
       <div class="form-group col-md-12">
-        <asp:Label class="control-label col-sm-3" ID="lblWebsite" runat="server" Text="Website :"></asp:Label>
+        <asp:Label class="control-label col-sm-3" ID="lblWebsite" runat="server" Text="Website :" Font-Names="roboto-bold" Font-Size="12pt"></asp:Label>
         <div class="col-sm-5">
-            <asp:TextBox ID="txtWebsite" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtWebsite" Width="50%" runat="server"></asp:TextBox>
         </div>
     </div> 
     
     <div class="form-group col-md-12">
-        <asp:Label class="control-label col-sm-3" ID="lblContact" runat="server" Text="Contact :"></asp:Label>
+        <asp:Label class="control-label col-sm-3" ID="lblContact" runat="server" Text="Contact :" Font-Names="roboto-bold" Font-Size="12pt"></asp:Label>
         <div class="col-sm-5">
-            <asp:TextBox ID="txtContact" placeholder="###-###-####" TextMode="Phone" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtContact" placeholder="###-###-####" TextMode="Phone" Font-Names="roboto-bold" Font-Size="12pt" runat="server" Width="50%"></asp:TextBox>
         </div>
         <div class="col-sm-4">
             <asp:RequiredFieldValidator ID="RequiredFieldValidator3" ValidationGroup="new" runat="server" ErrorMessage="Require Contact" CssClass="text-danger" Text="Required" Display="Dynamic" ControlToValidate="txtContact">Required</asp:RequiredFieldValidator>
@@ -373,9 +437,9 @@
 
 
     <div class="form-group col-md-12">
-        <asp:Label class="control-label col-sm-3" ID="lblTeam" runat="server" Text="Team Assignment:"></asp:Label>
+        <asp:Label class="control-label col-sm-3" ID="lblTeam" runat="server" Text="Team Assignment:" Font-Names="roboto-bold" Font-Size="12pt"></asp:Label>
         <div class="col-sm-5">
-            <asp:TextBox ID="txtTeam" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtTeam" Width="50%" runat="server"></asp:TextBox>
         </div>
         <div class="col-sm-4">
             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ValidationGroup="new" runat="server" ErrorMessage="Require Team" CssClass="text-danger" Text="Required" Display="Dynamic" ControlToValidate="txtTeam">Required</asp:RequiredFieldValidator>

@@ -340,7 +340,8 @@
     font-size: 20px;
 }
 .hyperlink:hover {
-    color: rgb(255,223,0)
+    color: black;
+    text-decoration: underline;
 }
 .bottomdiv {
     position: absolute;
