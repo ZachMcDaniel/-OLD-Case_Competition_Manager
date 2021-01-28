@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="Team Host" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="TeamHost.aspx.cs" Inherits="CaseCompetitionApp.TeamHost" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
- <div>
+    <div>
         <h2 style="font-size:65px; font-family: ZillaSlab-SemiBold">Team Host</h2>
         <div>
             <hr style="border-top: 3px solid #FFCD00" />
@@ -10,37 +10,38 @@
           
     </div>
 
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" Width="100%">
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" Width="100%" BackColor="White" BorderColor="#ffffff" BorderStyle="None" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="None" Height="175px">
+        <AlternatingRowStyle BackColor="#CCCCCC" />
         <Columns>
             <asp:BoundField DataField="Host" HeaderText="Host" SortExpression="Host">
                 <ControlStyle CssClass="padding" />
-                <HeaderStyle CssClass="center" />
-                <ItemStyle CssClass="padding" />
+                <HeaderStyle  Font-Names="roboto-bold" Font-Size="12pt" />
+                            <ItemStyle Font-Names="roboto-regular" Font-Size="12pt" />
                 </asp:BoundField>
             <asp:HyperLinkField runat="server" DataNavigateUrlFields="Website" DataTextField="Website" target="_blank" HeaderText="Website" SortExpression="Website" DataNavigateUrlFormatString="http://{0}" >
-                <ControlStyle CssClass="center" />
-                <HeaderStyle CssClass="center" />
-                <ItemStyle CssClass="center" />
+                <ControlStyle CssClass="padding" />
+                <HeaderStyle  Font-Names="roboto-bold" Font-Size="12pt" />
+                            <ItemStyle Font-Names="roboto-regular" Font-Size="12pt" />
             </asp:HyperLinkField>
             <asp:BoundField DataField="Contact" HeaderText="Contact" SortExpression="Contact" >
                 <ControlStyle CssClass="padding" />
-                <HeaderStyle CssClass="center" />
-                <ItemStyle CssClass="padding" />
+                <HeaderStyle  Font-Names="roboto-bold" Font-Size="12pt" />
+                            <ItemStyle Font-Names="roboto-regular" Font-Size="12pt" />
                 </asp:BoundField>
             <asp:BoundField DataField="Team" HeaderText="Team" SortExpression="Team" >
                 <ControlStyle CssClass="padding" />
-                <HeaderStyle CssClass="center" />
-                <ItemStyle CssClass="padding" />
+                <HeaderStyle  Font-Names="roboto-bold" Font-Size="12pt" />
+                            <ItemStyle Font-Names="roboto-regular" Font-Size="12pt" />
             </asp:BoundField>
         </Columns>
-        <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
-            <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
-            <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
-            <SelectedRowStyle BackColor="#FFDF00" Font-Bold="True" ForeColor="Black" />
-            <SortedAscendingCellStyle BackColor="#F7F7F7" />
-            <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
-            <SortedDescendingCellStyle BackColor="#E5E5E5" />
-            <SortedDescendingHeaderStyle BackColor="#242121" />
+        <FooterStyle BackColor="#CCCCCC" />
+            <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+            <SelectedRowStyle BackColor="#FFCD00" Font-Bold="True" ForeColor="White" />
+            <SortedAscendingCellStyle BackColor="#F1F1F1" />
+            <SortedAscendingHeaderStyle BackColor="#808080" />
+            <SortedDescendingCellStyle BackColor="#CAC9C9" />
+            <SortedDescendingHeaderStyle BackColor="#383838" />
     </asp:GridView>
 
 

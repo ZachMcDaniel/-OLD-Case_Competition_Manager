@@ -13,7 +13,7 @@
  }
 
 .dropbtn {
-    padding: 16px;
+    padding-top: 12px;
     background-color: #000000;
     border: none;
     color: white;
@@ -50,7 +50,8 @@
 
         /* Change color of dropdown links on hover */
         .dropdown-content a:hover {
-            color: rgb(255,223,0);
+            color: white;
+            text-decoration: underline;
         }
 
 /* Show the dropdown menu on hover */
@@ -60,8 +61,9 @@
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
-    color: rgb(255,223,0);
+    color: white;
     background-color: #000000;
+    text-decoration: underline;
 }
 .none{
     resize: none;
@@ -300,7 +302,8 @@
 }
 
     #white:hover {
-        color: rgb(255,223,0);
+        color: white !important;
+        text-decoration: underline;
     }
 
 #white1 {
@@ -308,7 +311,8 @@
 }
 
     #white1:hover {
-        color: rgb(255,223,0);
+        color: white !important;
+        text-decoration: underline;
     }
 
 #white2 {
@@ -316,19 +320,22 @@
 }
 
     #white2:hover {
-        color: rgb(255,223,0) !important;
+        color: white !important;
+        text-decoration: underline;
     }
 
 #white3 {
     color: white !important;
 }
     #white3:hover {
-        color: rgb(255,223,0) !important;
+        color: white !important;
+        text-decoration: underline;
     }
 
 .nav > li.customclass1 > a:hover, .nav > li.customclass1 > a:focus {
     background-color: inherit;
-    color: #FFDF00;
+    color: white;
+    text-decoration: underline;
 }
 
 .nav > li.customclass1 > a {
@@ -397,8 +404,7 @@ flex: inherit;
 
 .Grid {
     table-layout: fixed;
-    width: 100%;
-}
+    }
 
     .Grid .Shorter {
         overflow: hidden;

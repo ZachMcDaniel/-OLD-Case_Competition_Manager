@@ -45,7 +45,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" runat="server" id="white2" href="~/">Home</a>
+                    <a class="navbar-brand" runat="server" id="white2" style="font-family:Roboto-Bold; font-size: 14pt" href="~/">Home</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
@@ -55,28 +55,28 @@
                                 <RoleGroups>
                                     <asp:RoleGroup Roles="competitor, admin, judge">
                                         <ContentTemplate>
-                                            <a runat="server" id="white" href="~/Hub">HUB</a>
+                                            <a runat="server" id="white" style="font-family:Roboto-Bold; font-size: 14pt" href="~/Hub">HUB</a>
                                         </ContentTemplate>
                                     </asp:RoleGroup>
                                 </RoleGroups>
                             </asp:LoginView>
                         </li>
                         <li class="dropdown">
-                            <button class="dropbtn">Competition Info</button>
+                            <button class="dropbtn" style="font-family:Roboto-Bold; font-size: 14pt">Competition</button>
                             <div class="dropdown-content">
-                                <a runat="server" href="~/EventInformation">Event Details</a>
-                                <a runat="server" href="~/TeamInfo">Team Info</a>
-                                <a runat="server" href="~/Results">Results</a>
+                                <a runat="server"  style="font-family:Roboto-Regular; font-size: 12pt" href="~/EventInformation">Event Details</a>
+                                <a runat="server" style="font-family:Roboto-Regular; font-size: 12pt" href="~/TeamInfo">Team Info</a>
+                                <a runat="server"  style="font-family:Roboto-Regular; font-size: 12pt" href="~/Results">Results</a>
                             </div>
                         </li>
-                        <li><a runat="server" id="white1" href="~/News">News</a></li>
-                        <li class="customclass1"><a runat="server" id="white3" href="~/About">About</a></li>
+                        <li><a runat="server" id="white1" style="font-family:Roboto-Bold; font-size: 14pt" href="~/News">News</a></li>
+                        <li class="customclass1"><a runat="server" id="white3" style="font-family:Roboto-Bold; font-size: 14pt" href="~/About">About</a></li>
                         <li class="customclass1">
                             <asp:LoginView runat="server">
                                 <RoleGroups>
                                     <asp:RoleGroup Roles="admin">
                                         <ContentTemplate>
-                                            <a runat="server" href="~/Maintenance">Admin</a>
+                                            <a runat="server" style="font-family:Roboto-Bold; font-size: 14pt" href="~/Maintenance">Admin</a>
                                         </ContentTemplate>
                                     </asp:RoleGroup>
                                 </RoleGroups>
@@ -86,16 +86,16 @@
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
                             <ul class="nav navbar-nav navbar-right">
-                                <li class="customclass1"><a runat="server" href="~/Account/JudgeRegister">Register Judge</a></li>
-                                <li class="customclass1"><a runat="server" href="~/Account/Register">Register Team</a></li>
-                                <li class="customclass1"><a runat="server" href="~/Account/Login">Log in</a></li>
+                                <li class="customclass1"><a runat="server" style="font-family:Roboto-Regular; font-size: 12pt" href="~/Account/JudgeRegister">Register Judge</a></li>
+                                <li class="customclass1"><a runat="server" style="font-family:Roboto-Regular; font-size: 12pt" href="~/Account/Register">Register Team</a></li>
+                                <li class="customclass1"><a runat="server" style="font-family:Roboto-Regular; font-size: 12pt" href="~/Account/Login">Log in</a></li>
                             </ul>
                         </AnonymousTemplate>
                         <LoggedInTemplate>
                             <ul class="nav navbar-nav navbar-right">
-                                <li class="customclass1"><a runat="server" href="~/Account/Manage" title="Manage your account">Hello, <%: Context.User.Identity.GetUserName()  %> !</a></li>
+                                <li class="customclass1"><a runat="server" style="font-family:Roboto-Regular; font-size: 12pt" href="~/Account/Manage" title="Manage your account">Hello, <%: Context.User.Identity.GetUserName()  %> !</a></li>
                                 <li class="customclass1">
-                                    <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
+                                    <asp:LoginStatus runat="server" style="font-family:Roboto-Regular; font-size: 12pt" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
                                 </li>
                             </ul>
                         </LoggedInTemplate>
@@ -114,8 +114,8 @@
                 <a target="_blank" href="https://uiowa.edu/">
                     <img src="Images/Block-IOWA-GOLD-ffcd00.png" style="height:75px; width:150px" />
                 </a>
-                <p class="col-md-12"><a runat="server" class="white"  style="text-align:left" href="~/ContactInfo">Contact Us</a> </p>
-                <p class="col-md-12"><a runat="server" class="white" href="~/CompetitionSupport">Competition Support</a> </p>
+                <p class="col-md-12"><a runat="server" class="white"  style="text-align:left ; font-family:Roboto-Regular; font-size: 14pt"  href="~/ContactInfo">Contact Us</a> </p>
+                <p class="col-md-12"><a runat="server" class="white" style="text-align:left ; font-family:Roboto-Regular; font-size: 14pt" href="~/CompetitionSupport">Competition Support</a> </p>
                 <p class="whitefoot col-md-12">&copy; <%: DateTime.Now.Year %> - University of Iowa Tippie Technology and Innovation</p>
             </div>
         </footer>

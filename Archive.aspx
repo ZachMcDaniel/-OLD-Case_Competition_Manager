@@ -28,37 +28,38 @@
 
     <div class="row">
         <div class="col-md-12">
-            <asp:GridView ID="gvCompete" runat="server" AutoGenerateColumns="False" DataSourceID="SqlCompetition" Width="100%" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" DataKeyNames="CompetitionID">
+            <asp:GridView ID="gvCompete" runat="server" AutoGenerateColumns="False" DataSourceID="SqlCompetition" Width="100%" BackColor="White" BorderColor="#ffffff" BorderStyle="None" BorderWidth="1px" CellPadding="3" ForeColor="Black" DataKeyNames="CompetitionID" GridLines="None" Height="165px">
+                <AlternatingRowStyle BackColor="#CCCCCC" />
                 <Columns>
                     <asp:BoundField DataField="CompetitionName" HeaderText="Competition Name" SortExpression="CompetitionName" >
                     <ControlStyle CssClass="padding" />
-                    <HeaderStyle CssClass="padding" />
-                    <ItemStyle CssClass="padding" />
+                    <HeaderStyle  Font-Names="roboto-bold" Font-Size="12pt" />
+                            <ItemStyle Font-Names="roboto-regular" Font-Size="12pt" />
                     </asp:BoundField>
                     <asp:BoundField DataField="CompetitionDate" HeaderText="Competition Date" SortExpression="CompetitionDate" >
                         <ControlStyle CssClass="padding" />
-                    <HeaderStyle CssClass="padding" />
-                    <ItemStyle CssClass="padding" />
+                    <HeaderStyle  Font-Names="roboto-bold" Font-Size="12pt" />
+                            <ItemStyle Font-Names="roboto-regular" Font-Size="12pt" />
                     </asp:BoundField>
                      <asp:HyperLinkField runat="server" DataNavigateUrlFields="Dropbox" DataTextField="Dropbox" target="_blank" HeaderText="Dropbox" SortExpression="Dropbox" DataNavigateUrlFormatString="http://{0}" >
                 <ControlStyle CssClass="center" />
-                <HeaderStyle CssClass="center" />
-                <ItemStyle CssClass="center" />
+                <HeaderStyle  Font-Names="roboto-bold" Font-Size="12pt" />
+                            <ItemStyle Font-Names="roboto-regular" Font-Size="12pt" />
             </asp:HyperLinkField>
                     <asp:CommandField SelectText="View Details" ShowSelectButton="True" >
                         <ControlStyle CssClass="padding" />
-                    <HeaderStyle CssClass="padding" />
-                    <ItemStyle CssClass="padding" />
+                   <HeaderStyle  Font-Names="roboto-bold" Font-Size="12pt" />
+                            <ItemStyle Font-Names="roboto-regular" Font-Size="12pt" />
                     </asp:CommandField>
                 </Columns>
-                <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
-            <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
-            <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
-            <SelectedRowStyle BackColor="#FFDF00" Font-Bold="True" ForeColor="Black" />
-            <SortedAscendingCellStyle BackColor="#F7F7F7" />
-            <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
-            <SortedDescendingCellStyle BackColor="#E5E5E5" />
-            <SortedDescendingHeaderStyle BackColor="#242121" />
+                <FooterStyle BackColor="#CCCCCC" />
+            <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+            <SelectedRowStyle BackColor="#FFCD00" Font-Bold="True" ForeColor="White" />
+            <SortedAscendingCellStyle BackColor="#F1F1F1" />
+            <SortedAscendingHeaderStyle BackColor="#808080" />
+            <SortedDescendingCellStyle BackColor="#CAC9C9" />
+            <SortedDescendingHeaderStyle BackColor="#383838" />
             </asp:GridView>
             <asp:SqlDataSource ID="SqlCompetition" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT CompetitionId, CompetitionName, FORMAT([CompetitionDate], 'MM/dd/yy') AS CompetitionDate,Dropbox FROM [Competition]"></asp:SqlDataSource>
         </div>
@@ -66,37 +67,38 @@
     <br />
      <div class="row">
         <div class="col-md-12">
-            <asp:GridView ID="gvJudge" runat="server" AutoGenerateColumns="False" DataSourceID="SqlJudge" Width="100%" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black">
+            <asp:GridView ID="gvJudge" runat="server" AutoGenerateColumns="False" DataSourceID="SqlJudge" Width="100%" BackColor="White" BorderColor="#ffffff" BorderStyle="None" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="None">
+                <AlternatingRowStyle BackColor="#CCCCCC" />
                 <Columns>
                     <asp:BoundField DataField="JudgeName" HeaderText="Judge Name" SortExpression="JudgeName" >
                     <ControlStyle CssClass="padding" />
-                    <HeaderStyle CssClass="padding" />
-                    <ItemStyle CssClass="padding" />
+                    <HeaderStyle  Font-Names="roboto-bold" Font-Size="12pt" />
+                            <ItemStyle Font-Names="roboto-regular" Font-Size="12pt" />
                     </asp:BoundField>
                     <asp:BoundField DataField="Company" HeaderText="Company" SortExpression="Company" >
                         <ControlStyle CssClass="padding" />
-                    <HeaderStyle CssClass="padding" />
-                    <ItemStyle CssClass="padding" />
+                   <HeaderStyle  Font-Names="roboto-bold" Font-Size="12pt" />
+                            <ItemStyle Font-Names="roboto-regular" Font-Size="12pt" />
                     </asp:BoundField>
                     <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" >
                         <ControlStyle CssClass="padding" />
-                    <HeaderStyle CssClass="padding" />
-                    <ItemStyle CssClass="padding" />
+                    <HeaderStyle  Font-Names="roboto-bold" Font-Size="12pt" />
+                            <ItemStyle Font-Names="roboto-regular" Font-Size="12pt" />
                     </asp:BoundField>
                     <asp:HyperLinkField runat="server" DataNavigateUrlFields="CompanySite" DataTextField="CompanySite" target="_blank" HeaderText="Company Site" SortExpression="CompanySite" DataNavigateUrlFormatString="http://{0}" >
             <ControlStyle CssClass="padding" />
-            <HeaderStyle CssClass="padding" />
-            <ItemStyle CssClass="padding" />
+            <HeaderStyle  Font-Names="roboto-bold" Font-Size="12pt" />
+                            <ItemStyle Font-Names="roboto-regular" Font-Size="12pt" />
             </asp:HyperLinkField>
                 </Columns>
-                <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
-            <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
-            <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
-            <SelectedRowStyle BackColor="#FFDF00" Font-Bold="True" ForeColor="Black" />
-            <SortedAscendingCellStyle BackColor="#F7F7F7" />
-            <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
-            <SortedDescendingCellStyle BackColor="#E5E5E5" />
-            <SortedDescendingHeaderStyle BackColor="#242121" />
+                <FooterStyle BackColor="#CCCCCC" />
+            <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+            <SelectedRowStyle BackColor="#FFCD00" Font-Bold="True" ForeColor="White" />
+            <SortedAscendingCellStyle BackColor="#F1F1F1" />
+            <SortedAscendingHeaderStyle BackColor="#808080" />
+            <SortedDescendingCellStyle BackColor="#CAC9C9" />
+            <SortedDescendingHeaderStyle BackColor="#383838" />
             </asp:GridView>
             <asp:SqlDataSource ID="SqlJudge" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT concat([FirstName], ' ', [LastName]) AS JudgeName, [Company], [Email], [CompanySite] FROM [Judges] WHERE ([CompetitionID] = @CompetitionID)">
                 <SelectParameters>
@@ -109,32 +111,33 @@
 
     <div class="row">
         <div class="col-md-7"> 
-            <asp:GridView ID="gvTeam" runat="server" Width="100%" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" AutoGenerateColumns="False" DataSourceID="SqlTeam" DataKeyNames="TeamID">
+            <asp:GridView ID="gvTeam" runat="server" Width="100%" BackColor="White" BorderColor="#ffffff" BorderStyle="None" BorderWidth="1px" CellPadding="3" ForeColor="Black" AutoGenerateColumns="False" DataSourceID="SqlTeam" DataKeyNames="TeamID" GridLines="None">
+                <AlternatingRowStyle BackColor="#CCCCCC" />
                 <Columns>
                     <asp:BoundField DataField="TeamName" HeaderText="Team Name" SortExpression="TeamName" >
                         <ControlStyle CssClass="padding" />
-                    <HeaderStyle CssClass="padding" />
-                    <ItemStyle CssClass="padding" />
+                    <HeaderStyle  Font-Names="roboto-bold" Font-Size="12pt" />
+                            <ItemStyle Font-Names="roboto-regular" Font-Size="12pt" />
                     </asp:BoundField>
                     <asp:BoundField DataField="School" HeaderText="School" SortExpression="School" >
                         <ControlStyle CssClass="padding" />
-                    <HeaderStyle CssClass="padding" />
-                    <ItemStyle CssClass="padding" />
+                    <HeaderStyle  Font-Names="roboto-bold" Font-Size="12pt" />
+                            <ItemStyle Font-Names="roboto-regular" Font-Size="12pt" />
                     </asp:BoundField>
                     <asp:CommandField SelectText="View Members" ShowSelectButton="True" >
                         <ControlStyle CssClass="padding" />
-                    <HeaderStyle CssClass="padding" />
-                    <ItemStyle CssClass="padding" />
+                    <HeaderStyle  Font-Names="roboto-bold" Font-Size="12pt" />
+                            <ItemStyle Font-Names="roboto-regular" Font-Size="12pt" />
                     </asp:CommandField>
                 </Columns>
-                <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
-            <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
-            <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
-            <SelectedRowStyle BackColor="#FFDF00" Font-Bold="True" ForeColor="Black" />
-            <SortedAscendingCellStyle BackColor="#F7F7F7" />
-            <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
-            <SortedDescendingCellStyle BackColor="#E5E5E5" />
-            <SortedDescendingHeaderStyle BackColor="#242121" />
+                <FooterStyle BackColor="#CCCCCC" />
+            <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+            <SelectedRowStyle BackColor="#FFCD00" Font-Bold="True" ForeColor="White" />
+            <SortedAscendingCellStyle BackColor="#F1F1F1" />
+            <SortedAscendingHeaderStyle BackColor="#808080" />
+            <SortedDescendingCellStyle BackColor="#CAC9C9" />
+            <SortedDescendingHeaderStyle BackColor="#383838" />
             </asp:GridView>
             <asp:SqlDataSource ID="SqlTeam" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT * FROM [TEAM] WHERE ([CompetitionID] = @CompetitionID)">
                 <SelectParameters>
@@ -143,22 +146,23 @@
             </asp:SqlDataSource>
         </div>
         <div class="col-md-5">
-            <asp:GridView ID="gvMembers" runat="server" AutoGenerateColumns="False" Width="100%" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" DataSourceID="SQLMembers">
+            <asp:GridView ID="gvMembers" runat="server" AutoGenerateColumns="False" Width="100%" BackColor="White" BorderColor="#ffffff" BorderStyle="None" BorderWidth="1px" CellPadding="3" ForeColor="Black" DataSourceID="SQLMembers" GridLines="None">
+                <AlternatingRowStyle BackColor="#CCCCCC" />
                 <Columns>
                     <asp:BoundField DataField="Name" HeaderText="Competitor Name" SortExpression="Name" >
                         <ControlStyle CssClass="padding" />
-                    <HeaderStyle CssClass="padding" />
-                    <ItemStyle CssClass="padding" />
+                    <HeaderStyle  Font-Names="roboto-bold" Font-Size="12pt" />
+                            <ItemStyle Font-Names="roboto-regular" Font-Size="12pt" />
                     </asp:BoundField>
                 </Columns>
-                <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
-            <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
-            <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
-            <SelectedRowStyle BackColor="#FFDF00" Font-Bold="True" ForeColor="Black" />
-            <SortedAscendingCellStyle BackColor="#F7F7F7" />
-            <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
-            <SortedDescendingCellStyle BackColor="#E5E5E5" />
-            <SortedDescendingHeaderStyle BackColor="#242121" />
+                <FooterStyle BackColor="#CCCCCC" />
+            <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+            <SelectedRowStyle BackColor="#FFCD00" Font-Bold="True" ForeColor="White" />
+            <SortedAscendingCellStyle BackColor="#F1F1F1" />
+            <SortedAscendingHeaderStyle BackColor="#808080" />
+            <SortedDescendingCellStyle BackColor="#CAC9C9" />
+            <SortedDescendingHeaderStyle BackColor="#383838" />
             </asp:GridView>
             <asp:SqlDataSource ID="SQLMembers" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT concat([FirstName], ' ', [LastName]) AS Name FROM [Members] WHERE ([TeamID] = @TeamID)">
                 <SelectParameters>

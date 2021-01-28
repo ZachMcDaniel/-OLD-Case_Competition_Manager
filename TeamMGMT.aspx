@@ -9,10 +9,11 @@
         <h2 style="font-size: 30px; font-family: Roboto-Regular">Add or Remove Members & Edit Information</h2>
           <br />
     </div>
-
+    
 <div class="row center"> 
     <asp:ValidationSummary ID="ValidationSummary1" ValidationGroup="Grid" runat="server" />
-    <asp:GridView ID="GridView1" CssClass="Grid" runat="server" AutoGenerateColumns="False" DataKeyNames="MemberID" DataSourceID="SqlDataSource1" Width="100%" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" AllowSorting="True">
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="MemberID" DataSourceID="SqlDataSource1" Width="100%" BackColor="White" BorderColor="#ffffff" BorderStyle="None" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="None" AllowSorting="True" Height="165px">
+        <AlternatingRowStyle BackColor="#CCCCCC" />
         <Columns>
             <asp:TemplateField HeaderText="First Name" SortExpression="FirstName">
                 <EditItemTemplate>
@@ -22,9 +23,9 @@
                 <ItemTemplate>
                     <asp:Label ID="Label2" runat="server" Text='<%# Bind("FirstName") %>'></asp:Label>
                 </ItemTemplate>
-                <ControlStyle CssClass="Shorter" />
-                <HeaderStyle CssClass="center Shorter" />
-                <ItemStyle CssClass="center Shorter" />
+            
+                <HeaderStyle CssClass="center"  font-names="Roboto-Bold" Font-Size="11pt"  />
+                <ItemStyle font-names="Roboto-Regular" Font-Size="11pt"  />
             </asp:TemplateField>
             <asp:TemplateField HeaderText="Last Name" SortExpression="LastName">
                 <EditItemTemplate>
@@ -34,9 +35,9 @@
                 <ItemTemplate>
                     <asp:Label ID="Label3" runat="server" Text='<%# Bind("LastName") %>'></asp:Label>
                 </ItemTemplate>
-                <ControlStyle CssClass="Shorter" />
-                <HeaderStyle CssClass="center Shorter" />
-                <ItemStyle CssClass="center Shorter" />
+                
+                <HeaderStyle CssClass="Shorter center" font-names="Roboto-Bold" Font-Size="11pt"  />
+                <ItemStyle CssClass=" Shorter" font-names="Roboto-Regular" Font-Size="11pt"  />
             </asp:TemplateField>
             <asp:TemplateField HeaderText="Email" SortExpression="Email">
                 <EditItemTemplate>
@@ -46,9 +47,9 @@
                 <ItemTemplate>
                     <asp:Label ID="Label4" runat="server" Text='<%# Bind("Email") %>'></asp:Label>
                 </ItemTemplate>
-                <ControlStyle CssClass="Shorter" />
-                <HeaderStyle CssClass="center Shorter" />
-                <ItemStyle CssClass="center Shorter" />
+                
+                   <HeaderStyle CssClass="Shorter center" font-names="Roboto-Bold" Font-Size="11pt"  />
+                <ItemStyle CssClass=" Shorter" font-names="Roboto-Regular" Font-Size="11pt"  />
             </asp:TemplateField>
             <asp:TemplateField HeaderText="Phone Number" SortExpression="PhoneNumber">
                 <EditItemTemplate>
@@ -58,45 +59,45 @@
                 <ItemTemplate>
                     <asp:Label ID="Label5" runat="server" Text='<%# Bind("PhoneNumber") %>'></asp:Label>
                 </ItemTemplate>
-                <ControlStyle CssClass="Shorter" />
-                <HeaderStyle CssClass="center Shorter" />
-                <ItemStyle CssClass="center Shorter" />
+                
+                   <HeaderStyle CssClass="Shorter center" font-names="Roboto-Bold" Font-Size="11pt"  />
+                <ItemStyle CssClass=" Shorter" font-names="Roboto-Regular" Font-Size="11pt"  />
             </asp:TemplateField>
             <asp:TemplateField HeaderText="Shirt Size" SortExpression="ShirtSize">
                 <EditItemTemplate>
-                    <asp:TextBox ID="Shirt" runat="server" Text='<%# Bind("ShirtSize") %>'></asp:TextBox>
+                    <asp:TextBox ID="Shirt" Style="width: 50px" CssClass="center" runat="server" Text='<%# Bind("ShirtSize") %>'></asp:TextBox>
                     <asp:RequiredFieldValidator ID="ShirtValidate" ValidationGroup="Grid" runat="server" ControlToValidate="Shirt" ErrorMessage="Shirt size is required"></asp:RequiredFieldValidator>
                 </EditItemTemplate>
                 <ItemTemplate>
                     <asp:Label ID="Label6" runat="server" Text='<%# Bind("ShirtSize") %>'></asp:Label>
                 </ItemTemplate>
-                <ControlStyle CssClass="Shorter" />
-                <HeaderStyle CssClass="center Shorter" Width="75px" />
-                <ItemStyle CssClass="center Shorter" />
+               
+                   <HeaderStyle CssClass="Shorter center" font-names="Roboto-Bold" Font-Size="11pt"  />
+                <ItemStyle CssClass=" Shorter" font-names="Roboto-Regular" Font-Size="11pt"  />
             </asp:TemplateField>
             <asp:TemplateField HeaderText="Food Allergy" SortExpression="FoodAllergy">
                 <EditItemTemplate>
-                    <asp:TextBox ID="TextBox6" runat="server" Text='<%# Bind("FoodAllergy") %>'></asp:TextBox>
+                    <asp:TextBox ID="TextBox6"  CssClass="center" style="width:60%" runat="server" Text='<%# Bind("FoodAllergy") %>'></asp:TextBox>
                 </EditItemTemplate>
                 <ItemTemplate>
                     <asp:Label ID="Label7" runat="server" Text='<%# Bind("FoodAllergy") %>'></asp:Label>
                 </ItemTemplate>
-                <ControlStyle CssClass="Shorter" />
-                <HeaderStyle CssClass="center Shorter" />
-                <ItemStyle CssClass="center Shorter" />
+                
+                   <HeaderStyle CssClass="center" font-names="Roboto-Bold" Font-Size="11pt"  />
+                <ItemStyle  font-names="Roboto-Regular" Font-Size="11pt"  />
             </asp:TemplateField>
             <asp:TemplateField HeaderText="Vegan" SortExpression="Vegan">
                 <EditItemTemplate>
-                    <asp:TextBox ID="txtVegan" runat="server" Text='<%# Bind("VeganNum") %>'></asp:TextBox>
+                    <asp:TextBox ID="txtVegan" CssClass="center" style="width:50px" runat="server" Text='<%# Bind("VeganNum") %>'></asp:TextBox>
                             <asp:RangeValidator ID="ValidateVegan" ValidationGroup="Grid" runat="server" MinimumValue="0" MaximumValue="1" ControlToValidate="txtVegan" Display="None" ErrorMessage="For Vegan, please input 1 for yes or 0 for no"></asp:RangeValidator>
                     <asp:RequiredFieldValidator ID="VeganRequired" ValidationGroup="Grid" runat="server" ControlToValidate="txtVegan" ErrorMessage="Please let us know if you are Vegan"></asp:RequiredFieldValidator>            
                     </EditItemTemplate>
                 <ItemTemplate>
                     <asp:Label ID="Label1" runat="server" Text='<%# Bind("Vegan") %>'></asp:Label>
                 </ItemTemplate>
-                 <ControlStyle CssClass="Shorter" />
-                <HeaderStyle CssClass="center Shorter" Width="75px" />
-                <ItemStyle CssClass="center Shorter" />
+                 
+                   <HeaderStyle CssClass="center" font-names="Roboto-Bold" Font-Size="11pt"  />
+                <ItemStyle CssClass="center" font-names="Roboto-Regular" Font-Size="11pt"  />
             </asp:TemplateField>
             <asp:TemplateField ShowHeader="False">
                 <EditItemTemplate>
@@ -107,19 +108,19 @@
                     <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" CommandName="Edit" Text="Edit"></asp:LinkButton>
                     &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete" OnClientClick="return confirm('Are you sure you want to delete team member?');"></asp:LinkButton>
                 </ItemTemplate>
-                 <ControlStyle CssClass="Shorter" />
-                <HeaderStyle CssClass="Shorter" />
-                <ItemStyle CssClass="Shorter" />
+                 
+                  <HeaderStyle CssClass="center" font-names="Roboto-Bold" Font-Size="11pt"  />
+                <ItemStyle CssClass="center" font-names="Roboto-Regular" Font-Size="11pt"  />
             </asp:TemplateField>
         </Columns>
-        <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
-        <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
-        <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
-        <SelectedRowStyle BackColor="#FFDF00" Font-Bold="True" ForeColor="Black" />
-        <SortedAscendingCellStyle BackColor="#F7F7F7" />
-        <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
-        <SortedDescendingCellStyle BackColor="#E5E5E5" />
-        <SortedDescendingHeaderStyle BackColor="#242121" />
+        <FooterStyle BackColor="#CCCCCC" />
+        <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
+        <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+        <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
+        <SortedAscendingCellStyle BackColor="#F1F1F1" />
+        <SortedAscendingHeaderStyle BackColor="#808080" />
+        <SortedDescendingCellStyle BackColor="#CAC9C9" />
+        <SortedDescendingHeaderStyle BackColor="#383838" />
     </asp:GridView>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="select MemberId, TeamId, FirstName, LastName, Email, FoodAllergy, ShirtSize, PhoneNumber, CASE WHEN Vegan = 1 THEN 'Yes' ELSE 'No' END AS Vegan, Vegan AS VeganNum From [Members] where TeamID = (select TeamID FROM TEAM where TeamName = (select Username FROM AspNetUsers where Id = @ID))"  UpdateCommand="UPDATE [Members] SET [FirstName] = @FirstName, [LastName] = @LastName, [Email] = @Email, [PhoneNumber] = @PhoneNumber, [ShirtSize] = @ShirtSize, [FoodAllergy] = @FoodAllergy, [Vegan] = @VeganNum WHERE [MemberID] = @original_MemberID" OldValuesParameterFormatString="original_{0}" DeleteCommand="DELETE FROM [Members] where [MemberID] = @original_MemberID">
 <SelectParameters>
