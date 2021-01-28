@@ -5,7 +5,7 @@
         <div>
             <hr style="border-top: 3px solid #FFCD00" />
         </div>
-        <h2 style="font-size: 30px; font-family: Roboto-Regular">This year's judges can be found below, along iwth the company they work for. Make sure to check this out!</h2>
+        <h2 style="font-size: 30px; font-family: Roboto-Regular">This year's judges can be found below, along with the company they work for. Make sure to check this out!</h2>
           <br />
     </div>
     <div id="empty" runat="server" class="center">

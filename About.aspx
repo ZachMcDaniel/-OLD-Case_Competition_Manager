@@ -10,8 +10,8 @@
     </div>
     <div>
         <h4 style="font-family: Roboto-Regular; font-size: 18pt">
-            The Case Competition Manager app was created by students as a summer internship provided by Tippie College of Business and Tippie Analytics. Tippie Tech, a business student organization, and Tippie collaborated to create a meaningful experience for students whose internship opportunities were lost due to COVID-19.
-            The app was created by Tippie business analytics students through a summer internship and continued development in university capstone classes.
+            The Case Competition Manager app was created by students as a summer internship provided by Tippie College of Business. Tippie Tech, a business student organization, and the college collaborated to create meaningful experiences for students whose internship opportunities were lost due to COVID-19.
+            The app continued development and recieved new features from a business capstone class. The students who helped make this app possible are listed below!
         </h4>
          <div>
         <br />

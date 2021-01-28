@@ -58,12 +58,13 @@
             <br />
             <br />
             <div class="form-group, center">
-                <h3>Event Schedule</h3>
+                <h3 style="font-family:Roboto-Bold; font-size: 18pt">Event Schedule</h3>
                 <div class="row">
-                    <h5><asp:GridView ID="GridView1" runat="server" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="2" CellSpacing="2" ForeColor="Black" AutoGenerateColumns="False" DataKeyNames="EventID" DataSourceID="SqlDataSource1" Width="1024px" ShowHeaderWhenEmpty="True" ShowFooter="True" HorizontalAlign="Center">
+                    <h5><asp:GridView ID="GridView1" runat="server" BackColor="White" BorderColor="#ffffff" BorderStyle="None" BorderWidth="1px" CellPadding="3" ForeColor="Black" AutoGenerateColumns="False" DataKeyNames="EventID" DataSourceID="SqlDataSource1" Width="90%" ShowHeaderWhenEmpty="True" ShowFooter="True" GridLines="None">
+                        <AlternatingRowStyle BackColor="#CCCCCC" />
                         <Columns>
                             <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
-                            <asp:TemplateField HeaderText="Event ID" InsertVisible="False" SortExpression="EventID">
+                            <asp:TemplateField HeaderText="ID" InsertVisible="False" SortExpression="EventID">
                                 <EditItemTemplate>
                                     <asp:Label ID="EventID" runat="server" Text='<%# Eval("EventID") %>'></asp:Label>
                                 </EditItemTemplate>
@@ -74,7 +75,7 @@
                                     <asp:LinkButton ValidationGroup="INSERT" OnClick="LbInsert_Click" ID="lbInsert" runat="server">Insert</asp:LinkButton>
                                 </FooterTemplate>
                             </asp:TemplateField>
-                            <asp:TemplateField HeaderText="Date: " SortExpression="EventDate">
+                            <asp:TemplateField HeaderText="Date " SortExpression="EventDate">
                                 <EditItemTemplate>
                                     <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("EventDate") %>'></asp:TextBox>
                                     <asp:RequiredFieldValidator ID="rfvEditEventDate" runat="server" ErrorMessage="Enter Event Date" ControlToValidate="TextBox1" Text="*" ForeColor="Red"></asp:RequiredFieldValidator>
@@ -88,7 +89,7 @@
                                 </FooterTemplate>
                                 <ItemStyle Wrap="False" />
                             </asp:TemplateField>
-                            <asp:TemplateField HeaderText="Begins: " SortExpression="EventStartTime">
+                            <asp:TemplateField HeaderText="Begins " SortExpression="EventStartTime">
                                 <EditItemTemplate>
                                     <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("EventStartTime") %>'></asp:TextBox>
                                     <asp:RequiredFieldValidator ID="rfvEditEventStartTime" runat="server" ErrorMessage="Enter Start Time" ControlToValidate="TextBox2" Text="*" ForeColor="Red"></asp:RequiredFieldValidator>
@@ -102,7 +103,7 @@
                                 </FooterTemplate>
                                 <ItemStyle Wrap="False" />
                             </asp:TemplateField>
-                            <asp:TemplateField HeaderText="Ends: " SortExpression="EventEndTime">
+                            <asp:TemplateField HeaderText="Ends " SortExpression="EventEndTime">
                                 <EditItemTemplate>
                                     <asp:TextBox ID="TextBox3" runat="server" Text='<%# Bind("EventEndTime") %>'></asp:TextBox>
                                     <asp:RequiredFieldValidator ID="rfvEditEventEndTime" runat="server" ErrorMessage="Enter End Time" ControlToValidate="TextBox3" Text="*" ForeColor="Red"></asp:RequiredFieldValidator>
@@ -116,7 +117,7 @@
                                 </FooterTemplate>
                                 <ItemStyle Wrap="False" />
                             </asp:TemplateField>
-                                <asp:TemplateField HeaderText="Location: " SortExpression="EventLocation">
+                                <asp:TemplateField HeaderText="Location " SortExpression="EventLocation">
                                     <EditItemTemplate>
                                         <asp:TextBox ID="TextBox4" runat="server" Text='<%# Bind("EventLocation") %>'></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="rfvEditEventLocation" runat="server" ErrorMessage="Enter Event Location" ControlToValidate="TextBox4" Text="*" ForeColor="Red"></asp:RequiredFieldValidator>
@@ -129,7 +130,7 @@
                                         <asp:RequiredFieldValidator ValidationGroup="INSERT" ID="rfvInsertEventLocation" runat="server" ErrorMessage="Enter Event Location" ControlToValidate="txtEventLocation" Text="*" ForeColor="Red"></asp:RequiredFieldValidator>
                                     </FooterTemplate>
                                 </asp:TemplateField>
-                                <asp:TemplateField HeaderText="Event: " SortExpression="EventName">
+                                <asp:TemplateField HeaderText="Event " SortExpression="EventName">
                                     <EditItemTemplate>
                                         <asp:TextBox ID="TextBox5" runat="server" Text='<%# Bind("EventName") %>'></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="rfvEditEventName" runat="server" ErrorMessage="Enter Event Name" ControlToValidate="TextBox5" Text="*" ForeColor="Red"></asp:RequiredFieldValidator>
@@ -142,7 +143,7 @@
                                         <asp:RequiredFieldValidator ValidationGroup="INSERT" ID="rfvInsertEventName" runat="server" ErrorMessage="Enter Event Name" ControlToValidate="txtEventName" Text="*" ForeColor="Red"></asp:RequiredFieldValidator>
                                     </FooterTemplate>
                                 </asp:TemplateField>
-                                <asp:TemplateField HeaderText="Event Details: " SortExpression="EventDescription">
+                                <asp:TemplateField HeaderText="Event Details " SortExpression="EventDescription">
                                     <EditItemTemplate>
                                         <asp:TextBox ID="TextBox6" runat="server" Text='<%# Bind("EventDescription") %>'></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="rfvEditEventDescription" runat="server" ErrorMessage="Enter Event Description" ControlToValidate="TextBox6" Text="*" ForeColor="Red"></asp:RequiredFieldValidator>
@@ -155,7 +156,7 @@
                                         <asp:RequiredFieldValidator ValidationGroup="INSERT" ID="rfvInsertEventDescription" runat="server" ErrorMessage="Enter Event Description" ControlToValidate="txtEventDescription" Text="*" ForeColor="Red"></asp:RequiredFieldValidator>
                                     </FooterTemplate>
                                 </asp:TemplateField>
-                                <asp:TemplateField HeaderText="Presenter(s) / Speaker(s): " SortExpression="EventSpeaker">
+                                <asp:TemplateField HeaderText="Presenter(s) / Speaker(s) " SortExpression="EventSpeaker">
                                     <EditItemTemplate>
                                         <asp:TextBox ID="TextBox7" runat="server" Text='<%# Bind("EventSpeaker") %>'></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="rfvEditEventSpeaker" runat="server" ErrorMessage="Enter Name(s) of Speaker(s)" ControlToValidate="TextBox7" Text="*" ForeColor="Red"></asp:RequiredFieldValidator>
@@ -173,9 +174,8 @@
                             <EmptyDataRowStyle HorizontalAlign="Center" VerticalAlign="Middle" />
                             <FooterStyle BackColor="#CCCCCC" />
                             <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" HorizontalAlign="Center" VerticalAlign="Middle" />
-                            <PagerStyle BackColor="#CCCCCC" ForeColor="Black" HorizontalAlign="Left" />
-                            <RowStyle BackColor="White" />
-                            <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
+                            <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+                            <SelectedRowStyle BackColor="#FFCD00" Font-Bold="True" ForeColor="White" />
                             <SortedAscendingCellStyle BackColor="#F1F1F1" />
                             <SortedAscendingHeaderStyle BackColor="#808080" />
                             <SortedDescendingCellStyle BackColor="#CAC9C9" />
