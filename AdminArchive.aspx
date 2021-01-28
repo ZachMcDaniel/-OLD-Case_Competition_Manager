@@ -10,13 +10,12 @@
     </div>
     <div class="row center">
             <div class="col-md-6">
-                <asp:Button ID="btnShowArchives" CausesValidation="false" OnClick="btnShowArchives_Click" class="btn btn-default wide gold2" runat="server" Text="Archive/Unarchive Competitions" />
+                <asp:Button ID="btnShowArchives" CausesValidation="false" OnClick="btnShowArchives_Click" class="btn btn-default wide gold2" runat="server" Text="ARCHIVE/UNARCHIVE COMPETITIONS" />
             </div>
              <div class="col-md-6">
-                <asp:Button ID="btnEditArchives" CausesValidation="false" OnClick="btnEditArchives_Click" class="btn btn-default wide gold2" runat="server" Text="Edit Archived Competitions" />
+                <asp:Button ID="btnEditArchives" CausesValidation="false" OnClick="btnEditArchives_Click" class="btn btn-default wide gold2" runat="server" Text="EDIT ARCHIVED COMPETITIONS" />
             </div>
     </div>
-    <hr />
 
     <div id="archives" runat="server">
         <asp:UpdatePanel runat="server" ID="ArchiveUpdates" UpdateMode="Conditional">

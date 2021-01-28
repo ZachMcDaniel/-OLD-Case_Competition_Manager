@@ -1,13 +1,14 @@
 ﻿<%@ Page Title="Archive" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Archive.aspx.cs" Inherits="CaseCompetitionApp.Archive" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-      <h2 class=" center gold">
-       Competition Archive
-     </h2>
-    <h3 class="center">
-        Access all previous competitions and results
-    </h3>
-    <hr class="style-four">
+<div>
+        <h2 style="font-size:65px; font-family: ZillaSlab-SemiBold">Competition Archive</h2>
+        <div>
+            <hr style="border-top: 3px solid #FFCD00" />
+        </div>
+        <h2 style="font-size: 30px; font-family: Roboto-Regular">Access Previous Competitions and Results</h2>
+          <br />
+    </div>
 
      <asp:LoginView runat="server">     
          <RoleGroups>       

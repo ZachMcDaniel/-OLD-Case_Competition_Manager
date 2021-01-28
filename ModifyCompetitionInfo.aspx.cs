@@ -20,6 +20,7 @@ namespace CaseCompetitionApp
                 gvMember.Visible = false;
                 gvJudge.Visible = false;
                 gvHost.Visible = false;
+                gvHost.Visible = false;
                 NewHost.Visible = false;
 
                 empty.Visible = false;
@@ -33,7 +34,7 @@ namespace CaseCompetitionApp
             gvdropbox.Visible = true;
             gvMember.Visible = false;
             gvJudge.Visible = false;
-            gvHost.Visible = false;
+            NewHost.Visible = false;
             //"add the other gv ids as false under this btn"
             BTNTeamInfo.Style.Add("background-color", "rgba(255, 223, 0, 0.75)");
             BTNTeamInfo.Style.Add("font-weight", "bold");
@@ -70,6 +71,7 @@ namespace CaseCompetitionApp
             gvMember.Visible = true;
             gvJudge.Visible = false;
             gvHost.Visible = false;
+            NewHost.Visible = false;
             //"add the other gv ids as false under this btn"
             BTNMemberInfo.Style.Add("background-color", "rgba(255, 223, 0, 0.75)");
             BTNMemberInfo.Style.Add("font-weight", "bold");
@@ -107,6 +109,8 @@ namespace CaseCompetitionApp
             gvMember.Visible = false;
             gvJudge.Visible = true;
             gvHost.Visible = false;
+            NewHost.Visible = false;
+
             //"add the other gv ids as false under this btn"
             BTNJudgeInfo.Style.Add("background-color", "rgba(255, 223, 0, 0.75)");
             BTNJudgeInfo.Style.Add("font-weight", "bold");

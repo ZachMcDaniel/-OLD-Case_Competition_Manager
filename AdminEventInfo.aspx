@@ -13,7 +13,6 @@
     </div>
     </div>
  
-   <hr class="style-four">
 
     <br />
         <div class="row">
@@ -228,8 +227,9 @@
                  </div>
             </div>
         </div>
+
        <div class="stickydiv">
          <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="Hub.aspx" CssClass="hyperlink" >Return to Hub</asp:HyperLink>
-    </div>
-</div>
+        </div>
+
 </asp:Content>

@@ -1,12 +1,13 @@
 ﻿<%@ Page Title="Meet the Judges" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="JudgeInfo.aspx.cs" Inherits="CaseCompetitionApp.JudgeInfo" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <h2 class=" center gold">
-        Meet the Judges!
-    </h2>
-    <h3 class="center">
-        This year's judges can be found below, along with the company they work for. Make sure to check this out!
-    </h3>
-    <hr class="style-four">
+    <div>
+        <h2 style="font-size:65px; font-family: ZillaSlab-SemiBold">Meet the Judges!</h2>
+        <div>
+            <hr style="border-top: 3px solid #FFCD00" />
+        </div>
+        <h2 style="font-size: 30px; font-family: Roboto-Regular">This year's judges can be found below, along iwth the company they work for. Make sure to check this out!</h2>
+          <br />
+    </div>
     <div id="empty" runat="server" class="center">
       <asp:Label ID="lblEmpty" Font-Size="X-Large" runat="server" Text="There is no current judges information available at this time. Please check back later."></asp:Label>
     </div>

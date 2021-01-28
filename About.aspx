@@ -1,7 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="About.aspx.cs" Inherits="CaseCompetitionApp.About" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-  
-   <hr class="style-four">
+
     <div>
         <h2 style="font-size:65px; font-family: ZillaSlab-SemiBold">The Case Competition Manager Story</h2>
         <div>

@@ -1,12 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="JudgeModify.aspx.cs" Inherits="CaseCompetitionApp.WebForm3" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-      <h2 class=" center gold">
-       Modify Judge Info
-    </h2>
-    <h3 class="center">
-        Add or remove information about yourself!
-    </h3>
-    <br />
+    <div>
+        <h2 style="font-size:65px; font-family: ZillaSlab-SemiBold">Modify Judge Info</h2>
+        <div>
+            <hr style="border-top: 3px solid #FFCD00" />
+        </div>
+        <h2 style="font-size: 30px; font-family: Roboto-Regular">Add or Remove Information About Yourself</h2>
+          <br />
+    </div>
 
   <div class="row">
         <div class="col-md-12">
@@ -52,7 +53,10 @@
             </asp:SqlDataSource>
         </div>
       </div>
-     <div class="bottomdiv">
+    <div>
+        <br />
+    </div>
+     <div class="stickydiv">
          <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="Hub.aspx" CssClass="hyperlink" >Return to Hub</asp:HyperLink>
     </div>
 </asp:Content>

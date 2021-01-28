@@ -43,49 +43,58 @@
                 <br />
             <div class="form-group, center">
                 <div class="row center">
-                    <h5 class="center"><asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="8" DataKeyNames="EventID" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="Horizontal" HorizontalAlign="Center" ShowHeaderWhenEmpty="True" CellSpacing="2" Width="100%">
+                    <h5 class="center"><asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="White" BorderStyle="None" BorderWidth="0px" CellPadding="3" DataKeyNames="EventID" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="None" HorizontalAlign="Center" ShowHeaderWhenEmpty="True" Width="101%" Height="304px">
+                        <AlternatingRowStyle BackColor="#CCCCCC" />
                         <Columns>
                             <asp:BoundField DataField="EventID" HeaderText="Event ID" InsertVisible="False" ReadOnly="True" SortExpression="EventID" >
                             <ControlStyle CssClass="Center" />
-                            <HeaderStyle CssClass="center" />
+                            <HeaderStyle CssClass="center" Font-Names="roboto-bold" Font-Size="12pt" />
+                            <ItemStyle Font-Names="roboto-regular" Font-Size="12pt" />
                             </asp:BoundField>
-                            <asp:BoundField DataField="EventDate" DataFormatString="{0:d}" HeaderText="Date: " SortExpression="EventDate" ApplyFormatInEditMode="True" >
+                            <asp:BoundField DataField="EventDate" DataFormatString="{0:d}" HeaderText="Date " SortExpression="EventDate" ApplyFormatInEditMode="True" >
                             <ControlStyle CssClass="center" />
-                            <HeaderStyle CssClass="center" />
+                            <HeaderStyle CssClass="center" Font-Names="roboto-bold" Font-Size="12pt" />
+                            <ItemStyle Font-Names="roboto-regular" Font-Size="12pt" />
                             </asp:BoundField>
-                            <asp:BoundField DataField="EventStartTime" HeaderText="Begins: " SortExpression="EventStartTime" ApplyFormatInEditMode="True" DataFormatString="{0:hh\:mm}" HtmlEncode="False" >
+                            <asp:BoundField DataField="EventStartTime" HeaderText="Begins " SortExpression="EventStartTime" ApplyFormatInEditMode="True" DataFormatString="{0:hh\:mm}" HtmlEncode="False" >
                             <ControlStyle CssClass="Center" />
-                            <HeaderStyle CssClass="center" />
+                            <HeaderStyle CssClass="center" Font-Names="roboto-bold" Font-Size="12pt" />
+                            <ItemStyle Font-Names="roboto-regular" Font-Size="12pt" />
                             </asp:BoundField>
-                            <asp:BoundField DataField="EventEndTime" HeaderText="Ends: " SortExpression="EventEndTime" DataFormatString="{0:hh\:mm}" HtmlEncode="False" >
+                            <asp:BoundField DataField="EventEndTime" HeaderText="Ends " SortExpression="EventEndTime" DataFormatString="{0:hh\:mm}" HtmlEncode="False" >
                             <ControlStyle CssClass="Center" />
-                            <HeaderStyle CssClass="center" />
+                            <HeaderStyle CssClass="center" Font-Names="roboto-bold" Font-Size="12pt" />
+                            <ItemStyle Font-Names="roboto-regular" Font-Size="12pt" />
                             </asp:BoundField>
-                            <asp:BoundField DataField="EventLocation" HeaderText="Location: " SortExpression="EventLocation" >
+                            <asp:BoundField DataField="EventLocation" HeaderText="Location " SortExpression="EventLocation" >
                             <ControlStyle CssClass="Center" />
-                            <HeaderStyle CssClass="center" />
+                            <HeaderStyle CssClass="center" Font-Names="roboto-bold" Font-Size="12pt" />
+                            <ItemStyle Font-Names="roboto-regular" Font-Size="12pt" />
                             </asp:BoundField>
-                            <asp:BoundField DataField="EventName" HeaderText="Event Name:" SortExpression="EventName" >
+                            <asp:BoundField DataField="EventName" HeaderText="Event Name" SortExpression="EventName" >
                             <ControlStyle CssClass="Center" />
-                            <HeaderStyle CssClass="center" />
+                            <HeaderStyle CssClass="center" Font-Names="roboto-bold" Font-Size="12pt" />
+                            <ItemStyle Font-Names="roboto-regular" Font-Size="12pt" />
                             </asp:BoundField>
-                            <asp:BoundField DataField="EventDescription" HeaderText="Event Description: " SortExpression="EventDescription" >
+                            <asp:BoundField DataField="EventDescription" HeaderText="Event Description " SortExpression="EventDescription" >
                             <ControlStyle CssClass="Center" />
-                            <HeaderStyle CssClass="center" />
+                            <HeaderStyle CssClass="center" Font-Names="roboto-bold" Font-Size="12pt" />
+                            <ItemStyle Font-Names="roboto-regular" Font-Size="12pt" />
                             </asp:BoundField>
-                            <asp:BoundField DataField="EventSpeaker" HeaderText="Event Speaker(s): " SortExpression="EventSpeaker" >
+                            <asp:BoundField DataField="EventSpeaker" HeaderText="Event Speaker(s) " SortExpression="EventSpeaker" >
                             <ControlStyle CssClass="Center" />
-                            <HeaderStyle CssClass="center" />
+                            <HeaderStyle CssClass="center" Font-Names="roboto-bold" Font-Size="12pt" />
+                            <ItemStyle Font-Names="roboto-regular" Font-Size="12pt" />
                             </asp:BoundField>
                         </Columns>
-                        <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
-                        <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" HorizontalAlign="Center" VerticalAlign="Middle" />
-                        <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
-                        <SelectedRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
-                        <SortedAscendingCellStyle BackColor="#F7F7F7" />
-                        <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
-                        <SortedDescendingCellStyle BackColor="#E5E5E5" />
-                        <SortedDescendingHeaderStyle BackColor="#242121" />
+                        <FooterStyle BackColor="#CCCCCC" />
+                        <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" HorizontalAlign="Center" VerticalAlign="Middle" />
+                        <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+                        <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
+                        <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                        <SortedAscendingHeaderStyle BackColor="#808080" />
+                        <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                        <SortedDescendingHeaderStyle BackColor="#383838" />
                     </asp:GridView></h5>  
                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:casecompetitionConnectionString %>" SelectCommand="SELECT * FROM [EventInfo]"></asp:SqlDataSource>
                 </div>

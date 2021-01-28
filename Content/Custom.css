@@ -74,7 +74,10 @@
 }
 .left {
     text-align: left;
-    padding-left: 30px;
+
+}
+.right {
+    text-align: right;
 }
 
 .gridcenter {

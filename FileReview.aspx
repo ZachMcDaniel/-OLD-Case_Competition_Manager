@@ -10,7 +10,7 @@
     </div>
 
     <div class ="col-md-12 center">
-        <a class="btn btn-default wide2 gold2" target="_blank"  href="https://www.dropbox.com/sh/8h7pjqsrrzyo3u8/AADfweW9pktF6cT8kFmJqJP_a?dl=0">Dropbox <img src="Images/arrow-BLACK.png" style="height: 20px; width:20px;" /></a>
+        <a class="btn btn-default wide2 gold2" target="_blank"  href="https://www.dropbox.com/sh/8h7pjqsrrzyo3u8/AADfweW9pktF6cT8kFmJqJP_a?dl=0">DROPBOX <img src="Images/arrow-BLACK.png" style="height: 20px; width:20px;" /></a>
     </div>
     <div>
         <br />
