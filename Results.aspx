@@ -56,7 +56,7 @@
                         
                 <%--Members names div--%>
                 <div class="center">
-                    <asp:GridView ID="GridView1" HorizontalAlign="Center" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#ffffff" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource3" ForeColor="Black" GridLines="Horizontal" Width="100%">
+                    <asp:GridView ID="GridView1" CssClass="center" HorizontalAlign="Center" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#ffffff" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource3" ForeColor="Black" GridLines="None" Width="50%">
                         <Columns>
                             <asp:BoundField DataField="FirstName" HeaderText="First Name" SortExpression="FirstName" >
                                 <ControlStyle CssClass="center" />
@@ -67,7 +67,7 @@
                             <asp:BoundField DataField="LastName" HeaderText="Last Name" SortExpression="LastName" >
                                 <ControlStyle CssClass="center" />
                                 <HeaderStyle CssClass="center" BackColor="White" ForeColor="White" />
-                                <ItemStyle CssClass="center" Font-Names="roboto-regular" Font-Size="14pt" />
+                                <ItemStyle CssClass="left" Font-Names="roboto-regular" Font-Size="14pt" />
                              </asp:BoundField>
                         </Columns>
 
@@ -118,18 +118,18 @@
               
           
             <div class="center">
-                <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" BackColor="White" BorderColor="#FFFFFF" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" Width="100%">
+                <asp:GridView ID="GridView2" CssClass="center" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" BackColor="White" BorderColor="#FFFFFF" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="None" Width="50%">
                     <Columns>
                         <asp:BoundField DataField="FirstName" HeaderText="First Name" SortExpression="FirstName">
                             <ControlStyle CssClass="center" />
                             <HeaderStyle CssClass="center" BackColor="White" ForeColor="White" />
-                            <ItemStyle CssClass="center" Font-Names="roboto-regular" Font-Size="14pt" />
+                            <ItemStyle CssClass="right" Font-Names="roboto-regular" Font-Size="14pt" />
                         </asp:BoundField>
 
                         <asp:BoundField DataField="LastName" HeaderText="Last Name" SortExpression="LastName">
                             <ControlStyle CssClass="center" />
                             <HeaderStyle CssClass="center" BackColor="White" ForeColor="White" />
-                            <ItemStyle CssClass="center" Font-Names="roboto-regular" Font-Size="14pt" />
+                            <ItemStyle CssClass="left" Font-Names="roboto-regular" Font-Size="14pt" />
                         </asp:BoundField>
                     </Columns>
 
@@ -211,5 +211,9 @@
 
         </div>
     </div>
+    <div>
+        <br />
+    </div>
+
 
 </asp:Content>
