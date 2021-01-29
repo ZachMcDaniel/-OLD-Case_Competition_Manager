@@ -76,11 +76,12 @@
 }
 .left {
     text-align: left;
+    padding-left: 6px;
 
 }
 .right {
     text-align: right;
-    padding-right: 6px
+    padding-right: 6px;
 }
 
 .gridcenter {

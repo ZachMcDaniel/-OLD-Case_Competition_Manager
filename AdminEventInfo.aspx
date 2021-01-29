@@ -60,7 +60,7 @@
             <div class="form-group, center">
                 <h3 style="font-family:Roboto-Bold; font-size: 18pt">Event Schedule</h3>
                 <div class="row">
-                    <h5><asp:GridView ID="GridView1" runat="server" BackColor="White" BorderColor="#ffffff" BorderStyle="None" BorderWidth="1px" CellPadding="3" ForeColor="Black" AutoGenerateColumns="False" DataKeyNames="EventID" DataSourceID="SqlDataSource1" Width="90%" ShowHeaderWhenEmpty="True" ShowFooter="True" GridLines="None">
+                    <h5><asp:GridView ID="GridView1" runat="server" BackColor="White" BorderColor="#ffffff" BorderStyle="None" BorderWidth="1px" CellPadding="3" ForeColor="Black" AutoGenerateColumns="False" DataKeyNames="EventID" DataSourceID="SqlDataSource1" Width="90%" ShowHeaderWhenEmpty="True" ShowFooter="True" HorizontalAlign="Center" GridLines="None">
                         <AlternatingRowStyle BackColor="#CCCCCC" />
                         <Columns>
                             <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
