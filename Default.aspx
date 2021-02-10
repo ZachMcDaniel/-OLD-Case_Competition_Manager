@@ -11,7 +11,7 @@
             <hr style="border-top: 3px solid #FFCD00" />
         </div>
        
-        <h2 style="font-size: 30px; font-family: Roboto-Regular">The CyHawk Case Competition is an annual event hosted by the University of Iowa and Iowa State University</h2>
+        <h2 style="font-size: 30px; font-family: Roboto-Regular">X - The CyHawk Case Competition is an annual event hosted by the University of Iowa and Iowa State University</h2>
           
     </div>
 
