@@ -196,7 +196,6 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Account\Web.config" />
-    <Content Include="Images\About %282%29.jpg" />
     <Content Include="Images\arrow-BLACK.png" />
     <Content Include="Images\Block-IOWA-GOLD-ffcd00.png" />
     <Content Include="Images\BLOG-IA-vs-ISU_930x402.jpg" />
