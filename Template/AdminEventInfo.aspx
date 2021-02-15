@@ -64,7 +64,7 @@
                         <AlternatingRowStyle BackColor="#CCCCCC" />
                         <Columns>
                             <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
-                            <asp:TemplateField HeaderText="ID" InsertVisible="False" SortExpression="EventID">
+                            <asp:TemplateField HeaderText="ID" InsertVisible="True" SortExpression="EventID">
                                 <EditItemTemplate>
                                     <asp:Label ID="EventID" runat="server" Text='<%# Eval("EventID") %>'></asp:Label>
                                 </EditItemTemplate>
@@ -228,6 +228,9 @@
             </div>
         </div>
 
+    <div>
+        <br />
+    </div>
        <div class="stickydiv">
          <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="Hub.aspx" CssClass="hyperlink" >Return to Hub</asp:HyperLink>
         </div>
