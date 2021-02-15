@@ -1,0 +1,157 @@
+/* ------------------------------------
+   Body
+*/
+body {
+  font-family: 'PT Mono', monospace;
+  min-height: 100vh;
+}
+
+
+/* ------------------------------------
+   Navigation
+*/
+/* Do this if you want to change the color of the navbar */
+.navbar.bg-dark {
+  background-color: #000000 !important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: rgb(255,205,0)!important;
+}
+
+/* This will insert a space of height 75px before every id:
+   https://github.com/twbs/bootstrap/issues/1768 check the solution from @mnot
+*/
+*[id]:before {
+  display: block;
+  content: " ";
+  margin-top: -75px;
+  height: 75px;
+  visibility: hidden;
+}
+
+
+/* ------------------------------------
+   Jumbotron
+*/
+.jumbotron.jumbotron-fluid {
+  background-color: #000000;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  color: white;
+}
+/* Fonts */
+@font-face {
+    font-family: 'Antonio-Regular';
+    src: url('../fonts/Antonio-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'ZillaSlab-SemiBold';
+    src: url('../fonts/ZillaSlab-SemiBold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url('../fonts/Roboto-Bold.ttf') format('truetype');
+}
+
+/* ------------------------------------
+   About Me
+*/
+
+.center {
+	text-align: center;
+}
+.col-md-8 {
+  padding-left: 150px;
+}
+
+.about-text-title {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* ------------------------------------
+   section
+*/
+.section {
+  margin-top: 100px;
+}
+
+.row.extra {
+  margin-top: 100px;
+}
+
+.pics img {
+  display: block;
+  height: 150px;
+  margin: auto;
+}
+
+
+	
+.gold {
+    background-color: white !important;
+    color: black !important;
+	border-color: rgb(255,205,0) !important;
+	border-width: 2px;
+    width: 95%;
+    text-align: center;
+}
+
+.gold:hover {
+	text-decoration: underline !important;
+    color: black !important;
+    background-color: white !important;
+	border-color: rgb(255,205,0) !important;
+}
+
+.bold {
+	font: bold !important ;
+}
+.fleft {
+	float: left;
+}
+
+.height {
+	min-height: 80vh !important
+}
+
+/* ------------------------------------
+   Footer
+*/
+footer {
+  
+  margin-top: 100px;
+  margin-bottom: 0px;
+  padding-left: 25px;
+  background-color: #000000;
+  color: white;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  padding-top: 15px;
+  text-align: inline;
+  font: bold;
+}
+
+.footer ul {
+  list-style-type: row;
+}
+
+.footer li{
+  display: inline;
+  color: rgb(255,205,0);
+}
+.footer li.customclass {
+	color: white;
+}
+
+.footer li  :hover {
+	color:#ffdf00; }
