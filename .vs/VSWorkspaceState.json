@@ -1,4 +1,8 @@
 {
-  "ExpandedNodes": [],
+  "ExpandedNodes": [
+    "",
+    "\\bin"
+  ],
+  "SelectedNode": "\\CaseCompetitionApp.sln",
   "PreviewInSolutionExplorer": false
 }
