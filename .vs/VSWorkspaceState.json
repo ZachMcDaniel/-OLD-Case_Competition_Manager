@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\bin"
+    "\\bin",
+    "\\bin\\roslyn"
   ],
-  "SelectedNode": "\\CaseCompetitionApp.sln",
+  "SelectedNode": "\\bin",
   "PreviewInSolutionExplorer": false
 }
