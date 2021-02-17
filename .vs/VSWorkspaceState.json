@@ -1,4 +1,9 @@
 {
-  "ExpandedNodes": [],
+  "ExpandedNodes": [
+    "",
+    "\\bin",
+    "\\bin\\roslyn"
+  ],
+  "SelectedNode": "\\bin",
   "PreviewInSolutionExplorer": false
 }
